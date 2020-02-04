@@ -1,0 +1,382 @@
+body{
+	/*Iphone 不支overflow:hidden，有以下兩種解法*/
+	position: relative;
+	/*position: fixed;*/
+}
+.col3{
+	-moz-column-count:3; /* Firefox */
+	-webkit-column-count:3; /* Safari and Chrome */
+	column-count:3;
+}
+
+/*盈達紅標*/
+header{
+    display: block;
+    padding: 0 13%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    min-height: 45px;
+    position: absolute;
+    z-index: 99999;
+    font-weight: 300;
+    background: rgba(226,1,17,.48);
+}
+.logo{
+	max-width: 170px;
+	float: left;
+	/*padding-top: 4px;*/
+}
+.logo a{
+	display: block;
+}
+.logo img{
+	width: 170px;
+}
+.indexarticle{
+	display: flex;
+}
+.sectionleft{
+	width: 70%;
+	height: 100vh;
+	position: relative;
+}
+.sectionright{
+	width: 30%;
+	padding: 30px 1% 0 1%;
+}
+/*banner輪播*/
+.bannercarousel{
+	position: relative;
+}
+.bannerTop{
+	position: absolute;
+	z-index: 99;
+}
+.bannerTop img:nth-child(2),.bannerimg img:nth-child(2){
+	display: none;
+}
+
+.bannerline{
+	position: absolute;
+    bottom: -3%;
+    z-index: 999;
+    height: 45px;
+    width: 100%;
+    background: url(../images/bannerline.png) no-repeat center/cover;
+}
+/*輪播*/
+.btncheck{
+    position: absolute;
+    max-width: 190px;
+    bottom: 2%;
+    z-index: 999;
+    left: 0;
+    right: 0;
+  	margin: 0 auto;
+}
+.item{
+	height: 100vh;
+}
+.carouselimg01{
+	background: url('../images/carouselimg01.jpg') no-repeat center/cover;
+}
+.carouselimg02{
+	background: url('../images/carouselimg02.jpg') no-repeat center/cover;
+}
+.carouselimg03{
+	background: url('../images/carouselimg03.jpg') no-repeat center/cover;
+}
+.carouselimg04{
+	background: url('../images/carouselimg04.jpg') no-repeat center/cover;
+}
+.carouselimg05{
+	background: url('../images/carouselimg05.jpg') no-repeat center/cover;
+}
+.carouselimg06{
+	background: url('../images/carouselimg06.jpg') no-repeat center/cover;
+}
+.carouselimg07{
+	background: url('../images/carouselimg07.jpg') no-repeat center/cover;
+}
+.carouselimg08{
+	background: url('../images/carouselimg08.jpg') no-repeat center/cover;
+}
+.carouselimg09{
+	background: url('../images/carouselimg09.jpg') no-repeat center/cover;
+}
+.owl-nav{
+    position: absolute;
+    width: 100%;
+    top: 50vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*規則說明*/
+.TTblock{
+	max-width: 550px;
+	margin: 0 auto;
+}
+.methodblock{
+	color: #70645a;
+    line-height: 25px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding:0 2%;
+}
+
+/*步驟說明*/
+.stepblock{
+	margin: 15px 0;
+    color: #70645a;
+    font-weight: 300;
+    line-height: 22px;
+    letter-spacing: 1px;
+    padding:0 2%;
+}
+.stepblock li{
+	display: flex;
+    align-items: flex-start;
+    margin-bottom: 5px;
+}
+.stepblock li>img{
+	max-width: 25px;
+	margin: 0;
+}
+.stepblock h6{
+    display: inline;
+    color: #e61c10;
+    font-weight: 500;
+}
+.btnline{
+	margin-top: 20px;
+	overflow: hidden;
+	background: url('../images/line.png') no-repeat left/contain;
+}
+.btnmethod img{
+	max-width: 150px;
+	float: right;
+}
+
+/*表單*/
+.formcontent{
+	display: flex;
+    align-items: flex-start;
+	margin-bottom: 10px;
+}
+.formcontent img{
+	max-width: 100px;
+	width: 100%;
+	margin: 0;
+}
+input,textarea{
+	width: 350px;
+	background: #e8b5b9;
+}
+input{
+	height: 30px;
+	/*margin-top: 5px;*/
+}
+textarea{
+	height: 200px;
+}
+.btnpreview img{
+	max-width: 130px;
+	float: right;
+}
+
+/*詳細活動*/
+.maskblock{
+	position: fixed;
+    z-index: 99999;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    margin: 0;
+    padding: 0 10px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.methodbox{
+	position: relative;
+    max-width: 900px;
+    width: 100%;
+    box-sizing: border-box;
+    border:8px solid #f5dedf;
+    margin: 3vh auto 0 auto;
+    padding: 20px 20px 20px 20px;
+    overflow: hidden;
+    background: #fff;
+}
+.flightblock{
+	max-width: 700px;
+	letter-spacing: 1px;
+}
+.closebox{
+	position: absolute;
+    right: 1vw;
+    top: 1vw;
+    cursor: pointer;
+}
+.methodTT{
+	max-width: 370px;
+	margin: 0 auto;
+}
+.giftblock{
+	display: flex;
+	justify-content: flex-end;
+	overflow: hidden;
+}
+.giftblock img{
+	max-width: 450px;
+}
+.methodline{
+	max-width: 800px;
+}
+.description{
+	padding: 2% 7%;
+	color: #70645a;
+}
+.description h2{
+	margin-bottom: 10px;
+}
+.description ul{
+    list-style-type: decimal;
+    padding-left: 25px;
+    line-height: 20px;
+    font-weight: 200;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+/*明信片*/
+.postcardblock{
+	/*transform: rotate(3deg);*/
+	position: relative;
+	margin: 0 auto;
+	max-width: 1000px;
+}
+.postcardTT{
+	background: url('../images/bg-postcard02.png') repeat-y center/contain;
+}
+.postcardcontent{
+    padding: 45px 0;
+    background: url(../images/bg-postcardrepeat.png) repeat top/contain;
+}
+
+.greettext{
+    display: flex;
+    padding: 0 130px;
+    font-size: 25px;
+}
+.postcardusertext{
+	max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+    letter-spacing: 1px;
+    line-height: 25px;
+    color: #000;
+    padding: 0 9vw;
+}
+.postcardbtn{
+	position: absolute;
+	right: 11%;
+	bottom:11%;
+}
+.btnfbsubmit{
+	max-width: 250px;
+    margin: 0 auto;
+    padding-bottom: 10px
+}
+@media (max-width: 1024px){
+	.logo img {
+	    width: 110px;
+	}
+	/*.bannerblock img:nth-child(1){
+		display: none;
+	}
+	.bannerblock img:nth-child(2){
+		display: block;
+	}*/
+	.indexarticle{
+		display: block;
+	}
+	.sectionleft,.sectionright{
+		width: 100%;
+	}
+	.sectionleft,.item{
+		height: 70vh;
+	}
+	.owl-nav{
+		top: 30vh;
+	}
+	.formblock{
+		padding: 0 2%;
+	}
+	input, textarea{
+		width: 780px;
+	}
+	.giftblock img {
+	    max-width: 300px;
+	}
+	.description {
+	    padding: 2% 2%;
+	}
+	.greettext{
+	    padding: 0 12vw;
+	}
+	.postcardcontent{
+	    padding: 5vw 0;
+	}
+}
+@media (max-width: 768px){
+
+	.greettext{
+		font-size: 3vw;
+	}
+	.postcardbtn {
+	    max-width: 140px;
+	}
+}
+
+@media (max-width: 640px){
+	.bannerTop img:nth-child(1),.bannerimg img:nth-child(1){
+		display: none;
+	}
+	.bannerTop img:nth-child(2),.bannerimg img:nth-child(2){
+		display: block;
+	}
+	.bannerline{
+		height: 30px;
+		bottom: -2%;
+	}
+	.owl-nav button{
+		max-width: 80px;
+	}
+	.btncheck {
+	    max-width: 120px;
+	}
+	.methodbox{
+		margin: 3vh auto 3vh auto;
+	}
+	.giftblock{
+		display: block;
+	}
+	.giftblock img {
+	    max-width: 400px;
+	}
+	.postcardusertext {
+	    padding: 0 10vw;
+	    font-size: 14px;
+    	line-height: 20px;
+	}
+	.postcardbtn {
+	    max-width: 100px;
+	    bottom: 6%;
+	}
+}
