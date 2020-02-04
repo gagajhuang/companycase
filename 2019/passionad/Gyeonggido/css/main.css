@@ -1,0 +1,371 @@
+body{
+	/*Iphone 不支overflow:hidden，有以下兩種解法*/
+	position: relative;
+	/*position: fixed;*/
+}
+.col3{
+	-moz-column-count:3; /* Firefox */
+	-webkit-column-count:3; /* Safari and Chrome */
+	column-count:3;
+}
+.col4{
+	-moz-column-count:4; /* Firefox */
+	-webkit-column-count:4; /* Safari and Chrome */
+	column-count:4;
+}
+.sectionblock{
+	padding:0 5vw;
+}
+.lineblock,.lineblock2{
+	margin-top: -5vw;
+}
+/*置中*/
+.amusementfourblock,.couponcontent img,.coupontext,.btncoupon,.schedulelist,.schedulecontent img,.ih-item.circle{
+	width: 100%;
+	margin: 0 auto;
+}
+/*選單*/
+nav{
+    display: block;
+    padding: 0 3%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: absolute;
+}
+.logo{
+	float: left;
+	padding-top: 4px;
+	display: flex;
+}
+.logo a{
+	display: block;
+}
+.logo img{
+	width: 150px;
+}
+.fa{
+	padding: 0 5px;
+}
+#menubtn{
+	display: none;
+	float: right;
+	margin-top: 8px;
+}
+#menubtn img{
+	width: 30px;
+}
+.menu{
+	float: right;
+	margin-top: 8px;
+}
+.menu img{
+	max-width: 180px;
+}
+.menu a{
+	display: block;
+	padding: 10px 0;
+	transition: 0.5s;
+}
+.menu a:hover{
+	transform: scale(0.95);
+}
+.menu ul li{
+	float: left;
+	font-size: 18px;
+}
+/*主視覺*/
+.bannerblock img:nth-child(2){
+	display: none;
+}
+.bannerblock img:nth-child(3){
+	display: none;
+}
+/*簡介*/
+
+#introblock{
+	background: url(../images/bg-intro.jpg) no-repeat center/contain #7bc9f1;
+}
+.introcontent img{
+	max-width: 1000px;
+}
+.introcontent img:nth-child(2),.introcontent img:nth-child(3){
+	display: none;
+}
+
+/*四大樂園*/
+.TTblock{
+	background: url(../images/bg-TT.png) no-repeat center/contain;
+}
+.TTblock img{
+	max-width: 500px;
+}
+.amusementfourblock{
+	max-width: 1400px;
+	margin: 20px auto;
+}
+.amusementname{
+	position: absolute;
+	z-index: 99;
+}
+
+/*旅遊金*/
+#couponblock{
+	background: #7bc9f1;
+}
+.couponcontent{
+	position: relative;
+	font-size: 18px;
+}
+.couponcontent img{
+	max-width: 1200px;
+}
+.couponcontent .iconcoupon img{
+	max-width: 1450px;
+}
+.couponcontent .iconcoupon{
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	max-width: 1450px;
+}
+.coupontext{
+	max-width: 1200px;
+	padding: 0 60px 70px 60px;
+	font-weight: 500;
+	line-height: 25px;
+	letter-spacing: 1px;
+	background: url(../images/bg-coupon02.png) repeat-y center/contain;
+}
+.coupontext span{
+	color: #fd31ab;
+}
+.coupontextlist{
+	font-weight: 300;
+}
+.coupontextlist ul{
+	list-style-type: decimal;
+	list-style-position: outside; 
+	padding-left: 20px;
+	font-size: 14px;
+}
+.triangle{
+	display: inline-block;
+    margin: 0 5px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 5px 0 5px 8.7px;
+	border-color: transparent transparent transparent #fd31ab;
+}
+.btncoupon{
+	max-width: 170px;
+	cursor:pointer;
+	position: absolute;
+    left: 0;
+    right: 0; 
+    z-index: 999;
+    transition: 0.5s;
+}
+.btncoupon:hover{
+	transform: scale(0.95);
+}
+/*行程表*/
+#scheduleblock{
+	position: relative;
+}
+.schedulecontent img{
+	max-width: 1000px;
+}
+.schedulelist{
+	display: flex;
+    max-width: 1000px;
+    /*justify-content: space-around;*/
+    font-size: 20px;
+    padding-top: 15px;
+}
+/*.schedulelist img{
+	max-width: 100px;
+}*/
+.schedulelist h2{
+	color: #dc3f92;
+	font-weight: 500;
+	min-width: 50px;
+	width: 14%;
+	margin-right: 1%;
+}
+.schedulelist h3{
+	color: #f15a25;
+	font-weight: 500;
+	width: 19%;
+	margin-left: 1%;
+	text-align: center;
+}
+.schedulelistext{
+	font-size: 16px;
+	line-height: 25px;
+	width: 70%;
+}
+.schedulelistext a:nth-child(even){
+	color: #975656;
+	padding: 5px 0;
+}
+.schedulelistext a:hover{
+	color: #009fe8;
+}
+footer{
+	position: relative;
+}
+
+/*.lineblock img:nth-child(2){
+	display: none;
+}*/
+.iconfooter{
+	max-width: 250px;
+	position: absolute;
+	top: 20vw;
+}
+.pointtext{
+    max-width: 680px;
+    margin: 0 auto;
+    font-size: 12px;
+    color: #616161;
+    line-height: 15px;
+    padding-top: 15px;
+    letter-spacing: 1px;
+}
+.pointtext ul{
+	list-style-type: square;
+	padding-left: 25px;
+}
+@media (max-width:1500px){
+	.iconfooter{
+		display: none;
+	}
+}
+@media (min-width:1500px){
+	.ih-item.circle.effect2 .info p{
+	    font-size: 16px;
+	    line-height: 25px;
+	}
+}
+@media (max-width:1100px){
+	nav{
+		overflow: visible;
+	}
+	.logo{
+		padding-top: 0; 
+	}
+	.menu{
+	    max-height: 0px;
+	    overflow: hidden;
+	    transition: max-height 0.5s;
+	    position: absolute;
+	    z-index: 100;
+	    top: 50px;
+	    left: 0;
+	    right: 0;
+	    background:#fff;
+	}
+	.menu ul li{
+	    float: none;
+	    border-top: 1px solid rgba(123, 201, 240, 0.5);
+	}
+	#menubtn{
+	    display: block;
+	    cursor: pointer;
+	}
+	.menu-show{
+	    max-height: 1000px;
+	    /*box-shadow: 0px 8px 20px #cecece;*/
+	 }
+}
+@media (max-width: 1024px){
+	.bannerblock img:nth-child(1){
+		display: none;
+	}
+	.bannerblock img:nth-child(2){
+		display: block;
+	}
+	#introblock {
+	    background: #7bc9f1;
+	}
+	.col4{
+		-moz-column-count:2; /* Firefox */
+		-webkit-column-count:2; /* Safari and Chrome */
+		column-count:2;
+	}
+	.ih-item.circle.effect2 .info p{
+		font-size: 2vw;
+    	line-height: 3.5vw;
+    	margin: 8vw 30px 0 30px;
+    	padding: 10px 2vw;
+	}
+	.schedulelist h2,.schedulelist h3{
+		font-size: 18px;
+		line-height: 20px;
+	}
+	.schedulelistext{
+		font-size: 16px;
+		line-height: 25px;
+		width: 70%;
+	}
+	.pointtext{
+		max-width: 650px;
+	}
+
+}
+@media (max-width: 789px){
+	.iconcoupon{
+		display: none;
+	}
+}
+@media (max-width: 640px){
+	.bannerblock img:nth-child(2){
+		display: none;
+	}
+	.bannerblock img:nth-child(3){
+		display: block;
+	}
+	.introcontent img:nth-child(1){
+		display: none;
+	}
+	.introcontent img:nth-child(2){
+		display: block;
+	}
+	.col4{
+		-moz-column-count:1; /* Firefox */
+		-webkit-column-count:1; /* Safari and Chrome */
+		column-count:1;
+	}
+	.ih-item.circle.effect2 .info p{
+		font-size: 16px;
+    	line-height: 25px;
+    	margin: 15vw 30px 0 30px;
+    	padding: 10px 4vw;
+	}
+	.coupontext {
+	    padding: 0 5vw 70px 5vw;
+	}
+	.schedulelistext{
+		line-height: 20px;
+	}
+	.lineblock2{
+		margin-top: -2vw;
+	}
+}
+@media (max-width: 375px){
+	.logo img {
+	    width: 100px;
+	}
+	.introcontent img:nth-child(2){
+		display: none;
+	}
+	.introcontent img:nth-child(3){
+		display: block;
+	}
+	.schedulelist h3{
+		font-size: 13px;
+	}
+}
