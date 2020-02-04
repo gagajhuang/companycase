@@ -1,0 +1,581 @@
+body{
+	color: #36302e;
+	position: relative;
+	box-sizing: border-box;
+}
+nav{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: transparent;
+    min-height: 45px;
+    position: fixed;
+    z-index: 999;
+    bottom: 0;
+}
+.logo{
+	float: left;
+	width: 30%;
+}
+.logo a{
+	display: block;
+	padding-bottom: 5px;
+}
+.logo img{
+	width: 200px;
+}
+.fa{
+	padding: 0 5px;
+}
+#menubtn{
+	display: none;
+	float: right;
+	margin-top: 8px;
+}
+#menubtn img{
+	max-width: 160px;
+}
+#menu{
+	float: right;
+	width: 70%;
+}
+#menu a{
+	display: block;
+	padding:0 10px;
+	transition: 0.5s;
+	/*font-weight: bold;*/
+}
+#menu a:hover{
+	transform: scale(0.96);
+}
+#menu ul{
+	overflow: hidden;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+#menu ul li{
+	/*float: left;*/
+	font-size: 18px;
+}
+.mobilemenu{
+	display: none;
+}
+.closemenu{
+	max-width: 160px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    z-index: 999;
+}
+/*統一版型*/
+.section{
+	background: url('../images/bg-all.jpg');
+}
+.sectionblock{
+	padding-bottom:10vh;
+    overflow: hidden;
+    height: 100%;
+}
+.leftblock,.rightblock,.videoblock,#menu a,#menu li,.tabs_container div,.movieleftblock {
+	height: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.leftblock{
+	width: 29%;
+	float: left;
+	margin-right: 1%;
+}
+.rightblock{
+	width: 70%;
+	float: left;
+}
+.slidercontent{
+	width: 100%;
+	margin: 0 auto;
+}
+/*首頁*/
+.sliderblock{
+	position: relative;
+}
+.slidermain{
+ 	padding:3% 2% 0 2%;
+ 	height: 100%;
+}
+.slidercontent{
+	max-width: 480px;
+	height: 65%;
+    overflow: hidden;
+    background: #e1e1e1;
+}
+.sliderlogo{
+	position: absolute;
+	z-index: 2;
+	right: 0;
+    top: 5%;
+}
+.videoblock{
+	max-width: 480px;
+	position: relative;
+	height: 35%;
+	background: url('../images/indexmovieimg.jpg') no-repeat center/contain #e1e1e1;
+}
+.btnvideo{
+	margin:0 auto;
+	max-width: 80px;
+	cursor: pointer;
+	z-index: 99;
+	transition: 0.1s;
+	margin-top: 22%;
+}
+.btnvideo:hover{
+	transform: scale(0.95);
+}
+
+.banner{
+	background: url('../images/banner.png') no-repeat center/cover;
+}
+iframe{
+	width: 100%;
+	height:100%;
+}
+
+/*美食區域*/
+
+a,a:active,a:focus {
+	outline-color: -moz-use-text-color;
+	outline-style: none;
+	outline-width: 0;
+}
+
+a:active,a:focus {
+	outline: expression(hideFocus='true');
+}
+
+#foodtabs,#viewtabs,#movietabs{
+	width: 100%;
+	/*height: 88vh;*/
+	margin: 0 auto;
+	overflow: hidden;
+}
+#foodtabs li,#viewtabs li,#movietabs li{
+	height: 28.5vh;
+}
+.col2{
+	width: 48%;
+	margin: 0 0 1% 1%;
+	float: left;
+	display: block;
+    overflow: hidden;
+}
+.imgspace{
+	padding:1% 0;
+	max-width: 1280px;
+	float: right;
+}
+.pageTT{
+	display: none;
+}
+.pageTTm{
+	display: none;
+}
+/*.pageTT img:nth-child(2){
+	display: none;
+}*/
+
+#foodtabs a,#viewtabs a,#movietabs a{
+	display: block;
+	text-decoration: none;
+	overflow: hidden;
+	position: relative;	
+}
+#foodtabs p,#viewtabs p,#movietabs p{
+	width: 80%;
+    margin: 0 auto;
+    line-height: 25px;
+    letter-spacing: 5px;
+}
+.tabs_container {
+	padding: 40px;
+}
+.tabs_container div{
+	margin-top: 10vh;
+}
+
+.transition {
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+
+	-webkit-transition-delay: .3s;
+	-moz-transition-delay: .3s;
+	-o-transition-delay: .3s;
+	-ms-transition-delay: .3s;
+	transition-delay: .3s;
+}
+
+.make_transist {
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+
+.hidescale {
+	-webkit-transform: scale(0.9);
+	-moz-transform: scale(0.9);
+	-o-transform: scale(0.9);
+	-ms-transform: scale(0.9);
+	transform: scale(0.9);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	filter: alpha(opacity=0);
+	/*opacity: 0;*/
+	display: none;
+}
+
+.showscale {
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-o-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	/*opacity: 1;*/
+	display: block;
+
+	-webkit-transition-delay: .3s;
+	-moz-transition-delay: .3s;
+	-o-transition-delay: .3s;
+	-ms-transition-delay: .3s;
+	transition-delay: .3s;
+}
+
+.tabulous_active {
+	/**/
+}
+
+.tabulousclear {
+	display: block;
+	clear: both;
+}
+.foodimg01{
+	background: url('../images/foodimg01.jpg') no-repeat center/cover; 
+}
+.foodimg02{
+	background: url('../images/foodimg02.jpg') no-repeat center/cover; 
+}
+.foodimg03{
+	background: url('../images/foodimg03.jpg') no-repeat center/cover; 
+}
+.foodimg04{
+	background: url('../images/foodimg04.jpg') no-repeat center/cover; 
+}
+.foodimg05{
+	background: url('../images/foodimg05.jpg') no-repeat center/cover; 
+}
+.foodimg06{
+	background: url('../images/foodimg06.jpg') no-repeat center/cover; 
+}
+.nameblock{
+	max-width: 130px;
+	position: absolute;
+    right: 0;
+    bottom: 0;
+}
+/*景點*/
+.viewimg01{
+	background: url('../images/viewimg01.jpg') no-repeat center/cover; 
+}
+.viewimg02{
+	background: url('../images/viewimg02.jpg') no-repeat center/cover; 
+}
+.viewimg03{
+	background: url('../images/viewimg03.jpg') no-repeat center/cover; 
+}
+.viewimg04{
+	background: url('../images/viewimg04.jpg') no-repeat center/cover; 
+}
+.viewimg05{
+	background: url('../images/viewimg05.jpg') no-repeat center/cover; 
+}
+.viewimg06{
+	background: url('../images/viewimg06.jpg') no-repeat center/cover; 
+}
+
+/*電影介紹*/
+.movieimg01{
+	background: url('../images/movieimg01.jpg') no-repeat center/cover; 
+}
+.movieimg02{
+	background: url('../images/movieimg02.jpg') no-repeat center/cover; 
+}
+.movieimg03{
+	background: url('../images/movieimg03.jpg') no-repeat center/cover; 
+}
+.movieimg04{
+	background: url('../images/movieimg04.jpg') no-repeat center/cover; 
+}
+
+.movieleftblock{
+	background: url('../images/bg-movie.jpg') no-repeat center/cover;
+	width: 96%;
+    margin-top: 3%;
+    color: #fff;
+    font-weight: 400;
+    padding: 15% 6%;
+}
+.movieleftblock h1{
+	font-size: 35px;
+    text-align: center;
+    border-bottom: 1px solid;
+    line-height: 10vh;
+}
+.movieleftblock p{
+	padding: 10% 5%;
+    line-height: 25px;
+    letter-spacing: 2px;
+    font-weight: 200;
+}
+.movieupblock{
+	overflow: hidden;
+}
+.moviedownblock{
+	padding: 0;
+	max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+.tabs_container div.moviefun,.tabs_container div.moviecontentleft,.tabs_container div.moviecontentright{
+	margin: 0;
+}
+.moviemobilecontent{
+	display: none;
+}
+.moviecontentleft{
+	max-width: 250px;
+	width: 20%;
+	float: left;
+}
+.moviecontentright{
+	max-width: 750px;
+	width: 80%;
+	float: left;
+}
+@media (max-width:1260px){
+	#menu a{
+		padding:0px;
+	}
+	#menu{
+		margin-top: 1vw;
+	}
+	.pageTT{
+		padding-top: 30%;
+	}
+	.tabs_container {
+	    padding: 5px;
+	}
+	#foodtabs p,#viewtabs p,#movietabs p{
+		width: 90%;
+	}
+}
+@media (max-width:1024px){
+	.logo img{
+		max-width: 180px;
+	}
+	.pcmenu{
+		display: none;
+	}
+	.mobilemenu{
+		display: block;
+	}
+	#menu{
+	    overflow: hidden;
+	    transition: right 1s;
+	    position: absolute;
+	    z-index: 9999;
+    	top: 0;
+    	right: -100vw;
+    	width: 100%;
+    	height: 100vh;
+	    background:#fafafa;
+	    margin-top: 0;
+	}
+	#menu ul{
+		max-width:none;
+		margin-top: 65px;
+		display: block;
+	}
+	#menu ul li{
+	    float: none;
+	    /*border-top: 1px solid rgba(255, 240, 187, 0.4);*/
+	}
+	#menu a{
+		padding: 0px; 
+    	max-width: 200px;
+    	text-align: center;
+	}
+	#menu li:nth-child(1){
+		max-width: 100px;
+		text-align: center;
+	}
+	#menubtn{
+	    display: block;
+	    cursor: pointer;
+	}
+	#menu.menu-show{
+		right: 0;
+	    height: 100vh;
+	}
+	.imgspace ul{
+		width: 101%;
+	}
+	.movieleftblock p{
+		font-size: 1.4vw;
+	}
+
+}
+@media (max-width: 768px){
+	.banner{
+		background: url('../images/banner-m.png') no-repeat top/contain;
+	}
+	.slidercontent,.sliderlogo{
+		display: none;
+	}
+	.rightblock{
+		width: 100%;
+	}
+	.sliderblock {
+	    position: absolute;
+	    bottom: 85px;
+	    height: auto;
+	}
+	.leftblock{
+		width: 100%;
+		background: #e1e1e1;
+	}
+	.slidermain{
+		padding:0;
+	}
+	.videoblock{
+		max-width: 520px;
+	}
+	.videoblock a{
+		display: block;
+		overflow: hidden;
+	}
+	.btnvideo {
+	    margin: 15% auto;
+	}
+	/*美食區*/
+	/*body{
+		position: relative;
+	}*/
+	.tabs_container{
+		background: transparent;
+		padding:0;
+	}
+	.tabs_container div{
+		top: 0;
+		left: 0;
+		right: 0;
+    	height: 100vh;
+		margin-top:0;
+		position: absolute;
+    	z-index: 9999;
+    	background: #fff;
+	}
+	.pageTT{
+		padding:0;
+	}
+	.pageTTm{
+		display: block;
+		max-width: 300px;
+	}
+	.tabs_container div.btnclose{
+		max-width: 50px;
+		right: 1%;
+		left: auto;
+		cursor: pointer;
+		z-index: 1000;
+		background: transparent;
+	}
+	#foodtabs li,#viewtabs li,#movietabs li{
+		height: 26.8vh;
+	}
+	/*電影*/
+	.movieleftblock{
+		width: 100%;
+		margin: 0;
+		padding: 0 2%;
+	}
+	.moviemobile{
+		height: 35vh
+	}
+	.movieleftblock p{
+		font-size: 15px;
+		padding: 2%;
+    	line-height: 21px;
+	}
+	.movieleftblock h1{
+		font-size: 25px;
+		line-height: 6vh;
+	}
+	.moviecontentleft{
+		display: none;
+	}
+	.tabs_container div.moviecontentright{
+		left: 0;
+	    right: 0;
+	    margin: 0 auto;
+	    top: 25vh;
+	    width: 100%;
+	}
+}
+@media (max-width: 640px){
+	.moviepccontent{
+		display: none;
+	}
+	.moviemobilecontent{
+		display: block;
+	}
+	.movieleftblock p {
+	    font-size: 18px;
+	    padding: 2%;
+	    line-height: 28px;
+	    text-align: justify;
+	}
+}
+@media (max-width: 485px){
+	.banner{
+		background: url('../images/banner-m2.jpg') no-repeat top/contain #e1e1e1;
+	}
+	.sectionblock{
+		padding-bottom: 13vh;
+	}
+}
+@media (max-width: 375px){
+	#foodtabs li,#viewtabs li,#movietabs li{
+	    height: 25vh;
+	}
+	.imgcontent{
+		padding: 8vh 1em;
+	}
+	.movieleftblock h1{
+		font-size: 20px;
+	}
+	.movieleftblock p {
+	    font-size: 15px;
+	    padding: 2%;
+	    line-height: 21px;
+	    text-align: justify;
+	}
+}
