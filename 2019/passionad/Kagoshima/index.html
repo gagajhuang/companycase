@@ -1,1 +1,436 @@
+<!--@license http://powerful-ad.com/test/gagatest/gpl-3.0.txt-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0">
+	<title>悠遊鹿兒島</title>
+	<!--main-->
+	<link rel="stylesheet" href="assets/owlcarousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="assets/owlcarousel/owl.theme.default.min.css">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/fullpage/fullpage.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/fancybox/jquery.fancybox.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/hoverstyle.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<nav>
+       	<div class="logo">
+       		<a href="http://www.kagoshima-yokanavi.jp/chinese_t/index.html" target="_blank"><img src="images/logo.png"></a>
+       	</div>
+       	<div id="menubtn"><img src="images/menu.png"></div>
+       	<div id="menu" class="pcmenu">
+			<ul>
+				<li data-menuanchor="page1"><a href="#page1"><img src="images/menu-index.png"></a></li>
+				<li data-menuanchor="page2"><a href="#page2"><img src="images/menu-food.png"></a></li>
+				<li data-menuanchor="page3"><a href="#page3"><img src="images/menu-view.png"></a></li>
+				<li data-menuanchor="page4"><a href="#page4"><img src="images/menu-movie.png"></a></li>
+				<li><a href="http://bit.ly/2Ew2al9" target="_blank"><img src="images/menu-fb.png"></a></li>
+			</ul>
+       	</div>
+    </nav>
+    <!--手機板menu-->
+    <div id="menu" class="mobilemenu">
+    	<div class="closemenu"><img src="images/menuback.png"></div>
+			<ul>
+				<li data-menuanchor="page1"><a href="#page1"><img src="images/menu-index.png"></a></li>
+				<li data-menuanchor="page2"><a href="#page2"><img src="images/menu-food.png"></a></li>
+				<li data-menuanchor="page3"><a href="#page3"><img src="images/menu-view.png"></a></li>
+				<li data-menuanchor="page4"><a href="#page4"><img src="images/menu-movie.png"></a></li>
+				<li><a href="http://bit.ly/2Ew2al9" target="_blank"><img src="images/menu-fb.png"></a></li>
+			</ul>
+       	</div>
+	<div id="fullpage" class="allsection">
+		<!--首頁-->
+		<div class="section">
+			<div class="sectionblock">
+				<div class="leftblock sliderblock">
+					<div class="sliderlogo"><img src="images/carousel-logo.png"></div>
+					<div class="slidermain">
+						<div class="slidercontent">
+							<div class="owl-carousel">
+							  <div><img src="images/carousel-lmg01.jpg"></div>
+							  <div><img src="images/carousel-lmg02.jpg"></div>
+							  <div><img src="images/carousel-lmg03.jpg"></div>
+							  <div><img src="images/carousel-lmg04.jpg"></div>
+							  <div><img src="images/carousel-lmg05.jpg"></div>
+							</div>
+						</div>
+						<div class="videoblock">
+							 <div>
+				                <a id="fullvideo" data-fancybox="video" data-width="100%" data-height="100%" href="video.mp4">
+				                    <div class="videomask card-img-top img-fluid">
+				                        <div class="btnvideo">
+				                            <img src="images/btn-play.png">
+				                        </div>
+				                    </div>
+				                </a>
+				            </div>
+						</div>
+					</div>
+				</div>
+				<div class="rightblock banner">
+					<iframe src="animate/index.html"></iframe>
+					<!-- <div class="bg-container snowy"></div> -->
+				</div>
+			</div>
+		</div>
 
+		<!--美食區-->
+		<div class="section">
+			<div class="sectionblock">
+				<div id="foodtabs">
+					<div class="tabs_container leftblock">
+						<img class="pageTTm" src="images/page-food-m.png">
+						<div class="pageTT">
+							<img src="images/page-food.png">
+						</div>
+						<div id="tabs1" class="funact">
+							<div class="btnclose"><img src="images/btn-close.png"></div>
+							<img src="images/page-food01.png">
+							<p>「黑豬」指得是飼養於鹿兒島，外觀看起來黑黑的純種Berkshire豬。<br>
+							鹿兒島的黑豬又是知名高品質豬肉，不僅沒有豬肉的腥味，相當順口也是其特徵。<br>
+							黑豬的料理方式有相當多種，可做成涮涮鍋，或者是炸豬排，請實際品嚐看看它與一般豬肉的品質差異到底為何吧！</p>
+						</div>
+						<div id="tabs2" class="funact">
+							<div class="btnclose"><img src="images/btn-close.png"></div>
+							<img src="images/page-food02.png">
+							<p>榮獲和牛奧林匹克日本第一殊榮的鹿兒島黑牛，一口咬下肉的時候，脂肪的甜味、鮮味還有香氣瞬間在嘴巴裡擴散開來，而且還能同時感受到肌肉纖維散開來時的口感。<br>
+							黑毛和牛的脂肪和橄欖油相同都擁有豐富的油酸，能夠幫助血液循環變得更順暢。而且還擁有多種能夠提升免疫能力與骨質密度的營養素。</p>
+						</div>
+						<div id="tabs3" class="funact">
+							<div class="btnclose"><img src="images/btn-close.png"></div>
+							<img src="images/page-food03.png">
+							<p>宛如雪花般的冰品上淋上甜滋滋的煉乳，再將水果放在上面，可愛的熊就出現了！<br>
+							先別急著吃，非常適合拍照打卡喔～相較於日本一般的刨冰，白熊冰顯得豐富許多，不僅吃得到散發淡淡奶香的冰涼滋味，也放入各式各樣的水果，繽紛的色彩增加了視覺效果，也使口感更上一層樓。</p>
+						</div>
+						<div id="tabs4" class="funact">
+							<div class="btnclose"><img src="images/btn-close.png"></div>
+							<img src="images/page-food04.png">
+							<p>屋台村內有25家店鋪,每家店鋪約8個座位，有各式各樣內容豐富的小店，可以品嘗最道地鹿兒島季節食材以及鄉土料理等。<br>
+							小店內跟店員及其他客人聊天，感受到鹿兒島滿滿的人情味！</p>
+						</div>
+						<div id="tabs5" class="funact">
+							<div class="btnclose"><img src="images/btn-close.png"></div>
+							<img src="images/page-food05.png">
+							<p>鹿兒島拉麵用特產黑豬骨、雞肋、鰹魚加洋蔥紅蘿蔔熬煮成湯底，完美結合，湯頭香醇濃郁，搭配彈Q的麵條，顛覆對於日式拉麵的想像。</p>
+						</div>
+						<div id="tabs6" class="funact">
+							<div class="btnclose"><img src="images/btn-close.png"></div>
+							<img src="images/page-food06.png">
+							<p>鹿兒島由於擁有優良的水質與溫暖的氣候，鰻魚的養殖量可是日本第一。<br>
+							鹿兒島的鰻魚擁有無臭腥味且肉質柔軟的最高品質而自豪。當熱騰騰的炭火炙燒鰻魚送上桌，完全讓你無法抵擋。</p>
+						</div>
+					</div>
+					<div class="rightblock imgspace">
+						<ul>
+							<div class="col2">
+								<a href="#tabs1">
+									<li class="foodimg01">
+										<div class="nameblock"><img src="images/foodname01.png"></div>
+										<div class="imgcontent">
+											<h2>黑豬</h2>
+											<p>點擊觀看內容</p>
+										</div>
+									</li>
+								</a>
+							</div>
+							<div class="col2">
+								<a href="#tabs2">
+									<li class="foodimg02">
+										<div class="nameblock"><img src="images/foodname02.png"></div>
+										<div class="imgcontent">
+											<h2>黑毛和牛</h2>
+											<p>點擊觀看內容</p>
+										</div>
+									</li>
+								</a>
+							</div>
+							<div class="col2">
+								<a href="#tabs3">
+									<li class="foodimg03">
+										<div class="nameblock"><img src="images/foodname03.png"></div>
+										<div class="imgcontent">
+											<h2>白熊冰</h2>
+											<p>點擊觀看內容</p>
+										</div>
+									</li>
+								</a>
+							</div>
+							<div class="col2">
+								<a href="#tabs4">
+									<li class="foodimg04">
+										<div class="nameblock"><img src="images/foodname04.png"></div>
+										<div class="imgcontent">
+											<h2>屋台村</h2>
+											<p>點擊觀看內容</p>
+										</div>
+									</li>
+								</a>
+							</div>
+							<div class="col2">
+								<a href="#tabs5">
+									<li class="foodimg05">
+										<div class="nameblock"><img src="images/foodname05.png"></div>
+										<div class="imgcontent">
+											<h2>拉麵</h2>
+											<p>點擊觀看內容</p>
+										</div>
+									</li>
+								</a>
+							</div>
+							<div class="col2">
+								<a href="#tabs6">
+									<li class="foodimg06">
+										<div class="nameblock"><img src="images/foodname06.png"></div>
+										<div class="imgcontent">
+											<h2>鰻魚</h2>
+											<p>點擊觀看內容</p>
+										</div>
+									</li>
+								</a>
+							</div>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--風景區-->
+		<div class="section">
+			<div class="sectionblock">
+				<div id="viewtabs">
+					<div class="tabs_container leftblock">
+						<img class="pageTTm" src="images/page-view-m.png">
+						<div class="pageTT">
+							<img src="images/page-view.png">
+						</div>
+						<div id="tabs7" class="funact">
+							<div class="btnclose"><img src="images/btn-close.png"></div>
+							<img src="images/page-view01.png">
+							<p>鹿兒島的象徵-櫻島是世界上屈指可數的活火山，曾多次出現大的噴發。<br>其中，大正大噴發（1914年），掩埋400公尺的海峽，與對岸的大隅半島陸地連接一起。<br>山腰上建有可眺望山頂的展望台，可近距離感受偶爾噴煙的活火山之活力。</p>
+						</div>
+						<div id="tabs8" class="funact">
+							<div class="btnclose"><img src="images/btn-close.png"></div>
+							<img src="images/page-view02.png">
+							<p>在錦江灣體驗獨木舟，能夠用最特別的視角感受火山的熔岩與煙霧，而清澈的海水中不時會有海底生物跟你互動，還有機會登上無人島探險。</p>
+						</div>
+						<div id="tabs9" class="funact">
+							<div class="btnclose"><img src="images/btn-close.png"></div>
+							<img src="images/page-view03.png">
+							<p>位於櫻島渡輪碼頭旁，以當地及鹿兒島南部其他島嶼的海洋生物為主。<br>
+							其中最令人印象深刻的是其巨大的黑潮水漕，養殖了大小的魚類，還有巨型鯨鯊。<br>
+							其他展區可看到海獺、巨型螃蟹、珊瑚礁、電鰻和紅樹林。<br>
+							而每天三場海豚表演也是不能錯過的經典。</p>
+						</div>
+						<div id="tabs10" class="funact">
+							<div class="btnclose"><img src="images/btn-close.png"></div>
+							<img src="images/page-view04.png">
+							<p>走在昭和年代的小巷中，發現有需多居酒屋、餐廳等，如果你喜歡老房子的氛圍，這裡絕對是你殺底片的口袋景點。</p>
+						</div>
+						<div id="tabs11" class="funact">
+							<div class="btnclose"><img src="images/btn-close.png"></div>
+							<img src="images/page-view05.png">
+							<p>1867年，明治維新正如火如荼展開，島津忠義在鹿兒島創立日本第一個機械化紡織廠，並向英國購買紡織機械，聘請7位英國技師前來指導，並興建這棟木造洋式建築作為宿舍，因居住者是外國人，又被稱為「異人館」並於2009年收錄於世界遺產暫定名錄。</p>
+						</div>
+						<div id="tabs12" class="funact">
+							<div class="btnclose"><img src="images/btn-close.png"></div>
+							<img src="images/page-view06.png">
+							<p>仙巖園又稱「磯庭園」，是歷代薩摩藩主的別墅，是第19代當家島津光久於1658年修建，經後代多次改建。<br>其中用借景的方式，以以錦江灣作為池塘、櫻島火山化為假山，搭配實際的庭園造景，只要坐在宅邸內，就可飽覽天然山海美景，也是熱門日據篤姬拍攝地點。</p>
+						</div>
+					</div>
+					<div class="rightblock imgspace">
+						<ul>
+							<div class="col2">
+								<a href="#tabs7">
+									<li class="viewimg01">
+										<div class="nameblock"><img src="images/viewname01.png"></div>
+										<div class="imgcontent">
+											<h2>櫻島</h2>
+											<p>點擊觀看內容</p>
+										</div>
+									</li>
+								</a>
+							</div>
+							<div class="col2">
+								<a href="#tabs8">
+									<li class="viewimg02">
+										<div class="nameblock"><img src="images/viewname02.png"></div>
+										<div class="imgcontent">
+											<h2>獨木舟</h2>
+											<p>點擊觀看內容</p>
+										</div>
+									</li>
+								</a>
+							</div>
+							<div class="col2">
+								<a href="#tabs9">
+									<li class="viewimg03">
+										<div class="nameblock"><img src="images/viewname03.png"></div>
+										<div class="imgcontent">
+											<h2>水族館</h2>
+											<p>點擊觀看內容</p>
+										</div>
+									</li>
+								</a>
+							</div>
+							<div class="col2">
+								<a href="#tabs10">
+									<li class="viewimg04">
+										<div class="nameblock"><img src="images/viewname04.png"></div>
+										<div class="imgcontent">
+											<h2>名山堀</h2>
+											<p>點擊觀看內容</p>
+										</div>
+									</li>
+								</a>
+							</div>
+							<div class="col2">
+								<a href="#tabs11">
+									<li class="viewimg05">
+										<div class="nameblock"><img src="images/viewname05.png"></div>
+										<div class="imgcontent">
+											<h2>異人館</h2>
+											<p>點擊觀看內容</p>
+										</div>
+									</li>
+								</a>
+							</div>
+							<div class="col2">
+								<a href="#tabs12">
+									<li class="viewimg06">
+										<div class="nameblock"><img src="images/viewname06.png"></div>
+										<div class="imgcontent">
+											<h2>山巖園</h2>
+											<p>點擊觀看內容</p>
+										</div>
+									</li>
+								</a>
+							</div>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--電影區-->
+		<div class="section">
+			<div class="sectionblock">
+				<div class="leftblock moviemobile">
+					<div class="movieleftblock">
+						<h1>電影介紹</h1>
+						<p class="moviepccontent">年輕⼈共同的功課就是「出⾨找⾃⼰」，不隨「緣」⾛⼀回，就無法安「份」過⼀輩⼦。追尋「外緣」之後，可能安於「本份」，回歸原本的⽣命軌道，可能改變了原來的⽣命軌跡，卻也無憾，因為這就是青春。<br><br>
+
+    					女孩冬冬糊裡糊塗地去了⽇本就學，女孩希敏初次離家，來到台灣古都-台南⼯作，25歲的她們初次離家獨⽴⾯對⽣活與⾃⼰，⼀是初次獨⽴勇敢⽣活，⼀是遇⾒愛情勇敢去愛，各⾃開始獨⽴⾶翔。<br><br>
+
+    					她們迎接異⽂化的洗鍊，重新思索⽣命⾯貌，衝擊原有的價值體系，她們⼤膽衝撞，成就⾃⼰的舞台，隨著⾃⼰的節奏，開始輕舞屬於⾃⼰的⼈⽣。</p>
+    					<p class="moviemobilecontent">女孩冬冬糊裡糊塗地去了⽇本就學，女孩希敏初次離家，來到台灣古都-台南⼯作，25歲的她們初次離家獨⽴⾯對⽣活與⾃⼰，她們迎接異⽂化的洗鍊，重新思索⽣命⾯貌，她們⼤膽衝撞原有的價值體系，隨著⾃⼰的節奏，開始輕舞屬於⾃⼰的⼈⽣。</p>
+					</div>
+				</div>
+				<div class="rightblock imgspace">
+					<div id="movietabs">
+						<div class="movieupblock">
+							<ul>
+								<div class="col2">
+									<a href="#tabs13">
+										<li class="movieimg01">
+											<div class="nameblock"><img src="images/moviename01.png"></div>
+											<div class="imgcontent">
+												<h2>平川遊樂園</h2>
+												<p>點擊觀看內容</p>
+											</div>
+										</li>
+									</a>
+								</div>
+								<div class="col2">
+									<a href="#tabs14">
+										<li class="movieimg02">
+											<div class="nameblock"><img src="images/moviename02.png"></div>
+											<div class="imgcontent">
+												<h2>一之宮神社</h2>
+												<p>點擊觀看內容</p>
+											</div>
+										</li>
+									</a>
+								</div>
+								<div class="col2">
+									<a href="#tabs15">
+										<li class="movieimg03">
+											<div class="nameblock"><img src="images/moviename03.png"></div>
+											<div class="imgcontent">
+												<h2>城山瞭望台</h2>
+												<p>點擊觀看內容</p>
+											</div>
+										</li>
+									</a>
+								</div>
+								<div class="col2">
+									<a href="#tabs16">
+										<li class="movieimg04">
+											<div class="nameblock"><img src="images/moviename04.png"></div>
+											<div class="imgcontent">
+												<h2>居酒屋</h2>
+												<p>點擊觀看內容</p>
+											</div>
+										</li>
+									</a>
+								</div>
+							</ul>
+						</div>
+						<div class="tabs_container moviedownblock">
+							<!-- <img class="pageTTm" src="images/page-view-m.png"> -->
+							<div id="tabs13" class="funact moviefun">
+								<div class="btnclose"><img src="images/btn-close.png"></div>
+								<div class="moviecontentleft"><img src="images/page-movie.png"></div>
+								<div class="moviecontentright">
+									<img src="images/page-movie01.png">
+									<p>「平川動物園」是自然資源豐富的南國--鹿兒島的動物園，園內生活著約130種1000隻動物。<br>能近距離看見長頸鹿悠閒的散步，還有稀有的白老虎。<br>
+									除了與動物互動外，不能錯過各種遊樂設施，如高達40公尺的摩天輪、飛行船與碰碰車等。</p>
+								</div>
+							</div>
+							<div id="tabs14" class="funact moviefun">
+								<div class="btnclose"><img src="images/btn-close.png"></div>
+								<div class="moviecontentleft"><img src="images/page-movie.png"></div>
+								<div class="moviecontentright">
+									<img src="images/page-movie02.png">
+									<p>鹿兒島市區最古老的神社，於西元626年間，由大化革新-天智天皇所建造，而且在統治薩摩番的島津家族中，也有很很崇高的地位，因此每年元旦都會前往一之宮神社參拜。</p>
+								</div>
+							</div>
+							<div id="tabs15" class="funact moviefun">
+								<div class="btnclose"><img src="images/btn-close.png"></div>
+								<div class="moviecontentleft"><img src="images/page-movie.png"></div>
+								<div class="moviecontentright">
+									<img src="images/page-movie03.png">
+									<p>城山是鹿兒島最高的山，位於鹿兒島市區的正中央。<br>
+									從海拔107公尺的瞭望台可以將鹿兒島市區和遠方裊裊冒煙的櫻島活火山一覽無遺，是個讓人放鬆心情的地方。<br>
+									由城山觀望的夜景很也十分有名，可以毫無阻礙地將夜景盡收眼底，是欣賞鹿兒島夜景的最佳景點。</p>
+								</div>
+							</div>
+							<div id="tabs16" class="funact moviefun">
+								<div class="btnclose"><img src="images/btn-close.png"></div>
+								<div class="moviecontentleft"><img src="images/page-movie.png"></div>
+								<div class="moviecontentright">
+									<img src="images/page-movie04.png">
+									<p>如果你喜歡日本燒酒，一定會愛上這裡，店中有鹿兒島縣內1500支以上的燒酒，完全能滿足你對於燒酒口味與喜好，是鹿兒島知名的燒酒專賣店。</p>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	<!--js-->
+	<script src="assets/jquery-1.12.4.min.js"></script>
+	<script src="assets/fullpage/fullpage.min.js"></script>
+	<script src="assets/owlcarousel/owl.carousel.min.js"></script>
+	<script src="assets/fancybox/jquery.fancybox.min.js"></script>
+	<script src="assets/tabulous.js"></script>
+	<script src="assets/tabulousmovie.js"></script>
+
+	<script src="js/main.js"></script>
+</body>
+</html>
