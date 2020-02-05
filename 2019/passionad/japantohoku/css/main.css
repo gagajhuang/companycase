@@ -1,0 +1,815 @@
+body{
+    background: #d8231f;
+    /*overflow: hidden;*/
+}
+
+header{
+    background: #caa851;
+}
+nav{
+    max-width: 1280px;
+    margin:0 auto;
+    cursor: pointer;
+}
+nav,nav ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+nav ul img{
+    max-width: 120px;
+    width: 100%;
+}
+.col2{
+    width: 50%;
+    float: left;
+}
+h6{
+    color: #000;
+    display: inline;
+}
+#menubtn{
+    display: none;
+    position: absolute;
+    z-index: 99999;
+    right: 1%;
+    top: 1%;
+    cursor: pointer;
+    width: 130px;
+}
+.iocn-fb{
+    max-width: 80px;
+    padding-top: 20px;
+}
+section{
+    max-width: 1280px;
+    margin:0 auto;
+    overflow: hidden;
+    /*height: 700px;*/
+}
+.section01{
+    background: url('../images/bg.jpg') repeat top right/contain; 
+}
+.mainleft{
+    float: left;
+    width:790px;
+    height: 720px;
+    background: url('../images/bg-circle.png') no-repeat center/cover;
+}
+.mainright,.mainrightP{
+    float: left;
+    width: 35%;
+    padding-top: 30px;
+}
+.circleimage{
+    width:120px;
+    height:120px;
+}
+
+.circleblock{
+    position:relative;
+    margin:0 auto;
+    /*padding-top: 135px;*/
+    width:100%;
+    max-width: 700px;
+    animation:run 60s linear infinite;
+    -webkit-animation:run 60s linear infinite;
+    -moz-animation:run 60s linear infinite;
+    -o-animation:run 60s linear infinite;
+}
+.wideblock{
+    width:700px;
+    height:720px;
+}
+.circleblock img{
+    position:absolute;
+    animation:run2 60s linear infinite;
+    -webkit-animation:run2 60s linear infinite;
+    -moz-animation:run2 60s linear infinite;
+    -o-animation:run2 60s linear infinite;
+    cursor: pointer;
+}
+
+.circleblock img:nth-child(2){
+    top:0;
+    left:0;
+    right: 0;
+}
+.circleblock img:nth-child(3){
+    top: 5%;
+    right: 27%;
+}
+.circleblock img:nth-child(4){
+    top: 13%;
+    right: 14%;
+}
+.circleblock img:nth-child(5){
+    top: 25%;
+    right: 6%;
+}
+.circleblock img:nth-child(6){
+    top: 42%;
+    right: 0;
+}
+.circleblock img:nth-child(7){
+    bottom: 28%;
+    right: 6%;
+}
+.circleblock img:nth-child(8){
+    bottom:13%;
+    right: 14%;
+}
+.circleblock img:nth-child(9){
+    bottom:5%;
+    right: 27%;
+}
+.circleblock img:nth-child(10){
+    bottom:0;
+    right: 0;
+    left: 0;
+}
+.circleblock img:nth-child(11){
+    bottom:5%;
+    left: 27%;
+}
+.circleblock img:nth-child(12){
+    bottom:13%;
+    left: 14%;
+}
+.circleblock img:nth-child(13){
+    bottom:28%;
+    left: 6%;
+}
+.circleblock img:nth-child(14){
+    top:42%;
+    left: 0;
+}
+.circleblock img:nth-child(15){
+    top:25%;
+    left: 6%;
+}
+.circleblock img:nth-child(16){
+    top:13%;
+    left: 14%;
+}
+.circleblock img:nth-child(17){
+    top:5%;
+    left: 27%;
+}
+/*大圈*/
+ @keyframes run {
+     0%{
+        transform:rotate(0deg)
+    }
+     100%{
+        transform:rotate(360deg)
+    }
+}
+/* @-webkit-keyframes run {
+     0%{
+        -webkit-transform:rotate(0deg)
+    }
+     100%{
+        -webkit-transform:rotate(360deg)
+    }
+}
+ @-moz-keyframes run {
+     0%{
+        -moz-transform:rotate(0deg)
+    }
+     100%{
+        -moz-transform:rotate(360deg)
+    }
+}
+ @-o-keyframes run {
+     0%{
+        -o-transform:rotate(0deg)
+    }
+     100%{
+        -o-transform:rotate(360deg)
+    }
+}*/
+/*小圈*/
+/*小圈使用-360deg 可抵消大圈的360deg*/
+ @keyframes run2 {
+     0%{
+        transform:rotate(0deg)
+    }
+     100%{
+        transform:rotate(-360deg)
+    }
+}
+/* @-webkit-keyframes run2 {
+     0%{
+        -webkit-transform:rotate(0deg)
+    }
+     100%{
+        -webkit-transform:rotate(-360deg)
+    }
+}
+ @-moz-keyframes run2 {
+     0%{
+        -moz-transform:rotate(0deg)
+    }
+     100%{
+        -moz-transform:rotate(-360deg)
+    }
+}
+ @-o-keyframes run2 {
+     0%{
+        -o-transform:rotate(0deg)
+    }
+     100%{
+        -o-transform:rotate(-360deg)
+    }
+}*/
+
+.mainright div:nth-child(2){
+    max-width: 200px;
+    margin: 0 auto;
+}
+.mainrightP p{
+    color: #fff;
+    text-align: right;    
+    padding-top: 25px;
+    font-weight: bold;
+    font-size: 20px
+}
+.mainer{
+    animation-duration: 2s;
+}
+.btn-mainer,.btn-mainer2{
+    display: flex;
+    width: 130px;
+    overflow: hidden;
+    position: absolute;
+}
+.btn-mainer{
+    left: 15px;
+}
+.btn-mainer2{
+    right: 15px;
+}
+.btn-mainer img:hover,.btn-mainer2 img:hover{
+    transform: scale(0.9);
+    transition: 0.5s;
+}
+/*分頁*/
+.bannerpage{
+    background: url('../images/bg.jpg') repeat top right/contain;
+}
+.bannerpage img:nth-child(2){
+    display: none;
+}
+.pagebg{
+    position: relative;
+    padding:10px 0;
+    background: url('../images/bg-pagination.jpg')  center/contain;
+}
+.title{
+    margin: 0 auto; 
+    max-width: 500px;
+    /*margin-bottom: 40px;*/
+}
+/*.title2{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto; 
+    max-width: 700px;
+}*/
+/*活動時間表*/
+strong{
+    font-weight: 600;
+    color: #ffffff;
+    padding: 0 10px;
+    background: #b29671;
+    line-height: 40px;
+}
+.timetable{
+    width: 90%;
+    margin: 0 auto; 
+    font-size: 18px;  
+    color: #231815;
+    text-align: center;
+    overflow-x: auto;
+}
+.wine{
+    width: 100%;
+}
+.timetitle,.wineblock{
+    width: 90%;
+    margin: 0 auto;
+}
+.timetitle img{
+    margin: 0;
+}
+.timetitle img:nth-child(2){
+    display: none;
+}
+table{
+    white-space: nowrap;
+    margin: 0 auto;
+    width:99%;
+}
+.timetable th{
+    background: url(../images/timetable-title.png) no-repeat top/cover;
+    /*background: #ceaf87;*/
+    padding: 10px 0;
+    border: none;
+    font-size: 22px;
+    line-height: 26px;
+    vertical-align: middle;
+    font-weight: 600;
+}
+.wine table{
+    white-space: normal;
+}
+.wine th{
+    font-size: 18px;
+    line-height: 20px;
+}
+.timetable td{
+    vertical-align: middle;
+    border: 2px solid #b89c78;
+    padding: 6px 5px;
+    /*width: 15%;*/
+    line-height: 24px;
+}
+.timetable tr td:nth-child(1){
+    width: 10%;
+}
+.wine tr td:nth-child(1){
+    width: auto;
+}
+.timetable tr td:nth-child(1),.timetable tr td:nth-child(3){
+    background: #fff6e9;
+}
+.timetable tr td:nth-child(2),.timetable tr td:nth-child(4){
+    background: #edddc5;
+}
+.timetext{
+    text-align: right;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+.winetable{
+    width: 60%;
+    float: left;
+}
+.winetext{
+    width: 40%;
+    float: left;
+    padding-left: 5%;
+    box-sizing: border-box;
+}
+.winetext p{
+    font-size: 20px;
+    line-height: 35px;
+}
+.winetext span{
+    color: #d8261d;
+    font-weight: 600;
+}
+.winetext a{
+    max-width: 210px;
+    transition: 0.5s;
+    /*padding-top: 10%;*/
+}
+.winetext a:hover{
+    transform: scale(0.9);
+}
+.iconban img{
+    max-width: 30px;
+    margin: 0;
+    float: left;
+}
+.iconban p{
+    font-size: 18px;
+    line-height: 28px;
+}
+/*東北旅遊行程*/
+.companyblock{
+    overflow: hidden;
+    width: 86%;
+    margin: 0 auto;
+}
+.companyimg{
+    max-width: 550px;
+}
+.companyimg a:hover{
+    transition: 0.5s;
+    transform:scale(0.9);
+}
+.companyimg:nth-child(3){
+    margin-top: -45px;
+}
+.companyimg:nth-child(4){
+    margin-top: -10px;
+}
+.tigerimg{
+    position: relative;
+    padding: 30px 0 50px 0;
+}
+.tigerimg img{
+    max-width: 700px;
+    margin:0 auto;
+}
+.sixicon img:nth-child(1),.sixicon img:nth-child(2){
+    position: absolute;
+    max-width: 1280px;
+}
+.sixicon img:nth-child(1){
+    top: 2%;
+    right: 3%;
+}
+.sixicon img:nth-child(2){
+    top: 26%;
+    left: 5%;
+}
+.iconflower img{
+    position: absolute;
+    width: 100px;
+}
+.iconflower img:nth-child(1){
+    top: 60px;
+    left: 50px;
+}
+.iconflower img:nth-child(2){
+    right:20px;
+}
+.iconflower img:nth-child(3){
+    bottom:100px;
+    left: 50px;
+}
+/*六線介紹*/
+.sixblock{
+    position: relative;
+}
+.sixblock-mobile{
+    display: none;
+}
+.sixblock-mobile img{
+    max-width: 600px;
+}
+.sixblock img{
+    max-width: 1160px;
+}
+
+.btncontent{
+    position: absolute;
+    top: 30.5%;
+    right: 15%;
+}
+.btncontent-m{
+    position: absolute;
+    top: 32%;
+    right: 8%;
+}
+.QRcode{
+    position: absolute;
+    top: 2.5%;
+    right: 11%;
+}
+.btnban{
+    max-width: 175px;
+    position: absolute;
+    bottom: 3.2%;
+    right: 15%;
+}
+.btnban-m{
+    max-width: 150px;
+    position: absolute;
+    bottom: 0.2%;
+    right: 8%;
+}
+/*footer*/
+footer{
+    background: #fff;
+}
+.footerblock{
+    max-width: 1280px;
+    margin:0 auto;
+    overflow: hidden;
+}
+.footerlogo{
+    padding-top: 35px;
+}
+.footerlogo img{
+    max-width: 180px;
+}
+.footerlogo,.footercompany{
+    display: flex;
+    justify-content: center;
+}
+@media (max-width:1235px){
+    .mainleft{
+        float: none;
+        max-width: 950px;
+        width: 100%;
+        min-width: 800px;
+        height: 850px;
+        margin: 0 auto;
+        background: url(../images/bg-circle.png) no-repeat bottom;
+        /*background-attachment: fixed;*/
+    }
+    #menubtn{
+        display: block;
+    }
+    nav{
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height 0.5s;
+        position: absolute;
+        z-index: 100;
+        top: 7%;
+        /*left: 0;*/
+        right: 1.5%;
+        background: #caa851;
+        border-radius: 10px;
+        width: 12%;
+        min-width:90px; 
+    }
+    .menu-show{
+        max-height: 1000px;
+
+    }
+    nav, nav ul{
+        display: block;
+    }
+    nav ul li{
+        width: 100%;
+    }
+    .iocn-fb{ 
+        margin: 0 auto;
+        padding: 20px 0;
+    }
+    .circleblock{
+        max-width: 800px;
+    }
+    .wideblock{
+        width: 800px;
+        height: 800px;
+    }
+    .mainright {
+        width: 90%;
+        max-width: 500px;
+        margin: 0 auto;
+        float: none;
+    }
+    .mainrightP{
+        width: 100%;
+        margin: 0 auto;
+        float: none;
+        padding-bottom: 10px;
+    }
+     .mainrightP p{
+        text-align: center;
+     }
+
+}
+@media (max-width:960px){
+    .col2{
+        width: 100%;
+        margin: 0 auto;
+        float: none;
+    }
+    .winetable,.winetext{
+        width: 100%;
+        margin: 0 auto;
+        float: none;
+    }
+    .winetext{
+        padding-left: 0;
+    }
+    .winetext a{
+        padding-top: 0;
+    }
+    .companyimg:nth-child(3),.companyimg:nth-child(4){
+        margin-top: 0;
+    }
+    .iconflower img:nth-child(1) {
+        top: 150px;
+    }
+    .iconflower img:nth-child(2) {
+        top: 200px;
+    }
+    .iconflower img:nth-child(3){
+        bottom: 500px;
+    }
+    .sixicon{
+        display: none;
+    }
+}
+@media (max-width:800px){
+
+    .mainleft{
+        width: 100%;
+        min-width: auto;
+        height: 800px;
+    }
+    .circleblock{
+        max-width: 750px;
+    }
+    .circleimage{
+        max-width: 100px;
+        width: 100%;
+        max-height: 100px;
+        height:100%;
+    }
+    .wideblock{
+        width: 750px;
+        height: 750px;
+    }
+    table{
+        font-size: 2vw;
+    }
+    .timetable th{
+
+    }
+    .btncontent{
+        width: 100px;
+    }
+}
+@media (max-width:640px){
+    #menubtn{
+        width: 100px;
+    }
+    .mainleft{
+        background: url('../images/bg-circle.png') no-repeat center/cover;
+        height: 650px;
+    }
+    .circleblock {
+        max-width: 650px;
+    }
+    .wideblock{
+        height: 650px;
+        width: 650px;
+        margin: 0 auto;
+    }
+    .circleimage{
+        max-width: 80px; 
+        max-height: 80px;
+
+     }
+    .circleblock img:nth-child(2){
+        top: 2%;
+    }
+    .circleblock img:nth-child(10){
+        bottom: 2%;
+    }
+    .bannerpage img:nth-child(1){
+        display: none;
+    }
+    .bannerpage img:nth-child(2){
+        display: block;
+    }
+    .iconflower img:nth-child(1) {
+        left: 0vw;
+        top: 15vh
+    }
+    .iconflower img:nth-child(2) {
+        top: 60vh;
+        right: -8px;
+    }
+    .iconflower img:nth-child(3){
+        bottom: 50vh;
+        left: 5vw;
+    }
+    table{
+        font-size: 3vw;
+        line-height: 4vw;
+    }
+    .sixblock{
+        display: none;
+    }
+    .sixblock-mobile{
+        display: block;
+    }
+    .timetitle img:nth-child(1){
+        display: none;
+    }
+    .timetitle img:nth-child(2){
+        display: block;
+    }
+}
+@media (max-width:500px){
+    .wideblock{
+        height: 550px;
+        width: 550px;
+        margin: 0 auto;
+    }
+}
+@media (max-width:414px){
+    .mainleft {
+        height: 410px;
+    }
+    .btn-mainer,.btn-mainer2{
+        width: 120px;
+    }
+    .btn-mainer {
+        left: 0;
+    }
+    .btn-mainer2 {
+        right: 0;
+    }
+    .circleblock {
+        max-width: 410px;
+    }
+    .wideblock{
+        height: 410px;
+        width: 410px;
+        margin: 0 auto;
+    }
+    .wideblock{
+        height: 410px;
+        width: 410px;
+        margin: 0 auto;
+    }
+    .circleimage {
+        max-width: 65px;
+        max-height: 65px;
+    }
+    .circleblock img:nth-child(6) {
+        right: 3%;
+    }
+    .circleblock img:nth-child(14) {
+        left: 3%;
+    }
+    .circleblock img:nth-child(12) {
+        bottom: 16%;
+        left: 16%;
+    }
+    .circleblock img:nth-child(8) {
+        bottom: 15%;
+        right: 14%;
+    }
+    .circleblock img:nth-child(16){
+        left: 16%;
+    }
+    .circleblock img:nth-child(4){
+        right: 16%;
+    }
+    .btncontent-m{
+        width: 95px;
+        right: 5%;
+    }
+    .btnban-m{
+        max-width: 135px;
+    }
+}
+@media (max-width:375px){
+    .mainleft {
+        height: 375px;
+    }
+    .circleblock {
+        max-width: 375px;
+    }
+    .wideblock{
+        height: 375px;
+        width: 375px;
+        margin: 0 auto;
+    }
+    .wideblock{
+        height: 375px;
+        width: 375px;
+        margin: 0 auto;
+    }
+    #menubtn {
+        width: 85px;
+    }
+    nav{
+        min-width: 75px;
+    }
+
+}
+@media (max-width:320px){
+    .mainleft {
+        height: 320px;
+    }
+    .circleblock {
+        max-width: 320px;
+    }
+    .wideblock{
+        height: 320px;
+        width: 320px;
+        margin: 0 auto;
+    }
+    .wideblock{
+        height: 320px;
+        width: 320px;
+        margin: 0 auto;
+    }
+    .circleimage {
+        max-width: 55px;
+        max-height: 55px;
+    }
+
+}
+/*IE11專用*/
+/*@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .title2{
+        margin-left: 15vw;
+    }
+}*/
