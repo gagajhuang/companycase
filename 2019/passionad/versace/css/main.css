@@ -1,0 +1,484 @@
+header{
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 9999;
+}
+nav{
+    display: block;
+    padding: 0 3%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: #241815;
+    min-height: 45px;
+}
+.logo{
+	float: left;
+	margin: 5px 0;
+	display: flex;
+	cursor: pointer;
+}
+.logo a{
+	display: block;
+}
+.logo a:nth-child(1){
+	max-width: 140px;
+}
+.logo a:nth-child(2){
+	max-width: 110px;
+}
+.fa{
+	padding: 0 5px;
+}
+#menubtn{
+	display: none;
+	float: right;
+	margin-top: 18px;
+}
+#menubtn img{
+	width: 30px;
+}
+.menu{
+	float: right;
+}
+.menu a{
+	display: block;
+	padding:0 10px;
+	color: #fff;
+	line-height: 75px;
+}
+.menu a:hover{
+	color: #89b3dd;
+}
+.menu ul li{
+	float: left;
+	font-size: 18px;
+}
+/*menu結束*/
+
+
+#bannerblock,.bannerTT,article,.bannerbtn,.titleblcok,.restaurantblock,.scheduleblock,.suppliesright,.suppliesleft,.popboxblock p{
+	margin: 0 auto;
+	width: 100%;
+}
+/*統一區塊*/
+
+#bannerblock{
+	background: url('../images/banner-pc.jpg') no-repeat center/cover;
+	height: 100vh;
+	position: relative;
+}
+.bannerTT{
+	max-width: 800px;
+	padding-top:7%;
+}
+.bannercontent{
+	max-width: 250px;
+	position: absolute;
+	top: 8%;
+	right: 0;
+}
+.bannerbtn{
+	max-width: 130px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	animation-duration: 2s;
+}
+.btnbuy{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index: 999;
+	transition: 0.5s;
+}
+.btninfor{
+	position: fixed;
+	bottom: 150px;
+	right: 35px;
+	z-index: 999;
+	transition: 0.5s;
+	/*animation-duration: 2s;*/
+}
+.btnbuy:hover,.btninfor:hover{
+	transform: scale(0.9);
+}
+/*banner結束*/
+
+main{
+	background: #f9f8f8;
+}
+article{
+	max-width: 1400px;
+}
+section{
+	padding-top: 60px;
+	overflow: hidden;
+}
+.conceptblock{
+	background: url('../images/bg-line02.png') repeat top/contain;
+	padding: 0 15vw;
+}
+.conceptmain{
+	display: flex;
+}
+.conceptmain img{
+	max-width: 280px;
+}
+.conceptleft{
+	width: 40%;
+}
+.conceptright{
+	width: 60%;
+	padding-top: 20px;
+}
+h1{
+	font-size: 25px;
+    font-weight: bold;
+    line-height: 50px;
+}
+h2{
+	font-size: 25px;
+    font-weight: bold;
+    line-height: 50px;
+    text-align: center;
+}
+h3{
+	font-size: 22px;
+    font-weight: bold;
+    line-height: 30px;
+}
+.conceptright p{
+	letter-spacing: 1px;
+    line-height: 25px;
+}
+.conceptimgblock,.discountblock{
+	margin-top: 3%;
+}
+.conceptimgcontent{
+	display: flex;
+	justify-content: space-around;
+	overflow: hidden;
+	margin-top: 10px;
+}
+.conceptimgcontent div+.conceptimgcontent div{
+	margin-left: 1%;
+}
+.conceptimgcontent img{
+	max-width: 250px;
+}
+.col3{
+	-moz-column-count:3; /* Firefox */
+	-webkit-column-count:3; /* Safari and Chrome */
+	column-count:3;
+	/*width: 33.3333%;
+	float: left;*/
+}
+.col2{
+	width: 48%;
+	float: left;
+}
+.col2+.col2{
+	margin-left: 2%;
+}
+.titleblcok{
+    border: 8px solid #1e1e1e;
+    max-width: 180px;
+    font-size: 30px;
+    padding: 8px;
+    text-align: center;
+    font-weight: 500;
+    margin: 2% auto;
+}
+.discountblock img{
+	max-width: 800px;
+}
+/*輪播*/
+#introcarousel{
+	position: relative;
+}
+#introcarousel .sp-selected-thumbnail {
+	/*border: 4px solid #000;*/
+	opacity: 0.5;
+	background: #000;
+}
+.sp-thumbnails-container{
+	position: absolute;
+	bottom: 0;
+	left: auto;
+	right: 0;
+	margin: 0;
+}
+.sp-bottom-thumbnails .sp-thumbnail-container, .sp-top-thumbnails .sp-thumbnail-container{
+	margin: 0;
+}
+.introcontent{
+	margin-top: 3%;
+	padding: 0 15vw;
+	height: 285px;
+	overflow: hidden;
+}
+.introcontent p{
+	line-height: 25px;
+    letter-spacing: 1px;
+    height: 285px;
+    display: table-cell;
+    vertical-align: middle;
+}
+.introcontent img{
+	max-width: 430px;
+}
+.roomblock{
+	display: flex;
+	justify-content: center;
+	padding: 0 8px;
+}
+.roomblock img{
+	max-width: 470px;
+}
+.restaurantblock{
+	max-width: 1000px;
+}
+.restaurantblock p{
+	padding: 1vw 4vw;
+    line-height: 20px;
+    letter-spacing: 1px;
+}
+
+/*備品*/
+.suppliesblock{
+	display: flex;
+	justify-content: center;
+}
+.suppliesleft{
+	max-width: 750px;
+}
+.suppliesright{
+	max-width: 550px;
+}
+.suppliesright img:nth-child(2){
+	display: none;
+}
+/*行程*/
+.scheduleblock{
+	max-width: 1200px;
+	padding: 0 8px;
+}
+.scheduleblock div{
+	max-width: 370px;
+}
+.schedulecontent{
+	padding: 0 8px
+}
+.schedulecontent p{
+	line-height: 22px;
+	min-height: 15vh;
+}
+
+/*說明會*/
+.maskblock{
+	position: absolute;
+    z-index: 99999;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    margin: 0;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.popbox{
+	position: relative;
+    max-width: 900px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 20vh auto 0 auto;
+    padding: 70px 20px 20px 20px;
+    overflow: hidden;
+}
+.popboxblock{
+    max-width: 900px;
+    letter-spacing: 1px;
+    background: #fff;
+    border: 26px double #000;
+}
+.popboxblock p{
+	max-width: 800px;
+    font-size: 22px;
+    line-height: 30px;
+    padding: 0 4%;
+}
+
+.closebox{
+	position: absolute;
+    right: 37px;
+    top: 87px;
+    cursor: pointer;
+}
+.signupblock{
+	display: flex;
+}
+.signupblock a{
+	display: block;
+	max-width: 400px;
+    transition: 0.2s;
+}
+.signupblock a:hover{
+	transform: scale(0.9);
+}
+@media (max-width: 1024px){
+	#block02{
+		padding:60px 8px 0 8px;
+	}
+	.introcontent{
+		padding: 0;
+	}
+}
+@media (max-width:960px){
+	nav{
+		padding: 0 1%;
+	}
+	.logo {
+	    margin: 8px 0;
+	}
+	.logo a:nth-child(1){
+		max-width: 110px;
+	}
+	.logo a:nth-child(2){
+		max-width: 90px;
+	}
+}
+@media (max-width:768px){
+	.menu{
+	    max-height: 0px;
+	    overflow: hidden;
+	    transition: max-height 0.5s;
+	    position: absolute;
+	    z-index: 100;
+	    top: 68px;
+	    left: 0;
+	    right: 0;
+	    background:#241715;
+	}
+	.menu ul li{
+	    float: none;
+	    border-top: 1px solid #4d4d4d;
+	}
+	#menubtn{
+	    display: block;
+	    cursor: pointer;
+	}
+	.menu-show{
+	    max-height: 1000px;
+	    /*box-shadow: 0px 8px 20px #cecece;*/
+	}
+	.menu a{
+    	line-height: 60px;
+	}
+	#bannerblock{
+		background: url('../images/banner-m.jpg') no-repeat center/cover;
+	}
+	.bannercontent{
+		display: none;
+	}
+	.bannerTT{
+		padding-top: 8vh;
+	}
+	/*介紹*/
+	.conceptblock,.introcontent {
+	    padding: 0 6vw;
+	}
+	.conceptmain{
+		display: block;
+	}
+	.conceptleft{
+		width: 100%;
+	}
+	.conceptright{
+		width: 100%;
+		padding-top: 0;
+		text-align: center;
+	}
+	.conceptimgblock, .discountblock{
+		margin-top: 12%;
+	}
+	h2{
+		line-height: 35px;
+	}
+	.col2{
+		width: 100%;
+	}
+	.col2+.col2{
+		margin-left:0;
+	}
+	.sp-thumbnails{
+		display: none;
+	}
+	.introcontent,.introcontent p{
+		height: auto;
+		text-align: center;
+	}
+	/*客房*/
+	.roomblock,.suppliesblock{
+		display: block;
+	}
+	.col3{
+		-moz-column-count:2; /* Firefox */
+		-webkit-column-count:2; /* Safari and Chrome */
+		column-count:2;
+	}
+	.suppliesright img:nth-child(1){
+		display: none;
+	}
+	.suppliesright img:nth-child(2){
+		display: block;
+	}
+	.btnbuy {
+	    max-width: 110px;
+	}
+	.btninfor{
+		bottom: 110px;
+		right: 15px;
+	}
+}
+@media (max-width:414px){
+	.bannerTT {
+	    padding-top: 15vh;
+	}
+	.conceptimgcontent{
+		display: block
+	}
+	.conceptright p{
+		text-align: left;
+	}
+	.introcontent{
+		padding: 0;
+	}
+	.col3 {
+	    -moz-column-count: 1;
+	    -webkit-column-count: 1;
+	    column-count: 1;
+	}
+	.popbox{
+		margin: 0 auto;
+	}
+	.popboxblock p {
+	    font-size: 16px;
+	    line-height: 22px;
+	}
+	.signupblock{
+		display: block
+	}
+	.popboxblock {
+	    border: 20px double #000;
+	}
+	.popboxblock >.titleblcok{
+		border: 5px solid #1e1e1e;
+	    max-width: 120px;
+	    font-size: 20px;
+	}
+}
