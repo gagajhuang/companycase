@@ -1,0 +1,118 @@
+/*主選單*/
+html,body{
+      font-family:Arial, Helvetica, sans-serif, "微軟正黑體";
+      -webkit-text-size-adjust:none;}
+
+
+
+      .navbar {border-radius:0px;}
+      .navbar-right {margin-right:20px;}
+      .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus{
+        background-color: #111;
+        color:#fcc61d;
+
+      }
+
+      .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus{
+        background-color: #313131;
+        color:#fcc61d;
+
+      }
+
+
+
+
+
+     /*@media (min-width: 380px)and (max-width:1285px){.container {width: 99.8vw;}}*/
+      
+
+
+      .abc {
+        min-width:470px;
+        border-radius:0px;
+        height:80px;
+        z-index:9999 !important;
+      }
+      
+      /*選單文字設定*/
+      .abc ul li {
+        font-size:1.2em;
+        margin:12px 0px;
+        letter-spacing:1px;
+        line-height:40px;
+      }
+
+      .navbar-inverse {background-color:#313131 !important;}
+      .navbar-brand{height:80px;}
+      .navbar-inverse .navbar-nav>li>a {
+        color:#F0F0F0;
+      }
+      .navbar-inverse .navbar-nav>li>a:hover{
+        color:#fcc61d;
+        background-color:#2a2a2a;
+        transition:all 0.6s;
+      }
+
+/*下拉選單設定*/
+      .dropdown-menu {
+        background-color: #313131;
+        z-index:999;
+
+      }
+
+      .dropdown-menu>li>a {
+        background-color: #313131;
+        color: #F0F0F0;
+      }
+
+      .dropdown-menu>li>a:hover {
+        background-color: #2a2a2a;
+        color:#fcc61d;
+        transition:all 0.6s;
+      }
+
+      .navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
+    max-height: 600px;
+}
+
+/*漢堡設定*/
+
+      .bcd {
+        background-color:#313131 !important;
+        margin-top:-5px;
+        z-index:999;
+      }
+      .bcd a:hover{background-color:#2a2a2a !important;}
+
+      .navbar-inverse .navbar-toggle {
+        border-color: #f7ae1f !important;}
+      .navbar-inverse .navbar-toggle:hover,
+      .navbar-inverse .navbar-toggle:focus {
+        border-color: #f7ae1f !important;
+        background-color: #f7ae1f!important;}
+      
+      .navbar-toggle {
+        margin-top:4px;
+        margin-right:5px;
+        border-radius:0px;
+        background-color:#f7ae1f;
+        padding:28px 19px;
+      }
+
+ /*漢堡位置
+         @media (min-width: 360px)and (max-width:991px){
+                  .navbar-toggle{margin-right:10px; }}*/
+
+
+
+
+#toTop {
+        display: block;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        width: 48px;
+        height: 48px;
+        background: url(../images/top_move.png) no-repeat 0px 0px;
+        background-size:cover;
+      }
