@@ -1,0 +1,154 @@
+.col5,
+.col5:hover{
+	width: 20%;
+	float: left;
+	transition: 0.3s;
+	cursor: pointer;
+	
+	transform: scale(1);
+	opacity: 1;
+}
+.col5.active{
+	
+	transform: scale(0.95);
+	opacity: 0.5;
+}
+
+.activityshare{
+	position:relative;
+	/* max-width: 900px; */
+	/* margin: 0 auto; */
+	/* height: 480px; */
+    /* background: url(../images/bg-share.png) no-repeat center top/cover; */
+}
+.shareimg{
+	position:relative;
+	max-width:700px; 
+	margin: 0 auto;
+    padding-top: 0;
+    top: 60px;
+}
+.shareimg canvas{
+	position:relative;
+	width:100% !important;
+}
+.shareimg img{
+	position:relative;
+	width:100% !important;
+}
+
+@media (max-width:769px){
+	.activityshare {
+		position:relative;
+		/* height:auto; */
+	    /* background: url(../images/bg-share.png) no-repeat center top/contain; */
+	}
+	.shareimg{
+		position:relative;
+		margin: 0 auto;
+		padding: 0 0;		
+		top: 0;
+	}
+	.col5,
+	.col5:hover{
+		width: 33.333%;
+	}
+}
+@media (max-width:480px){
+	.col5,
+	.col5:hover{
+		width: 50%;
+	}
+}
+#activitydatablock .msg{
+	text-align:center;
+}
+#activitydatablock .success{
+	color:green;
+}
+#activitydatablock .error{
+	color:red;
+}
+
+.activitydata{
+	max-width: 350px;
+	padding: 50px 10px 0 10px;
+}
+.activitydata .btnsubmit{
+	margin: 10px auto 0 auto;
+}
+.activitydata .msg{
+	margin: 0 auto;
+	line-height: 25px;
+}
+
+.pop{
+	display:none;
+}
+#overlay{
+	position:fixed;
+	width:100%;
+	height:100%;
+	left:0;
+	top:0;
+	right:0;
+	bottom:0;
+	background-color:rgba(0,0,0,0.8);
+	z-index:999990;
+}
+#form-success{
+	position:fixed;
+	width:95%;
+	/* height:367px; */
+	left:0;
+	top:0;
+	right:0;
+	bottom:0;
+	margin:auto;
+	z-index:999991;
+}
+@media (min-width:768px){
+	#form-success{
+		/* position:fixed; */
+		width:693px;
+		height:367px;
+		/* left:0; */
+		/* top:0; */
+		/* right:0; */
+		/* bottom:0; */
+		/* margin:auto; */
+		/* z-index:999991; */
+	}
+}
+#form-success > img{
+	display:block;
+	width:100%;
+}
+#form-success .close-pop{
+	position:absolute;
+	width:10.82251082251082%;/*75*/
+	top:0;
+	right:0;
+	overflow:hidden;
+}
+#form-success .close-pop img{
+	display:block;
+	width:100%;
+}
+
+.sectionblock-btns{
+	position:relative;
+	text-align:center;
+	display:none;
+}
+.sectionblock-btns > div{
+	display:inline-block;
+	vertical-align:top;
+}
+
+#btn-makeshow-msg{
+	position:relative;
+	color:red;
+	text-align:center;
+	opacity:0;
+}
