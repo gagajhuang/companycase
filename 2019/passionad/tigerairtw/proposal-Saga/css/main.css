@@ -1,0 +1,321 @@
+body{
+	/*Iphone 不支overflow:hidden，有以下兩種解法*/
+	position: relative;
+	/*position: fixed;*/
+	background: url('../images/bg-body.jpg');
+}
+.col3{
+	-moz-column-count:3; /* Firefox */
+	-webkit-column-count:3; /* Safari and Chrome */
+	column-count:3;
+}
+section{
+	position: relative;
+}
+header{
+	/*height: 111vh;*/
+	overflow: hidden;
+	position: relative;
+	/*margin-top: -40px;*/
+}
+video{
+	width: 100%;
+}
+.bgline{
+	position: absolute;
+    bottom: 10px;
+    z-index: 99;
+}
+/*選單*/
+nav{
+    display: block;
+    /*padding: 10px 3%;*/
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: url('../images/bg-body.jpg');
+}
+.logo{
+	float: left;
+	padding-top: 4px;
+}
+.logo a{
+	display: block;
+}
+.logo img{
+	width: 200px;
+}
+.fa{
+	padding: 0 5px;
+}
+#menubtn{
+	display: none;
+	float: right;
+	margin-top: 8px;
+}
+#menubtn img{
+	width: 30px;
+}
+.menu{
+	margin: 8px auto 0 auto;
+	overflow: hidden;
+    max-width: 1430px;
+}
+.menu a{
+	display: block;
+	/*padding: 10px;*/
+	/*font-weight: bold;*/
+}
+.menu a:hover{
+	color: #8ba6ff;
+}
+.menu ul{
+	display: flex;
+}
+.menu ul li{
+	/*float: left;*/
+	font-size: 18px;
+	background: url(../images/menu-line.png) no-repeat right/contain;
+    padding-right: 17px;
+}
+.menu ul li:last-child{
+	background: transparent;
+}
+/*輪播*/
+.item{
+	position: relative;
+}
+.bannertiger{
+    position: absolute;
+    bottom: 12%;
+    right: 18%;
+    max-width: 300px;
+}
+
+/*主活動*/
+.menuload{
+	max-width: 1020px;
+    margin: 0 auto;
+    overflow: hidden;
+    cursor: pointer;
+}
+.menuload img{
+	max-width: 250px;
+}
+.menuload ul li{
+	float: left;
+	position: relative;
+}
+.ballon{
+	position: absolute;
+	right: 80px;
+}
+.tigeract{
+	position: absolute;
+	max-width: 120px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	top: 10px;
+}
+#block02{
+	display: none;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+}
+.block02left,.block02right{
+	float: left;
+    width: 50%;
+
+
+}
+.postcard01,.postcard02{
+	display: none;
+}
+.postcard01{
+	position: absolute;
+    top: 30%;
+    left: 9%;
+    max-width: 400px;
+}
+.postcard02{
+    position: absolute;
+    bottom: 36%;
+    right: 3%;
+    max-width: 400px;
+}
+
+/*跳窗01*/
+.maskblock{
+	position: absolute;
+    z-index: 99999;
+    display: none;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 110vh;
+    background: rgba(0,0,0,0.8);
+    margin: 0;
+    padding: 0 10px;
+    box-sizing: border-box;
+    
+}
+.popblock{
+	position: relative;
+    max-width: 900px;
+    width: 100%;
+    box-sizing: border-box;
+	background: url(../images/bg-pop.png) no-repeat top/cover;
+    margin: 20vh auto 0 auto;
+    padding: 70px 20px 20px 20px;
+    overflow: hidden;
+
+}
+
+.closebox{
+	position: absolute;
+    right: 1vw;
+    top: 42px;
+    cursor: pointer;
+}
+.btnblock{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 5%;
+}
+.btnfb,.btnnext,.btnsubmit,.btnreplay{
+	max-width: 200px;
+    transition: 0.2s;
+}
+.btnfb:hover,.btnnext:hover,.btnsubmit:hover,.btnreplay:hover{
+	transform: scale(0.9);
+}
+.pop02block{
+	display: none;
+}
+
+/*異業合作*/
+.maskblock2{
+	position: absolute;
+    z-index: 99999;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    margin: 0;
+    padding: 0 10px;
+    box-sizing: border-box
+}
+.cooperationblock{
+	position: relative;
+    max-width: 900px;
+    width: 100%;
+    box-sizing: border-box;
+	background: url(../images/bg-cooperation.png) no-repeat top/cover;
+    margin: 20vh auto 0 auto;
+    padding: 70px 20px 20px 20px;
+    overflow: hidden;
+}
+
+/*以下為虎醬動作*/
+.tiger05{
+	max-width: 90px;
+	position: absolute;
+	display: none;
+	z-index: 22;
+}
+.flyimg{
+	animation: fly 4s ease-in-out forwards infinite;
+}
+
+@keyframes fly{
+  	0%{ 
+  		transform: translateY(150px);
+	}
+	30% {
+		transform: translateX(100px) translateY(100px) rotateZ(30deg);
+	}
+	60% {
+		transform: translateX(50px) translateY(50px) rotateZ(-10deg);
+	}
+	100% {
+		transform: translateX(150px) translateY(-20px) rotateZ(20deg);
+	}
+ }
+
+.tigerfly{
+	width: 200px;
+	position: relative;
+	z-index: 22;
+}
+.flyimg{
+	animation: fly 4s 3s ease-in-out forwards infinite;
+}
+
+@keyframes fly{
+  	0%{ 
+  		transform: translateX(-150px) translateY(150px);
+	}
+	30% {
+		transform: translateX(-100px) translateY(100px) rotateZ(30deg);
+	}
+	60% {
+		transform: translateX(-50px) translateY(50px) rotateZ(-10deg);
+	}
+	100% {
+		transform: translateX(-50px) translateY(0px) rotateZ(0deg);
+	}
+ }
+
+ /*page分頁*/
+ .pagenav{
+ 	background: #fff;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+ }
+ .photoblock{
+ 	display: flex;
+ 	justify-content: space-around;
+ }
+ .pagemain{
+ 	margin-top: 86px;
+	background: url(../images/bg-tiger.jpg) fixed;
+ }
+ .pagemain article{
+	background: url('../images/bg-body.jpg');
+	max-width: 1300px;
+    margin: 0 auto;
+ }
+ .photonameblock{
+ 	max-width: 220px;
+    margin: 0 auto;
+ }
+@media (max-width:768px){
+	.menu{
+	    max-height: 0px;
+	    overflow: hidden;
+	    transition: max-height 0.5s;
+	    position: absolute;
+	    z-index: 100;
+	    top: 48px;
+	    left: 0;
+	    right: 0;
+	    background:#f2c21f;
+	}
+	.menu ul li{
+	    float: none;
+	    border-top: 1px solid rgba(255, 240, 187, 0.4);
+	}
+	#menubtn{
+	    display: block;
+	    cursor: pointer;
+	}
+	.menu-show{
+	    max-height: 1000px;
+	    /*box-shadow: 0px 8px 20px #cecece;*/
+	  }
+}
