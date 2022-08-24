@@ -1,0 +1,10 @@
+body{
+	/*Iphone 不支overflow:hidden，有以下兩種解法*/
+	position: relative;
+	/*position: fixed;*/
+}
+.col3{
+	-moz-column-count:3; /* Firefox */
+	-webkit-column-count:3; /* Safari and Chrome */
+	column-count:3;
+}
