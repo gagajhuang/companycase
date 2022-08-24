@@ -1,0 +1,678 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+    background-color: #e3ddd4;
+    font-family: Helvetica, Arial, 'LiHei Pro', '微軟正黑體', '新細明體', sans-serif;
+}
+
+.logo{
+	position: absolute;
+	margin-right: 10px;
+	background-image: url(../images/evergreenlogo.png);
+	width: 154px;
+	height: 52px;
+	background-size: 100% auto;
+	z-index: 999;
+	margin-top: 10px;
+}
+.title{
+	position: absolute;
+	top: 120px;
+	right: 20px;
+	width: 545px;
+	height: 141px;
+	z-index: 999;
+	background: url(../images/title.png) no-repeat;
+	background-size: 100% auto;
+}
+.Myimg-fluid{
+	width: auto;
+	height: 100%;
+	position: 50% 0;
+}
+.MyBanner {
+    font-size: 0rem;
+	height: 462px;
+}
+/*----------------輪播圖------------------*/
+.banner01{
+	background:url(../images/banner_01.jpg) no-repeat 50% 0;
+	width: auto;
+	height: 462px;	
+}
+.banner02{
+	background:url(../images/banner_02.jpg) no-repeat 50% 0;
+	width: auto;
+	height: 462px;
+}
+.banner03{
+	background:url(../images/banner_03.jpg) no-repeat 50% 0;
+	width: auto;
+	height: 462px;
+}
+/*----------------輪播圖結束------------------*/
+.MyBanner button {
+    position: absolute;
+    z-index: 999;
+}
+.MyBanner button:focus {
+    outline: 0px auto;
+}
+.MyBanner .slick-next {
+    right: 0;
+    top: calc(100% / 2 - 50px);
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+	background-image: url('../images/angle-right.svg'); width: 25px; height: 50px;
+}
+.MyBanner .slick-prev{
+    left: 0;
+    top: calc(100% / 2 - 50px);
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+	background-image: url('../images/angle-left.svg'); width: 25px; height: 50px;
+}
+		  	  
+.MYline {
+    height: 34px;
+    background: url(../images/arrow_bg.jpg) repeat-x;
+    margin-bottom: 26px;
+}
+/*----------------地點照片------------------*/
+.img_Keelung {
+    background: url(../images/img_keelung.jpg) no-repeat 50% 0;
+    background-size: auto 100%;
+}
+.img_Taipei01 {
+    background: url(../images/img_taipeia.jpg) no-repeat 50% 0;
+    background-size: auto 100%;
+}
+.img_Taipei02 {
+    background: url(../images/img_taipeib.jpg) no-repeat 50% 0;
+    background-size: auto 100%;
+}
+.img_Taichung01 {background: url(../images/img_taichunga.jpg) no-repeat 50% 0;
+    background-size: auto 100%;
+}
+
+.img_Taichung02 {
+    background: url(../images/img_taichungb.jpg) no-repeat 50% 0;
+    background-size: auto 100%;
+}
+.img_Tainan {
+    background: url(../images/img_tainan.jpg) no-repeat 50% 0;
+    background-size: auto 100%;
+}
+
+.img_Jiaosi01{
+    background: url(../images/img_jiaosia.jpg) no-repeat 50% 0;
+    background-size: auto 100%;
+}
+.img_Jiaosi02{
+    background: url(../images/img_jiaosib.jpg) no-repeat 50% 0;
+    background-size: auto 100%;
+}
+.img_Shanghai {
+    background: url(../images/img_shanghai.jpg) no-repeat 50% 0;
+    height: 247px;
+}
+.img_Penang {
+    background: url(../images/img_penang.jpg) no-repeat 50% 0;
+    height: 247px;
+}
+.img_Bangkok{
+    background: url(../images/img_bangkok.jpg) no-repeat 50% 0;
+    height: 247px;
+}
+.img_Paris{
+    background: url(../images/img_paris.jpg) no-repeat 50% 0;
+    height: 247px;
+}
+/*----------------地點照片結束------------------*/
+.box01 {
+    margin-bottom: 34px;
+    height: 268px;
+}
+.PlaceName {
+    position: absolute;
+    right: 20px;
+    top:0;
+    color: #e3ddd4;
+    font-size: 44px;
+    letter-spacing: 2px;
+    font-weight: lighter;
+    font-family: "華康黑體 Std";
+    margin-top: -18px;
+}
+.box03 .PlaceName {
+	top: 246px;
+}
+.T1 {
+    color: #8f8677;
+    font-size: 36px;
+    letter-spacing: 10px;
+    font-weight: 500;
+    font-family: "華康黑體 Std";
+    line-height: 1.1;
+}
+.T2 {
+    font-size: 14px;
+    line-height: 20px;
+}
+.GoBar {
+    height: 58px;
+}
+.GO_text {
+    background-color: #e3ddd4;
+    font-size: 18px;
+    font-weight: 500;
+}
+.GO_text ul li {
+    list-style-image: url('../images/square.png');
+}
+.GO_text ul li p {
+    margin-top: 0;
+    margin-bottom: 0rem;
+    line-height: 26px;
+}
+.GO_text ul li p:nth-child(1) {
+    color: #01601e;
+    letter-spacing: 2px;
+    padding-top: 3px;
+    font-family: "華康黑體 Std"
+}
+.GO_text ul li .Mytext-danger {
+    color: #dc3545;
+    font-size: 20px;
+}
+.GO {
+    background-color: #01601e;
+    line-height: 58px;
+}
+.GO:hover {
+    background-color: #013912;
+}
+
+.box01 .MyTriangle {
+    margin-top: 30px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 17.3px;
+    border-color: transparent transparent transparent #ffffff;
+}
+.box02 {
+    margin-bottom: 34px;
+    height: 268px;
+}
+
+.box02 .MyTriangle {
+    position: absolute;
+    right: 0;
+    margin-top: 30px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 17.3px 10px 0;
+    border-color: transparent #ffffff transparent transparent;
+}
+.bgc02 {
+    background-color: #cec5b8;
+}
+.box03 {
+    margin-bottom: 25px;
+}
+.box03 .box_txt {
+    padding: 0 15px;
+    height: auto;
+}
+.box03 .GoBar {
+    height:36px;
+}
+.box03 .GO_text ul{
+    line-height: 36px;
+}
+.box03 .GO_text ul li p {
+    line-height: 36px;
+}
+.box03 .GO_text ul li p:nth-child(1) {
+    padding-top: 0px;
+}
+.box03 .GO {
+    background-color: #01601e;
+    line-height: 36px;
+}
+
+.box03 .GO:hover {
+    background-color: #013912;
+}
+.box03 .T1 {
+    letter-spacing: 4px;
+}
+.box03 .GO img {
+    width: auto;
+	height: 36px;
+}
+
+.footer_main {
+    height: 7px;
+    background-color: #01601e;
+}
+.footer {
+    margin-top: 50px;
+    background-color: #cec5b8;
+}
+.gototop {
+    width: 40px;
+    height: 40px;
+    font-family: verdana;
+    text-align: center;
+    background: #01601e;
+    color: #fff;
+    position: fixed;
+    bottom: 0px;
+    right: 40px;
+    text-decoration: none;
+    cursor: pointer;
+    display: none;
+}
+
+@media (min-width: 1201px) and (max-width: 1335px) {
+
+.title{
+	top: 80px;
+	width: 475px;
+	height: 123px;
+}
+/*----------------地點照片------------------*/
+.img_Taipei02 {
+    background-size:100% auto;
+}
+.img_Taichung02 {
+    background-size:100% auto;
+}
+/*----------------地點照片結束------------------*/
+.box03 .GO_text ul li p {
+    line-height: 36px;
+}
+.box03 .GO_text ul li p:nth-child(1) {
+    padding-top: 0px;
+}
+.box03 .GO_text ul {
+    line-height: 36px;
+}
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+.title{
+	top: 80px;
+	width: 475px;
+	height: 123px;
+}
+/*----------------地點照片------------------*/
+.img_Taipei02 {
+    background-size:100% auto;
+}
+.img_Taichung02 {
+    background-size:100% auto;
+}
+/*----------------地點照片結束------------------*/
+.box03 .GoBar {
+    height: 58px;
+}
+.box03 .GO_text ul li p {
+    line-height: 26px;
+}
+.box03 .GO_text ul li p:nth-child(1) {
+    padding-top: 3px;
+}
+.box03 .GO_text ul {
+    line-height: 30px;
+}.box03 .GO img {
+    width: auto;
+	height: 36px;
+}
+.box03 .GO img {
+	height: 58px;
+}
+
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+.box03 .GoBar {
+    height: 58px;
+}
+.gototop {
+            right: 0px;
+        }
+.title{
+	top: 220px;
+	width: 475px;
+	height: 123px;
+}
+.box03 .GO_text ul li p {
+    line-height: 26px;
+}
+.box03 .GO_text ul li p:nth-child(1) {
+    padding-top: 3px;
+}
+.box03 .GO_text ul {
+    line-height: 30px;
+}
+.box03 .GO img {
+	height: auto;
+    width: 100%;
+    padding-top: 10px;
+}
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+/*----------------地點照片------------------*/
+.img_Taipei02 {
+    background-size:auto 100%;
+}
+.img_Taichung02 {
+    background-size:auto 100%;
+}
+.img_Shanghai {
+    height: 242px;
+}
+.img_Penang {
+    height: 242px;
+}
+.img_Bangkok{
+    height: 242px;
+}
+.img_Paris{
+    height: 242px;
+}
+/*----------------地點照片結束------------------*/
+.GO_text ul li p {
+    font-size: .8rem;
+    letter-spacing: 1px;
+}
+.GO_text ul li p:nth-child(1) {
+    font-size: .9rem;
+    font-family: "華康黑體 Std"
+}
+.GO_text ul li .Mytext-danger {
+    font-size: .8rem;
+    font-weight: bold;
+}
+.GO_text ul {
+    -webkit-padding-start: 30px;
+}
+
+.gototop {
+            right: 0px;
+        }
+.box03 {margin-bottom:30px;}
+.box03 .GoBar {
+    height: 58px;
+}
+.box03 .GO_text ul li p {
+    line-height: 26px;
+	clear: both;
+}
+.box03 .GO_text ul li p:nth-child(1) {
+    padding-top: 3px;
+}
+.box03 .GO_text ul {
+    line-height: 30px;
+}
+.box03 .GO img {
+	height: 58px;
+}
+.PlaceName {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    color: #e3ddd4;
+	font-size: 32px;}
+}
+
+@media (max-width: 575.98px) {
+.title{
+	top: 360px;
+	right: calc(100vw / 2 - 160px);
+	width:300px;
+	
+}
+.MyBanner {
+    font-size: 0rem;
+	height: 462px;
+}
+/*----------------輪播圖------------------*/
+.banner01{
+	background:url(../images/m_banner_01.jpg) no-repeat 50% 0;
+    height: 462px;
+    background-size:auto 100%;
+}
+.banner02{
+	background:url(../images/m_banner_02.jpg) no-repeat 50% 0;
+	height: 462px;
+    background-size:auto 100%;
+}
+.banner03{
+	background:url(../images/m_banner_03.jpg) no-repeat 50% 0;
+	height: 462px;
+	background-size:auto 100%;}
+/*----------------輪播圖結束------------------*/
+.box01 {
+
+	height: auto;
+}
+.PlaceName {
+    font-size: 36px;
+    margin-top: -14px;
+}
+.box_txt {
+    height: 275px;
+    /*height: auto;*/
+}
+.T1 {
+    font-size: 32px;
+}
+.GO_text ul {
+    -webkit-padding-start: 30px;
+}
+.GO_text ul li {
+    font-size: 1rem;
+}
+/*----------------地點照片------------------*/
+.img_Keelung {
+    height: 270px;
+}
+.img_Taipei02 {
+    height: 270px;
+    background-size:auto 135%;
+}
+.img_Taichung02{
+    height: 270px;
+    background-size:auto 135%;
+}
+.img_Tainan{
+    height: 270px;
+}
+.img_Jiaosi02 {
+    height: 270px;
+    background-size:auto 135%;
+}
+.img_Shanghai {
+    height: 242px;
+}
+.img_Penang {
+    height: 242px;
+}
+.img_Bangkok{
+    height: 242px;
+}
+.img_Paris{
+    height: 242px;
+}
+/*----------------地點照片結束------------------*/
+.box01 .MyTriangle {
+    position: absolute;
+    bottom: 0;
+    left: 36px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 13px 22.5px 13px;
+    border-color: transparent transparent #ffffff transparent;
+}
+.box02 {
+    height: auto;/*margin: 0 10px 34px 10px;*/
+}
+
+.box02 .MyTriangle {
+    position: absolute;
+    bottom: 0;
+    left: 36px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 13px 22.5px 13px;
+    border-color: transparent transparent #ffffff transparent;
+}
+.box03 {
+    padding: 10px 15px 8px 15px;
+}
+.box03 .box_txt {
+    height: 200px;
+}
+.box03 .GoBar {
+    height: 58px;
+}
+.box03 .GO_text {
+   line-height: 30px;
+}
+.box03 .GO_text ul {
+    line-height: 26px;
+}
+.box03 .GO_text ul li p {
+    margin-top: 0;
+    margin-bottom: 0rem;
+    line-height: 26px;
+	clear: both;
+}
+.box03 .GO img {
+    height:auto;
+    width:  100%;
+}
+.box03 .GO_text ul li p:nth-child(1) {
+    padding-top: 3px!important;
+}
+.box03 .GO {
+    line-height: 58px;
+}
+
+
+.box03 .MyTriangle {
+    position: absolute;
+    top: 233px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 13px 22.5px 13px;
+    border-color: transparent transparent #ffffff transparent;
+}
+.box03 .PlaceName {
+    font-size: 36px;
+    position: absolute;
+    right: 20px;
+    top: 254px;
+    margin-top: -15px;
+}
+.box04 {
+    padding: 0 25px 34px 25px;
+}
+.gototop {
+            right: 0px;
+        }
+}
+
+@media (max-width: 320px) {
+.container-fluid{
+	min-width: 320px;
+}
+/*----------------地點照片------------------*/
+.img_keeling {
+    height: 200px;
+}
+.img_Taipei02 {
+    height: 200px;
+    background-size: 120% auto;
+}
+.img_Taichung02{
+    height: 200px;
+    background-size: 120% auto;
+}
+.img_Tainan{
+    height: 200px;
+}
+.img_Jiaosi02{
+    height: 200px;
+    background-size: 120% auto;
+}
+.img_Shanghai {
+    height: 245px;
+}
+.img_Penang {
+    height: 245px;
+}
+.img_Bangkok{
+    height: 245px;
+}
+.img_Paris{
+    height: 245px;
+}
+
+.GO_text ul li p {
+    font-size: .8rem;
+    letter-spacing: 1px;
+}
+.GO_text ul li p:nth-child(1) {
+    font-size: .9rem;
+    font-family: "華康黑體 Std"
+}
+.GO_text ul li .Mytext-danger {
+    font-size: .8rem;
+    font-weight: bold;
+}
+.box03 {
+    padding: 10px 15px 8px 15px;
+}
+.box03 .GO_text ul {
+    line-height: 26px;
+}
+.box03 .GO img {
+    height:auto;
+    width:  100%;
+}
+.box03 .GoBar {
+    height: 58px;
+}
+.box03 .GO_text {
+   line-height: 30px;
+}
+.box03 .GO_text ul li p {
+    margin-top: 0;
+    margin-bottom: 0rem;
+    line-height: 26px;
+	clear: both;
+}
+.box03 .GO_text ul li p:nth-child(1) {
+    padding-top: 3px!important;
+}
+.box03 .GO {
+    line-height: 58px;
+}
+}
