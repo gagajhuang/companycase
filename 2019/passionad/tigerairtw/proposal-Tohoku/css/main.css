@@ -1,0 +1,91 @@
+body{
+	/*Iphone 不支overflow:hidden，有以下兩種解法*/
+	position: relative;
+	/*position: fixed;*/
+}
+.col3{
+	-moz-column-count:3; /* Firefox */
+	-webkit-column-count:3; /* Safari and Chrome */
+	column-count:3;
+}
+.col4{
+	-moz-column-count:4; /* Firefox */
+	-webkit-column-count:4; /* Safari and Chrome */
+	column-count:4;
+}
+/**/
+.bgcarousel{
+	position: absolute;
+	z-index: 999;
+}
+.bgcarousel img:nth-child(2){
+	display: none
+}
+.owl-carousel{
+	padding-top: 4%;
+}
+/*主區塊*/
+main{
+	background: url(../images/bg-index.jpg) no-repeat center/cover;
+}
+section{
+	padding:50px 0;
+}
+.TTblock,.amusementname{
+	margin: 0 auto;
+	width: 100%;
+}
+.TTblock{
+	max-width: 650px;
+}
+.amusementfourblock{
+	max-width: 1400px;
+	margin: 20px auto;
+}
+.amusementfourblock2{
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 0 11vw;
+}
+.amusementname{
+    position: absolute;
+    z-index: 99;
+    /*bottom: -2%;*/
+    left: 0;
+    right: 0;
+    max-width: 285px;
+}
+.more{
+    border: 1px solid #fff;
+    color: #ffffff;
+    font-weight: 300;
+    max-width: 100px;
+    padding: 12px;
+    margin: 0 auto;
+}
+
+@media (max-width:768px){
+	.bgcarousel img:nth-child(1){
+		display: none
+	}
+	.bgcarousel img:nth-child(2){
+		display: block
+	}
+} 
+@media (max-width:640px){
+	.col3,.col4{
+		-moz-column-count:1; /* Firefox */
+		-webkit-column-count:1; /* Safari and Chrome */
+		column-count:1;
+	}
+	.ih-item.circle {
+	    margin: 25px auto;
+	}
+	.ih-item.circle.effect2 .info p {
+	    margin: 29vw 30px 0 30px;
+	    font-size: 5vw;
+	}
+	.more{
+		margin: 10px auto;
+	}
+}
