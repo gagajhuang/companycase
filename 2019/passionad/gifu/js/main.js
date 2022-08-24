@@ -3,6 +3,10 @@ $(document).ready(function() {
         e.preventDefault(); /*防止打開URL*/
         $('.menu').toggleClass('menu-show');
     });
+    AOS.init({
+        duration: 600,
+        easing: 'ease-in-sine',
+    });
     
     /*滾動出現*/
     $(window).scroll( function(){
@@ -15,17 +19,17 @@ $(document).ready(function() {
             }
         }); 
         
-        $('.contentblock').each( function(i){
-            // var col3option = $(this).find('.col3');
-            var col3option = $(this).children('.col3');
-            var col3top = col3option.offset().top + col3option.outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-            if( bottom_of_window > col3top){
-                $('.col3:nth-child(1)', this).addClass('animated fadeInRight');
-                $('.col3:nth-child(2)', this).addClass('animated fadeInRight');
-                $('.col3:nth-child(3)', this).addClass('animated fadeInRight');
-            }
-        });
+        // $('.contentblock').each( function(i){
+        //     // var col3option = $(this).find('.col3');
+        //     var col3option = $(this).children('.col3');
+        //     var col3top = col3option.offset().top + col3option.outerHeight();
+        //     var bottom_of_window = $(window).scrollTop() + $(window).height();
+        //     if( bottom_of_window > col3top){
+        //         $('.col3:nth-child(1)', this).addClass('animated fadeInRight');
+        //         $('.col3:nth-child(2)', this).addClass('animated fadeInRight');
+        //         $('.col3:nth-child(3)', this).addClass('animated fadeInRight');
+        //     }
+        // });
         
     });
 
