@@ -1,0 +1,235 @@
+body{
+	/*Iphone 不支overflow:hidden，有以下兩種解法*/
+	position: relative;
+	/*position: fixed;*/
+}
+.col3{
+	-moz-column-count:3; 
+	-webkit-column-count:3; 
+	column-count:3;
+	margin-bottom: 20px;
+}
+
+
+/*輪播*/
+header{
+	position: relative;
+}
+.logoblock{
+	max-width: 250px;
+	position: absolute;
+	left: 7%;
+	top: 3%;
+	z-index: 99;
+}
+.bannerTTblock{
+	max-width: 550px;
+	position: absolute;
+	right: 10%;
+	top: 0;
+	z-index: 2;
+}
+.scrollline{
+	position: absolute;
+	bottom: -2%;
+	z-index: 2;
+	height: 150px;
+	width: 100%;
+	background: url('../images/scrollline.png') no-repeat center/cover;
+}
+.item{
+	height: 615px;
+}
+.carouselimg01{
+	background: url('../images/banner01.jpg') no-repeat center/cover;
+}
+.carouselimg02{
+	background: url('../images/banner02.jpg') no-repeat center/cover;
+}
+.carouselimg03{
+	background: url('../images/banner03.jpg') no-repeat center/cover;
+}
+
+/*共同選擇器*/
+.contentblock,.TTblock,.hotelname,.btnclick,.hotelimg,.hotelblock,.hotelleft,.TTblock2{
+	margin: 0 auto;
+	width: 100%;
+}
+.contentblock{
+	max-width: 1024px;
+	padding:30px 2%;
+}
+.TTblock{
+	max-width: 460px;
+	padding: 20px 0;
+}
+/*內容*/
+.bgblock01{
+	background: #cfa92f;
+}
+
+.introtext{
+    color: #fff;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+/*台灣*/
+.bgblock02{
+	background: url('../images/bg-taiwan.png') no-repeat center/contain #fffdea;
+}
+.hotelname{
+	max-width: 105px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+.hotelblock{
+	max-width: 320px;
+	position: relative;
+	padding-top: 45px;
+	break-inside: avoid-column;/*打破布局，產生斷點*/
+}
+.hotelgreenline{
+	border: 1px solid #47b97a;
+	padding:5px;
+}
+.hotelcontent{
+	background: #fff;
+}
+.hotelcontent p{
+	min-height: 160px;
+	padding: 60px 10px 0px 10px;
+    letter-spacing: 1px;
+    text-align: justify;
+    line-height: 25px;
+    color: #585858;
+}
+.btnclick{
+	max-width: 130px;
+    float: right;
+    margin: 3%;
+    transition: 0.5s;
+}
+.btnclick:hover{
+	transform: scale(0.9);
+}
+.hotelimg{
+	max-width: 310px;
+}
+/*海外*/
+.bgblock03{
+	background: url('../images/bg-overseas.png') no-repeat center/contain #eff8e1;
+}
+.TTblock2{
+	max-width: 460px;
+	padding: 20px 0 0 0;
+}
+.hotelblock2{
+	/*max-width: 320px;*/
+	position: relative;
+	padding-top: 20px;
+}
+.hotelname2{
+	max-width: 105px;
+    position: absolute;
+    top: 0;
+    left: 2%;
+}
+.hotelcontent2{
+	display: flex;
+	justify-content:space-between;
+	background: #fff;
+}
+.hotelcontent2 p{
+    letter-spacing: 1px;
+	padding: 10px 10px;
+    text-align: justify;
+    line-height: 25px;
+    color: #585858;
+}
+.hotelleft{
+	max-width: 450px;
+	padding-top: 10%;
+}
+.hotelimg2{
+	max-width: 400px;
+}
+.hotelimg2 img{
+	width: auto;
+}
+@media (max-width: 1024px){
+	.logoblock{
+		left: 0;
+	}
+	.bannerTTblock {
+		left: 0;
+	    right: 0;
+	    margin: 0 auto;
+	}
+	.carouselimg01{
+		background-position: left;
+	}
+	.carouselimg02{
+		background-position: center;
+	}
+	.carouselimg03{
+		background-position: center;
+	}
+}
+@media (max-width: 768px){
+	.hotelcontent p{
+		min-height: 240px;
+	}
+}
+@media (max-width: 640px){
+	.item {
+	    height: 500px;
+	}
+	.bannerTTblock {
+	    max-width: 470px;
+	}
+	.logoblock {
+	    max-width: 170px;
+	}
+	.col3{
+		-moz-column-count:1; 
+		-webkit-column-count:1; 
+		column-count:1;
+	}
+	.carouselimg01{
+		background-position: left;
+	}
+	.carouselimg02{
+		background-position: center;
+	}
+	.carouselimg03{
+		background-position: center;
+	}
+	.hotelcontent p{
+		min-height: 160px;
+	}
+	.hotelblock2{
+		max-width: 320px;
+		margin: 0 auto;
+
+	}
+	.hotelcontent2{
+		display: block;
+	}
+	.hotelimg2 {
+	    max-width: 308px;
+	}
+	.hotelimg2 img{
+		width: 100%;
+	}
+	.hotelname2 {
+	    left: 0;
+	    right: 0;
+	    margin: 0 auto;
+	}
+	.hotelcontent2 p {
+	    padding: 60px 10px 0px 10px;
+	}
+}
