@@ -1,0 +1,93 @@
+$(document).ready(function(){
+	$('#menubtn').on('click', function(e) {
+        e.preventDefault(); /*防止打開URL*/
+        $('.menu').toggleClass('menu-show');
+    });
+
+	// 滾動平滑效果
+    $(function() {
+      $('a[href*="#"]:not([href="#"])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html, body').animate({
+              scrollTop: target.offset().top
+            }, 1000);
+            return false;
+          }
+        }
+      });
+    });
+
+
+    var WinWidth = $(window).height();
+
+    function bannerSize(){
+      if (WinWidth < 800) {
+        $('.bannerblock img').css('max-width','100vh');
+        console.log(WinWidth);
+      }else{
+        $('.bannerblock img').css('max-width','1280px')
+      }
+    }
+
+    $(window).resize(function() {
+      bannerSize();
+    });
+
+    // icon guideline
+    // change position
+    var offsetPixels = 450;
+
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > offsetPixels) {
+            $(".scrollingBox2").css({
+                "left": "0",
+                "justify-content": "center"
+            });
+            $(".goTop").fadeIn();
+        } else {
+            $(".scrollingBox2").css({
+                "left": "10px",
+                "justify-content": "left"
+            });
+            $(".goTop").fadeOut();
+        }
+    });
+
+  //   function fontch() {
+  //       src = $(".scrollingBox img").attr("src");
+
+  //       if (src == "img/97.png") {
+  //           $(".scrollingBox img").attr('src', 'img/98.png');
+  //       } else {
+  //           $(".scrollingBox img").attr('src', 'img/97.png');
+  //       }
+  //       setTimeout(fontch, 600);
+  //   }
+  //   setTimeout(fontch, 600);
+
+  // // WhatsHelp.io widget----FB、LINE、 Email
+  //   var options = {
+  //       facebook: "1517773441849696", // Facebook page ID
+  //       line: "//line.me/R/ti/p/@anuefund", // Line QR code URL
+  //       call_to_action: "聯絡我們", // Call to action
+  //       button_color: "#FF6550", // Color of button
+  //       position: "top right", // Position may be 'right' or 'left'
+  //       order: "facebook,line", // Order of buttons
+  //   };
+  //   var proto = document.location.protocol,
+  //       host = "whatshelp.io",
+  //       url = proto + "//static." + host;
+  //   var s = document.createElement('script');
+  //   s.type = 'text/javascript';
+  //   s.async = true;
+  //   s.src = url + '/widget-send-button/js/init.js';
+  //   s.onload = function() {
+  //       WhWidgetSendButton.init(host, proto, options);
+  //   };
+  //   var x = document.getElementsByTagName('script')[0];
+  //   x.parentNode.insertBefore(s, x);
+    
+});
