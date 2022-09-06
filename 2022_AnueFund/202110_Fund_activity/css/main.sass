@@ -1,0 +1,326 @@
+@import _variables
+@import _mixin
+
+%margin-auto
+  width: 100%
+  margin:0 auto
+
+%mobile480-none
+  +mobile-480 
+    display: none
+%btn-base
+  font-size: 1rem
+  color: #fff
+  padding: 7px 12px
+  white-space: nowrap
+  cursor: pointer
+  +pc-1024
+    max-width: 800px
+    margin: 0 auto
+    width: 100%
+%fund-title
+  height: 55px
+  margin: 60px 0 20px 0
+body
+  color: #000000
+  background: #f8d9cc
+.section__block 
+  max-width: 960px
+.padding-reduce
+  padding:0 2%
+//menu
+.menu
+  .opentrack
+    padding: 0px 18px
+    color: #fff
+    line-height: 60px
+    background:$secondary
+    cursor: pointer
+    +font-bold
+    &:hover
+      background: #e76545
+// 背景區
+.bg
+  &-fund
+    background: url(../images/bg-fund.jpg) no-repeat bottom fixed
+  &-point
+    overflow: hidden
+    background: url(../images/bg-point.jpg) no-repeat center
+  &-activity
+    background: url(../images/bg-activity.jpg) no-repeat bottom left
+  
+article
+  padding-top: 60px
+
+// KV
+.banner
+  &__block
+    background: url(../images/bg-banner.jpg) no-repeat bottom center
+    height: 750px
+    cursor: pointer
+    +pc-1024
+      background: url(../images/bg-banner2.jpg) no-repeat bottom center/cover
+      height: 450px 
+    +mobile-480
+      height: auto
+    a
+      display: inline
+  &__mobile
+    display: none
+    +mobile-480 
+      display: block
+.divider
+    width: 100%
+    height: 150px
+    position: absolute
+    z-index: 2
+    bottom: -90px
+    background: url(../images/img-divider.png) no-repeat center
+// 錢袋
+#bonus
+  text-align: center
+  margin-top: 80px
+  img
+    max-width: 660px
+  p
+    margin-top: 20px
+    +font-18
+  strong
+    color:$primary
+  
+.bonus
+  &-btn
+    background: $main-text
+    border-radius: 50px
+    display: inline-block
+    padding: 5px 50px
+    letter-spacing: 1px
+    box-shadow: 0px 5px 0px #5e0808
+    cursor: pointer
+    animation: bonus-act 1s infinite
+    +img-hover
+    a
+      color: #fff
+      +font-24
+      +font-bold
+  &__content
+    margin-top: 20px
+    img
+      &:nth-child(2)
+        display: none
+      +mobile-480
+        &:nth-child(1)
+          display: none
+        &:nth-child(2)
+          display: block
+  &-text
+    margin: 20px 0
+    strong
+      +font-24
+@keyframes bonus-act 
+  0% 
+    transform: scale(1)
+  50% 
+    transform: scale(1.05)
+  100% 
+    transform: scale(1)
+// 基金清單
+h2
+  font-size: 1.75rem
+  line-height: 2.5rem
+  +font-bold
+  color:$main-text
+  text-align: center
+  margin-top: 20px
+h3
+  +font-24
+  +font-bold
+  text-align: center
+  +mobile-480
+    font-size: 1.2rem
+    line-height: 2rem
+  strong
+    color: $secondary
+    +font-bold
+    font-size: 1.7rem
+.fund
+  &-tab
+    +flex-center
+    div
+      +img-hover
+  &-img01
+    @extend %fund-title
+    background: url(../images/img-fund01.png) no-repeat bottom center/cover
+  &-img02
+    @extend %fund-title
+    background: url(../images/img-fund02.png) no-repeat bottom center/cover
+  &-img03
+    @extend %fund-title
+    background: url(../images/img-fund03.png) no-repeat bottom center/cover
+  &-name
+    +font-bold
+.fundlist
+  &__block
+    max-width:900px
+    width: 100%
+    margin:100px auto 20px auto
+    font-size: 1.125rem
+    line-height: 1.375rem
+    ul
+      // margin-bottom: 70px
+      li:not(:last-child)
+        margin-bottom: 20px
+        vertical-align: bottom
+        border-bottom: 1px solid #b48f7f
+        padding-bottom: 20px
+  &__title
+    font-size: 1.5rem
+    +font-bold
+    letter-spacing: 1px
+    +border-bottom(#000)
+    margin-bottom: 15px
+    padding: 15px 0 5px 0
+    color: #a10c06
+    span
+      font-size: 1rem
+  &__content
+    display: none
+    // 基金表格
+    .tableblock
+      max-width: 800px
+      text-align: justify
+      line-height: 2.2rem
+      font-size: 1rem
+      margin-top: 10px
+      @extend %margin-auto
+      table
+        width: 100%
+        border:1px solid $color-light-gray
+        th
+          background: #d0d0d0
+          padding: 5px 0
+          +font-bold
+          font-size: 1.125rem
+          vertical-align: middle
+          padding: 0 2%
+          &:nth-child(1)
+            width: 28%
+          +mobile-480 
+            font-size: 1rem
+            line-height: 1.5rem
+        td
+          padding: 5px 0
+          width: 15%
+          background: #fff
+    .chart__caption
+      text-align: justify
+.list
+  &-content
+    // 基金按鈕
+    .btn__block
+      +mobile-480 
+        display: flex
+    .btnbuy
+      @extend %btn-base
+      background: $primary
+    .fundinfor
+      @extend %btn-base
+      background: $tertiary
+      +flex-center
+      justify-content: center
+  &-name
+    +flex-center
+    color:#000
+    +pc-1024
+      display: block
+    &:hover
+      .fund-name
+        color: $secondary
+        +font-bold
+  &-title
+    +flex-center
+    align-items: end
+    +pc-1024
+      padding-bottom: 10px
+    span
+      color: #00555f
+      +font-bold
+    p
+      display: inline
+      color: #666666
+    a
+      color:#000
+  &-left
+    display: flex
+  &-icon
+    max-height: 25px
+    color: $secondary
+    +font-bold
+    padding-right: 5px
+    margin-right: 5px
+    +mobile-480
+      border:0
+    .fas
+      margin-right: 5px
+      font-size: 1.5rem
+      vertical-align: middle
+      color: $main-text
+
+.activity
+  &__block
+    span
+      color: $text
+      +font-bold
+    .activity__sup
+      li
+        list-style-type: none
+        font-size: 0.8rem
+        margin-bottom: 0
+        text-indent: -2.5rem
+        color: $color-blue
+        line-height: 1.25rem
+  &__table
+    width: 100%
+    // max-width: 650px
+    border: 1px solid $color-light-gray
+    background: #fff
+    margin: 15px auto
+    line-height: 2rem
+    +mobile-480 
+      font-size: 1rem
+    // tr:nth-child(even)
+    //   background: #e4e4e4
+    tr:not(:last-child)
+      border: 1px solid $color-light-gray
+    th
+      +font-bold
+      background: #e4e4e4
+      &:last-child
+        text-align: left
+      +mobile-480 
+        vertical-align: middle
+        line-height: 1.5rem
+    td
+      &:first-child
+        width: 15%
+        +mobile-480
+          width: 18%
+      &:nth-child(even)
+        +font-bold
+        color: $secondary
+        width: 12%
+        +mobile-480
+          width: 28%
+      &:last-child
+        text-align: left
+    sup
+      vertical-align: super
+      font-size: smaller
+      color: $color-blue
+
+    
+      
+      
+
+  
+
