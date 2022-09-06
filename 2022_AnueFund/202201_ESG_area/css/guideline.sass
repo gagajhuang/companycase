@@ -1,0 +1,202 @@
+// 此檔案請勿更動
+@import _variables
+@import _mixin
+
+/* 統一樣式 */
+%margin-auto
+  width: 100%
+  margin:0 auto
+%btn-base
+  max-width: 200px
+  width: 100%
+  padding: 8px 3px 8px 3px
+  transition: $trans-time
+  text-align: center
+  color: #fff
+  text-align: center
+  cursor: pointer
+  border-radius: 5px
+%btn-nonewidth
+  +mobile-640
+    max-width: none
+body, a
+  color: $text
+h2 
+  +title(#000)
+  +font-18
+  display: flex
+  align-items: center
+h2
+  &:before
+    content: " "
+    height: 15px
+    width: 15px
+    background: $secondary
+    margin-right: 5px
+strong
+  +font-bold
+/* 選單 */
+header
+  +position-center(fixed)
+  top: 0
+  z-index: 9999
+  +border-bottom($color-line)
+  background: #fff
+.bar
+  +flex-center
+  div
+    height: 3px
+    &:nth-child(1)
+      width:60%
+      background: $color-blue
+    &:nth-child(2)
+      width:30%
+      background: $secondary
+    &:nth-child(3)
+      width:10%
+      background: $tertiary
+nav
+  width: 100%
+  @extend %margin-auto
+  margin-top: 15px
+  box-sizing: border-box
+  overflow: hidden
+  max-width: 1200px
+  +pc-960 
+    padding: 0 15px
+    +flex-center
+    margin: 15px 0
+  +mobile-480
+    padding: 0 10px
+.logo
+  display: flex
+  align-items: flex-end
+  img
+    max-width: 165px
+    margin:0
+    +mobile-480
+      max-width: 120px
+    +mobile-320
+      max-width: 100px
+  h1
+    border-left: 2px solid $text
+    padding-left: 15px
+    margin-left: 15px
+    +font-20
+    +font-bold
+    line-height: 1.25rem
+    +mobile-480
+      font-size: 1rem
+      line-height: 0.9rem
+      padding-left: 10px
+      margin-left: 10px
+.fa
+  padding: 0 5px
+#menu-btn 
+  display: none
+  cursor: pointer
+  +pc-960
+    display: block
+  img 
+    max-width: 28px
+
+.menu 
+  +pc-960 
+    +position-center(absolute)
+    max-height: 0px
+    overflow: hidden
+    transition: all 1s
+    top: 75px
+    z-index: 100
+    text-align: center
+    background: #fff
+    &-show
+      max-height: 1000px
+  +mobile-480
+    top: 65px
+  ul 
+    li
+      float: left
+      +pc-960 
+        float: none
+        +border-bottom($color-line)
+  a 
+    transition: 0.1s
+    padding: 20px 15px 5px 15px
+    &:hover,&:focus
+      border-bottom: 3px solid $primary
+    +font-18
+    color: #000
+    +pc-960
+      line-height: 40px
+      padding: 10px
+    +mobile-480
+      +font-16
+      line-height: 1.8rem
+  .active
+    border-bottom: 3px solid $primary
+
+/* 內容 */
+main 
+  overflow: hidden
+  display: block
+article
+  padding-top: 115px
+  +mobile-480
+    padding-top: 60px
+section
+  position: relative
+.section
+  &__block
+    @extend %margin-auto
+    max-width: 1240px
+    padding: 60px 20px
+    overflow: hidden
+    +pc-960
+      padding: 30px 2%
+
+/* 按鈕 */
+.btn
+  &__block
+    +flex-center
+    justify-content: center
+    text-align: center
+    div + div
+      margin-left: 20px
+    a
+      color: #fff
+      text-align: center
+    i
+      margin-left: 5px
+    +mobile-480
+      clear: both
+      display: block
+      div + div
+        margin-left: 0
+button
+  @extend %btn-base
+  @extend %btn-nonewidth
+button + button
+  margin-left: 10px 
+
+/* 影片區 */
+.video
+  &-img
+    position: relative
+    &::before
+      position: absolute
+      content: ""
+      background: rgba(0,0,0,0.3)
+      width: 100%
+      height: 100%
+  &-btn
+    position: absolute
+    @extend %margin-auto
+    max-width: 76px
+    left: 0
+    right: 0
+    top: 50%
+    transform: translateY(-50%) 
+.remark
+  color: $color-gray
+  +font-12
