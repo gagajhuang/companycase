@@ -1,0 +1,400 @@
+/*統一margin*/
+.sectionblock,footer,.width800,
+.titleblock img,
+.tableblock,.chartblock,
+.activityinforblock,.footerblock{
+    width: 100%;
+    margin:0 auto;
+}
+
+/*選單*/
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: #3e454d;
+    height: 60px;
+}
+.logo a{
+    max-width: 130px;
+}
+.fa{
+    padding: 0 5px;
+}
+#menubtn{
+    display: none;
+    cursor: pointer;
+}
+#menubtn img{
+    max-width: 28px;
+}
+.menu ul li{
+    float: left;
+}
+.menu a{
+    padding: 0px 18px;
+    color:#fff;
+    font-size: 16px;
+    line-height: 60px;
+}
+.menu a:hover {
+    color: #f9a532;
+}
+/*section*/
+section{
+    position: relative;
+}
+.sectionblock{
+    max-width: 1280px;
+    padding: 70px 40px;
+    overflow: hidden;
+}
+.width800{
+    max-width: 880px;
+}
+.tableblock,.chartblock{
+    max-width: 800px;
+}
+
+/*btnblock*/
+.btnblock{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btnblock a{
+    color: #fff;
+    text-align: center;
+}
+.btnblock i{
+    margin-left: 5px;
+}
+.btnblock div+div{
+    margin-left: 8px;
+}
+/*立即開戶、推薦基金*/
+.btnopen,.btnfund{
+    background: #ff8400;
+    font-size: 22px;
+    padding: 8px 15px 9px 16px;
+    transition: 0.5s;
+    width: 160px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+.btnopen:hover{
+    background: #c57800;
+}
+.btnfund{
+    background: #cc0000;
+}
+.btnfund:hover{
+    background: #b1000c;
+}
+
+/*圖表區*/
+table{
+    width: 100%;
+    text-align: center;
+}
+.tableblock th{
+    background: #abecf1;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 0;
+}
+.tableblock td{
+    background: #f7f7f7;
+    font-size: 16px;
+    padding: 10px 5px;
+    vertical-align: middle;
+}
+.tablecaption,.charcaption{
+    font-size: 13px;
+    letter-spacing: 1px;
+    padding-top: 10px;
+    line-height: 18px;
+    text-align: left;
+}
+.tablecaption span{
+    color: #cc0000;
+}
+.rwd-table{
+    margin-bottom: 10px;
+}
+
+/*活動辦法*/
+.activityTT{
+    text-align: center;
+    font-size: 35px;
+    font-weight: 500;
+    padding-bottom: 25px; 
+}
+.activityinforblock{
+    text-align: justify;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    /*max-width: 900px;*/
+    word-break: break-all;
+}
+.activityinforblock ul{
+    overflow: hidden;
+    padding-left: 40px;
+    list-style: disc;
+}
+.activityinforblock li{
+    margin-bottom: 10px;
+}
+.activityinforblock span{
+    color: #ef4e28;
+    font-weight: bold;
+}
+.activityinforblock a{
+    display: inline;
+    color: #ef4e28;
+    font-weight: bold;
+}
+.activityinforblock a:hover{
+    color: #f9a532;
+}
+.activitylistcontent li {
+    list-style: decimal-leading-zero;
+}
+
+/*footer*/
+footer{
+    color: #fff;
+    background:#545454;
+    padding-bottom:10px;
+    overflow: hidden;
+    font-size: 16px;
+    text-align: center;
+}
+footer p{
+    margin-bottom:10px;
+    line-height: 20px;
+}
+footer a{
+    color: #299ed8;
+    display: unset;
+}
+footer a:hover{
+    color: #81e0e4;
+}
+
+/*警語btn*/
+.btnshowcontent{
+    text-align: center;
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: 0.5s;
+    color: #d4dce6;
+}
+.btnshowcontent:hover{
+    color: #fff;
+}
+.btnshowcontent i{
+    padding-left: 10px;
+}
+.showcontent{
+    max-height: 100vh;
+    height: auto;
+}
+
+/*詳細說明*/
+.descriptionblock,.descriptionextra{
+    text-align: justify;
+    line-height: 25px;
+    letter-spacing: 1px;
+    /*margin-top: 50px;*/
+    display: none;
+}
+.descriptionblock ul,.descriptionextra ul{
+    list-style:disc;
+    padding-left: 5%;
+}
+.descriptionblock li,.descriptionextra li{
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+.descriptionblock a,.descriptionextra a{
+    display: inline-block;
+    font-weight: bold;
+}
+.descriptionblock p,.descriptionextra p{
+    display: inline;
+    color: #ceb981;
+}
+.listcontent li{
+    list-style: decimal
+}
+.companyinfor{
+    margin-top:50px;
+    font-size: 14px;
+}
+/*分享列*/
+.scrollingBox2 {
+    display: flex;
+     width: 100%;
+     position: fixed;
+     bottom: 10px;
+     left: 10px;
+     z-index: 99
+}
+.scrollingBox h4 {
+     font-size: 16px;
+     color: white;
+     text-align: center;
+}
+.scrollingBox p {
+     font-size: 12px;
+     color: white;
+     line-height: 15px;
+     text-align: center;
+}
+.scrollingBox2 .btn {
+     display: inline-block;
+     border-radius: 50%;
+     width: 40px;
+     height: 40px;
+     margin: 0 4px;
+     cursor: pointer;
+     opacity: 0.8;
+}
+.scrollingBox2 svg {
+     display: inline-block;
+     border: 0;
+     width: 100%;
+     height: 100%;
+}
+ .scrollingBox2 .fb {
+     background-color: #4267B2;
+}
+ .scrollingBox2 .line {
+     background-color: #00B700;
+}
+ .scrollingBox2 .email {
+     background-color: #19ACDA;
+}
+ .scrollingBox2 .goTop {
+     background-color: #5E5f60;
+     display: none;
+     color: #fff;
+}
+ .scrollingBox2 .fixedLink{
+     max-width: 165px;
+     margin: 0 2px;
+}
+.goTop a{
+    display: inline;
+}
+@media (max-width:960px){
+    nav{
+        padding: 0 15px;
+    }
+    .menu{
+        max-height: 0px;
+        overflow: hidden;
+        transition: all 1s;
+        position: absolute;
+        z-index: 100;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background:#3e454d;
+        text-align: center;
+    }
+    .menu ul li{
+        float: none;
+        border-bottom: 1px solid #333;
+    }
+    #menubtn{
+        display: block;
+    }
+    .menu-show{
+        max-height: 1000px;
+    }
+    .menu a {
+        line-height: 50px;
+    }
+}
+@media (min-width:769px){
+    .col2,.col3,.col4,.col5,.col6{
+        display: flex;
+        /*flex-wrap:wrap;*/
+        justify-content: space-between;
+    }
+}
+@media (max-width:640px){
+    #wh-widget-send-button.wh-widget-right{
+        bottom:60px !important;
+        z-index: 999 !important;
+    }
+    .btnopen, .btnfund {
+        width: 100%;
+    }
+    .activityinforblock ul {
+        padding-left: 20px;
+    }
+}
+@media (max-width:480px){
+    .sectionblock{
+        padding: 30px 20px;
+    }
+    .btnblock{
+        clear: both
+    }
+    .btnblock div+div{
+        margin-left: 0
+    }
+    .btnfund, .btnopen{
+        width: 100%;
+    }
+    /*RWD 表格*/
+    .rwd-table th{
+        display: none;
+    }
+    .rwd-table td{
+        display: block;
+        line-height: 25px;
+    }
+    .rwd-table td:nth-child(odd){
+        background: #c8d0e4
+    }
+    .rwd-table td:first-child{
+        background: #344570;
+        color: #fff;
+    }
+    .rwd-table td.currency{
+        background: #7f0b0a;
+        color: #fff
+    }
+    .rwd-table td.rateblock{
+        background: #c3c3c3;
+    }
+    .rwd-table td:before {
+        width: 100%;
+        content: attr(data-th);
+        float: left;
+        font-weight: bold;
+    }
+    .rwd-table td:first-child{
+        width: 100%;
+        font-size: 20px;
+    }
+}
