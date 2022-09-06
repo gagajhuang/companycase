@@ -1,0 +1,666 @@
+/* IE11 */
+/* @media all and (-ms-high-contrast:none)
+{
+	*::-ms-backdrop,
+	[data-aos^=fade][data-aos^=fade],[data-aos^=zoom][data-aos^=zoom]{
+	opacity: 1;
+	}
+} */
+body {
+  /*Iphone 不支overflow:hidden，有以下兩種解法*/
+  /*position: relative;*/
+  /*position: fixed;*/
+  color: #333333;
+  font-weight: 300;
+}
+.bannerImg,
+.bannerBtn,
+.longtimeBtn,
+.titleblock,
+.step__title,
+.flightblock,
+.pointcontent,
+.threemethods img,
+.methodsimg {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.sectionblock{
+  position: relative;
+}
+/*KV*/
+.bannerblock {
+  position: relative;
+  height: 100vh;
+  max-height: 900px;
+  overflow: hidden;
+  background: url(../images/bg-banner.jpg) no-repeat center 25px / cover #fff;
+}
+.bannerTT {
+  position: relative;
+  max-width: 600px;
+  height: 100vh;
+  top: 42px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 99;
+}
+.bannerTT img:nth-child(2),
+.img-dis {
+  display: none;
+  max-width: 640px;
+}
+.img-dis {
+  position: absolute;
+  top: 65%;
+}
+.bannerblock .btnblock {
+	position: absolute;
+	z-index: 999;
+  left: 50%;
+  bottom: 15vh;
+  transform: translate(-50%, 0);
+}
+.bannerBtn {
+  border-radius: 5px;
+}
+.btnopen {
+  background: #fd6401;
+}
+.btnopen:hover {
+  background: #ef4e28;
+}
+.btnplay:hover {
+  background: #e4222f;
+}
+.imgdice {
+  position: absolute;
+  max-width: 560px;
+  left: 50%;
+  /* right: 0;
+  margin: 0 auto; */
+  top: 45vh;
+  transform: translateX(-50%);
+  animation: diceact 1.5s infinite; /*IE*/
+  -moz-animation: diceact 1.5s infinite; /*FireFox*/
+  -webkit-animation: diceact 1.5s infinite; /*Chrome, Safari*/
+}
+@keyframes diceact {
+  0% {
+    top: 35vh;
+  }
+  50% {
+    top: 38vh;
+  }
+  100% {
+    top: 35vh;
+  }
+}
+.imgdice img:nth-child(2){
+  display: none;
+}
+/*content*/
+.bgfundlist {
+  background: url(../images/bg-fundlist.jpg) no-repeat bottom/cover fixed;
+}
+.titleblock {
+  max-width: 530px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  padding: 0;
+  margin-bottom: 30px;
+}
+.titletext span{
+  font-weight: bold;
+  color: #ef4e28;
+}
+.bgfundlist p {
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 20px;
+}
+/* 基金清單 */
+.fundlistblock {
+  max-width: 1040px;
+  width: 100%;
+  margin: 20px auto;
+  font-size: 18px;
+  line-height: 22px;
+}
+.fundlistblock li {
+  margin-bottom: 20px;
+  vertical-align: bottom;
+}
+.fundlistblock li:not(:last-child){
+  border-bottom:1px solid #ababab;
+  padding-bottom: 10px;
+}
+.fundlist__part {
+  position: relative;
+  margin-top: 100px;
+  padding: 50px 70px 20px 80px;
+  background: #fff0f0;
+  border: 3px solid #ffaf00;
+  border-radius: 40px;
+}
+.fundlist__title {
+  position: absolute;
+  left: 50%;
+  top:-42px;
+  transform: translate(-50%, 0);
+  max-width: 250px;
+  width: 100%;
+}
+.fundlist__description {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.fundlist__description:after,
+.fundlist__description:before {
+  content: "";
+  width: 60px;
+  height: 20px;
+  background: url(../images/lineblack.png) no-repeat center center;
+  display: inline-block;
+}
+.fundcontent {
+  display: none;
+}
+.listname {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #000;
+}
+.listname:hover {
+  color: #cc0000;
+  font-weight: bold;
+}
+.listtitle {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  width: 73%;
+}
+.listleft {
+  text-align: left;
+  margin-right: 10px;
+  line-height: 26px;
+  text-indent: -1.5em;
+  font-size: 20px;
+  font-weight: bold;
+}
+.listleft:before{
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 900; 
+  content: "\f0a9";
+  margin-right: 5px;
+  font-size: 22px;
+  vertical-align: top;
+}
+
+.listtitle span{
+  color: #ef4e28;
+  display: block;
+  text-indent: 0em;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: bold;
+}
+.listtitle p {
+  display: inline;
+  color: #717171;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/*基金按鈕*/
+.btnbuy {
+  background: #cc0000;
+}
+.btnbuy,
+.fundinfor {
+  font-size: 16px;
+  color: #fff;
+  padding: 7px 12px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.fundinfor {
+  display: flex;
+  align-items: center;
+  background: #ff8400;
+  justify-content: center;
+}
+/* .listcontent:first-child .fundinfor{
+	background: #ff9d34;
+} */
+
+/*基金表格*/
+.fundlistblock .tableblock {
+  max-width: 800px;
+  text-align: center;
+  line-height: 35px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+.fundlistblock table {
+  width: 100%;
+  border: 1px solid #919191;
+}
+.fundcontent th {
+  background: #d0d0d0;
+  padding: 5px 0;
+}
+.fundcontent td {
+  padding: 5px 0;
+  width: 15%;
+  background: #fff;
+}
+.fundcontent th:nth-child(1) {
+  width: 40%;
+}
+
+/*threemethods*/
+.bgmethods {
+  background: url(../images/bg-methods.jpg) no-repeat right center/cover;
+}
+.threemethods {
+  text-align: center;
+  font-size: 18px;
+}
+.methodsimg {
+  max-width: 225px;
+  transition: 0.5s;
+}
+.methodsimg a {
+  position: relative;
+  overflow: hidden;
+}
+.methodsimg a:after {
+  font-family: "Microsoft JhengHei", "Font Awesome 5 Free";
+  font-weight: 600;
+  content: "查看更多 \f0da";
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 12%;
+  right: 0;
+  bottom: 16%;
+  text-align: right;
+  line-height: 30px;
+  color: #fff;
+  padding-right: 7px;
+}
+.methodsimg:hover {
+  transform: scale(0.95);
+}
+.threemethods span p {
+  font-weight: bold;
+}
+.threemethods span p:nth-child(1) {
+  font-size: 28px;
+  letter-spacing: 2px;
+  margin: -10px 0 5px 0;
+  max-width: 225px;
+  overflow: hidden;
+}
+
+/*活動辦法*/
+.bgactivity {
+  background: #fff5d8;
+}
+.activityinforblock {
+  background: #fff;
+  border-radius: 40px;
+  border: 12px dotted #e81d24;
+  padding: 25px 150px 25px 100px;
+}
+.activityinforblock ul {
+  padding-left: 0;
+}
+.activityinforblock ul li {
+  background: url(../images/icon-ball.png) no-repeat;
+  list-style-type: none;
+  padding-left: 2em;
+  font-weight: bold;
+}
+.activityinforblock .activity--rule {
+  padding-left: 3.5em;
+}
+.activityinforblock .activity--rule li {
+  background: transparent;
+  list-style-type: disc;
+  padding: 0;
+}
+.activityimg {
+  position: absolute;
+  bottom: 16%;
+  right: 5%;
+}
+.bgactivity .btnblock {
+  margin-top: 40px;
+}
+/*跳窗*/
+.maskblock {
+  position: fixed;
+  z-index: 99999;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  margin: 0;
+  padding: 0 10px;
+  box-sizing: border-box;
+  overflow-x: scroll;
+}
+.flightbox {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  margin: 12vh auto 0 auto;
+  padding: 40px 20px;
+  overflow: hidden;
+  border-radius: 30px;
+}
+.flightblock {
+  max-width: 700px;
+  letter-spacing: 1px;
+}
+.flightblock tr:nth-child(odd) {
+  background: #fff1ee;
+}
+.flightblock th {
+  background: #d0d0d0;
+}
+.flightblock img {
+  max-width: 25px;
+}
+.flightblock td {
+  padding: 5px 0;
+}
+.flightblock td,
+.flightblock th {
+  border-right: 1px solid #919191;
+}
+.flightblock td:nth-child(1) {
+  min-width: 200px;
+  width: 20%;
+}
+.flightblock td:nth-child(3) {
+  max-width: 200px;
+}
+
+.closebox {
+  position: absolute;
+  right: 3%;
+  top: 3%;
+  cursor: pointer;
+}
+.maskblock table {
+  border: 1px solid #919191;
+  text-align: center;
+  width: 100%;
+  line-height: 30px;
+}
+.maskblock .buy2btn {
+  max-width: 200px;
+  padding-top: 20px;
+  transition: 0.2s;
+}
+.maskblock .buy2btn:hover {
+  transform: scale(0.9);
+}
+
+/*RWD*/
+@media (max-height: 800px) and (min-width: 1024px) {
+  .bannerblock .btnblock {
+    bottom: 10vh;
+  }
+  .bannerblock{
+    min-height: 700px;
+  }
+  .bannerTT {
+    max-width: 540px;
+  }
+  .imgdice {
+    max-width: 440px;
+  }
+  @keyframes diceact {
+    0% {
+      top: 43vh;
+    }
+    50% {
+      top: 45vh;
+    }
+    100% {
+      top: 43vh;
+    }
+  }
+}
+@media(max-height: 680px) and (min-width: 1024px) {
+  .bannerblock{
+    min-height: 650px;
+  }
+  .bannerTT {
+    max-width: 420px;
+  }
+  .imgdice {
+    max-width: 340px;
+  }
+  @keyframes diceact {
+    0% {
+      top: auto;
+      bottom:40vh;
+    }
+    50% {
+      top: auto;
+      bottom:38vh;
+    }
+    100% {
+      top: auto;
+      bottom:40vh;
+    }
+  }
+  .bannerblock .btnblock {
+    bottom: 20vh;
+  }
+}
+
+@media (max-width: 1024px) {
+  .bannerblock {
+    background: url(../images/bg-banner-m.jpg) no-repeat center/cover #fff;
+  }
+  .bannerblock .btnblock,
+  .btnblock {
+    display: flex;
+    left: 0;
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    transform: none;
+  }
+  .btnblock div + div {
+    margin-left: 0;
+  }
+  .bannerBtn {
+    border-radius: 0;
+  }
+  .listtitle {
+    width: 100%;
+    padding-bottom: 10px;
+  }
+  .listname {
+    display: block;
+  }
+  .fundlistblock li:not(:last-child){
+    border: none;
+  }
+  .btnbuy,
+  .fundinfor {
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .activityinforblock {
+    padding: 25px 90px 25px 30px;
+  }
+  .activityimg {
+    bottom: 14vh;
+    right: 4vw;
+  }
+  .bgactivity .btnblock {
+    margin-top: 60px;
+  }
+}
+@media (max-width: 960px) {
+  .bannerImg {
+    left: auto;
+    right: 5%;
+    margin: 0;
+    max-width: auto;
+    width: 940px;
+  }
+}
+@media (max-width: 769px) {
+  .bannerImg {
+    right: 0;
+  }
+  .bannerBtn {
+    bottom: 55%;
+  }
+  .fundlist__part {
+    padding: 50px 30px 20px 50px;
+    margin-top: 60px;
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .bannerTT {
+    max-width: 550px;
+    top: 60px;
+  }
+  .bannerTT img:nth-child(1) {
+    display: none;
+  }
+  .bannerTT img:nth-child(2),
+  .img-dis {
+    display: block;
+  }
+  .bannerBtn,
+  .bgactivity .bannerBtn {
+    top: auto;
+    bottom: 0;
+    max-width: none;
+  }
+  .imgdice img:nth-child(1){
+    display: none;
+  }
+  .imgdice img:nth-child(2){
+    display: block;
+  }
+  @keyframes diceact {
+    0% {
+      top: 45vh;
+    }
+    50% {
+      top: 48vh;
+    }
+    100% {
+      top: 45vh;
+    }
+  }
+  .bgactivity .btnblock {
+    display: block;
+  }
+  .activityinforblock {
+    padding: 40px 30px;
+  }
+  .activityimg {
+    display: none;
+  }
+  .activityinforblock .activity--rule {
+    padding-left: 1.5em;
+  }
+  .bgactivity .btnblock div + div {
+    margin-top: 10px;
+  }
+  .btnblock div + div {
+    margin-left: 0;
+  }
+  .fundlist__description:after,
+  .fundlist__description:before {
+    content: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .titleblock {
+    margin: 10px auto;
+    font-size: 25px;
+  }
+  .imgdice{
+    left: auto;
+    transform: none;
+  }
+  .listtitle,
+  .listleft {
+    display: block;
+  }
+  .listicon {
+    border: 0;
+  }
+  .funddetails {
+    float: right;
+  }
+  .fundname {
+    padding-left: 1.5em;
+  }
+  .flightblock td:nth-child(3) {
+    max-width: none;
+  }
+  .flightblock td,
+  .flightblock th {
+    border: none;
+    padding: 5px 0;
+  }
+  .flightblock tr:nth-child(odd) {
+    background: none;
+  }
+  .fundlist__part {
+    padding: 50px 15px 20px 40px;
+  }
+  .tableblock th{
+    font-size: 16px;
+  }
+  .tableblock td{
+    font-size: 14px;
+  }
+}
+@media (max-width: 375px) {
+  .bannerImg {
+    right: 30px;
+  }
+  .titleblock {
+    font-size: 22px;
+  }
+  
+  .result__input,
+  .fundreward {
+    font-size: 17px;
+    letter-spacing: 1px;
+  }
+  .fundlist__description {
+    font-size: 24px;
+  }
+}
