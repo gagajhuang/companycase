@@ -1,0 +1,351 @@
+body{
+	/*Iphone 不支overflow:hidden，有以下兩種解法*/
+	/*position: relative;*/
+	/*position: fixed;*/
+	color: #fff;
+	font-weight: 300;
+}
+.sectionblock,footer,
+.titleblock img,.threepointimg,
+.companyblock,.companylogo,
+.btnblock,
+.activityinforblock,
+.footerblock{
+	width: 100%;
+	margin:0 auto;
+}
+section{
+	position: relative;
+}
+.sectionblock{
+	max-width: 1280px;
+	padding: 5% 5%;
+	overflow: hidden;
+}
+.footerblock{
+	max-width: 1280px;
+	padding: 0 5%;
+}
+.menu a:hover {
+    color: #72c7ff;
+}
+/*KV*/
+.bannerblock{
+	position: relative;
+	height: 830px;
+	background: url(../images/banner.jpg) repeat top center;
+}
+.bannerblock img{
+	display: none;
+}
+.bannerblock img:nth-child(1){
+	max-width: 800px;
+}
+.bannerblock img:nth-child(2){
+	max-width: 460px;
+}
+.divider{
+	position: absolute;
+	top: -22px;
+	width: 100%;
+	height: 54px;
+	background: url(../images/divider.png) no-repeat top center;
+}
+.divider2{
+	bottom: -20px;
+    top: auto;
+    transform: rotateY(180deg);
+    z-index: 99;
+}
+
+/*content*/
+.bgcompany{
+	background: url(../images/bg-company.jpg) no-repeat top/cover fixed;
+}
+.bggary{
+	background: #e5e5e2;
+}
+.titleblock img{
+	max-width: 520px;
+}
+.titleblock{
+	margin-bottom: 30px;
+}
+
+/*三大重點*/
+.threepointblock{
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 60px;
+}
+.threepointimg{
+	max-width: 300px;
+}
+/*三巨頭公司*/
+#cathay,#yuanta{
+	margin-top: 50px;
+}
+.companymain{
+	display: flex;
+	background: #f0f0f0;
+	box-shadow: 3px 5px 7px rgba(113, 113, 113, 0.3);
+	border-radius: 10px;
+	padding: 5% 3%;
+	max-width: 1100px;
+}
+.companylogo{
+	max-width: 320px;
+	width: 32%;
+}
+.companylogo:before{
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 100%;
+}
+.companylogo img{
+	display: inline-block;
+  	vertical-align: middle;/* 保证文字垂直居中 */
+}
+.companycontent{
+	color: #151515;
+	width: 66%;
+	letter-spacing: 1px;
+	margin-left: 2%;
+}
+.companytext{
+	position: relative;
+	border-bottom:1px solid #c5c5c5;
+	padding-bottom: 30px;
+}
+.companytext:first-child{
+	margin-bottom: 40px;
+}
+.companytext h1{
+	font-size: 25px;
+	color: #b80914;
+	font-weight: 600;
+    text-indent: -0.5em;
+    padding-left: 1em;
+    padding-bottom: 10px;
+}
+.companytext h1 span{
+	color: #313131;
+	font-weight: 600;
+}
+.companytext h1.cathay{
+	color: #017433;
+}
+.companytext h1.yuanta{
+	color: #0050a4;
+}
+.companytext .fas{
+	font-size: 20px;
+	padding-right: 5px;
+}
+.companytext ul{
+	list-style: disc;
+	padding-left: 2.5em;
+	font-size: 18px;
+}
+.companytext li{
+	padding:5px 0;
+}
+.seemore a{
+    margin-top: 40px;
+    font-size: 18px;
+    padding-left: 20px;
+    color: rgb(25, 103, 210);
+    font-weight: 400;
+}
+.seemore a:hover{
+	color: #4a5cde;
+}
+/*btnblock*/
+.btnblock{
+    display: flex;
+    justify-content: space-around;
+}
+.btnblock a{
+	color: #fff;
+}
+.btnbuy,.btnopen{
+	width: 150px;
+	height: 40px;
+	background: #f29401;
+	padding: 10px 15px 8px 15px;
+	border-radius: 20px;
+	transition: 0.5s;
+	font-size: 20px;
+	color: #fff;
+	text-align: center;
+	letter-spacing: 1px;
+	cursor: pointer;
+}
+.btnbuy:hover,.btnopen:hover{
+	transform: scale(0.95);
+}
+.btnbuy{
+	position: absolute;
+    bottom: -15px;
+    right: -5px;
+}
+.btnopen{
+	background: #e4000e;
+	margin: 25px auto;
+	border-radius: 0;
+}
+.btnopen:hover{
+	background: #a10c06;
+}
+.btnopen .fas{
+	padding-left: 5px;
+}
+/*活動辦法*/
+.bgactivity{
+	background: #dceeff;
+	color: #3c3c3c;
+}
+.activityTT{
+	text-align: center;
+	font-size: 35px;
+	font-weight: 500;
+	padding-bottom: 25px; 
+}
+.activityinforblock{
+	text-align: justify;
+	font-size: 18px;
+    line-height: 25px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    max-width: 900px;
+    word-break: break-all;
+}
+.activityinforblock span{
+	color: #f1830d;
+	font-weight: 400;
+}
+.activityinforblock ul{
+	overflow: hidden;
+    padding-left: 40px;
+    list-style: disc;
+}
+.activityinforblock li{
+	margin-bottom: 10px;
+}
+.activityinforblock a{
+	/*display: unset;*/
+	display: inline;
+	color: #0075a9;
+}
+.activityinforblock a:hover{
+	color: #9fc1e7;
+}
+.activitylistcontent li{
+	list-style: decimal-leading-zero;
+}
+/*詳細說明*/
+
+.descriptionblock{
+	text-align: justify;
+    line-height: 25px;
+    letter-spacing: 1px;
+    margin-top: 50px;
+    color: #1e1e1e;
+}
+.descriptionblock ul{
+	list-style:disc;
+	padding-left: 5%;
+}
+.descriptionblock li{
+	margin-bottom: 10px;
+	font-weight: 400;
+}
+.descriptionblock a{
+	display: inline-block;
+	color: #06C
+}
+.descriptionblock p{
+	display: inline;
+	color: #a10c06
+}
+.listcontent li{
+	list-style: decimal
+}
+/*footer*/
+footer{
+	color: #1e1e1e;
+	padding-bottom:60px;
+    overflow: hidden;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 400;
+}
+footer p{
+    margin-bottom:10px;
+    line-height: 20px;
+}
+footer a{
+	color: #06C;
+	display: unset;
+}
+footer a:hover{
+	color: #cc0000;
+}
+/*RWD*/
+
+@media (max-width:769px){
+	.bannerblock{
+		padding-top: 60px;
+		background: url(../images/bg-banner-m.jpg) no-repeat top center/cover;
+	}
+	.bannerblock img:nth-child(1){
+		display: block
+	}
+}
+
+@media (max-width:640px){
+	.bannerblock{
+		height: 100vh;
+		padding-top: 0;
+		background: url(../images/bg-banner-m2.jpg) no-repeat bottom center/cover;
+	}
+	.bannerblock img:nth-child(1){
+		display: none;
+	}
+	.bannerblock img:nth-child(2){
+		display: block
+	}
+	.divider{
+		top: -32px;
+	}
+	.threepointblock,.companymain{
+		display: block;
+	}
+	.companylogo,.companycontent{
+		width: 100%;
+	}
+	.companycontent{
+		margin-left: 0;
+	}
+	.companytext{
+		border:none;
+	}
+	.companytext:first-child{
+		border-bottom: 1px solid #c5c5c5;
+	}
+	.companytext h1{
+		font-size: 22px;
+		text-align: center;
+		text-indent: 0;
+    	padding-left: 0;
+	}
+	.btnbuy{
+		position: relative;
+		bottom: 0;
+		right: 0;
+		top: 10px;
+	}
+	
+}
