@@ -1,0 +1,256 @@
+@charset "UTF-8";
+.table__list {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/*KV*/
+.banner__block {
+  padding-top: 60px;
+}
+.banner__block img:nth-child(2) {
+  display: none;
+}
+@media (max-width: 640px) {
+  .banner__block img:nth-child(2) {
+    display: block;
+  }
+  .banner__block img:nth-child(1) {
+    display: none;
+  }
+}
+
+/*content*/
+@media (max-width: 480px) {
+  #chart01 {
+    height: 360px;
+  }
+  #chart01 span {
+    font-size: 13px !important;
+  }
+}
+
+h3 strong {
+  font-size: 1.125rem;
+  line-height: 1.6rem;
+  font-weight: bold;
+  color: #cc0000;
+}
+
+.table-mobile {
+  display: none;
+}
+@media (max-width: 480px) {
+  .table-mobile {
+    display: block;
+  }
+}
+@media (max-width: 480px) {
+  .table-pc {
+    display: none;
+  }
+}
+.table__list {
+  max-width: 600px;
+}
+.table__list tr:nth-child(odd) {
+  background: transparent;
+}
+.table__list tr:not(:last-child) {
+  border-bottom: 1px solid #b3b3b3;
+}
+.table__list tr:not(:last-child) td:first-child {
+  border-bottom: 1px solid;
+}
+.table__list tr td:first-child {
+  font-weight: bold;
+  font-size: 1.125rem;
+  line-height: 1.6rem;
+  background: #818b98;
+  color: #fff;
+}
+.table__list ul {
+  text-align: left;
+  list-style: disc;
+  margin-left: 2rem;
+}
+
+.content-p {
+  font-size: 1.25rem;
+  line-height: 1.6rem;
+  font-weight: bold;
+  margin-top: 5px;
+  color: #2c67ae;
+}
+
+.extra-video {
+  padding-bottom: 0;
+}
+
+/* guideline 修改 */
+.fund-advantage p {
+  color: #2c67ae;
+}
+.fund-advantage li::marker {
+  color: #2c67ae;
+}
+
+/* modal */
+.modal {
+  z-index: 10000;
+}
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 700px;
+  }
+}
+.modal.fade .modal-dialog {
+  transform: none;
+}
+.modal-content {
+  background: #f3f3f3;
+  border-radius: 1rem;
+  border: 0;
+  box-shadow: 5px 5px 8px #0000006b;
+}
+.modal-header {
+  border: 0;
+  padding: 1rem 1rem 0;
+}
+.modal-body {
+  padding: 0 2rem 2rem;
+}
+@media (max-width: 480px) {
+  .modal-body {
+    padding: 0 1rem 1rem;
+  }
+}
+.modal-body h4 {
+  color: #cc0000;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+}
+@media (max-width: 480px) {
+  .modal-body h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .modal-body h3 {
+    font-size: 18px;
+  }
+}
+.modal-body .sub-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.125rem;
+  line-height: 1.6rem;
+}
+@media (max-width: 480px) {
+  .modal-body .sub-title {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+}
+.modal-body .chart__block {
+  margin: 20px 0 0;
+}
+@media (max-width: 480px) {
+  .modal-body .chart__block {
+    margin: 0;
+  }
+}
+
+.chart__caption a {
+  display: inline;
+}
+
+/* 影片區 */
+.video, .WordPress {
+  margin: 30px 0;
+  display: flex;
+  justify-content: space-around;
+}
+@media (max-width: 480px) {
+  .video, .WordPress {
+    display: block;
+  }
+  .video a, .WordPress a {
+    margin-bottom: 10px;
+  }
+}
+.video img, .WordPress img {
+  max-width: 500px;
+  transition: 0.5s;
+}
+.video img:hover, .WordPress img:hover {
+  transform: scale(0.95);
+}
+
+#WordPress img {
+  max-width: 350px;
+}
+
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.6rem;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.video__block {
+  display: flex;
+  font-size: 18px;
+}
+@media (max-width: 769px) {
+  .video__block {
+    display: block;
+  }
+}
+.video__block h2 {
+  color: #ef4e28;
+  font-weight: bold;
+  font-size: 22px;
+  border-bottom: 1px solid #ccc;
+  line-height: 35px;
+  margin-bottom: 15px;
+}
+.video-show {
+  margin-right: 2%;
+  width: 50%;
+}
+@media (max-width: 769px) {
+  .video-show {
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+.video .activity__block {
+  width: 50%;
+}
+@media (max-width: 769px) {
+  .video .activity__block {
+    width: 100%;
+  }
+}
+.video .activity__block ul {
+  list-style: none;
+  padding: 0;
+  font-size: 16px;
+}
+.video .activity__block ul li {
+  text-indent: -1.4em;
+  padding-left: 1.4em;
+}
+.video .activity__block ul li:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "";
+  padding-right: 5px;
+}
+
+/*# sourceMappingURL=main.css.map */

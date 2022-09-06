@@ -1,0 +1,189 @@
+@import _variables
+@import _mixin
+
+%margin-auto
+  width: 100%
+  margin:0 auto
+
+// %btn-base
+//   font-size: 1rem
+//   color: #fff
+//   padding: 7px 12px
+//   white-space: nowrap
+//   cursor: pointer
+
+/*KV*/
+.banner
+  &__block 
+    padding-top: 60px
+    img:nth-child(2)
+      display: none
+    +mobile-640
+      img:nth-child(2)
+        display: block
+      img:nth-child(1)
+        display: none
+/*content*/
+#chart01
+  +mobile-480
+    height: 360px
+    span
+      font-size: 13px !important
+      // top: -10px !important
+      // left: 5px !important
+h3
+  strong
+    +font-18
+    +font-bold
+    color: $primary
+.table
+  &-mobile
+    display: none
+    +mobile-480
+      display: block
+  &-pc
+    +mobile-480
+      display: none
+  &__list
+    max-width: 600px
+    @extend %margin-auto
+    tr
+      &:nth-child(odd)
+        background: transparent
+      &:not(:last-child)
+        border-bottom: 1px solid $color-light-gray
+        td
+          &:first-child
+            border-bottom: 1px solid
+      td
+        &:first-child
+          +font-bold
+          +font-18
+          background: #818b98
+          color: #fff
+    ul
+      text-align: left
+      list-style: disc
+      margin-left: 2rem
+.content-p
+  +font-20
+  +font-bold
+  margin-top: 5px
+  color: $color-blue
+.extra-video
+  padding-bottom: 0
+
+/* guideline 修改 */
+// .bg-three-point
+//   background: #fff
+.fund
+  &-advantage
+    p
+      color: $color-blue
+    li::marker
+      color: $color-blue
+/* modal */
+.fade:not(.show)
+  // opacity: 1
+.modal
+  // display: block
+  z-index: 10000
+  &-dialog
+    +mobile-min-576
+      max-width: 700px
+  &.fade 
+    .modal-dialog
+      transform: none
+  &-content
+    background: #f3f3f3
+    border-radius: 1rem
+    border: 0
+    box-shadow: 5px 5px 8px #0000006b
+  &-header
+    border: 0
+    padding: 1rem 1rem 0
+  &-body
+    padding: 0 2rem 2rem
+    +mobile-480
+      padding: 0 1rem 1rem
+    h4
+      color: $primary
+      text-align: center
+      +font-bold
+      +font-24
+      +mobile-480
+        font-size: 1.2rem
+        margin-bottom: 10px
+    h3
+      +mobile-480
+        font-size: 18px
+    .sub-title
+      text-align: center
+      +font-bold
+      +font-18
+      +mobile-480
+        +font-16
+    .chart__block
+      margin: 20px 0 0 
+      +mobile-480
+        margin: 0 
+.chart__caption
+  a
+    display: inline
+/* 影片區 */
+.video,.WordPress
+  margin: 30px 0
+  display: flex
+  justify-content: space-around
+  +mobile-480
+    display: block
+    a
+      margin-bottom: 10px
+  img
+    max-width: 500px 
+    +img-hover
+#WordPress
+  img
+    max-width: 350px 
+h4
+  +font-20
+  text-align: center
+  +font-bold
+  margin-bottom: 5px
+
+.video
+  &__block
+    display: flex
+    font-size: 18px
+    +pc-769
+      display: block
+    h2
+      color: #ef4e28
+      font-weight: bold
+      font-size: 22px
+      border-bottom: 1px solid #ccc
+      line-height: 35px
+      margin-bottom: 15px
+  &-show
+    margin-right: 2%
+    width: 50%
+    +pc-769
+      margin:0 auto
+      width: 100%
+  .activity
+    &__block 
+      width: 50%
+      +pc-769
+        width: 100%
+      ul
+        list-style: none
+        padding: 0
+        font-size: 16px
+        li
+          text-indent: -1.4em
+          padding-left: 1.4em
+          &:before
+            font-family: "Font Awesome 5 Free"
+            font-weight: 900
+            content: '\f35a'
+            padding-right: 5px
