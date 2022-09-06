@@ -1,0 +1,464 @@
+@import _variables
+@import _mixin
+// @import "../assets/fontawesome-sass/scss/fontawesome.scss"
+// @import "../assets/fontawesome-sass/scss/solid.scss"
+// @import "../assets/fontawesome-sass/scss/brands.scss"
+
+body
+  color: $text
+  line-height: 22px
+  text-align: justify
+
+/* 統一樣式 */
+%margin-auto
+  width: 100%
+  margin:0 auto
+
+h1
+  font-size: 1.8rem
+h2
+  +font-bold
+  text-align: center
+  font-size: 1.7rem
+  line-height: 2.2rem
+h3
+  color: $primary
+  font-size: 1.2rem
+  font-weight: bold
+  display: table
+  margin: 0 auto
+  line-height: 2rem
+  +border-bottom($primary)
+h4
+  color:#fff
+  font-size: 1.4rem
+  +font-bold
+  text-align: center
+h5
+  font-size: 1.3rem
+  +font-bold
+  line-height: 2rem
+span
+  color: $color-blue
+  +font-bold
+.section
+  &__block
+    max-width: 850px
+    +mobile-480
+      padding: 60px 3%
+.index
+  &-content
+    max-width: 1100px
+  &-remark
+    text-align: center
+    margin-top: 30px
+.banner
+  &__block
+    margin-top: 60px
+    height: 150px
+    background: url(../images/banner.jpg) no-repeat center/cover
+    +mobile-640
+      height: 120px
+      background: url(../images/banner-m.jpg) no-repeat center/cover
+    &-bank
+      background: url(../images/banner2.jpg) no-repeat center/cover
+      +mobile-640
+        background: url(../images/banner2-m.jpg) no-repeat center/cover
+.methods
+  &__block
+    +flex-center
+    align-items: stretch
+    +pc-1024
+      display: block
+  &__choice
+    @extend %margin-auto 
+    position: relative
+    width: 30%
+    padding: 15px
+    background: $color-lightgray
+    border: 1px solid #fff
+    border-radius: 30px
+    box-shadow: 5px 5px 10px rgb(111 111 111 / 50%)
+    // cursor: pointer
+    // cursor: url(../images/enter.cur), auto
+    transition: $trans-time
+    +pc-1024
+      width: 50%
+      margin-bottom: 50px
+    +mobile-769
+      width: 100%
+      margin-bottom: 25px
+      box-shadow: 3px 3px 5px rgb(111 111 111 / 50%)
+    &:hover
+      transform: scale(1.05)
+    img
+      max-width: 30px
+      margin: 0
+      margin-right: 10px
+    ul
+      text-indent: -1.6rem
+      padding-left: 1.6rem
+    a
+      display: inline
+  &__title
+    background: #fff
+    padding: 30px
+    border-radius: 20px
+    text-align: center
+    strong
+      color:$secondary
+      +font-bold
+    p
+      font-size: 1.2rem
+      +font-bold
+.choice
+  &-content
+    position: relative
+    margin-top: 20px
+    padding-left: 5px
+    +pc-1024 
+      left: 16%
+    +mobile-769
+      left:0
+  &-list
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    margin-top: 10px
+.read-more
+  // position: absolute
+  // bottom: 4%
+  // left: 50%
+  // transform: translate(-50%)
+  +font-bold
+  text-align: center
+  margin-top: 20px
+  &::after
+    +font-icon('\f0da')
+  a
+    color: #000
+    font-size: 1.2rem
+
+.remarks
+  &__block
+    display: flex
+    justify-content: center
+    +space-up
+    +mobile-769
+      display: block
+  &__content
+    font-size: 1rem
+    text-align: center
+    min-width: 340px
+    +.remarks__content
+      margin-left: 20px
+      +mobile-769
+        margin-left: 0
+        margin-top: 20px
+    p
+      padding-top: 20px
+      text-align: justify
+      display: inline-block
+    a
+      display: inline
+    &.another-page, &.tab__extra
+      cursor: pointer
+      background: url(../images/img-ques.png) no-repeat center/contain 
+      height: 80px
+      +hover-trans
+      h3
+        line-height: 82px
+        border: 0
+        padding-left: 45px
+        font-size: 1.3rem
+    &.tab__extra
+      margin-top: 50px
+      background: url(../images/img-extra.png) no-repeat center/contain 
+      h3
+        color:$text
+        +mobile-480 
+          font-size: 1.2rem
+        strong
+          +font-bold 
+          color:$primary
+  //共同區塊 
+.remind
+  &__block
+    @extend %margin-auto
+    max-width: 640px
+    text-align: center
+    h3
+      border: 0
+  &__text
+    position: relative
+    padding: 5px 0
+    background: $color-lightgray
+    img
+      position: absolute
+      max-width: 100px
+      left: -32px
+      top: -11px
+      +mobile-769
+        max-width: 80px
+        left: -10px
+    +mobile-769
+      padding: 5px 9%
+    p
+      +font-bold
+  &__pic
+    +space-up
+    +flex-center
+    img
+      max-width: 320px
+    +mobile-769
+      display: block
+.bg
+  &-step
+    background: url(../images/bg-step.jpg) no-repeat right/cover fixed
+.step
+  &__block
+    position: relative
+    top: 30px
+    +mobile-640
+      top: 0
+  &__block:first-child
+    .step__content
+      display: block
+  &__TT
+    cursor: pointer
+    @extend %margin-auto
+    max-width: 390px
+    height: 65px
+    background: url(../images/img-TT02.png) no-repeat center/contain
+    line-height: 65px
+    margin-bottom: 1%
+    +hover-trans
+    // @extend %fa-icon
+    // @extend .fas
+    &::after
+      +font-icon("\f0d8")
+      padding-left: 5px
+      // content: fa-content($fa-var-caret-up)
+    &.arrow
+      &-up
+        &::after
+          content:"\f0d7"
+      &-down
+        &::after
+          content:"\f0d8"
+    &.act-status
+      background: url(../images/img-TT01.png) no-repeat center/contain
+    // +mobile-640
+    //   position: relative
+    //   top: 0
+    //   background-size: contain
+
+  &__content
+    display: none
+    background: #fff
+    border: 1px solid $color-lightgray
+    box-shadow: 5px 5px 8px rgb(111 111 111 / 35%)
+    padding: 8% 8% 5%
+    margin-bottom: 60px
+    +mobile-769
+      padding: 5% 3%
+  &__text
+    h5
+      color: $color-blue
+    p
+      // display: flex
+      font-size: 1.1rem
+      font-weight: bold
+      margin: 0 0 10px 1rem
+      text-indent: -0.5rem
+      &::before
+        display: inline-block
+        content:"■"
+        // width: 12px
+        // height: 12px
+        // background: $text
+        margin: -0.2rem 0.3rem 0 0
+        vertical-align: top
+    span
+      display: contents
+      color: $primary
+    strong
+      display: contents
+      color: $color-blue
+      +font-bold
+    i
+      text-indent: 0.5rem
+      margin-right: 5px
+    a
+      display: inline
+  &__img
+    max-width: 700px
+    @extend %margin-auto
+  &__next
+    max-width: 140px
+    +position-center(absolute)
+    bottom: -45px
+    cursor: pointer
+    +hover-trans
+    &:hover
+      transform: translateX(-50%) scale(0.95)
+    +mobile-480
+      bottom: -55px
+
+.remark
+  font-size: 1rem
+  ul
+    list-style: decimal
+    padding-left: 2.2rem
+      
+/* 開戶銀行列表 */
+
+.tab
+  &__text
+    +title($text, 1.4rem, 2rem)
+    margin:30px 0
+    display: flex
+    justify-content: center
+    +mobile-769
+      display: block
+    p
+      +font-bold
+      &::before
+        +font-icon("\f35a")
+    strong
+      color: $primary
+      +font-bold
+.bank
+  &__table
+    tr
+      &:nth-child(even)
+        background:$color-lightgray
+    th,td
+      vertical-align: middle
+      +title($text, 1.125rem, 1.5rem)
+      padding: 12px 
+    th
+      font-size: 1.25rem
+      padding: 0 10px
+      +border-bottom($color-lightgray)
+      +mobile-480
+        font-size: 1.125rem
+        padding: 3px 10px
+      span
+        display: block
+        color:$secondary
+        font-size: 1rem
+      &:first-child
+        text-align: left
+        width: 25%
+        padding-left: 1.5rem
+        +mobile-640
+          min-width: 115px
+          padding: 5px 10px
+      &.th01, &.th02, &.th03
+        background:#f4a02e
+        letter-spacing: 1px
+        color:#fff
+        height: 60px
+        width: 35%
+        strong
+          font-size: 1rem
+          display: block
+          font-weight: bold
+          +mobile-480
+            font-size: 0.9rem
+      &.th02 
+        background:#eb6877
+        +mobile-480
+          min-width: 125px
+          letter-spacing: 0
+      &.th03
+        background:#f0c011
+    td
+      line-height: 1.8rem
+      +mobile-480 
+        font-size: 1rem
+        line-height: 1.5rem
+      &:first-child
+        text-align: left
+    .fa-check, .inline-text
+      color:#ab231e
+  &-recommend
+    margin-bottom: 50px
+    tr
+      td
+        &:first-child
+          text-indent: -1.9rem
+          padding-left: 3rem
+          +mobile-640
+            padding-left: 2rem
+          &::before
+            +font-icon("\f005")
+            color:$secondary
+  &-not-recommend
+    tr
+      td
+        &:first-child
+          padding-left: 1.5rem
+          +mobile-640
+            padding: 5px 10px
+  &__remind
+    margin-bottom: 50px
+    .remind__text
+      background: #ffedcc
+      +mobile-480
+        padding: 5px 2%
+      img
+        top:5px
+        +mobile-480 
+          display: none
+.attention
+  &-list
+    margin-top: -60px
+    font-size: 1.125rem
+    line-height:1.6rem
+    li
+      letter-spacing: 0.1rem
+      text-indent: -1.4rem
+      padding-left: 1.4rem
+      margin-bottom: 10px
+      &::before
+        content: "※ "
+    span
+      color:$primary
+    a
+      display: contents
+.nav-tabs .nav-link
+  +font-bold
+  color: #fff
+  background: #b9b9b9
+  padding: 10px 30px
+  font-size: 1.4rem
+  letter-spacing: 0.05rem
+  border-radius:0
+  +mobile-480 
+    padding: 10px 20px
+  &.nav-title
+    display: flex
+    align-items: center
+  img
+    max-width: 20px
+    margin-right: 5px
+  &:focus, &:hover
+    background: #8ea4be
+    border-color: transparent
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active
+  background: $color-blue
+  color: #fff    
+  border-color: transparent
+  position: relative
+  &::after
+    content: ""
+    position: absolute
+    bottom: -22px
+    left: 50%
+    transform: translateX(-50%)
+    border: 11px solid transparent
+    border-top-color: $color-blue
+  
+  
