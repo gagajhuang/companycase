@@ -1,0 +1,399 @@
+body{
+	/*Iphone 不支overflow:hidden，有以下兩種解法*/
+	/*position: relative;*/
+	/*position: fixed;*/
+	color: #000000;
+	font-weight: 300;
+}
+.sectionblock,footer,
+.titleblock img,.threepointimg,
+.fundblock,.fundtitle,.fundcontent,
+.fundpoint,.pointblock,
+.width900,.tableblock,
+.btnblock,
+.activityinforblock,
+.footerblock{
+	width: 100%;
+	margin:0 auto;
+}
+section{
+	position: relative;
+}
+.sectionblock{
+	max-width: 1280px;
+	padding: 5% 5%;
+	overflow: hidden;
+}
+.footerblock{
+	max-width: 1280px;
+	padding: 0 5%;
+}
+.menu a:hover {
+    color: #e18987;
+}
+.menu li:first-child a{
+	color: #f1ce66;
+    font-size: 18px;
+}
+.menu li:first-child a:hover{
+	color: #9fc1e7;
+}
+/*KV*/
+.bannerblock{
+	position: relative;
+	height: 830px;
+	margin-top: 60px;
+	background: url(../images/bg-banner.jpg) no-repeat top center;
+}
+
+.bannerblock img:nth-child(1){
+	padding-top: 90px;
+	max-width: 580px;
+}
+.bannerblock img:nth-child(2){
+	max-width: 460px;
+}
+.divider{
+	position: absolute;
+	top: -22px;
+	width: 100%;
+	height: 54px;
+	background: url(../images/divider.png) no-repeat top center;
+}
+.divider2{
+	bottom: -20px;
+    top: auto;
+    transform: rotateY(180deg);
+    z-index: 99;
+}
+
+/*content*/
+.bottomspace{
+	padding-bottom: 20px;
+}
+.bgfund{
+	background: url(../images/bg-fundsection.jpg) no-repeat top/cover fixed;
+}
+.bggary{
+	background: #e5e5e2;
+}
+.titleblock img{
+	max-width: 450px;
+}
+.titleblock{
+	margin-bottom: 30px;
+}
+
+/*三大重點*/
+.threepointblock{
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 60px;
+}
+.threepointimg{
+	max-width: 300px;
+}
+/*三巨頭公司*/
+#taiwan{
+	padding-top: 50px;
+}
+#china{
+	padding-top: 100px;
+}
+.fundtitle{
+	max-width: 300px;
+	position: absolute;
+    left: 0;
+    right: 0;
+    top: -18px;
+}
+.fundmain{
+	position: relative;
+	display: flex;
+    background: #f0f0f0;
+    box-shadow: 3px 5px 7px rgba(113, 113, 113, 0.3);
+    border-radius: 10px;
+    padding: 5% 3%;
+    max-width: 1100px;
+}
+.fundcontent{
+	position: relative;
+	padding-bottom: 30px;
+}
+
+.fundcontent h1{
+	text-align: center;
+	font-size: 25px;
+	color: #7f0b0a;
+	font-weight: 600;
+	line-height: 30px;
+	/*text-indent: -0.5em;
+    padding-left: 1em;
+    padding-bottom: 10px;*/
+}
+.h1warning{
+	color: #484848;
+	font-weight: 600;
+}
+.pointblock{
+	max-width: 800px;
+	padding-bottom: 20px;
+    border-bottom:1px solid #c5c5c5;
+}
+.fundpoint{
+	display: flex;
+	justify-content: center;
+    overflow: hidden;
+}
+.fundpoint img{
+	max-width: 250px;
+}
+.pointcaption{
+	font-size: 13px;
+    letter-spacing: 1px;
+    padding-top: 10px;
+    text-indent: 2em;
+}
+.contentTT{
+	text-align: center;
+	font-size: 30px;
+	font-weight: 500;
+	padding: 25px 0; 
+}
+.contentTT p{
+	font-size: 20px;
+	font-weight: 500;
+	color: #7f0b0a;
+	line-height: 30px;
+}
+
+/*表格區*/
+.width600{
+	max-width: 600px;
+}
+.width800{
+	max-width: 800px;
+}
+.unitblock{
+	float: right;
+	padding-bottom: 5px;
+}
+table{
+	width: 100%;
+	text-align: center;
+}
+.tableblock th{
+	background: #7f0b0a;
+	font-size: 18px;
+	font-weight: 400;
+	color: #fff;
+	padding: 10px 0;
+}
+.tableblock td{
+	background: #fff;
+	font-size: 18px;
+	font-weight: 400;
+	padding: 10px 0;
+	vertical-align: middle;
+}
+.tablecaption{
+	font-size: 13px;
+    letter-spacing: 1px;
+    padding-top: 10px;
+}
+.currency,.rwd-table tr:nth-child(even){
+	border-bottom: 1px solid #bbb;
+}
+/*btnblock*/
+.btnblock{
+	max-width: 400px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+.btnblock a{
+	color: #fff;
+}
+.btnbuy,.btnopen{
+	background: #f29401;
+	font-size: 20px;
+	padding: 8px 15px 9px 16px;
+	border-radius: 20px;
+	transition: 0.5s;
+	width: 160px;
+    text-align: center;
+}
+.btnbuy:hover,.btnopen:hover{
+	transform: scale(0.95);
+}
+.btnopen{
+	background: #df1a27;
+}
+/*活動辦法*/
+.bgactivity{
+	background: #fff0f0;
+	color: #3c3c3c;
+}
+.activityTT{
+	text-align: center;
+	font-size: 35px;
+	font-weight: 500;
+	padding-bottom: 25px; 
+}
+.activityinforblock{
+	text-align: justify;
+	font-size: 18px;
+    line-height: 25px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    max-width: 900px;
+    word-break: break-all;
+}
+.activityinforblock span{
+	color: #f1830d;
+	font-weight: 400;
+}
+.activityinforblock ul{
+	overflow: hidden;
+    padding-left: 40px;
+    list-style: disc;
+}
+.activityinforblock li{
+	margin-bottom: 10px;
+}
+.activityinforblock a{
+	/*display: unset;*/
+	display: inline;
+	color: #f1ce66;
+}
+.activityinforblock a:hover{
+	color: #9fc1e7;
+}
+
+/*詳細說明*/
+
+.descriptionblock{
+	text-align: justify;
+    line-height: 25px;
+    letter-spacing: 1px;
+    margin-top: 50px;
+    color: #1e1e1e;
+}
+.descriptionblock ul{
+	list-style:disc;
+	padding-left: 5%;
+}
+.descriptionblock li{
+	margin-bottom: 10px;
+	font-weight: 400;
+}
+.descriptionblock a{
+	display: unset;
+	color: #06C
+}
+.descriptionblock p{
+	display: inline;
+	color: #a10c06
+}
+.listcontent li{
+	list-style: decimal
+}
+/*footer*/
+footer{
+	color: #1e1e1e;
+	padding-bottom:60px;
+    overflow: hidden;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 400;
+}
+footer p{
+    margin-bottom:10px;
+    line-height: 20px;
+}
+footer a{
+	color: #06C;
+	display: unset;
+}
+footer a:hover{
+	color: #cc0000;
+}
+/*RWD*/
+@media (max-width:1024px){
+	.bannerblock{
+		background: url(../images/bg-banner1024.jpg) no-repeat top center;
+	}
+	.bannerblock img:nth-child(1){
+		padding-top: 140px;
+		max-width: 580px;
+	}
+}
+
+@media (max-width:769px){
+	.bottomspace{
+		padding-top: 20px;
+	}
+}
+
+@media (max-width:640px){
+	.bannerblock{
+		background: url(../images/bg-banner640.jpg) no-repeat top center;
+		height: 80vh;
+	}
+	.divider{
+		top: -32px;
+	}
+	.pointcaption{
+		text-align: center;
+		text-indent: 0;
+	}
+	.threepointblock,.fundpoint,.btnblock{
+		display: block;
+	}
+	.tableblock td{
+		font-size: 16px;
+		padding: 10px 5px;
+	}
+	.btnblock div+div{
+		margin-top: 10px;
+	}
+	.btnbuy,.btnopen{
+		width: 100%;
+	}
+	
+	
+}
+@media (max-width:375px){
+	.bannerblock{
+		background: url(../images/bg-banner414.jpg) no-repeat top center;
+
+	}
+	.bottomspace {
+	    padding-top: 40px;
+	}
+
+	.rwd-table th{
+	    display: none;
+	}
+
+	.rwd-table td{
+	    display: block;
+	    line-height: 25px;
+	}
+	.rwd-table td:nth-child(odd){
+	    background: #f7d4d4
+	}
+	.rwd-table td.currency{
+	    background: #7f0b0a;
+	    color: #fff
+	}
+	.rwd-table td.rateblock{
+	    background: #c3c3c3;
+	}
+	.rwd-table td:before {
+		width: 100%;
+	    content: attr(data-th);
+	    float: left;
+	    font-weight: bold;
+	}
+}
