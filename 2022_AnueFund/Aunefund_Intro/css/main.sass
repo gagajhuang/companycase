@@ -1,0 +1,383 @@
+@import _variables
+@import _mixin
+// @import "../assets/fontawesome-sass/scss/fontawesome.scss"
+// @import "../assets/fontawesome-sass/scss/solid.scss"
+// @import "../assets/fontawesome-sass/scss/brands.scss"
+
+body
+  color: $text
+  line-height: 22px
+  text-align: justify
+  color:$text
+
+/* 統一樣式 */
+%margin-auto
+  width: 100%
+  margin:0 auto
+%font-bold
+  font-weight: bold
+%btn-base
+  max-width: none
+  width: 300px
+  font-size: 1.25rem
+  padding: 10px 50px
+  border-radius:20px
+  +font-bold
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  i
+    position: absolute
+    font-size: 1rem
+    right: 10%
+    +mobile-480
+      right: 5%
+  &:hover
+    i
+      animation: arrow-hover 0.5s
+@keyframes arrow-hover
+  0%
+    transform: translateX(0px)
+    opacity: 1
+  25%
+    transform: translateX(30px)
+    opacity: 0
+  50%
+    transform: translateX(-30px)
+    opacity: 0
+  75%
+    transform: translateX(-30px)
+    opacity: 0
+  100%
+    transform: translateX(0px)
+    opacity: 1
+
+h1
+  +title(1.6rem, 2.2rem)
+h2
+  @extend %font-bold
+  font-size: 1.25rem
+  line-height: 2rem
+h3
+  font-size: 1.25rem
+  line-height: 2rem
+h4
+  @extend %font-bold
+  font-size: 1.2rem
+  font-size: 2rem
+// h5
+//   @extend %font-bold
+//   font-size: 1.3rem
+//   line-height: 2rem
+span, strong
+  @extend %font-bold
+.banner
+  &__block
+    position: relative
+    margin-top: 60px
+    height: 450px
+    background: url('../images/bg-kv.jpg') no-repeat bottom/cover
+    +mobile-480
+      background-size:200%
+      height: 350px
+    img
+      max-width: 770px
+      @extend %margin-auto
+      +position-center(absolute)
+      top: 10%
+      cursor: pointer
+      +img-change
+.title
+  &__block
+    display: flex
+    justify-content: flex-start
+    align-items: flex-start
+    padding-bottom: 15px
+    background: url('../images/img-line.png') no-repeat bottom /contain
+    margin-bottom: 30px
+    +mobile-640 
+      display: block
+      background: url(../images/img-line.png) no-repeat bottom left/260%
+    img
+      width: auto
+      margin: 0 10px 0 0
+    h1
+      margin: 0
+      color: $text
+      +mobile-640
+        text-align: left
+        margin-top: 5px
+// 關於 About
+.advantage
+  &__block
+    +flex-center
+    margin-top: 60px
+    +pc-769
+      display: block
+  &-item
+    position: relative
+    width:100%
+    max-width: 355px
+    @extend %margin-auto
+    +pc-769
+      &+.advantage-item
+        margin-top: 50px
+  &-title
+    position: absolute
+    left: -20px
+    top: -20px
+    padding: 10px 0
+    height: 55px
+    width: 105px
+    color: #fff
+    font-size: 1.4rem
+    +font-bold
+    text-align: center
+    background: url('../images/img-advantage01.png') no-repeat center /contain
+    +mobile-480 
+      left: -10px
+    +mobile-375 
+      top: -25px
+  &__list
+    h2
+      img
+        max-width: 22px
+        display: inline-block
+        vertical-align: text-top
+    ul
+      list-style: disc
+      margin: 0.5rem 0 0 1.8rem
+      font-size: 1.125rem
+      li
+        padding-bottom: 5px
+      strong
+        color: $primary
+  &-bg
+    max-width: 355px
+  &__text
+    background: url('../images/bg-advantage-center.png') repeat-y center/contain
+    padding: 20px 30px
+
+// 優惠 Discount 
+%btn-100
+  +mobile-640
+    width: 100%
+.img-table
+  img
+    +img-change
+#discount
+  h3
+    a
+      display: inline
+      cursor: pointer
+  strong
+    color: $secondary
+.discount
+  &__caption
+    margin-left: 1rem
+    +mobile-480
+      margin-left:0
+    ul
+      list-style: auto
+      margin-left: 1.5rem
+      +mobile-480
+        margin-left:1rem
+      a
+        display: inline
+    
+.btn
+  &__block
+    margin-top: 40px
+    a
+      +flex-center
+  &-open
+    @extend %btn-base
+    background: #2c67ae
+    +btn-hover(#104079)
+    @extend %btn-100
+  &-fund
+    @extend %btn-base
+    background: $important
+    @extend %btn-100
+
+// 方便 Convenient 
+%flex-margin
+  margin-top:20px 
+  +flex-center
+  +pc-769
+    display: block
+%convenient-h3
+  color:$important
+  +border-bottom($color-light-gray)
+  +font-bold
+  margin-top: 10px
+.combination
+  &__block
+    margin-top:20px 
+    margin-bottom: 50px
+    +flex-center
+    +mobile-640
+      display: block
+  &__content
+    max-width: 250px
+    width: 32%
+    @extend %margin-auto
+    +mobile-640
+      width: 100%
+      &+.combination__content
+        margin-top: 40px
+.content
+  &-item
+    position: relative
+    padding: 15px 15px 30px
+    text-align: center
+    background: #fff
+    +block-shadow
+    color:#000
+    img
+      max-width: 220px
+      &.img
+        &-object
+          max-width: 180px
+          +position-center(absolute)
+          bottom: -50px
+          // animation: fadeInDown 2s 0.9s infinite
+    h3
+      @extend %convenient-h3
+    ul
+      display: inline-block 
+      list-style: disc
+      margin: 10px 0 0 1rem
+  &-object
+    width: 100%
+    padding: 20px
+    margin-top: 60px
+    +block-shadow
+    background: #fff
+    // border-radius:50px
+    p
+      +font-bold
+      +font-18
+      padding-left: 2rem
+      +pc-769
+        padding-left: 1rem
+      +mobile-640
+        padding-left: 2rem
+      &::before
+        content: "\f14a"
+        font-family: "Font Awesome 5 Free"
+        font-weight: 900
+        color:$important
+        padding-right: 5px
+    .btn__block
+      margin-top: 10px
+      .btn-fund
+        background: #FF6600
+        max-width: 170px
+        @extend %margin-auto
+        padding: 8px
+        &::after
+          content: "\f0da"
+          font-family: "Font Awesome 5 Free"
+          font-weight: 900
+          margin-left: 10px
+        +btn-hover(#ff3f00)
+.app
+  &__block
+    @extend %flex-margin
+    justify-content: center
+    .img-app
+      max-width: 350px
+      margin:0
+      +pc-769
+        margin: 0 auto
+  &__content
+    position: relative
+    +block-shadow
+    padding: 15px 25px
+    background: #fff
+    max-width: 300px
+    @extend %margin-auto
+    +pc-769
+      margin-top: 50px
+    h3
+      @extend %convenient-h3
+      margin-top: 0
+    ul
+      list-style: disc
+      margin: 10px 0 0 1.5rem
+    .icon-crown
+      position: absolute
+      max-width: 70px
+      right: -25px
+      top: -40px
+      +pc-769
+
+.safe-process
+  margin-top: 50px
+  p
+    text-align: center
+    +font-20
+    +font-bold
+  img
+    max-width: 800px
+    +img-change
+.gift
+  &__block
+    position: relative
+    margin-top: 50px
+    max-width: 800px
+    @extend %margin-auto
+    +pc-769 
+      margin-top: 130px
+  &__content
+    margin-left: 120px
+    +pc-769
+      margin-left: 0
+  &-img
+    position: absolute
+    z-index: 1
+    bottom: 0
+    max-width: 225px
+    width: 100%
+    +pc-769 
+      bottom: auto
+      top: -110px
+      left: 50%
+      transform: translateX(-50%)
+    +mobile-480
+      max-width: 200px
+    img
+      +pc-769
+        &:nth-child(1)
+          display: none
+      &:nth-child(2)
+        display: none
+        +pc-769 
+          display: block
+  &-bg
+    max-width: 655px
+  &__text
+    background: url('../images/bg-gift-center.png') repeat-y center/contain
+    max-width: 655px
+    @extend %margin-auto
+    text-align: center
+    +pc-769
+      margin: 0 auto
+      padding: 40px 20px
+    h1
+      color:$important
+      margin-bottom: 20px
+      +text-multi
+    h3
+      +font-18
+      +text-multi
+    strong
+      color: $color-blue
+      font-weight: normal
+.open-account
+  width: 400px
+  +mobile-480
+    width: 100%
+    padding: 10px 20px
