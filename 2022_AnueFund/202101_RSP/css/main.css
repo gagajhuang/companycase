@@ -1,0 +1,629 @@
+/* IE11 */
+/* @media all and (-ms-high-contrast:none)
+{
+	*::-ms-backdrop,
+	[data-aos^=fade][data-aos^=fade],[data-aos^=zoom][data-aos^=zoom]{
+	opacity: 1;
+	}
+} */
+body{
+	/*Iphone 不支overflow:hidden，有以下兩種解法*/
+	/*position: relative;*/
+	/*position: fixed;*/
+	color: #333333;
+	font-weight: 300;
+	background: #fff;
+}
+
+.bannerImg,.bannerBtn,.titleblock,.outside-block,
+.pointTT02,.point-img{
+	width: 100%;
+	margin:0 auto;
+}
+.bottom-reduce{
+	padding: 70px 40px 0 40px;
+}
+/*KV*/
+.bg-yellow{
+	background: #f1b903;
+}
+.bannerblock{
+	position: relative;
+	height: 850px;
+	overflow: hidden;
+	background: url(../images/bg-kv.jpg) no-repeat top/cover;
+}
+.bannerTT{
+	position: absolute;
+	max-width: 800px;
+	margin: 0 auto;
+	top: 50%;
+	left: 0;
+	right: 0;
+	transform: translate(0, -50%);
+}
+.bannerBtn{
+	position: absolute;
+	right: 0;
+	left: 0;
+	margin: 0 auto;
+	bottom: 90px;
+	max-width: 150px;
+}
+.btnopen{
+ background: #a10c06;
+}
+.btnopen:hover{
+	background: #d61c14;
+}
+.img-line{
+	width: 100%;
+	height: 26px;
+	position: absolute;
+	bottom: -18px;
+	background: url(../images/img-line.png) repeat-x center;
+}
+
+/*content*/
+.bgfundlist{
+  background: url(../images/bg-02.jpg) no-repeat bottom #ede8e7;
+}
+.titleblock{
+	max-width: 550px;
+	font-size: 30px;
+	line-height: 35px;
+  font-weight: bold;
+  text-align: center;
+  padding: 0;
+  margin-bottom: 30px;
+}
+.bgactivity .titleblock:after, .bgactivity .titleblock:before, .fundlistblock .titleblock:after, .fundlistblock .titleblock:before{
+	content: "";
+	width: 60px;
+	height: 20px;
+	background: url(../images/lineblack.png) no-repeat center center;
+  display: inline-block;
+}
+
+/* 三大秘訣 */
+.bgpoint{
+	background: url(../images/bg-01.jpg) no-repeat bottom left;
+}
+.outside-block{
+	max-width: 1120px;
+	border-radius: 10px;
+	border: 1px solid #000;
+	background: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 30px;
+	margin-bottom: 50px;
+}
+.point-img{
+	max-width: 380px;
+}
+
+.pointTT img:nth-child(1){
+	max-width: 660px;
+  margin-bottom: 5px;
+}
+.pointTT img:nth-child(2){
+	display: none;
+	max-width: 260px;
+  margin-bottom: 5px;
+}
+.point_content h2{
+	background: #ffbf52;
+	padding: 10px 15px;
+	color: #000000;
+	font-weight: bold;
+	letter-spacing: 1px;
+	font-size: 20px;
+	line-height: 22px;
+	margin-bottom: 15px;
+	text-align: justify;
+}
+.point_content h3{
+	color: #a10c06;
+	font-weight: bold;
+	letter-spacing: 1px;
+	font-size: 20px;
+	line-height: 25px;
+	margin-bottom: 15px;
+}
+.point_content b{
+	font-weight: bold;
+	color: #000;
+}
+.point-text{
+	padding-left: 3rem;
+	line-height: 28px;
+	font-size: 18px;
+}
+.point-text a{
+	display: inline;
+  color: #3969b7;
+  font-weight: bold
+}
+.point-text a:hover{
+  color: #f99746;
+}
+.point-text .btnopen{
+	display: table;
+	padding: 5px 20px;
+	color: #fff;
+	border-radius: 40px;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	cursor: pointer;
+	margin: 0 auto;
+	transition: 0.5s;
+}
+.point-text .btnopen:after {
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	content: "\f0da";
+	padding-left: 6px;
+}
+.list-number{
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	background: #000;
+	color: #fff;
+	border-radius: 50%;
+	line-height: 20px;
+	font-size: 16px;
+	text-align: center;
+	margin-right: 5px;
+}
+
+/* 基金清單 */
+.padding-reduce{
+	padding: 0 40px;
+}
+.fund-tab{
+	display: flex;
+	justify-content: space-between;
+}
+.fund-tab div{
+	transition: 0.5s;
+}
+.fund-tab div:hover{
+	transform: scale(0.95);
+}
+.fundlistblock{
+  max-width:900px;
+  width: 100%;
+  margin:20px auto;
+  font-size: 18px;
+  line-height: 22px;
+}
+.fundlistblock ul{
+	margin-bottom: 70px;
+}
+.fundlistblock li{
+  margin-bottom: 30px;
+  vertical-align:bottom;
+}
+.fundlist__title{
+	font-size: 24px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	border-bottom: 1px solid #000;
+	margin-bottom: 15px;
+	padding: 15px 0 5px 0;
+	color: #a10c06;
+}
+.fundlist__title span{
+	font-size: 16px;
+}
+.fundcontent{
+	display:none;
+}
+.listname{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #000;
+}
+.listname:hover .fundname{
+	color: #005eae;
+    font-weight: bold;
+}
+.listtitle{
+	display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+.listleft{
+	display: flex;
+}
+.listicon {
+  /* min-width: 112px; */
+  max-height: 25px;
+	color: #b7510b;
+	font-weight: bold;
+	padding-right: 5px;
+  margin-right: 5px;
+	/* border-right: 1px solid #333333; */
+}
+.listicon .fas{
+    margin-right: 5px;
+    font-size: 23px;
+    vertical-align: middle;
+    color: #333333;
+}
+.listtitle span{
+	color: #00555f;
+	font-weight: bold;
+
+}
+.listtitle p{
+	display: inline;
+    color: #666666;
+}
+
+/*基金按鈕*/
+.btnbuy{
+	background: #cc0000;
+}
+.btnbuy,.fundinfor{
+	font-size: 16px;
+    color: #fff;
+    padding: 7px 12px;
+    white-space:nowrap;
+    cursor: pointer;
+}
+.fundinfor{
+	display: flex;
+	align-items: center;
+	background: #ff8400;
+	justify-content: center;
+}
+/* .listcontent:first-child .fundinfor{
+	background: #ff9d34;
+} */
+
+/*基金表格*/
+.fundlistblock .tableblock{
+	max-width: 800px;
+  text-align: center;
+  line-height: 35px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+.fundlistblock table{
+	width: 100%;
+	border:1px solid #919191;
+}
+.fundcontent th{
+	background: #d0d0d0;
+	padding: 5px 0;
+}
+.fundcontent td{
+	padding: 5px 0;
+  width: 15%;
+  background: #fff;
+}
+.fundcontent th:nth-child(1){
+	width: 28%;
+}
+
+/*threemethods*/
+.bgmethods{
+	background: url(../images/bg-methods.jpg) no-repeat right center/cover;
+}
+.threemethods{
+	text-align: center;
+	font-size: 18px;
+}
+.methodsimg{
+	max-width: 225px;
+	transition: 0.5s;
+}
+.methodsimg a{
+	position: relative;
+	overflow: hidden;
+}
+.methodsimg a:after{
+	font-family: "Microsoft JhengHei", "Font Awesome 5 Free"; 
+  font-weight: 600; 
+	content: '查看更多 \f0da';
+	background: rgba(0,0,0,0.5);
+	position: absolute;
+	z-index: 2;
+	width: 100%;
+	height: 12%;
+	right: 0;
+	bottom: 16%;
+	text-align: right;
+	line-height: 30px;
+	color: #fff;
+	padding-right: 7px;
+}
+.methodsimg:hover{
+	transform: scale(0.95);
+}
+.threemethods span p{
+	font-weight: bold;
+}
+.threemethods span p:nth-child(1){
+	font-size: 28px;
+  letter-spacing: 2px;
+  margin: -10px 0 5px 0;
+  max-width: 225px;
+  overflow: hidden;
+}
+
+
+/*活動辦法*/
+.bgactivity{
+	/* background: url(../images/bg-activity.jpg) no-repeat top/cover; */
+}
+
+/*跳窗*/
+.maskblock{
+	position: fixed;
+  z-index: 99999;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  margin: 0;
+  padding: 0 10px;
+  box-sizing: border-box;
+  overflow-x: scroll;
+}
+.flightbox{
+	position: relative;
+  max-width: 900px;
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  margin: 12vh auto 0 auto;
+  padding: 40px 20px;
+  overflow: hidden;
+  border-radius: 30px;
+}
+.flightblock{
+	max-width: 700px;
+	letter-spacing: 1px;
+}
+.flightblock tr:nth-child(odd){
+	background: #fff1ee;
+}
+.flightblock th{
+	background: #d0d0d0;
+}
+.flightblock img{
+	max-width: 25px;
+}
+.flightblock td{
+	padding: 5px 0;
+}
+.flightblock td,.flightblock th{
+	border-right: 1px solid #919191;
+}
+.flightblock td:nth-child(1){
+	min-width: 200px;
+	width: 20%;
+}
+.flightblock td:nth-child(3){
+	max-width: 200px;
+}
+
+.closebox{
+	position: absolute;
+    right: 3%;
+    top: 3%;
+    cursor: pointer;
+}
+.maskblock table{
+	border: 1px solid #919191;
+	text-align: center;
+	width: 100%;
+    line-height: 30px;
+}
+.maskblock .buy2btn{
+	max-width: 200px;
+    padding-top: 20px;
+    transition: 0.2s;
+}
+.maskblock .buy2btn:hover{
+	transform: scale(0.9);
+}
+
+.listtable{
+	width: 100%;
+	max-width: 650px;
+	border: 1px solid #b3b3b3;
+	background: #fff;
+	margin: 15px auto;
+}
+.listtable th{
+	font-weight: bold;
+}
+.listtable td:nth-child(even){
+	font-weight: bold;
+	color: #ef4e28;
+}
+/* .listtable b{
+	color:#b55310
+} */
+.listtable span{
+	color: #333;
+	font-weight: normal
+}
+tr:nth-child(even){
+	background: #e4e4e4;
+}
+sup{
+	vertical-align: super;
+	font-size: smaller;
+	color: #4280b1
+}
+.listsup li{
+	list-style-type: none;
+	font-size: 14px;
+	margin-bottom: 0;
+	text-indent: -2.5em;
+	color: #4280b1;
+	line-height: 20px;
+}
+/*RWD*/
+@media (max-height:700px){
+	/* .bannerblock .btnblock{
+		top: 70vh;
+	} */
+}
+
+@media (max-width:1024px){
+	.bannerblock .btnblock, .btnblock {
+		display: flex;
+    left: 0;
+    top: auto;
+    bottom: 0;
+    width: 100%;
+	}
+	.btnblock div+div{
+		margin-left:0;
+	}
+	.bannerBtn {
+    border-radius: 0;
+	}
+	.listtitle{
+		padding-bottom: 10px;
+	}
+	.listname{
+		display: block
+	}
+	.btnbuy, .fundinfor{
+		max-width: 800px;
+		margin: 0 auto;
+		width: 100%;
+	}
+}
+@media (max-width:769px){
+	.outside-block{
+		flex-wrap: wrap;
+	}
+	#point02{
+		flex-direction: column-reverse;
+	}
+	.point-text{
+		padding-left: 0;
+	}
+}
+
+@media (max-width:640px){
+	.bannerblock{
+		height: 80vh;
+	}
+	.img-line{
+		display: none;
+	}
+	.bannerBtn {
+	  top: auto;
+	  bottom:0;
+	  max-width: none;
+	}
+	.btnblock div+div{
+		margin-left: 0;
+	}
+	.titleblock{
+    font-size: 25px;
+	}
+	.step__title{
+		font-size: 20px;
+	}
+	.step__title:after, .step__title:before{
+		content:none;
+	}
+	.result__tt{
+		max-width: 280px;
+		font-size: 20px;
+	}
+	.result__input, .fundreward{
+		font-size: 20px;
+		line-height:30px;
+	}
+	.blackmask p{
+		font-size: 18px;
+		font-weight: normal;
+	}
+	.count__img {
+    border-radius: 10px;
+    overflow: hidden;
+    background: #000;
+	}
+	.blackmask{
+    border-radius: 10px;
+	}
+	.maskact {
+    border-radius: 0 0 10px 10px;
+    height: 20px;
+	}
+	.count__alphabet{
+		top: -10px;
+	}
+}
+
+@media (max-width:480px){
+	.titleblock{
+		margin:10px auto;
+		font-size: 25px;
+	}
+	.pointTT img:nth-child(1){
+		display: none
+	}
+	.pointTT img:nth-child(2){
+		display: block
+	}
+	/* .listtitle,.listleft{
+		display: block;
+	} */
+	.listicon{
+		border:0;
+	}
+	.funddetails{
+		float: right;
+	}
+	/* .fundname{
+		padding-left: 1.5em
+	} */
+	.discount-block{
+		font-size: 18px;
+	}
+	.listtable {
+    font-size: 16px;
+	}
+	.point-text,.point-text .btnopen{
+		font-size: 16px;
+	}
+	.point_content h3{
+		letter-spacing: 0;
+	}
+	.outside-block{
+		padding: 15px;
+	}
+	.point_content h2{
+		font-size: 18px;
+		letter-spacing: 0;
+	}
+	.fund-tab{
+		display: block;
+    columns: 2;
+	}
+}
+@media (max-width:375px){
+
+	.titleblock{
+		font-size: 22px;
+	}
+}
