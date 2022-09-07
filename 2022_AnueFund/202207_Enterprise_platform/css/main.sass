@@ -1,0 +1,812 @@
+@import _variables
+@import _mixin
+/* 統一樣式 */
+%margin-auto
+  width: 100%
+  margin:0 auto
+%btn-choose
+  color: #fff
+  background: $menu-bg
+  cursor: pointer
+  display: inline-block
+  padding: 0 10px
+  line-height: 1.8rem
+  // &+li
+  //   margin-left: 50px
+  i
+    margin-right: 5px
+%btn-hollow
+  display: inline-block
+  border-radius: 50px
+  padding: 5px 20px
+  +font-bold
+  cursor: pointer
+
+body
+  overflow-y: scroll
+
+.flex-left
+  display: flex
+  justify-content: left
+  align-items: flex-start
+.W-800
+  max-width: 840px
+.W-1000
+  max-width: 1040px
+.logo-title 
+  h1
+    font-size: 1rem
+
+// 大標
+h2
+  +font-24
+  +font-bold
+  text-align: center
+  // +border-bottom($color-line)
+  max-width: 1200px
+  padding: 0 20px 30px 20px
+  overflow: hidden
+  @extend %margin-auto
+
+/*--------首頁--------*/
+#company__login
+  padding-top: 60px
+  height: 100vh
+.banner
+  &__block
+    position: relative
+    height: 100vh
+    background: url("../images/bg-banner01.jpg") 80% center/cover no-repeat #e2e1dd
+.login
+  &__block
+    position: absolute
+    top: 50%
+    transform: translateY(-60%)
+    right: 0
+    left: 0
+    max-width: 400px
+    @extend %margin-auto
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3)
+    color: $menu-bg
+    +mobile-480
+      max-width: 350px
+  &-title
+    text-align: center
+    +font-20
+    +font-bold
+    background: #fff
+    padding: 30px 0
+  &-content
+    background: $bg-gray
+    padding:30px
+    label
+      width: 100%
+      margin: 15px 0
+      display: inline-grid
+      +font-bold
+  &-input
+    margin: 8px 0 0 3px
+    background: transparent
+    +border-bottom($color-gray)
+    +font-16
+    color: $menu-bg
+    letter-spacing: 0.15rem
+    line-height: 1.6rem
+    border-radius: 0
+  &-help
+    +flex-center
+    +font-14
+    button, a
+      background: transparent
+      color: #000
+      height: auto
+      padding: 0
+      text-align: right
+      &:hover
+        color: $secondary
+    label
+      display: flex
+      font-weight: normal
+      margin: 0
+      cursor: pointer
+    input[type=checkbox]
+      position: relative
+      -webkit-appearance: none
+      -moz-appearance: none
+      appearance: none
+      width: 15px
+      height: 15px
+      border: 1px solid #333333
+      vertical-align: text-top
+      margin-right: 5px
+      &:checked:after
+        opacity: 1
+        transform: translate(-40%, -50%)
+      &:after 
+        font: var(--fa-font-solid)
+        content: ""
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-45%, -50%)
+        width: 100%
+        height: auto
+        transition: 0.3s
+        opacity: 0
+        font-size: 0.5rem
+  &-btn
+    max-width: none
+    background: $tertiary
+    border-radius: 30px
+    +font-20
+    +font-bold
+    letter-spacing: 1px
+    margin-top: 45px
+    +btn-hover(#da7f00)
+    a
+      color: #fff
+      +font-bold
+
+/*-------- 帳戶總覽、交易資料 --------*/
+.remind
+  .modal
+    display: block
+    background: rgba(0, 0, 0, 0.5)
+    &-dialog
+      max-width: 400px
+    &-header
+      text-align: center
+      justify-content: center
+      color: $secondary
+      +font-20
+      +font-bold
+    &-body
+      +font-16
+      margin-bottom: 100px
+      letter-spacing: 1px
+    &-footer
+      border: 0
+      justify-content: center
+  .btn-primary
+    background: $secondary
+    border-color: $secondary
+.rwd-table 
+  width: 100%
+  // margin: 10px 0
+  +mobile-640
+    +font-16
+  tr
+    line-height: 1.6rem
+    text-align: center
+  th,td
+    display: table-cell
+    vertical-align: middle
+    +mobile-640
+      text-align: left
+  th
+    padding: 5px
+    +mobile-640
+      display: none
+  td
+    padding: 5px
+    word-break: break-word
+    +mobile-640
+      +flex-center
+      justify-content: flex-start
+      line-height: 1.3rem
+      padding: 5px 0
+    &:before 
+      display: none
+      +mobile-640
+        content: attr(data-th) ""
+        width: 180px
+        min-width: 180px
+        margin-right: 10px
+        display: inline-block
+        +font-bold
+        color: $color-orange
+      +mobile-480
+        width: 120px
+        min-width: 120px
+    &+td
+      +mobile-640
+        +border-top($color-line) 
+.account
+  &-summary
+    padding: 0 20px 30px 20px
+    +pc-960
+      padding: 0 2% 30px 2%
+    .fund-name
+      margin: 0 auto 30px auto
+    .notice-content
+      border: 0
+      padding: 5px 0px 5px 20px
+      ul
+        list-style-type: disc
+  &-amount
+    +flex-center
+    margin-top: 15px
+    +pc-769
+      display: block
+    &-right
+      width: 68%
+      +pc-1024
+        width: 58%
+      +pc-769
+        width: 100%
+      .account-table
+        border: 1px solid $bg-gray
+        +pc-1024
+          table-layout: auto
+        +mobile-640
+          border: 0
+    &-left
+      width: 30%
+      +pc-1024
+        width: 40%
+      +pc-769
+        width: 100%
+    &-item
+      +flex-center
+      padding: 10px
+      &:not(:last-child)
+        +border-bottom($color-line)
+      p
+        display: inline-block
+        background: $tertiary
+        color: #fff
+        border-radius: 50px
+        padding: 10px 20px
+        +font-16
+      strong
+        +font-24
+        font-family: Arial, Helvetica, sans-serif
+  &-content
+    margin-top: 30px
+    &-title
+      +font-16
+      display: flex
+      align-items: center
+      &::before
+        content: " "
+        height: 15px
+        width: 15px
+        background: $primary
+        margin-right: 5px
+    // &-detail
+    &-tab
+      background: $color-line
+      +flex-center
+      padding: 20px
+      margin-top: 10px
+      +mobile-640
+        padding: 15px
+      p
+        +font-bold
+    &-list
+      padding: 20px
+      transition: $trans-time
+      +mobile-640
+        border: 0
+        margin-top: 0
+        padding-top: 10px
+      &:nth-child(odd)
+        background: $bg-gray
+      //.list-***各項
+      .list 
+        &-fund
+          +flex-center
+          p
+            +font-bold
+        &-collapse
+          background: transparent
+          color: $menu-bg
+          cursor: pointer
+          margin-left: 5px
+        &-name
+          display: flex
+          width: 80%
+          +font-bold
+          +font-16
+          letter-spacing: 0.5px
+          text-align: justify
+          +mobile-640
+            display: block
+            width: 70%
+          p
+            padding-right: 1rem
+        &-rate
+          color: $primary
+          +font-bold
+        //表格-細項清單
+        &-table
+          width: 100%
+          table-layout: fixed
+          margin-top: 10px
+          tr
+            line-height: 1.6rem
+            + tr
+              +border-top($color-line)
+          td
+            padding: 10px 0
+            &:last-child
+              text-align: right
+    &-left
+      +flex-center
+      width: 90% 
+      +font-bold
+    strong
+      color: $primary
+      +font-16
+      display: block
+      +mobile-640
+        display: inline   
+  //表格-總投資成本      
+  &-table
+    table-layout: fixed
+    width: 100%
+    th
+      background: $color-line
+      +font-bold
+      height: 45px
+    td
+      padding: 15px
+      vertical-align: middle
+      +font-16
+      +mobile-640
+        justify-content: space-between
+        text-align: right
+      &:before
+        +mobile-640
+          color: $text
+          +font-bold
+          width: 180px
+          min-width: 180px
+          text-align: left
+    strong
+      color: $primary
+    &-detail
+      width: 100%
+      td
+        padding:12px 0
+        &:last-child
+          text-align: right
+//交易資料
+.file
+  display: none
+  &-upload
+    overflow: hidden
+    border-radius: 5px
+    +border-all($secondary)
+    +flex-center
+    align-items: initial
+    +font-14
+    line-height: 1.5rem
+    input[type="button"]
+      padding: 0 20px
+      background: $secondary
+      color: #fff
+      vertical-align: middle
+      +font-16
+      &:hover 
+        background: $color-orange
+  &-name 
+    width: 100%
+    position: relative
+    padding: 10px 15px
+  &-text
+    text-align: center
+    margin-top: 30px
+  &-download
+    @extend %btn-hollow
+    +font-18
+    +border-all($text-blue)
+    color: $text-blue
+    margin-top: 20px
+
+.transaction-table
+  .account-content
+    &-tab
+      height: 45px
+      +change-640
+  .tab
+    &-title
+      +mobile-640
+        display: none
+    &-mobile
+      padding: 20px
+      +flex-center
+      +change-640
+      +mobile-640
+        padding: 15px
+  .account-table
+    td:first-child
+      +mobile-640
+        display: none
+        + td 
+          border:0
+  .transaction-list
+    &:nth-child(even)
+      background: $bg-gray
+  .list-collapse
+    width: 30px
+    cursor: pointer
+      
+.nomal-tb-style
+  &.account-table
+    table-layout: auto
+  th
+    line-height: 45px
+    padding: 0 15px
+    +mobile-640
+      padding: 0 10px
+    &:nth-child(2)
+      width: 70%
+      +mobile-640
+        width: auto
+  tr:nth-child(odd)
+    background: $bg-gray
+  td
+    text-align: center
+  strong
+    +mobile-480
+      display: block
+/*--------以下安全宣言、退休計畫--------*/
+.retirement
+  +border-top($color-line)
+  text-align: justify
+  p
+    +font-16
+    margin-bottom: 20px
+    letter-spacing: 1px
+.safety
+  +border-top($color-line)
+  text-align: justify
+  p
+    +font-16
+    margin-bottom: 20px
+    letter-spacing: 1px
+  div
+    +font-16
+    letter-spacing: 1px
+    margin-bottom: 20px
+  span
+    display: block
+  &-list
+    ul
+      list-style: decimal
+      list-style-position: inside
+      li
+        text-indent: -1.2rem
+        padding-left: 2.2rem
+      ul
+        list-style: none
+        counter-reset: sectioncounter
+        li
+          text-indent: -1.5rem
+          padding-left: 1.5rem
+          &:before 
+            content: "("counter(sectioncounter)")"
+            counter-increment: sectioncounter
+            padding-right: 2px      
+
+/*--------以下 AON--------*/
+#AON__block
+  padding-top: 60px
+  height: 100vh
+  .banner
+    &__block
+      position: relative
+      height: 100vh
+      background: url("../images/bg-banner02.jpg") 80% center/cover no-repeat #e2e1dd
+  .AON-logo
+    display: flex
+    justify-content: center
+    align-items: flex-end
+    margin-bottom: 20px
+    font-size: 1.125rem
+    +font-bold
+    img
+      margin: 0 5px 0 0
+      max-width: 70px
+  .login-content
+    +font-16
+    text-align: center
+    p
+      text-align: justify
+    label
+      text-align: left
+    .btn__block
+      button
+        height: auto
+      margin: 0
+      .back-btn
+        background: $color-blue    
+#AON, #Sales
+  .account-content-add
+    +flex-center
+    .btn-add
+      @extend %btn-hollow
+      +font-16
+      +border-all($secondary)
+      color: $secondary
+      line-height: 1.2rem
+  .nomal-tb-style
+    margin-top: 10px
+    th:nth-child(2)
+      width: auto
+    th,td
+      &:nth-child(2),&:nth-child(3)
+        +mobile-640
+          display: none
+.icon-status
+  cursor: pointer
+  img
+    max-width: 25px
+.information
+  padding: 30px 20px
+  +mobile-640
+    padding: 0 20px  
+
+//變更密碼
+.change-password
+  .modal-body
+    margin-bottom: 10px
+  .amount__block
+    +flex-center
+    &:not(:last-child)
+      margin-bottom: 20px
+    label
+      text-align: left
+      // text-align-last: justify
+      width: 25%
+      padding-right: 10px
+    .label-style
+      width: 75%
+      line-height: 40px
+      height: 40px
+      text-align: left
+    .label-grey
+      background: $bg-gray
+
+
+/*--------公司資訊、業務資訊--------*/
+%label-title
+  +font-20
+  +font-bold
+  margin-bottom: 10px
+.process
+  &-content
+    max-width: 800px
+    @extend %margin-auto
+    box-shadow: 0 0 10px $color-line
+    border-radius: 10px
+    padding: 50px
+    +mobile-480
+      box-shadow: none
+      padding: 15px
+      +border-top($color-line)
+      border-radius: 0
+.amount
+  &__block
+    max-width: 350px
+    @extend %margin-auto
+    text-align: center
+    &:not(:last-child)
+      margin-bottom: 30px
+    p
+      @extend %label-title
+    .description
+      margin-top: 10px
+      text-align: justify
+      font-size: 0.875rem
+      line-height: 1.5rem
+      letter-spacing: 0.05rem
+      font-weight: normal
+    .form-select
+      border-radius: 8px
+      text-align: left
+      font-size: 1.125rem
+      line-height: 45px
+      height: 45px
+      padding: 0 10px
+      +border-all($secondary)
+      &:focus
+        border-color: transparent
+        box-shadow: none
+        +border-all($secondary)
+  &-single
+    label
+      @extend %label-title
+.label
+  &-style
+    background: $bg-label
+    border-radius: 8px
+    text-align: center
+    font-size: 1.125rem
+    width: 100%
+    line-height: 45px
+    height: 45px
+    padding: 0 10px
+    strong
+      color: $secondary
+.btn
+  &__block
+    max-width: 350px
+    @extend %margin-auto
+    margin-top: 50px
+    button
+      height: 55px
+      +font-20
+  &-prev
+    background: $color-gray
+    +btn-hover($menu-bg)
+  &-next
+    background: $secondary
+    +btn-hover(#c22907)
+
+
+//公司資訊(顯示頁面)
+.confirming
+  &-item
+    +flex-center
+    +font-18
+    padding: 10px 0
+    &:not(:last-child)
+      +border-bottom($color-line)
+    button
+      background: $text-blue
+      max-width: none
+      display: inline-block
+      width: auto
+      padding: 3px 15px
+      font-size: 16px
+  &-point
+    color: $primary
+  
+
+/*日曆選擇*/
+.input
+  &-date
+    display: flex
+    margin-left: 10px
+    +pc-1024
+      width: 100%
+      margin: 10px 0
+    +mobile-640
+      display: block
+    .datepicker_input
+      border: 1px solid $secondary
+      border-radius: 5px
+      padding: 0 10px
+      line-height: 1.8rem
+    img
+      max-width: 30px
+      display: flex
+      align-items: center
+      padding: 5px
+      color: #fff
+      text-align: center
+      white-space: nowrap
+      background-color: $secondary
+      border: 1px solid $secondary
+      border-radius: 0.25rem
+    .input-group + .input-group
+      margin-left: 10px
+      +mobile-640
+        margin:10px 0     
+
+.datepicker-dropdown.datepicker-orient-top
+  +pc-1024
+    transform: translateY(113%)
+
+
+
+
+// bootstrap樣式修改
+// search-result
+#search-result
+  .nav
+    flex-wrap: nowrap
+    // +mobile-480
+    //   justify-content: space-around
+  .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active, .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover
+    transition: 0.1s
+    background-color: transparent
+    border-color: transparent
+    border-bottom: 3px solid $primary
+    border-radius: 0
+    color: #000
+    +font-bold
+  .nav-tabs .nav-link
+    border:0
+    +mobile-480
+      padding: 0.5rem 0.6rem
+  .nav-link
+    color: #000
+    +font-bold
+  .table
+    &-content
+      margin-top: 15px
+      text-align: center
+      .source
+        +font-12
+        margin: 10px 0
+// stepper
+%stepper-btn
+  color: #fff
+  background: $color-gray
+  border-radius: 30px
+  padding: 5px
+  letter-spacing: 0.1rem
+  font-size: 1.2rem
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active, .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover
+  border-color: transparent
+  background: $secondary
+  color: #fff
+.stepper
+  .nav
+    &-item
+      &:first-child
+        // p
+        //   +mobile-480
+        //     display: inline
+      &+.nav-item
+        margin-left: 10px
+    &-tabs
+      border:0
+    &-link
+      border:0
+      @extend %stepper-btn
+      span
+        display: inline-block
+        height: 1.5rem
+        width: 1.5rem
+        color: $text
+        text-align: center
+        background: #fff
+        border-radius: 50%
+        line-height: 1.6rem
+        +font-bold
+        font-family: Arial, Helvetica, sans-serif
+      p
+        display: inline
+        padding-right: 10px
+        margin-left: 5px
+        +mobile-480
+          display: none
+      .show-tab
+        display: inline
+
+// 分頁樣式
+ul
+  &.pagination
+    @extend %margin-auto
+    justify-content: center
+    margin-top: 35px
+    li
+      display: inline
+      a
+        color: black
+        float: left
+        padding: 5px 8px
+        text-decoration: none
+        +font-14
+        &.active
+          background: $color-gray
+          color: white
+        &:hover:not(.active)
+          background: $color-line
+
+.read
+  &-more
+    display: inline-block
+    color: $secondary
+    +border-bottom($secondary)
+    +font-bold
+    position: absolute
+    bottom: 0
+    cursor: pointer
+ 
+      
+

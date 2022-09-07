@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <meta name="description" content="鉅亨企業退休平台" />
+    <meta property="og:title" content="鉅亨企業退休平台" />
+    <meta property="og:description" content="鉅亨企業退休平台" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.anuefund.com/launch/gagatest/Enterprise_platform/" />
+    <meta property="og:image" content="https://www.anuefund.com/launch/gagatest/Enterprise_platform/images/share-300.jpg" />
+    <meta property="og:site_name" content="鉅亨買基金" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="300" />
+    <meta property="og:image:height" content="300" />
+
+    <title>鉅亨企業退休平台</title>
+    <link rel="icon" href="images/anuefund.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="assets/animate.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/guideline.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <script src="assets/jquery-1.12.4.min.js"></script>
+    <script src="https://www.anuefund.com/FundSpec/JavaScriptLib/anueGA.js"></script>
+    <script src="https://www.anuefund.com/FundSpec/JavaScriptLib/AppierMethod.js"></script>
+  </head>
+
+  <body>
+    <!--GTM-->
+    <script src="https://www.anuefund.com/FundSpec/JavaScriptLib/anueGTM.js"></script>
+    <header>
+      <nav>
+        <div class="logo logo-title">
+          <a href="https://www.anuefund.com/" target="_blank">
+            <img src="images/logo.svg" alt="鉅亨買基金" />
+          </a>
+          <h1>鉅亨企業退休平台</h1>
+        </div>
+        <div id="menu-btn"><img src="images/menubtn.png" /></div>
+        <div class="menu">
+          <ul>
+            <li><a href="03-account-overview.html">帳戶總覽</a></li>
+            <li><a href="retirement-plan.html">鉅亨退休計畫</a></li>
+            <li><a href="safety-declaration.html">安全宣言</a></li>
+            <li><a href="#">變更密碼</a></li>
+            <!-- <li class="login"><a href="#">登入</a></li> -->
+            <li class="login">
+              用戶：ARRRRRR
+              <a href="#">登出</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <article id="Sales">
+        <h2>帳戶總覽</h2>
+        <!-- 帳戶提醒 -->
+        <div class="remind">
+          <div id="a1" class="modal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content change-password">
+                <div class="modal-header">變更密碼</div>
+                <div class="modal-body">
+                  <div class="amount__block">
+                    <label for="amount-input">姓名</label>
+                    <input type="text" class="label-style label-grey" name="amount-input" placeholder="" />
+                  </div>
+                  <div class="amount__block">
+                    <label for="amount-input">E-mail</label>
+                    <input type="text" class="label-style label-grey" name="amount-input" placeholder="" />
+                  </div>
+                  <div class="amount__block">
+                    <label for="amount-input">舊密碼</label>
+                    <input type="text" class="label-style" name="amount-input" placeholder="" />
+                  </div>
+                  <div class="amount__block">
+                    <label for="amount-input">新密碼</label>
+                    <input type="text" class="label-style" name="amount-input" placeholder="" />
+                  </div>
+                  <div class="amount__block">
+                    <label for="amount-input">密碼確認</label>
+                    <input type="text" class="label-style" name="amount-input" placeholder="" />
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                  <button type="button" class="btn btn-primary">儲存</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section>
+          <div class="section__block account-summary" id="search-result">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="tab-01" data-bs-toggle="tab" data-bs-target="#tab01" type="button" role="tab" aria-controls="tab01" aria-selected="true">公司總覽</button>
+              </li>
+            </ul>
+            <!-- 合作公司列表 -->
+            <div class="tab-content table-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="tab01" role="tabpanel" aria-labelledby="tab-01">
+                <div class="account-content">
+                  <div class="account-content">
+                    <table class="account-table nomal-tb-style">
+                      <div class="account-content-add">
+                        <div class="account-content-title">合作公司列表</div>
+                        <!-- <div class="btn-add">+ 新增公司</div> -->
+                      </div>
+                      <tr>
+                        <th>公司名稱</th>
+                        <th>活動開始(年/月)</th>
+                        <th>每期結帳(日)</th>
+                        <th>狀態</th>
+                        <th>查詢修改</th>
+                      </tr>
+                      <tr>
+                        <td>台積電</td>
+                        <td>2022/06</td>
+                        <td>18日</td>
+                        <td>[已開通]</td>
+                        <td class="icon-status"><a href="03-information.html"><img src="images/icon-infor01.svg" alt=""></a></td>
+                      </tr>
+                      <tr>
+                        <td>台積電</td>
+                        <td>2022/06</td>
+                        <td>18日</td>
+                        <td>[已開通]</td>
+                        <td class="icon-status"><img src="images/icon-infor01.svg" alt=""></td>
+                      </tr>
+                      <tr>
+                        <td>台積電</td>
+                        <td>2022/06</td>
+                        <td>18日</td>
+                        <td><strong>[尚未開通]</strong></td>
+                        <td class="icon-status"><img src="images/icon-infor02.svg" alt=""></td>
+                      </tr>
+                      <tr>
+                        <td>台積電</td>
+                        <td>2022/06</td>
+                        <td>18日</td>
+                        <td><strong>[尚未開通]</strong></td>
+                        <td class="icon-status"><img src="images/icon-infor02.svg" alt=""></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                <ul class="pagination">
+                  <li><a href="#">上一頁</a></li>
+                  <li><a href="#">1</a></li>
+                  <li><a class="active" href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li><a href="#">6</a></li>
+                  <li><a href="#">7</a></li>
+                  <li><a href="#">下一頁</a></li>
+                </ul>
+              </div>
+              
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <!-- Footer -->
+    <footer></footer>
+    <!--js-->
+    <script src="https://kit.fontawesome.com/52207513ca.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
