@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <meta name="description" content="鉅亨自由 Pay 是以累積型基金為需要創造固定現金流的投資人打造輕鬆領的機制。不用天天計算配息率，每月提領金額自己設定，兼顧紀律停利與資本利得，單筆申購達 XX 元以上申購 0 手續費！" />
+    <meta property="og:title" content="鉅亨自由 Pay：輕鬆打造現金流 - 鉅亨買基金" />
+    <meta property="og:description" content="鉅亨自由 Pay 是以累積型基金為需要創造固定現金流的投資人打造輕鬆領的機制。不用天天計算配息率，每月提領金額自己設定，兼顧紀律停利與資本利得，單筆申購達XX元以上申購0手續費！" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.anuefund.com/launch/gagatest/ezpay/" />
+    <meta property="og:image" content="https://www.anuefund.com/launch/gagatest/ezpay/images/share-300.jpg" />
+    <meta property="og:site_name" content="鉅亨買基金" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="300" />
+    <meta property="og:image:height" content="300" />
+
+    <title>鉅亨自由 Pay：輕鬆打造現金流 - 鉅亨買基金</title>
+    <link rel="icon" href="images/anuefund.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="assets/aos/aos.css" />
+    <link rel="stylesheet" type="text/css" href="assets/animate.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="assets/fancybox/jquery.fancybox.min.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/guideline.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <script src="assets/jquery-1.12.4.min.js"></script>
+    <script src="https://www.anuefund.com/FundSpec/JavaScriptLib/anueGA.js"></script>
+    <script src="https://www.anuefund.com/FundSpec/JavaScriptLib/AppierMethod.js"></script>
+  </head>
+
+  <body>
+    <!--GTM-->
+    <script src="https://www.anuefund.com/FundSpec/JavaScriptLib/anueGTM.js"></script>
+    <header>
+      <nav>
+        <div class="logo logo-title">
+          <a href="https://www.anuefund.com/" target="_blank">
+            <img src="images/logo.svg" alt="鉅亨買基金" />
+          </a>
+          <h1>鉅亨自由 Pay</h1>
+        </div>
+        <div id="menu-btn"><img src="images/menubtn.png" /></div>
+        <div class="menu">
+          <ul>
+            <li><a href="index.html">自由 Pay 首頁</a></li>
+            <li><a href="#">帳戶總覽</a></li>
+            <li><a href="index.html#join">優惠介紹</a></li>
+            <li><a href="index.html#logo">精選品牌</a></li>
+            <li><a href="index.html#question">常見問題</a></li>
+            <li class="logout"><a href="#">登出</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <article>
+        <section>
+          <div class="section__block account-summary" id="search-result">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="total-tab" data-bs-toggle="tab" data-bs-target="#total" type="button" role="tab" aria-controls="total" aria-selected="true">帳戶總覽</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="environmental-tab" data-bs-toggle="tab" data-bs-target="#environmental" type="button" role="tab" aria-controls="environmental" aria-selected="false">委託查詢/取消</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="social-tab" data-bs-toggle="tab" data-bs-target="#social" type="button" role="tab" aria-controls="social" aria-selected="false">新申購</button>
+              </li>
+            </ul>
+            <div class="tab-content table-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="total" role="tabpanel" aria-labelledby="total-tab">
+                <div class="account-personal">潘OO小姐，您是<strong>積極型投資人</strong>，可購買 RR1-RR5 的基金，或重新檢視<strong>風險合適度評估</strong></div>
+                <div class="account-amount">
+                  <div class="account-amount-left">
+                    <div class="account-amount-item">
+                      <p>總投資成本</p>
+                      <strong>1,000,000 元</strong>
+                    </div>
+                    <div class="account-amount-item">
+                      <p>已 Pay 總額</p>
+                      <strong>25,000 元</strong>
+                    </div>
+                  </div>
+                  <div class="account-amount-right">
+                    <table class="rwd-table account-table">
+                      <tr>
+                        <th>總投資損益</th>
+                        <th>總約當市值</th>
+                        <th>參考報酬率(含 Pay )</th>
+                      </tr>
+                      <tr>
+                        <td data-th="總投資損益">5,000 元</td>
+                        <td data-th="總約當市值">980,000 元</td>
+                        <td data-th="參考報酬率(含 Pay )"><strong>2.05%</strong></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                <!-- 庫存明細 -->
+                <div class="account-content">
+                  <div class="account-content-title">庫存明細</div>
+                  <div class="account-content-tab">
+                    <p>基金代碼/名稱</p>
+                    <p>已 Pay 金額</p>
+                  </div>
+                  <!-- 清單 -->
+                  <div>
+                    <div class="account-content-list">
+                      <div class="list-fund">
+                        <div class="list-name">
+                          <p>B05001</p>
+                          安聯動力亞洲高收益債券基金-AMg穩定月收總收益類股 (澳幣避險)
+                        </div>
+                        <div class="paid-money">
+                          5,000 元
+                          <p class="list-collapse" data-bs-toggle="collapse" data-bs-target="#fund-01" aria-expanded="true" aria-controls="fund-01"><i class="fa-solid fa-circle-chevron-down"></i></p>
+                        </div>
+                      </div>
+                      <div id="fund-01" class="collapse show collapse-table">
+                        <table class="rwd-table account-table">
+                          <tr>
+                            <th>已 Pay 金額</th>
+                            <th>月 Pay 金額設定</th>
+                            <th>基準日</th>
+                            <th>投資成本</th>
+                            <th>投資損益</th>
+                            <th>約當市值</th>
+                            <th>參考報酬率(含 Pay )</th>
+                          </tr>
+                          <tr>
+                            <td data-th="已 Pay 金額">5,000 元</td>
+                            <td data-th="月 Pay 金額設定">5,000 元</td>
+                            <td data-th="基準日">20 日</td>
+                            <td data-th="投資成本">200,000 元</td>
+                            <td data-th="投資損益">5,000 元</td>
+                            <td data-th="約當市值">195,000 元</td>
+                            <td data-th="參考報酬率(含 Pay )"><strong>2.05%</strong></td>
+                          </tr>
+                        </table>
+                      </div>
+
+                      <div class="account-content-btn">
+                        <button class="btn-act">明細</button>
+                        <button class="btn-act">異動</button>
+                        <button class="btn-act">買回</button>
+                        <button class="btn-act btn-plus">加碼</button>
+                      </div>
+                    </div>
+                    <div class="account-content-list">
+                      <div class="list-fund">
+                        <div class="list-name">
+                          <p>B05001</p>
+                          安聯動力亞洲高收益債券基金-AMg穩定月收總收益類股 (澳幣避險)
+                        </div>
+                        <div class="paid-money">
+                          25,000 元
+                          <p class="list-collapse" data-bs-toggle="collapse" data-bs-target="#fund-02" aria-expanded="true" aria-controls="fund-02"><i class="fa-solid fa-circle-chevron-down"></i></p>
+                        </div>
+                      </div>
+                      <div id="fund-02" class="collapse show collapse-table">
+                        <table class="rwd-table account-table">
+                          <tr>
+                            <th>已 Pay 金額</th>
+                            <th>月 Pay 金額設定</th>
+                            <th>基準日</th>
+                            <th>投資成本</th>
+                            <th>投資損益</th>
+                            <th>約當市值</th>
+                            <th>參考報酬率(含 Pay )</th>
+                          </tr>
+                          <tr>
+                            <td data-th="已 Pay 金額">5,000 元</td>
+                            <td data-th="月 Pay 金額設定">5,000 元</td>
+                            <td data-th="基準日">20 日</td>
+                            <td data-th="投資成本">200,000 元</td>
+                            <td data-th="投資損益">5,000 元</td>
+                            <td data-th="約當市值">195,000 元</td>
+                            <td data-th="參考報酬率(含 Pay )"><strong>2.05%</strong></td>
+                          </tr>
+                        </table>
+                      </div>
+                      <div class="account-content-btn">
+                        <button class="btn-act">明細</button>
+                        <button class="btn-act">異動</button>
+                        <button class="btn-act">買回</button>
+                        <button class="btn-act btn-plus">加碼</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <ul class="pagination">
+                  <li><a href="#">上一頁</a></li>
+                  <li><a href="#">1</a></li>
+                  <li><a class="active" href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li><a href="#">6</a></li>
+                  <li><a href="#">7</a></li>
+                  <li><a href="#">下一頁</a></li>
+                </ul>
+              </div>
+              <!-- 委託查詢/取消 -->
+              <div class="tab-pane fade table-content options-style" id="environmental" role="tabpanel" aria-labelledby="environmental-tab">
+                <div class="filter-condition flex-block">
+                  <p class="filter-title">交易類型</p>
+                  <ul class="filter-fund">
+                    <li class="active">申購</li>
+                    <li>異動</li>
+                    <li>買回</li>
+                  </ul>
+                </div>
+                <div class="account-content">
+                  <div class="account-content-title">委託明細 - 異動</div>
+                  <div class="account-content-tab">
+                    <p>委託日</p>
+                    <p>交易類別</p>
+                  </div>
+                  <!-- 清單 -->
+                  <div class="entrust">
+                    <!-- 1 -->
+                    <div class="account-content-list">
+                      <div class="list-fund">
+                        <div class="list-name">
+                          <label for="fund-check" class="fund-check">
+                            <input type="checkbox" id="fund-check" name="fund-check" value="fund-check">
+                            <div>
+                              <p>B05001</p>
+                              安聯動力亞洲高收益債券基金-AMg穩定月收總收益類股 (澳幣避險)
+                            </div>
+                          </label>
+                        </div>
+                        <div class="paid-money">
+                          申購
+                          <p class="list-collapse" data-bs-toggle="collapse" data-bs-target="#fund-01" aria-expanded="true" aria-controls="fund-01"><i class="fa-solid fa-circle-chevron-down"></i></p>
+                        </div>
+                      </div>
+                      <div id="fund-01" class="collapse show collapse-table">
+                        <table class="rwd-table account-table">
+                          <tr>
+                            <th>委託日</th>
+                            <th>生效日</th>
+                            <th>異動項目</th>
+                            <th>原設定金額(月)</th>
+                            <th>異動後金額(月)</th>
+                            <th>原設定日期</th>
+                            <th>異動後日期</th>
+                          </tr>
+                          <tr>
+                            <td data-th="委託日">
+                              2022/05/02 <br />
+                              15:00:00
+                            </td>
+                            <td data-th="生效日">2022/05/03</td>
+                            <td data-th="異動項目">金額</td>
+                            <td data-th="原設定金額(月)">1,000 元</td>
+                            <td data-th="異動後金額(月)"><strong>2,000 元</strong></td>
+                            <td data-th="原設定日期">5 日</td>
+                            <td data-th="異動後日期"> - </td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                    <!-- 2 -->
+                    <div class="account-content-list">
+                      <div class="list-fund">
+                        <div class="list-name">
+                          <label for="fund-check" class="fund-check">
+                            <input type="checkbox" id="fund-check" name="fund-check" value="fund-check">
+                            <div>
+                              <p>B05001</p>
+                              安聯動力亞洲高收益債券基金-AMg穩定月收總收益類股 (澳幣避險)
+                            </div>
+                          </label>
+                        </div>
+                        <div class="paid-money">
+                          申購
+                          <p class="list-collapse" data-bs-toggle="collapse" data-bs-target="#fund-02" aria-expanded="true" aria-controls="fund-02"><i class="fa-solid fa-circle-chevron-down"></i></p>
+                        </div>
+                      </div>
+                      <div id="fund-02" class="collapse show collapse-table">
+                        <table class="rwd-table account-table">
+                          <tr>
+                            <th>委託日</th>
+                            <th>生效日</th>
+                            <th>異動項目</th>
+                            <th>原設定金額(月)</th>
+                            <th>異動後金額(月)</th>
+                            <th>原設定日期</th>
+                            <th>異動後日期</th>
+                          </tr>
+                          <tr>
+                            <td data-th="委託日">
+                              2022/05/02 <br />
+                              15:00:00
+                            </td>
+                            <td data-th="生效日">2022/05/03</td>
+                            <td data-th="異動項目">金額</td>
+                            <td data-th="原設定金額(月)">1,000 元</td>
+                            <td data-th="異動後金額(月)"><strong>2,000 元</strong></td>
+                            <td data-th="原設定日期">5 日</td>
+                            <td data-th="異動後日期"> - </td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <ul class="pagination">
+                  <li><a href="#">上一頁</a></li>
+                  <li><a href="#">1</a></li>
+                  <li><a class="active" href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li><a href="#">6</a></li>
+                  <li><a href="#">7</a></li>
+                  <li><a href="#">下一頁</a></li>
+                </ul>
+                <div class="file__block">
+                  <p class="file-title">注意事項</p>
+                  <div class="file-content notice-content">
+                    <ul>
+                      <li>自由Pay服務條款自由Pay服務條款自由Pay服務條款自由Pay服務條款自由Payaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa自由</li>
+                      <li>自由Pay服務條款自由Pay服務條款自由Pay服務條款自由Pay服務條款自由Pay</li>
+                      <li>自由Pay服務條款自由Pay服務條款自由Pay服務條款自由Pay服務條款自由Pay</li>
+                    </ul>
+                  </div>
+                  <div class="password-input">
+                    <label for="password-input">請輸入交易密碼
+                      <input type="text" id="password-input" class="password-style" name="password-input">
+                    </label>
+                  </div>
+                </div>
+                <div class="btn__block">
+                  <button class="btn-prev">清除選擇</button>
+                  <button class="btn-next">取消委託</button>
+                </div>
+              </div>
+
+              <div class="tab-pane fade table-content" id="social" role="tabpanel" aria-labelledby="social-tab">
+                
+                <ul class="pagination">
+                  <li><a href="#">上一頁</a></li>
+                  <li><a href="#">1</a></li>
+                  <li><a class="active" href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li><a href="#">6</a></li>
+                  <li><a href="#">7</a></li>
+                  <li><a href="#">下一頁</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <!-- Footer -->
+    <footer></footer>
+    <!--js-->
+    <script src="assets/aos/aos.js"></script>
+    <script src="https://kit.fontawesome.com/52207513ca.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="assets/fancybox/jquery.fancybox.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
