@@ -1,0 +1,371 @@
+@import _variables
+@import _mixin
+
+%margin-auto
+  width: 100%
+  margin:0 auto
+
+%mobile480-none
+  +mobile-480 
+    display: none
+%btn-base
+  font-size: 1rem
+  color: #fff
+  padding: 7px 12px
+  white-space: nowrap
+  cursor: pointer
+  +pc-1024
+    max-width: 800px
+    margin: 0 auto
+    width: 100%
+
+body
+  color: #fff
+  background: #180904
+.section__block 
+  max-width: 960px
+.reduce-bottom
+  padding-bottom: 0
+.reduce-top
+  padding-top: 0
+sup
+  color: $color-yellow
+//menu
+.menu
+  .opentrack
+    padding: 0px 18px
+    color: #fff
+    line-height: 60px
+    background:$secondary
+    cursor: pointer
+    +font-bold
+    &:hover
+      background: #e76545
+// 背景區
+article
+  padding-top: 60px
+  background: url(../images/bg-all.jpg) no-repeat center bottom fixed
+// .bg
+//   &-fund
+//     background: url(../images/bg-all.jpg) no-repeat center fixed
+// KV
+.banner
+  &__block
+    position: relative
+    overflow: hidden
+    // background: url(../images/bg-banner.jpg) no-repeat bottom center/cover
+    // height: 700px
+    // cursor: pointer
+  &-pc
+    +mobile-480
+      display: none
+  &-mobile
+    display: none
+    +mobile-480 
+      display: block
+// 大綱
+h2
+  color: $color-yellow
+  background: url(../images/bg-TT01.png) no-repeat center
+  +font-22
+  line-height: 75px
+  padding-top: 12px
+  +font-bold
+  text-align: center
+  margin-bottom: 20px
+.intro
+  &__content
+    +flex-center
+    padding-bottom: 20px
+    text-align: center
+    +pc-769
+      display: block
+    +mobile-480
+      padding: 20px 30px 5px 28px
+    span
+      line-height: 1.8rem
+      display: block
+      margin: 10px 0
+      +mobile-480
+        text-align: justify
+    strong
+      color: $color-yellow
+      +font-bold
+  &-text
+    width: 60%
+    +font-18
+    text-align: justify
+    letter-spacing: 1px
+    +pc-769
+      width: 100%
+      margin-bottom: 40px
+    ul
+      margin: 15px 0
+      li
+        line-height: 1.8rem
+        text-indent: -2rem
+        padding-left: 2rem
+        &::before
+          font: var(--fa-font-solid)
+          content: "\f058"
+          margin-right: 10px
+    button
+      position: relative
+      display: block
+      padding: 5px 50px 5px 30px
+      border: 1px solid #fff
+      background: transparent
+      cursor: pointer
+      transition: $trans-time
+      +pc-769
+        margin: 0 auto
+      a
+        color: #fff
+      i
+        position: absolute
+        right: 10%
+        top: 25%
+        font-size: 1rem
+      &:hover
+        i
+          animation: arrow-hover 0.5s
+  &-discount
+    height: 250px
+    max-width: 450px
+    @extend %margin-auto
+    background: url('../images/img-intro.jpg') no-repeat center top
+    padding-top: 85px
+    +font-20
+    // +font-bold
+    letter-spacing: 1px
+    line-height: 2rem
+    p
+      +font-16
+      margin-top: 25px
+      cursor: pointer
+      a
+        color:#fff
+        &:hover
+          color: $color-yellow
+
+@keyframes arrow-hover 
+  0% 
+    transform: translateX(0px)
+    opacity: 1
+  25% 
+    transform: translateX(30px)
+    opacity: 0
+  50% 
+    transform: translateX(-30px)
+    opacity: 0
+  75% 
+    transform: translateX(-30px)
+    opacity: 0
+  100% 
+    transform: translateX(0px)
+    opacity: 1
+// Point、Logo
+#logo
+  p
+    text-align: center
+    +font-16
+.point-img
+  max-width: 400px
+.logo__block
+  display: grid
+  display: -ms-flexbox
+  -ms-flex-wrap: wrap
+  // display: -ms-grid
+  justify-content: space-between
+  grid-template-columns: repeat(auto-fill, 170px)
+  // -ms-grid-columns: auto auto auto auto auto
+  grid-gap: 5px
+  margin: 20px 0
+  +mobile-640
+    justify-content: center
+    grid-gap: 10px
+  img
+    +img-hover
+  
+// 基金清單
+.fund
+  &-tab
+    +flex-center
+    div
+      +img-hover
+  &-img
+    height: 100px
+    margin-bottom: 30px
+    background: url(../images/title-fund.png) no-repeat bottom center/cover
+  &-name
+    +font-bold
+.fundlist
+  &__block
+    max-width:900px
+    width: 100%
+    margin:20px auto
+    font-size: 1.125rem
+    line-height: 1.375rem
+    + .fundlist__block
+      margin-top: 70px
+    h2
+      background: url(../images/bg-TT02.png) no-repeat center
+    ul
+      // margin-bottom: 70px
+      li:not(:last-child)
+        margin-bottom: 20px
+        vertical-align: bottom
+        border-bottom: 1px solid #565345
+        padding-bottom: 20px
+  &__title
+    font-size: 1.5rem
+    +font-bold
+    letter-spacing: 1px
+    +border-bottom(#000)
+    margin-bottom: 15px
+    padding: 15px 0 5px 0
+    color: #a10c06
+    span
+      font-size: 1rem
+  &__content
+    display: none
+    // 基金表格
+    .tableblock
+      max-width: 800px
+      text-align: justify
+      line-height: 2.2rem
+      font-size: 1rem
+      margin-top: 10px
+      @extend %margin-auto
+      table
+        width: 100%
+        border:1px solid $color-light-gray
+        th
+          background: #d0d0d0
+          padding: 5px 0
+          +font-bold
+          font-size: 1.125rem
+          vertical-align: middle
+          padding: 0 2%
+          &:nth-child(1)
+            width: 28%
+          +mobile-480 
+            font-size: 1rem
+            line-height: 1.5rem
+        td
+          padding: 5px 0
+          width: 15%
+          background: #fff
+    .chart__caption
+      text-align: justify
+.list
+  &-content
+    // 基金按鈕
+    .btn__block
+      +mobile-480 
+        display: flex
+    .btnbuy
+      @extend %btn-base
+      background: #c34412
+    .fundinfor
+      @extend %btn-base
+      background: $tertiary
+      +flex-center
+      justify-content: center
+    .btn
+      &-fund-intro
+        @extend %btn-base
+        background: $tertiary
+  &-name
+    +flex-center
+    color:#fff
+    +pc-1024
+      display: block
+    &:hover
+      .fund-name
+        color: $tertiary
+        +font-bold
+  &-title
+    +flex-center
+    align-items: end
+    +pc-1024
+      padding-bottom: 10px
+    span
+      color: #00555f
+      +font-bold
+    p
+      display: inline
+      color: #666666
+    a
+      color:#fff
+  &-left
+    display: flex
+  &-icon
+    max-height: 25px
+    color: $secondary
+    +font-bold
+    padding-right: 5px
+    margin-right: 5px
+    +mobile-480
+      border:0
+    .fas
+      margin-right: 5px
+      font-size: 1.4rem
+      vertical-align: middle
+      color: #fff
+#activity
+  h1
+    color: #fff
+.activity
+  &__block
+    span
+      color: $text
+      +font-bold
+    ul
+      p
+        color: $color-yellow
+  &__table
+    width: 100%
+    // max-width: 650px
+    border: 1px solid $color-light-gray
+    background: #fff
+    margin: 15px auto
+    line-height: 2rem
+    +mobile-480 
+      font-size: 1rem
+    // tr:nth-child(even)
+    //   background: #e4e4e4
+    tr:not(:last-child)
+      border: 1px solid $color-light-gray
+    th
+      +font-bold
+      background: #e4e4e4
+      &:last-child
+        text-align: left
+      +mobile-480 
+        vertical-align: middle
+        line-height: 1.5rem
+    td
+      &:first-child
+        width: 15%
+        +mobile-480
+          width: 18%
+      &:nth-child(even)
+        +font-bold
+        color: $secondary
+        width: 12%
+        +mobile-480
+          width: 28%
+      &:last-child
+        text-align: left
+    sup
+      vertical-align: super
+      font-size: smaller
+      color: $color-blue
+
+    
+      
+      
+
+  
+
