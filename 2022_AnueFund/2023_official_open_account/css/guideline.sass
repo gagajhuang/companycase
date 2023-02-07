@@ -1,0 +1,219 @@
+// 此檔案請勿更動
+@import _variables
+@import _mixin
+
+/* 統一樣式 */
+%margin-auto
+  width: 100%
+  margin:0 auto
+%btn-base
+  max-width: 170px
+  width: 100%
+  padding: 8px 3px 8px 3px
+  transition: $trans-time
+  text-align: center
+  color: #fff
+  text-align: center
+  cursor: pointer
+  border-radius: 5px
+%btn-nonewidth
+  +mobile-640
+    max-width: none
+body, a
+  color: $text
+strong
+  +font-bold
+/* 選單 */
+header
+  +position-center(fixed)
+  top: 0
+  z-index: 99
+nav
+  +flex-center
+  width: 100%
+  padding: 0 50px
+  box-sizing: border-box
+  overflow: hidden
+  background: $menu-bg
+  height: 60px
+  +pc-960 
+    padding: 0 15px
+.logo 
+  a
+    max-width: 130px
+  &-title
+    display: flex
+    align-items: flex-end
+    h1
+      color:#fff
+      border: 0
+      border-left: 1px solid #fff
+      padding: 0
+      padding-left: 10px
+      margin-left: 10px
+      overflow: inherit
+      +font-18
+      font-weight: normal
+      line-height: 1.125rem
+      text-align: left
+      +mobile-480
+        font-size: 1rem
+        line-height: 0.9rem
+        padding-left: 10px
+        margin-left: 10px
+.fa
+  padding: 0 5px
+#menu-btn 
+  display: none
+  cursor: pointer
+  +pc-960
+    display: block
+  img 
+    max-width: 28px
+.menu 
+  +pc-960 
+    +position-center(absolute)
+    max-height: 0px
+    overflow: hidden
+    transition: all 1s
+    top: 60px
+    z-index: 100
+    background: $menu-bg
+    text-align: center
+    &-show
+      max-height: 1000px
+  ul 
+    display: flex
+    justify-content: space-between
+    align-items: center
+    +pc-960 
+      display: block
+    li
+      +pc-960 
+        border-bottom: 1px solid #656e79
+  a 
+    padding: 0px 18px
+    color: #fff
+    +font-16
+    line-height: 60px
+    +pc-960
+      line-height: 50px
+    &:hover 
+      color: $tertiary
+.logout,.login
+  background: $tertiary
+  a
+    line-height: 30px
+    padding: 0px 10px
+    +btn-hover(#da7f00)
+    &:hover
+      color: #fff
+    +pc-960 
+      line-height: 50px
+/* 內容 */
+main 
+  overflow: hidden
+  display: block
+article
+  padding-top: 60px
+  +mobile-480
+    padding-top: 50px
+section
+  position: relative
+.section
+  &__block
+    @extend %margin-auto
+    max-width: 840px
+    padding: 40px 20px
+    overflow: hidden
+    +pc-960
+      padding: 30px 2%
+
+// H 標籤
+h2
+  +font-24
+  +font-bold
+  text-align: center
+  // +border-bottom($color-line)
+  max-width: 1200px
+  padding: 0 20px 30px 20px
+  overflow: hidden
+  @extend %margin-auto
+  +mobile-480
+    +font-22
+/* 按鈕 */
+.btn
+  &__block
+    +flex-center
+    justify-content: center
+    text-align: center
+    margin-top: 50px
+    a
+      color: #fff
+      text-align: center
+    i
+      margin-left: 5px
+    // +mobile-480
+    //   clear: both
+    //   display: block
+button
+  @extend %btn-base
+  @extend %btn-nonewidth
+button + button
+  margin-left: 20px 
+
+/* 影片區 */
+.video
+  &-img
+    position: relative
+    &::before
+      position: absolute
+      content: ""
+      background: rgba(0,0,0,0.3)
+      width: 100%
+      height: 100%
+  &-btn
+    position: absolute
+    @extend %margin-auto
+    max-width: 76px
+    left: 0
+    right: 0
+    top: 50%
+    transform: translateY(-50%) 
+.remark
+  color: $color-gray
+  +font-12
+  margin-top: 20px
+
+// 跳窗備註
+.modal
+  &-content
+    padding: 10px 15px
+    .btn-close
+      position: absolute
+      right: 10px
+  &-header
+    justify-content: center
+    color: $secondary
+    +font-20
+    +font-bold
+    margin: 0 10px
+  &-body
+    +font-16
+    text-align: justify
+    letter-spacing: 1px
+  &-footer
+    border: 0
+    justify-content: center
+    .btn-primary
+      background: $secondary
+      border-color: $secondary
+      border-radius: 50px
+      color: #fff
+    .btn-cancel
+      background: $color-gray
+      border-color: $color-gray
+      border-radius: 50px
+      color: #fff
+      
+      

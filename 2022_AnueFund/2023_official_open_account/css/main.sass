@@ -1,0 +1,923 @@
+@import _variables
+@import _mixin
+/* 統一樣式 */
+%margin-auto
+  width: 100%
+  margin:0 auto
+%btn-choose
+  position: absolute
+  bottom: 15px
+  left: 0
+  right: 0
+  max-width: 130px
+  margin: 0 auto
+%btn-blue-style
+  background: $color-blue
+  +btn-hover(#23a8b5)
+%btn-yellow-style
+  background: $color-yellow
+  +btn-hover($tertiary)
+%btn-orange-style
+  background: $secondary
+  +btn-hover(#c22907)
+%block-style
+  box-shadow: 1px 1px 5px rgb(0 0 0 / 20%)
+  border-radius: 10px
+body
+  overflow-y: scroll
+.btn
+  &__block
+    max-width: 350px
+    @extend %margin-auto
+    margin-top: 50px
+    button
+      border-radius: 50px
+      +font-20
+      display: inline-block
+      max-width: none
+  &-prev
+    background: $color-gray
+    +btn-hover($menu-bg)
+  &-next
+    @extend %btn-orange-style
+  &-add
+    @extend %btn-orange-style
+    margin-top: -10px
+  &-online
+    @extend %btn-choose
+    @extend %btn-yellow-style
+  &-post
+    @extend %btn-choose
+    @extend %btn-blue-style
+  &-designat
+    @extend %btn-orange-style
+    border-radius: 50px
+    display: block
+    margin: -20px auto 20px
+    width: auto
+    padding: 8px 15px
+button
+  a
+    color: #fff
+    &:hover
+      color: #fff
+.rwd-table 
+  +table-style
+.number-style
+  font-family: Arial Black
+h2
+  strong
+    color: $secondary
+
+/*--------以下為註冊首頁--------*/
+#simple-infor
+  position: relative
+  section
+    height: 750px
+    background: url('../images/bg-open.jpg') no-repeat center/cover
+    +mobile-640
+      height: 660px
+  .section__block
+    max-width: 1300px
+.simple
+  &-block
+    max-width: 400px
+    padding-top: 60px
+    margin-left: 12%
+    @extend %margin-auto
+    +mobile-640
+      margin: 0 auto
+    .number-style
+      +font-30
+      margin-top: 2px
+    p
+      +font-20
+      +font-bold
+      strong
+        +font-30
+        +font-bold
+  &-title
+    display: flex
+    justify-content: center
+  &-content
+    background: #fff
+    padding: 30px 20px
+    border-radius: 10px
+    margin-top: 15px
+    +shadow-style
+    p
+      text-align: center
+      +font-18
+      +font-bold
+      margin-bottom: 25px
+    .btn
+      &-otp
+        background: $color-blue
+        max-width: 90px
+        width: 100%
+        letter-spacing: 1px
+        height: 40px
+        margin-left: 10px
+      &-submit
+        background: $tertiary
+        @extend %margin-auto
+        display: block
+        border-radius: 50px
+        width: 35%
+        padding: 10px
+        letter-spacing: 1px
+        a
+          color: #fff
+  &-item
+    margin-bottom: 15px
+  &-input
+    +flex-center
+    &-style
+      padding: 8px 15px
+      background: $bg-label
+      border-radius: 5px
+      margin-left: 15px
+      width: 100%
+      letter-spacing: 0.5px
+    i
+      min-width: 20px
+      text-align: center
+  &-otp
+    +flex-center
+  &-agree
+    text-align: center
+    letter-spacing: 0.5px
+    +checkbox-style($color-gray, #fff, #fff, #000)
+    margin-bottom: 20px
+    label
+      display: inline-flex
+      margin-right: 5px
+    a
+      text-decoration: underline
+      +font-bold
+.remind
+  .modal
+    display: block
+    background: rgba(0, 0, 0, 0.5)
+    &-dialog
+      max-width: 420px
+    &-body
+      span
+        color: $secondary
+      li
+        list-style: decimal
+        margin-left: 1.5rem
+        color: $secondary
+
+// 證件預備
+.dividing-line
+  height: 1px
+  max-width: 900px
+  @extend %margin-auto
+  background: $color-line
+  +pc-769
+    width: 90%
+.credentials
+  &-block
+    max-width: 550px
+    @extend %margin-auto
+    +flex-center
+    align-items: flex-start
+    // padding: 20px 0
+    +mobile-480
+      justify-content: center
+  &-item
+    text-align: center
+    +mobile-480
+      + .credentials-item
+        margin-left: 20px
+    img
+      max-width: 115px
+      margin-bottom: 10px
+      +mobile-480
+        max-width: 95px
+    p
+      +font-bold
+      +font-16
+    span
+      color: $color-gray
+      +font-14
+.choose
+  &-block
+    +flex-center
+    align-items: stretch
+    max-width: 550px
+    @extend %margin-auto
+    +pc-769
+      justify-content: center
+    h3
+      +font-16
+      +font-bold
+      margin-bottom: 30px
+  &-item
+    position: relative
+    +border-all($color-yellow)
+    border-radius: 10px
+    max-width: 160px
+    width: 100%
+    text-align: center
+    padding: 20px 15px 40px
+    i
+      color: $color-yellow
+      margin-left: 5px
+    // & + .choose-item
+    //   margin-left: 20px
+    &:not(:last-child)
+      margin-right: 20px
+  &-list
+    margin-bottom: 30px
+    img
+      max-width: 90px
+    p
+      +font-bold
+      +font-14
+      color: $color-gray
+  &-post
+    +border-all($color-blue)
+    i
+      color: $color-blue
+  &-card
+    +pc-769
+      display: none
+// 流程樣式
+.stepper 
+  &-block
+    +flex-center
+    position: relative
+    margin-bottom: 4rem
+    height: 60px
+    .done
+      &-btn
+        background: $color-blue
+        color: #fff
+      &-text
+        color: $color-blue
+  &-item
+    text-align: center
+    z-index: 10
+    +mobile-640
+      display: none
+  &-button 
+    width: 25px
+    height: 25px
+    line-height: 25px
+    background: $color-stepper
+    border-radius: 50%
+    padding: 0
+    font-family: Arial
+    margin-top: 10px
+    +mobile-640
+      margin-top: 0
+      margin-right: 10px
+  &-item[aria-expanded="true"] 
+    +mobile-640
+      +flex-center
+      flex-direction: row-reverse
+    button
+      width: 35px
+      height: 35px
+      +font-20
+      line-height: 35px
+      background: $color-blue
+      color: #fff
+    .stepper-title
+      color: $color-blue
+  &-title
+    color: $color-stepper
+    letter-spacing: 0.5px
+    +font-bold
+#progress 
+  position: absolute
+  width: 90%
+  z-index: 5
+  height: 3px
+  bottom: 16px
+  left: 0
+  right: 0
+  margin: 0 auto
+  background: $color-stepper
+  color: $color-blue
+  +mobile-640
+    bottom: -10px
+    width: 98%
+  &::-webkit-progress-value
+    background: $color-blue
+    transition: .5s ease
+  &::-webkit-progress-bar 
+    background: $color-stepper
+  &::-moz-progress-bar
+    background: $color-blue
+    transition: .5s ease
+.progress
+  &-num
+    display: none
+    +mobile-640
+      display: block
+    span
+      color: $color-blue
+
+// 證件上傳
+.upload
+  &-block
+    @extend %block-style
+    padding: 20px
+    & + .upload-block
+      margin-top: 40px
+  &-card
+    text-align: center
+  &-title
+      +font-bold
+      margin-bottom: 15px
+  &-more
+    color: $color-yellow
+    margin-left: 10px
+    +font-14
+    cursor: pointer
+  &-content
+    +flex-center
+    +mobile-640
+      display: block
+    & + .upload-content
+      margin-top: 10px
+  &-w
+    max-width: 370px
+    width: 100%
+    @extend %margin-auto
+    + .upload-w
+      margin-left: 10px
+      +mobile-640
+        margin-left: auto
+        margin-top: 15px
+  &-style
+    background: $bg-label
+    height: 200px
+    // line-height: 200px
+    cursor: pointer
+    text-align: center
+    color: $color-gray
+    position: relative
+    p
+      color: $color-gray
+      +font-14
+    img
+      max-width: 35px
+  &-text
+    position: absolute
+    left: 0
+    right: 0
+    margin: 0 auto
+    top: 50%
+    transform: translateY(-50%)
+    &::after
+      font: var(--fa-font-solid)
+      content: "\f03e"
+      font-size: 25px
+      display: block
+      margin-top: 5px
+  &-demo
+    &-text
+      text-align: center
+      +font-bold
+      margin-bottom: 20px
+    &-img
+      +flex-center
+      justify-content: center
+      text-align: center
+      margin-bottom: 20px
+      +mobile-640
+        display: block
+        margin-bottom: 10px
+      div
+        +mobile-640
+          margin-bottom: 10px
+      img
+        max-width: 335px
+        @extend %margin-auto
+    &-ture
+      margin-bottom: 30px
+      i
+        color: $color-yellow
+      span
+        display: block
+        +font-14
+        margin-bottom: 20px
+    &-list
+      +font-14
+      margin-left: 1.5rem
+      li
+        list-style: disc
+    &-false
+      span
+        display: block
+        +font-14
+        margin-top: 5px
+      i
+        color: $secondary
+.modal-size7
+  max-width: 740px
+.modal-size4
+  max-width: 450px
+
+// 個資填寫
+.personal
+  &-block
+    @extend %block-style
+    overflow: hidden
+    letter-spacing: 0.5px
+    // +font-14
+    & + .personal-block
+      margin-top: 50px
+  &-title
+    background: $color-yellow
+    text-align: center
+    +font-18
+    +font-bold
+    color: #fff
+    padding: 5px 20px
+    position: relative
+    span
+      +font-14
+  &-content
+    padding: 25px
+    margin-top: -25px
+    +font-16
+    +mobile-640
+      padding: 15px
+      margin-top: -15px
+    &-columns
+      display: flex
+      justify-content: space-between
+      +mobile-640
+        display: block
+    &-field
+      width: 100%
+      margin-top: 25px
+      + .personal-content-field
+        margin-left: 2%
+        +mobile-640
+          margin-left: 0
+      label
+        display: block
+        margin-bottom: 12px
+        +font-bold
+      sup
+        color: $primary
+        top: -2px
+      select
+        text-align: center
+        +border-bottom($color-stepper)
+        min-width: 70px
+        width: 100%
+        margin: 0 10px
+        +mobile-640
+          min-width: auto
+        &:focus-visible
+          outline: none
+      input[type="text"]
+        +border-bottom($color-stepper)
+        width: 100%
+        line-height: 1.5rem
+        padding-left: 0.2rem
+    &-item
+      + .personal-content-item
+        margin-top: 25px
+        + .reduce-12
+          margin-top: 12px
+  &-agree
+    +font-14
+    margin-top: 25px
+    ul
+      margin-left: 1rem
+    li
+      list-style: decimal
+      text-align: justify
+      + li
+        margin-top: 10px
+    &-check
+      +font-14
+      text-align: justify
+      +checkbox-style($menu-bg, #fff, $menu-bg, #fff)
+      margin-top: 25px
+      label
+        + label
+          margin-top: 5px
+  &-terms
+    margin-top: 25px
+    &-content
+      margin-top: 30px
+    &-title
+      +font-18
+      +font-bold
+      text-align: center
+      // +border-all($color-yellow)
+      // border-radius: 20px
+      margin-bottom: 5px
+      color: $color-yellow
+    &-text
+      +font-14
+      height: 100px
+      overflow-y: scroll
+      text-align: justify
+      &::-webkit-scrollbar
+        width: 3px
+        // height: 3px
+        background: $color-line
+      &::-webkit-scrollbar-thumb
+        background: $color-gray
+    &-check
+      +font-14
+      text-align: justify
+      +checkbox-style($menu-bg, #fff, $menu-bg, #fff)
+      margin-top: 25px
+      .inline-style
+        +radio-style($menu-bg, $secondary)
+        justify-content: flex-start
+        white-space: normal
+        flex-wrap: wrap
+        margin-bottom: 10px
+        label
+          margin: 0 5px
+// 同行
+.inline-style
+  width: 100%
+  // display: flex
+  +flex-center
+  align-items: flex-end
+  white-space: nowrap
+  + .inline-style
+    margin-top: 10px 
+  input[type="text"]
+    & + input[type="text"]
+      margin-left: 2%
+// 單行、雙行
+.sign-row
+  justify-content: flex-start
+  select
+    margin:0
+    margin-right: 1%
+    width: auto
+  input[type="text"]
+    margin:0
+    width: 100%
+.double-row
+  input
+    & + input
+      margin-top: 20px
+// checkbox：通訊地址、訂閱資訊
+%input-text-sytle
+  margin-bottom: 12px
+  +font-bold
+  +font-16
+  letter-spacing: 0.5px
+.check
+  &-text
+   @extend %input-text-sytle
+  &-address
+    +checkbox-style($menu-bg, #fff, $menu-bg, #fff)
+    label
+      margin-bottom: 0 
+      input[type=checkbox]
+        margin-left: 10px
+    .check-text
+      margin-bottom: 0
+  &-infor
+    +checkbox-style($menu-bg, #fff, $menu-bg, #fff) 
+    display: flex
+    +mobile-640
+      display: block
+    label
+      margin-right: 30px
+  &-orange
+    +checkbox-style($menu-bg, #fff, $secondary, #fff) 
+    input[type="checkbox"]:checked
+      +border-all($secondary)
+#collapseThree
+  +radio-style($menu-bg, $secondary)
+  .inline-style
+    justify-content: flex-start
+    label 
+      & + label
+        margin-left: 15px
+  select
+    text-align: left
+    margin: 0
+  .radio
+    &-text
+      @extend %input-text-sytle
+      // margin-bottom: 8px
+    &-space
+      margin-bottom: -8px
+//分數
+.scroe
+  &-block 
+    text-align: center
+    .personal-title
+      background: $color-blue
+  &-num
+    font-family: Arial, Helvetica, sans-serif
+    font-weight: 900
+    font-size: 50px
+    text-align: center
+    padding: 20px 0
+  &-result
+    display: inline-block
+    text-align: center
+    background: $color-blue
+    padding: 10px 20px
+    border-radius: 50px
+    +font-bold
+    color: #fff
+    letter-spacing: 1px
+  &-text
+    text-align: justify
+    padding-top: 20px
+    p
+      +font-14
+      + p
+        margin-top: 10px
+    strong
+      +font-16
+      color: $color-blue
+      display: block
+      margin-bottom: 5px
+.risk
+  &-check
+    margin-top: 50px
+    +font-16
+    text-align: justify
+    ul
+      list-style: decimal
+      margin-left: 1rem
+  &-text
+    margin: 10px 0
+  &-checkbox
+    color: $primary
+    +checkbox-style($menu-bg, #fff, $menu-bg, #fff)
+    label
+      align-items: flex-start
+    input[type=checkbox]
+      max-width: 16px
+      width: 100%
+      margin-top: 2px
+.remark
+  &-tax
+    +font-14
+    margin-top: 20px
+    p
+      color: $tertiary
+.foreign
+  display: none
+
+/*--- 約定帳戶 ---*/
+%step-four-inline
+  .personal-agree
+    p
+      margin-bottom: 10px
+    li
+      strong
+        color: $tertiary
+  .inline-style
+    +mobile-640
+      display: block
+  select
+    display: block
+  .bank-account
+    width: 49%
+    +mobile-640
+      width: 100%
+#collapseFour
+  select
+    text-align: left
+    margin: 0
+    & + select
+      margin-left: 2%
+      +mobile-640
+        margin-left: 0
+        margin-top: 25px
+.online
+  @extend %step-four-inline
+.paper
+  display: none
+  @extend %step-four-inline
+  .personal-agree
+    li
+      strong
+        color: $primary
+
+.verification-edu
+  +font-14
+  position: absolute
+  right: 2%
+  top: 50%
+  transform: translateY(-50%)
+  cursor: pointer
+.change-block
+  .choose
+    &-block
+      justify-content: center
+      margin-bottom: 20px
+    &-item
+      max-width: 170px
+      min-height: 384px
+
+// 各步驟開戶資訊確認、列印、完成
+.final
+  &-confirmation
+    .choose
+      &-block
+        max-width: 840px
+        display: grid
+        justify-content: center
+        grid-template-columns: repeat(auto-fill, 150px)
+        grid-gap: 10px
+        h3
+          margin-bottom: 0
+      &-item
+        min-height: 220px
+        margin-bottom: 0
+        &:not(:last-child)
+          margin-right: 0
+      &-list
+        max-width: 90px
+        height: 90px
+        @extend %margin-auto
+        overflow: hidden
+      &-post
+        +border-all($color-line)
+    .btn-revise
+      @extend %btn-choose
+      @extend %btn-orange-style
+      bottom: 10px
+    .filled-out
+      +border-all($color-blue)
+      img
+        transform: translateY(-90px)
+      .btn-revise
+        @extend %btn-blue-style
+    .btn-prev
+      width: auto
+      padding: 8px 30px
+  // 列印
+  &-print
+    max-width: 450px
+    @extend %margin-auto
+    h3
+      height: 40px
+      margin-bottom: 0
+      span
+        display: block
+        +font-14
+    .choose
+      &-block
+        // justify-content: center
+      &-print
+        +border-all($color-gray)
+    .btn
+      &-print
+        @extend %btn-choose
+        bottom: 10px
+        cursor: pointer
+        a
+          color:#fff
+      &-download
+        @extend %btn-blue-style
+      &-anuefund
+        @extend %btn-yellow-style
+    .print
+      &-notice
+        margin-top: 30px
+        text-align: justify
+        &-list
+          &:not(:last-child)
+            margin-bottom: 25px
+          p
+            +font-bold
+            margin-bottom: 10px
+            &::before
+              font: var(--fa-font-solid)
+              content: "\f0da"
+              margin-right: 5px
+          ul
+            +font-14
+            margin-left: 0.8rem
+            strong
+              color: $primary
+            li
+              text-align: justify
+              + li
+                margin-top: 5px
+        span
+          +font-14
+
+// 完成頁
+.bg-orange
+  background: $color-yellow
+  position: absolute
+  top: 50%
+  height: 530px
+  width: 120%
+  z-index: -1
+  transform: rotate(175deg) translateY(8%)
+  left: -20px
+  +mobile-640
+    transform: rotate(175deg) translateY(-5%)
+.final
+  &-block
+    position: relative
+    overflow: hidden
+    height: 850px
+    // height: 90vh
+    +mobile-640
+      height: 700px
+  &-text
+    text-align: center
+    p + p
+      margin-top: 10px
+    strong
+      color: $primary
+    img
+      max-width: 360px
+  &-app
+    // position: absolute
+    // left: 0
+    // right: 0
+    // bottom: 70px
+    +flex-center
+    justify-content: center
+    a + a
+      margin-left: 20px
+    
+// bootstrap樣式修改
+// search-result
+#search-result
+  .nav-tabs
+    border-bottom: 1px solid #dee2e6
+  .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active, .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover
+    transition: 0.1s
+    background-color: transparent
+    border-color: transparent
+    border-bottom: 3px solid $primary
+    border-radius: 0
+    color: #000
+    +font-bold
+  .nav-tabs .nav-link
+    border:0
+  .nav-link
+    color: #000
+    +font-bold
+  .table
+    &-content
+      margin-top: 15px
+      .source
+        +font-12
+        margin: 10px 0
+// 分頁樣式
+ul
+  &.pagination
+    @extend %margin-auto
+    justify-content: center
+    margin-top: 35px
+    li
+      display: inline
+      a
+        color: black
+        float: left
+        padding: 5px 8px
+        text-decoration: none
+        +font-14
+        &.active
+          background: $color-gray
+          color: white
+        &:hover:not(.active)
+          background: $color-line
+
+.read
+  &-more
+    display: inline-block
+    color: $secondary
+    +border-bottom($secondary)
+    +font-bold
+    position: absolute
+    bottom: 0
+    cursor: pointer
+
+.label
+  &-style
+    +border-all($color-line)
+    border-radius: 8px
+    text-align: center
+    font-size: 1rem
+    width: 60%
+    padding: 0 10px
+    line-height: 30px
+    box-sizing: border-box
+    +pc-1024
+      width: 100%
+
+
+
