@@ -1,0 +1,609 @@
+@charset "UTF-8";
+/* 統一樣式 */
+.share-icon, .footer__block, .video__list, .img__block, .table__block, .chart__block, .section__block {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.btn-infor, .btn-fund {
+  max-width: 200px;
+  width: 100%;
+  font-size: 22px;
+  padding: 8px 15px 9px 16px;
+  text-align: center;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.table__block, .chart__block {
+  margin: 20px 0 40px 0;
+}
+
+.video__block, .fund-advantage, .activity__block, .video__list {
+  font-size: 1.125rem;
+  line-height: 1.6rem;
+}
+
+footer, .video__block ul, .table__block td, .menu a {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.description__block .extra-list p, .description__block p {
+  display: inline;
+  color: #ffbd23;
+}
+
+.activity__block, .video__list {
+  text-align: justify;
+  letter-spacing: 1px;
+  word-break: break-all;
+}
+.activity__block li, .video__list li {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 480px) {
+  .btn-infor, .btn-fund {
+    max-width: none;
+  }
+}
+
+/* 選單 */
+header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 9999;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 50px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #3e454d;
+  height: 60px;
+}
+@media (max-width: 960px) {
+  nav {
+    padding: 0 15px;
+  }
+}
+
+.logo a {
+  max-width: 130px;
+}
+
+.fa {
+  padding: 0 5px;
+}
+
+#menu-btn {
+  display: none;
+  cursor: pointer;
+}
+@media (max-width: 960px) {
+  #menu-btn {
+    display: block;
+  }
+}
+#menu-btn img {
+  max-width: 28px;
+}
+
+@media (max-width: 960px) {
+  .menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 1s;
+    top: 60px;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.8);
+    text-align: center;
+  }
+  .menu-show {
+    max-height: 1000px;
+  }
+}
+.menu ul li {
+  float: left;
+}
+@media (max-width: 960px) {
+  .menu ul li {
+    float: none;
+    border-bottom: 1px solid #656e79;
+  }
+}
+.menu a {
+  padding: 0px 18px;
+  color: #fff;
+  line-height: 60px;
+}
+@media (max-width: 960px) {
+  .menu a {
+    line-height: 50px;
+  }
+}
+.menu a:hover {
+  color: #f9a532;
+}
+
+/* 內容 */
+main {
+  overflow: hidden;
+  display: block;
+}
+
+section {
+  position: relative;
+}
+
+.section__block {
+  max-width: 900px;
+  padding: 50px 0;
+}
+@media (max-width: 960px) {
+  .section__block {
+    padding: 40px 2%;
+  }
+}
+@media (max-width: 480px) {
+  .section__block {
+    padding: 30px 2%;
+  }
+}
+
+/* 焦點優惠 */
+.bg-three-point {
+  background: #e9e0dd;
+}
+
+.point-content img {
+  max-width: 220px;
+}
+
+@media (min-width: 640px) {
+  .col3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* 精選基金 */
+.bg-gray {
+  background: #f2f2f2;
+}
+
+.fund-name {
+  color: #ef4e28;
+}
+.fund-name p {
+  color: #656565;
+  font-weight: bold;
+}
+@media (max-width: 480px) {
+  .fund-name {
+    font-size: 22px;
+  }
+}
+.fund-advantage {
+  text-align: center;
+}
+.fund-advantage ul {
+  list-style: disc;
+  padding-left: 20px;
+  display: inline-block;
+  text-align: justify;
+}
+.fund-advantage p {
+  font-weight: bold;
+  display: inline;
+}
+
+/* 按鈕：立即開戶、推薦基金、基金資訊 */
+.btn__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+}
+.btn__block div + div {
+  margin-left: 20px;
+}
+.btn__block a {
+  color: #fff;
+  text-align: center;
+}
+.btn__block i {
+  margin-left: 5px;
+}
+@media (max-width: 640px) {
+  .btn__block {
+    clear: both;
+    display: block;
+  }
+  .btn__block div + div {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+.btn-fund {
+  background: #cc0000;
+}
+.btn-fund:hover {
+  background: #8b050e;
+}
+.btn-infor {
+  background: #656565;
+}
+.btn-infor:hover {
+  background: #272727;
+}
+
+/* 圖表區 */
+.chart__block {
+  text-align: center;
+}
+.chart__caption {
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 1px;
+  padding-top: 10px;
+  line-height: 16px;
+  color: #656565;
+}
+.chart__caption p {
+  display: inline-block;
+  text-align: justify;
+}
+.chart__caption span {
+  display: inline;
+  color: #ab6f6f;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+  background: #fff;
+}
+
+.table__block th {
+  background: #323232;
+  font-size: 1.125rem;
+  font-weight: bold;
+  padding: 10px 0;
+  color: #fff;
+}
+@media (max-width: 480px) {
+  .table__block th {
+    font-size: 0.9rem;
+  }
+}
+.table__block tr:nth-child(odd) {
+  background: #cecece;
+}
+.table__block td {
+  padding: 10px 5px;
+  vertical-align: middle;
+}
+
+/* RWD 表格 */
+.rwd-table {
+  margin-bottom: 10px;
+}
+@media (max-width: 480px) {
+  .rwd-table tr:nth-child(odd) {
+    background: #fff;
+  }
+  .rwd-table th {
+    display: none;
+  }
+  .rwd-table td {
+    display: block;
+    line-height: 30px;
+    font-size: 1.2rem;
+    padding: 5px;
+  }
+  .rwd-table td:nth-child(odd) {
+    background: #cecece;
+  }
+  .rwd-table td:first-child {
+    background: #323232;
+    color: #fff;
+    width: 100%;
+    font-size: 20px;
+  }
+  .rwd-table td:before {
+    width: 100%;
+    content: attr(data-th);
+    float: left;
+    font-weight: bold;
+    font-size: 18px;
+  }
+}
+
+.img__block {
+  max-width: 600px;
+}
+
+/* 上標符號 */
+sup {
+  color: #2c67ae;
+  display: inline-block;
+}
+
+.supred {
+  color: #e43030;
+}
+
+/* 影片區 */
+#video {
+  margin-bottom: 50px;
+}
+
+.video__block {
+  display: flex;
+}
+.video__block ul {
+  list-style: none;
+  padding: 0;
+  text-indent: -1.4em;
+  padding-left: 1.4em;
+}
+.video__block ul li:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  content: "";
+  padding-right: 5px;
+}
+.video__show {
+  width: 100%;
+  margin-right: 2%;
+}
+
+/* 活動辦法 */
+.activity__block a {
+  display: inline;
+  font-weight: bold;
+}
+.activity__block ul {
+  overflow: hidden;
+  padding-left: 40px;
+  list-style: disc;
+}
+@media (max-width: 640px) {
+  .activity__block ul {
+    padding-left: 20px;
+  }
+}
+.activity__block ul li {
+  margin-bottom: 10px;
+}
+.activity__block ul b {
+  font-weight: bold;
+}
+.activity__block ul p {
+  color: #ef4e28;
+  font-weight: bold;
+  display: inline;
+}
+
+/* footer */  
+footer {
+  color: #fff;
+  background: #3e454d;
+  padding-bottom: 10px;
+  overflow: hidden;
+  text-align: center;
+}
+footer a {
+  color: #259bbf;
+  display: unset;
+}
+footer a:hover {
+  color: #81e0e4;
+}
+
+.footer__block {
+  max-width: 1280px;
+  padding: 70px 40px;
+  overflow: hidden;
+}
+@media (max-width: 480px) {
+  .footer__block {
+    padding: 30px 2%;
+  }
+}
+.footer__btn {
+  text-align: center;
+  font-size: 24px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: 0.3s;
+  color: #dddddd;
+}
+.footer__btn i {
+  padding-left: 10px;
+}
+.footer__btn:hover {
+  color: #fff;
+}
+.footer .showcontent {
+  max-height: 100vh;
+  height: auto;
+}
+
+/* 詳細說明 */    
+.description__block {
+  text-align: justify;
+  line-height: 25px;
+  letter-spacing: 1px;
+  display: none;
+}
+.description__block ul {
+  list-style: disc;
+  padding-left: 5%;
+}
+.description__block ul li {
+  margin-bottom: 10px;
+}
+.description__block a {
+  display: inline-block;
+  font-weight: bold;
+}
+.description__block .extra-list {
+  color: #ceb981;
+}
+.description__block .companyinfor {
+  margin-top: 50px;
+  text-align: center;
+}
+.description__block .companyinfor p {
+  display: block;
+  font-size: 14px;
+  color: #fff;
+}
+
+/* 分享列 */
+.share__blcok {
+  position: fixed;
+  z-index: 10000;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 5px;
+}
+@media (max-width: 769px) {
+  .share__blcok {
+    display: flex;
+    top: auto;
+    transform: translateY(0);
+    bottom: 0;
+    left: 0;
+    text-align: center;
+  }
+}
+.share-icon {
+  max-width: 45px;
+  color: #fff;
+  -webkit-writing-mode: vertical-lr;
+  writing-mode: vertical-lr;
+  line-height: 45px;
+  padding: 10px 0;
+  font-size: 1.125rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+@media (max-width: 769px) {
+  .share-icon {
+    max-width: none;
+    -webkit-writing-mode: horizontal-tb;
+    writing-mode: horizontal-tb;
+    line-height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.share-icon img {
+  max-width: 18px;
+  display: inline;
+}
+@media (max-width: 769px) {
+  .share-icon img {
+    display: block;
+    margin: 0;
+  }
+}
+.share-icon.opentrack {
+  background: #cc0000;
+}
+.share-icon.opentrack:hover {
+  background: #aa0000;
+}
+.share-icon.copy-url {
+  background: #ff6a46;
+}
+.share-icon.copy-url:hover {
+  background: #ed431a;
+}
+.share-icon + .share-icon {
+  margin-top: 5px;
+}
+@media (max-width: 769px) {
+  .share-icon + .share-icon {
+    margin: 0 0 0 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  hr {
+    display: none;
+  }
+}
+
+/* modal */
+.modal {
+  z-index: 10000;
+}
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 700px;
+  }
+}
+.modal.fade .modal-dialog {
+  transform: none;
+}
+.modal-content {
+  background: #f3f3f3;
+  border-radius: 1rem;
+  border: 0;
+  box-shadow: 5px 5px 8px #0000006b;
+}
+.modal-header {
+  border: 0;
+  padding: 1rem 1rem 0;
+}
+.modal-body {
+  padding: 0 2rem 2rem;
+}
+@media (max-width: 480px) {
+  .modal-body {
+    padding: 0 1rem 1rem;
+  }
+}
+.modal-body .sub-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.125rem;
+  line-height: 1.6rem;
+}
+@media (max-width: 480px) {
+  .modal-body .sub-title {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+}
+.modal-body .chart__block {
+  margin: 20px 0 0;
+}
+@media (max-width: 480px) {
+  .modal-body .chart__block {
+    margin: 0;
+  }
+}
+
+/*# sourceMappingURL=guideline.css.map */

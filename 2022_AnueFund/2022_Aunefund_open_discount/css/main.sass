@@ -1,0 +1,329 @@
+@import _variables
+@import _mixin
+// @import "../assets/fontawesome-sass/scss/fontawesome.scss"
+// @import "../assets/fontawesome-sass/scss/solid.scss"
+// @import "../assets/fontawesome-sass/scss/brands.scss"
+
+body
+  color: $text
+  line-height: 22px
+  text-align: justify
+  background: #fbe6d9
+
+/* 統一樣式 */
+%margin-auto
+  width: 100%
+  margin:0 auto
+%font-bold
+  font-weight: bold
+%btn-base
+  max-width: none
+  width: 300px
+  font-size: 1.25rem
+  padding: 10px 50px
+  border-radius:20px
+  +font-bold
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  i
+    position: absolute
+    font-size: 1rem
+    right: 10%
+    +mobile-480
+      right: 5%
+
+h2
+  +title(1.6rem, 2rem)
+h3
+  @extend %font-bold
+  font-size: 1.25rem
+  line-height: 2rem
+h4
+  font-size: 1.25rem
+  line-height: 2rem
+span, strong
+  @extend %font-bold
+.btn
+  &-open
+    max-width: 200px
+    width: 100%
+    height: 60px
+    margin: 0 auto
+    background: url('../images/btn-open.png') no-repeat top/cover
+    cursor: pointer
+    margin-top: 40px
+    &:hover
+      background-position: bottom
+/* 樣式分隔線 */    
+nav
+  background: rgb(255 255 255 / 80%)
+  box-shadow: 5px 3px 5px rgb(135 63 19 / 30%)
+.menu
+  a
+    color: $text
+    &:hover
+      color: $secondary
+  ul
+    display: flex
+    align-items: center
+    +pc-960
+      display: block
+      // background: rgba(255, 255, 255, 0.8)
+    li
+      +pc-960
+        +border-bottom($border-line)
+        height: 50px
+  .btn-open
+    margin: 0px 18px
+    width: 100px
+    height: 30px
+    +pc-960
+      margin: 0 auto
+      transform: translateY(30%)
+.banner
+  &__block
+    position: relative
+    background: url('../images/bg-kv.jpg') no-repeat top/cover
+    // +mobile-480
+    //   background-size:200%
+    //   height: 350px
+  &-kv
+    // height: 100vh
+    // +mobile-640
+    //   height: 60vh
+    img
+      max-width: 850px
+      @extend %margin-auto
+      padding-top: 50px
+      cursor: pointer
+      +img-change
+.title
+  &__block
+    max-width: 450px
+    @extend %margin-auto
+.w-1200
+  max-width: 1200px
+// 優惠
+.advantage
+  &__block
+    margin-top: 60px
+    display: grid
+    display: -ms-flexbox
+    -ms-flex-wrap: wrap
+    justify-content: space-between
+    grid-template-columns: repeat(auto-fill, 270px)
+    grid-gap: 10px 0
+    // +flex-center
+    // +pc-769
+    //   display: block
+    +pc-960
+      justify-content: center
+      grid-gap: 50px
+  &-item
+    
+    // position: relative
+    // width:100%
+    // max-width: 270px
+    // @extend %margin-auto
+    // +pc-769
+    //   &+.advantage-item
+    //     margin-top: 50px
+    a
+      color: $text
+      +img-hover
+    img
+      position: absolute
+      max-width: 270px
+      width: auto
+      left: -25px
+      top: -25px
+  &-title
+    font-size: 1.5rem
+    font-family: 'Noto Sans TC'
+    +font-bold
+    color: $color-title
+    text-align: center
+    +border-bottom($border-line)
+    margin-bottom: 10px
+    padding-bottom: 10px
+  &-list
+    border: 1px solid rgb(222 170 101 / 50%)
+    background: rgba(255, 255, 255, 0.5)
+    padding: 8px
+  &-text
+    +border-all($border-line)
+    background: rgba(255, 255, 255, 0.8)
+    padding: 20px 10px
+    text-align: center
+    +font-20
+    p
+      +font-bold
+    strong
+      color: $secondary
+
+// 優惠 Discount 
+.img-table
+  img
+    +img-change
+#discount
+  h4
+    text-align: center
+    margin-bottom: 30px
+  p
+    +font-bold
+  strong
+    color: $secondary
+.discount
+  &-table
+    max-width: 800px
+    @extend %margin-auto
+    img
+      +img-change
+  &-caption
+    color: $color-gray-yellow
+    margin-left: 0.85rem
+    +font-14
+    +mobile-480
+      margin-left:0
+    ul
+      list-style: auto
+      margin-left: 1.5rem
+      +mobile-480
+        margin-left:1rem
+      a
+        display: inline
+
+// 主題活動
+#theme
+  background: url('../images/bg-content.jpg') no-repeat bottom/contain
+  padding-bottom: 100px
+  +mobile-640
+    background: url('../images/bg-content-m.jpg') no-repeat bottom/contain
+.theme
+  &-content
+    margin-top: 25px
+    +flex-center
+    align-items: stretch
+    flex-wrap: wrap
+    +pc-769
+      justify-content: space-around
+    a
+      color: $text
+      &:hover
+        color: $text
+    &::after 
+      content: ''
+      width: 270px
+  &-list
+    position: relative
+    overflow: hidden
+    width: 100%
+    max-width: 270px
+    min-height: 140px
+    padding: 20px 15px 15px
+    margin: 15px 0
+    background: $bg-color
+    +border-all($border-line2)
+    box-shadow: 6px 6px rgb(135 63 19 / 30%)
+    +img-hover
+    cursor: pointer
+    &-title
+      display: flex
+      align-items: center
+      margin-bottom: 5px
+      h5
+        font-size: 1.25rem
+        line-height: 30px
+        +font-bold
+        color:$secondary
+      img
+        max-width: 30px
+        margin: 0
+        margin-right: 5px
+    &:hover
+      border: 2px solid $secondary
+      box-shadow: 6px 6px rgb(135 63 19 / 50%)
+      i
+        animation: arrow-hover 0.5s
+        color: $primary
+        font-size: 20px
+    i
+      position: absolute
+      bottom: 15px
+      right: 15px
+      color: $color-gray-yellow
+      font-size: 18px
+  &-text
+    margin:0 0 0 35px
+    p
+      +font-18
+      +font-bold
+
+@keyframes arrow-hover
+  0%
+    transform: translateX(0px)
+    opacity: 1
+  25%
+    transform: translateX(20px)
+    opacity: 0
+  50%
+    transform: translateX(-40px)
+    opacity: 0
+  100%
+    transform: translateX(0px)
+    opacity: 1   
+
+// 加入LINE
+.social
+  &__block
+    +flex-center
+    justify-content: center
+    +pc-769
+      display: block
+  &-title
+    font-size: 35px
+    line-height: 45px
+    text-align: right
+    letter-spacing: 1px
+    margin-right: 20px
+    +pc-769
+      text-align: center
+      margin-right: 0
+      font-size: 30px
+    strong
+      font-family: 'Noto Sans TC'
+      color: $secondary
+    p
+      font-family: 'Noto Sans TC'
+      +font-bold
+  &-img
+    +flex-center
+    +pc-769
+      justify-content: center
+      margin-top: 20px
+    img
+      max-width: 150px
+      &:first-child
+        margin-right: 10px
+        +pc-769
+          margin: 0
+// 安全交易
+#safety
+  .section__block
+    padding-bottom: 80px
+  background: #fffdf6
+  h2
+    font-family: 'Noto Sans TC'
+    font-size: 30px
+    +font-bold
+.safe-process
+  margin-top: 30px
+  p
+    text-align: center
+    +font-20
+    +font-bold
+  img
+    max-width: 800px
+    +img-change
