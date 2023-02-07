@@ -1,0 +1,2000 @@
+@import _variables
+@import _mixin
+/* 統一樣式 */
+%margin-auto
+  width: 100%
+  margin:0 auto
+%btn-choose
+  color: #fff
+  background: $menu-bg
+  cursor: pointer
+  display: inline-block
+  padding: 0 10px
+  line-height: 1.8rem
+  i
+    margin-right: 5px
+
+body
+  overflow-y: scroll
+.flex-left
+  display: flex
+  justify-content: left
+  align-items: flex-start
+// 大標
+h1
+  +font-24
+  +font-bold
+  text-align: center
+  +border-bottom($color-line)
+  max-width: 1200px
+  padding: 0 20px 30px 20px
+  overflow: hidden
+  @extend %margin-auto
+
+.rwd-table 
+  +table-style
+/*--------以下交易頁--------*/
+// 已篩條件
+.filter
+  &__block
+    +shadow-style
+    color: $text
+    margin-bottom: 50px
+    +mobile-480
+      +border-bottom($color-line)
+  &-condition
+    +flex-center
+    align-items: flex-start
+    +border-bottom($color-line)
+    padding-bottom: 10px
+    margin-bottom: 10px
+    p
+      &:nth-child(2)
+        margin-left: -0.5rem
+    button
+        max-width: none
+        width: auto
+        background: transparent
+        color: #20a2b0
+        +font-bold
+        padding: 0
+    strong
+      color: $primary
+      font-family: Arial, Helvetica, sans-serif
+  &-title
+    +font-bold
+    min-width: 110px
+    line-height: 28px
+    +mobile-480
+      min-width: 65px
+    i
+      color: #666
+      cursor: pointer
+  &-result
+    margin: 10px 0 
+    padding: 0 0 10px 105px
+    +border-bottom($color-line)
+    display: flex
+    justify-content: flex-start
+    flex-wrap: wrap
+    +mobile-640
+     padding: 0 0 10px 0px
+     margin-left: -5px
+    li
+      @extend %btn-choose
+      margin: 5px
+  // 基金品牌
+  &-fund
+    width: 100%
+    display: grid
+    display: -ms-flexbox
+    -ms-flex-wrap: wrap
+    justify-content: space-between
+    grid-template-columns: repeat(auto-fill, 125px)
+    grid-gap: 10px
+    +mobile-640
+      margin-top: 15px
+    li
+      @extend %btn-choose
+      // +font-bold
+      background: transparent
+      color: $menu-bg
+      &:hover
+        color: #fff
+        background: $color-blue
+    .active
+      color: #fff
+      background: $color-blue
+.flex-block //不可動
+  +mobile-640
+    display: block
+.collapse
+  &__block
+    transition: $trans-time
+    .btn
+      &-collapse
+        display: none
+        +mobile-640
+          display: block
+    .flex-left
+      +mobile-640
+        justify-content: space-between
+// 跳窗備註
+.remark
+  &-icon
+    +pc-960
+    &::before
+      cursor: pointer
+    span
+      cursor: pointer
+      +pc-960
+        display: none
+  &__blcok
+    .modal
+      &-content
+        padding: 10px 15px
+      &-header
+        justify-content: center
+        color: $secondary
+        +font-20
+        +font-bold
+      &-body
+        +font-18
+        text-align: justify
+      &-footer
+        border: 0
+        justify-content: center
+        button
+          background: #fff
+          color: $secondary
+          +border-all($secondary)
+          width: 100%
+          padding: 10px
+          +font-18
+        .btn-secondary
+          &:active:focus
+            box-shadow: none
+          &:hover
+            background: #f7ebe8
+  &__list
+    li
+      list-style: none
+      +font-14
+      & + li
+        margin-top: 5px
+// 交易流程
+%label-title
+  +font-20
+  +font-bold
+  margin-bottom: 10px
+.process,.theme
+  &-steps
+    justify-content: center
+  // &-content
+.fund
+  &-name
+    text-align: center
+    +font-20
+    +font-bold
+    margin: 50px 0 30px 0
+#amount
+  &-input
+    // @extend %label-style
+.amount
+  &__block
+    max-width: 350px
+    @extend %margin-auto
+    text-align: center
+    &:not(:last-child)
+      margin-bottom: 50px
+    p
+      @extend %label-title
+    .description
+      margin-top: 10px
+      text-align: justify
+      font-size: 0.875rem
+      line-height: 1.5rem
+      letter-spacing: 0.05rem
+      font-weight: normal
+  &-single
+    label
+      @extend %label-title
+.btn
+  &__block
+    max-width: 350px
+    @extend %margin-auto
+    margin-top: 50px
+    button
+      height: 55px
+      +font-20
+  &-prev
+    background: $color-gray
+    +btn-hover($menu-bg)
+  &-next
+    background: $secondary
+    +btn-hover(#c22907)
+
+//申購確認
+.confirming
+  &-item
+    +flex-center
+    +font-18
+    padding: 10px 0
+    &:not(:last-child)
+      +border-bottom($color-line)
+  &-point
+    color: $primary
+.file
+  &__block
+    @extend %margin-auto
+    margin-top: 30px
+  &-title
+    // color: $secondary
+    +font-bold
+    margin-bottom: 10px
+  &-pdf
+    // display: flex
+    display: grid
+    display: -ms-flexbox
+    -ms-flex-wrap: wrap
+    justify-content: space-between
+    grid-template-columns: repeat(auto-fill, 180px)
+    grid-gap: 10px
+    padding-top: 20px
+    // margin-bottom: 40px
+    +border-top($color-line)
+    +mobile-480
+      grid-template-columns: repeat(auto-fill, 100%)
+      padding: 15px
+    div
+      text-align: center
+      cursor: pointer
+      +flex-center
+      justify-content: flex-start
+      +font-14
+      +mobile-480
+        text-align: left
+      img
+        max-width: 20px
+        margin: 0
+        margin-right: 5px
+        +mobile-480
+          display: none
+      &::before
+        +mobile-480
+          content: attr(data-content)
+          color: $secondary
+          margin-right: 5px
+  &-content
+    +border-all($color-line)
+    +font-16
+    padding: 20px
+    text-align: justify
+    margin-bottom: 10px
+.check-agree
+  // width: 100%
+  display: block
+  +font-bold
+  cursor: pointer
+  text-indent: -1.7rem
+  margin-left: 1.7rem
+  text-align: justify
+  +font-16
+  +checkbox-style($menu-bg,#fff, #fff, $menu-bg)
+  + .check-agree
+    margin-top: 10px
+  +mobile-640
+    // +font-14
+.password
+  &-input
+    text-align: center
+    margin-top: 30px
+    label
+      +font-bold
+      +font-18
+  &-style
+    display: block
+    +border-all($color-line)
+    line-height: 35px
+    height: 35px
+    margin-top: 5px
+    padding: 0 10px
+    text-align: center
+
+// bootstrap樣式修改
+// search-result
+#search-result
+  .nav-tabs
+    border-bottom: 1px solid #dee2e6
+  .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active, .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover
+    transition: 0.1s
+    background-color: transparent
+    border-color: transparent
+    border-bottom: 3px solid $primary
+    border-radius: 0
+    color: #000
+    +font-bold
+  .nav-tabs .nav-link
+    border:0
+  .nav-link
+    color: #000
+    +font-bold
+  .table
+    &-content
+      margin-top: 15px
+      .source
+        +font-12
+        margin: 10px 0
+// stepper
+%stepper-btn
+  color: #fff
+  background: $color-gray
+  border-radius: 30px
+  padding: 5px
+  letter-spacing: 0.1rem
+  font-size: 1.2rem
+.nav-tabs
+  .nav-item.show .nav-link, .nav-link.active,.nav-link:focus,.nav-link:hover
+    border-color: transparent
+    background: $secondary
+    color: #fff
+.stepper
+  .nav
+    &-item
+      &+.nav-item
+        margin-left: 10px
+    &-tabs
+      border:0
+.process-steps
+  .nav
+    &-link
+      border:0
+      @extend %stepper-btn
+      span
+        display: inline-block
+        height: 1.5rem
+        width: 1.5rem
+        color: $text
+        text-align: center
+        background: #fff
+        border-radius: 50%
+        line-height: 1.6rem
+        +font-bold
+        font-family: Arial, Helvetica, sans-serif
+      p
+        display: inline
+        padding-right: 10px
+        margin-left: 15px
+        +mobile-480
+          display: none
+      .show-tab
+        display: inline
+.theme-steps 
+  flex-wrap: nowrap
+  margin: 50px 0
+  +mobile-480
+    margin: 30px 0
+  .nav-item.show .nav-link, .nav-link.active,.nav-link:focus,.nav-link:hover
+    background: $color-blue
+  .nav
+    &-item
+      max-width: 200px
+      width: 100%
+      margin: 0
+      +mobile-480
+        max-width: 160px
+      +.nav-item
+        +mobile-320
+          margin-left: 0
+    &-link
+      +flex-style(center,flex-end)
+      padding: 0.8rem 1rem
+      background: transparent
+      +border-all($color-blue)
+      color: $color-blue
+      border-radius: 30px
+  button
+    max-width: 200px
+    i
+      +font-14
+      margin-left:10px
+// 分頁樣式
+ul
+  &.pagination
+    @extend %margin-auto
+    justify-content: center
+    margin-top: 35px
+    li
+      display: inline
+      a
+        color: black
+        float: left
+        padding: 5px 8px
+        text-decoration: none
+        +font-14
+        &.active
+          background: $color-gray
+          color: white
+        &:hover:not(.active)
+          background: $color-line
+
+.read
+  &-more
+    display: inline-block
+    color: $secondary
+    +border-bottom($secondary)
+    +font-bold
+    position: absolute
+    bottom: 0
+    cursor: pointer
+
+/*--------以下母子基金樣式--------*/
+%mf-title
+  +font-20
+  margin-bottom: 8px
+  letter-spacing: 0.5px
+  +font-bold
+  span
+    +font-14
+    color: $color-gray
+    margin-left: 5px
+%mf-name
+  padding: 10px 15px
+  border-radius: 10px
+  text-align: justify
+  +font-18
+  +flex-center
+%btn-style
+  max-width: 60px
+  padding: 3px
+  margin-left: 10px
+  +font-16
+h2
+  @extend %mf-title
+.space-padding
+  padding: 10px 20px
+  +mobile-480
+    padding: 10px
+#choice-MF-tab
+  .filter-condition
+    color: $text
+.set__content
+  +mobile-480
+    +border-all($color-line)
+.label
+  &-style
+    +border-all($color-line)
+    border-radius: 8px
+    text-align: center
+    font-size: 1rem
+    width: 60%
+    padding: 0 10px
+    line-height: 30px
+    box-sizing: border-box
+    +pc-1024
+      width: 100%
+    strong
+      color: $important
+.master
+  &-fund
+    h2
+      @extend %mf-title
+      color: $secondary
+    .btn-change
+      @extend %btn-style
+      background: $secondary
+    .rwd-table
+      margin: 0
+      td
+        +mobile-640
+          padding: 0 0 10px 0
+  &-name
+    @extend %mf-name
+    color: $secondary
+    background: $master-bg
+    +border-all($master-line)
+  &-set
+    width: 100%
+    display: flex
+    margin-bottom: 30px
+    +pc-1024
+      display: block
+    &-content
+      width: 100%
+      +radio-style($color-line, $secondary)
+      label
+        line-height: 30px
+      &:first-child
+        width: 30%
+        min-width: 200px
+        +pc-1024
+          width: 100%
+      &:last-child
+        label
+          +pc-1024
+            width: 100%
+      
+      #foreign
+        margin-left: 20px
+  &-amount
+    +mobile-480
+      width: 100%
+.feeder
+  &-fund
+    margin-top: 30px
+    h2
+      @extend %mf-title
+      color: $color-blue
+    .btn-change
+      @extend %btn-style
+      background: $color-blue
+    .rwd-table
+      margin: 0
+      td
+        +pc-960
+          padding: 0 0 10px 0
+  &-name
+    @extend %mf-name
+    color: $color-blue
+    background: $feeder-bg
+    +border-all($feeder-line)
+    &+.feeder-name
+      margin-top: 10px
+  &-title
+    background: transparent
+    border: 0
+    +font-bold
+  &__content
+    +flex-center
+    align-items: flex-start
+    +pc-1024
+      display: block
+  &-right,&-left
+    width: 100%
+  &-right
+    margin-left: 50px
+    +pc-1024
+      margin-left: 0
+  &-set
+    width: 100%
+    display: flex
+    margin-bottom: 20px
+    +pc-1024
+      display: block
+    &-content
+      width: 100%
+      label
+        width: 100%
+      .input-group
+        width: 60%
+        +pc-1024
+          width: 100%
+      
+  &-img
+    max-width: 300px
+    @extend %margin-auto
+    text-align: center
+    color: $color-blue
+    margin-bottom: 40px
+    p
+      +font-bold
+  &-increase, &-stop
+    +checkbox-style($color-gray, #fff, $color-gray,#fff)
+    // label
+    //   +font-bold
+    i
+      margin-left: 5px
+      color: $tertiary
+      cursor: pointer
+  &-increase
+    .symbol
+      padding-left: 10px
+      color: $color-green
+  &-stop
+    .symbol
+      padding-left: 10px
+      color: $important
+  &-increase-buy
+    +flex-center
+    justify-content: start
+    line-height: 2rem
+    white-space: nowrap
+    +mobile-480
+      display: block
+    div
+      +flex-center
+      +mobile-480
+        justify-content: flex-start
+        + div
+          margin-top: 10px
+    label
+      max-width: 70px
+      margin: 0 5px
+      +pc-1024
+        max-width: none
+    .label-style
+      width: 100%
+.m-to-f
+  color: $color-green
+.f-to-m
+  color: $important
+.name-style
+  background: transparent
+  border: 0
+  padding: 0
+  margin-bottom: 20px
+  +pc-1024
+    text-align: center
+    display: block
+  p
+    +font-bold
+    +pc-1024
+      display: inline-block
+      text-align: justify
+// 主題
+#content-theme
+  .filter__block
+    +mobile-640
+      border-radius: 0
+  .filter-fund
+    +mobile-640
+      margin-top: 0
+// 自選
+#content-customize
+  .filter__block
+    margin-top: 20px
+  #search-result
+    margin-top: 50px
+// 設定
+.mf
+  &-name, &-success
+    text-align: center
+    margin: 50px 0
+    +font-20
+    +mobile-480
+      margin: 30px 0
+    span
+      +font-bold
+    .btn-name
+      @extend %btn-style
+      background: $color-blue
+      +font-16
+      line-height: 1.5rem
+      max-width: 100px
+  &-header
+    background: $bg-gray
+    padding: 10px 20px
+    +mobile-480
+      padding: 10px
+    // margin-bottom: 15px
+  &-table
+    + .mf-table
+      margin-top: 30px
+    p
+      +font-bold
+      margin-bottom: 5px
+      color: $color-blue
+      +pc-960
+        text-align: center
+    .rwd-table
+      td
+        +pc-960
+          display: block
+          width: 100%
+          text-align: center
+        & + td
+          border: 0
+    // 手機版表格樣式
+    .account-table td:before
+      width: 100%
+      +pc-960
+        background: $bg-gray
+        padding: 10px
+        margin-bottom: 10px
+        text-align: center
+        
+  &-success
+    i
+      color: $tertiary
+
+.discount
+  +radio-style($text, #000)
+  &-options
+    text-align: left
+  &-check
+    width: 100%
+    padding: 10px 0
+    // line-height: 30px
+    text-indent: -1.4rem
+    padding-left: 1.5rem
+    &:not(:last-child)
+      +border-bottom($color-line)
+  .label-style
+    background: #ffe6cc
+    border-radius: 8px
+    text-align: center
+    font-size: 1.125rem
+    width: 100%
+    line-height: 45px
+    height: 45px
+    border: 0
+    margin-top: 15px
+    +font-bold
+  strong
+    color: $primary
+    +font-bold
+    +font-22
+    padding: 0 5px
+.original-fee
+  +font-18
+  +font-bold
+  margin-bottom: 15px
+  text-align: center
+#step03
+  margin-top: 50px 
+  
+/*--------以下帳戶總覽、委託查詢/取消--------*/
+%table-style
+  table-layout: fixed
+  th
+    background: $color-line
+    +font-bold
+    padding: 10px
+    +pc-769
+      padding: 10px 2px
+  td
+    padding: 10px
+    +pc-960
+      padding: 10px 0
+      justify-content: space-between
+      text-align: right
+    &:before
+      +pc-960
+        color: $text
+        +font-bold
+        width: 100px
+        min-width: 100px
+        text-align: left
+  strong
+    color: $primary
+.account
+  &-summary
+    padding: 0 20px 30px 20px
+    +pc-960
+      padding: 0 2% 30px 2%
+    .fund-name
+      margin: 0 auto 30px auto
+    .notice-content
+      border: 0
+      padding: 5px 0px 5px 20px
+      ul
+        list-style-type: disc
+  &-personal
+    +font-16
+    strong
+      color: $tertiary
+  &-amount
+    +flex-center
+    margin-top: 15px
+    +pc-769
+      display: block
+    &-right
+      width: 48%
+      max-height: 300px
+      // +pc-1024
+      //   width: 58%
+      +pc-769
+        width: 100%
+      .account-table
+        border: 1px solid $bg-gray
+        +pc-1024
+          table-layout: auto
+        +mobile-640
+          border: 0
+    &-left
+      width: 50%
+      // +pc-1024
+      //   width: 40%
+      +pc-769
+        width: 100%
+      .item-main-style
+        p
+          display: inline-block
+          background: $tertiary
+          color: #fff
+          border-radius: 50px
+          padding: 10px 20px
+          +font-16
+        strong
+          +font-24
+          font-family: Arial, Helvetica, sans-serif
+      .rate
+        color: $primary
+    &-item
+      +flex-center
+      padding: 10px
+      line-height: 30px
+      &:not(:last-child)
+        +border-bottom($color-line)
+      
+  &-content
+    margin-top: 30px
+    &-title
+      +font-16
+      display: flex
+      align-items: center
+      &::before
+        content: " "
+        height: 15px
+        width: 15px
+        background: $primary
+        margin-right: 5px
+    &-tab
+      background: $color-line
+      +flex-center
+      padding: 10px
+      margin-top: 10px
+      height: 45px
+      display: none
+      +pc-960
+        display: flex
+      p
+        +font-bold
+    &-list
+      margin-top: 10px
+      padding-bottom: 15px
+      +border-top($color-line)
+      transition: $trans-time
+      +pc-960
+        border: 0
+        margin-top: 0
+        padding: 10px 5px 15px 
+      &:nth-child(even)
+        +pc-960
+          // background: $bg-gray
+          +border-top($text)
+      .mf-name
+        margin: 0 0 20px 0
+      .list
+        &-fund
+          +flex-center
+          padding-top: 10px
+          // +pc-960
+          //   padding: 10px 10px 0 10px
+          p
+            +font-bold
+        &-name
+          display: flex
+          width: 90%
+          +font-bold
+          +font-16
+          letter-spacing: 0.5px
+          text-align: justify
+          +pc-960
+            display: block
+            width: 70%
+            margin-right: 10px
+          p
+            padding-right: 5px
+        &-collapse
+          background: transparent
+          color: $menu-bg
+          cursor: pointer
+          // display: none
+          margin-left: 10px
+          +font-14
+          width: 100%
+          max-width: 15px
+          +pc-960
+            display: block
+      .paid-money
+        display: flex
+        +font-bold
+        white-space: nowrap
+    &-btn
+      display: flex
+      justify-content: center
+      margin-top: 15px
+      +pc-960
+        justify-content: center
+        padding: 0 10px
+      .btn
+        &-act
+          max-width: 150px
+          background: transparent
+          color: $menu-bg
+          +border-all($color-gray)
+          +font-bold
+          // +btn-hover($color-line)
+          &:hover
+            background: $color-gray
+            color: #fff
+        &-plus
+          color: $primary
+          border: 1px solid $primary
+          +btn-hover(#ffeaea)
+  &-table
+    @extend %table-style
+        
+  &-overview
+    margin-top: 20px
+    .account-content-list
+      border-top: 0
+      padding: 10px 0 0
+    .transaction-list
+      .account-table
+        +pc-960
+          td:nth-child(1),
+          td:nth-child(2),
+          td:last-child
+            display: none
+            + td 
+              border:0
+          .rwd-table td + td
+            &:not(:first-child)
+              border-top:0
+.category
+  &-master
+    color: $secondary
+    +font-bold
+  &-feeder
+    color: $color-blue
+    +font-bold
+  &-name
+    width: 300px
+    text-align: justify
+    +pc-960
+      width: 100%
+  &-increase
+    width: 300px
+    +pc-960
+      width: 100%
+  &-th
+    text-align: left
+// 手機板 - 表格調整
+.transaction
+  &-table
+    // .account-content
+    //   &-tab
+    //     height: 45px
+    .tab
+      &-title
+        +pc-960
+          display: none
+      &-mobile
+        padding: 20px
+        +font-16
+        +flex-center
+        align-items: flex-start
+        +change-960
+        +pc-960
+          padding: 15px 0
+        &-right
+          +flex-center
+    .account-table
+      td:first-child,td:nth-child(2)
+        +pc-960
+          display: none
+          + td 
+            border:0
+    .transaction-list
+      &:nth-child(even)
+        background: $bg-gray
+    .list-collapse
+      width: 30px
+      cursor: pointer
+  &-list
+    +pc-960
+      padding: 0 10px
+.btn
+  &-increase
+    @extend %btn-style
+    +border-all($secondary)
+    color: $secondary
+    background: transparent
+    min-width: 50px
+    &:hover
+      background: $secondary
+      color: #fff
+  &-modify
+    @extend %btn-style
+    +border-all($color-blue)
+    color: $color-blue
+    background: transparent
+    min-width: 50px
+    &:hover
+      background: $color-blue
+      color: #fff
+
+/*委託查詢*/
+.entrust
+  .list-name
+    div
+      display: flex
+      +font-bold
+      +pc-960
+        display: block
+  .fund-check 
+    display: flex
+    align-items: center
+    width: 100%
+    +pc-960
+      align-items: flex-start
+    & input[type=checkbox]
+      position: relative
+      -webkit-appearance: none
+      -moz-appearance: none
+      appearance: none
+      max-width: 15px
+      width: 100%
+      height: 15px
+      border: 1px solid $menu-bg
+      // background: $menu-bg
+      vertical-align: text-top
+      margin-right: 10px
+      +pc-960
+        margin-top: 2px
+      &:after
+        font: var(--fa-font-solid)
+        content: "\f00c"
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-45%, -50%)
+        width: 100%
+        height: auto
+        transition: $trans-time
+        opacity: 0
+        font-size: 10px
+        color: #fff
+      &:checked
+        background: $menu-bg
+        &:after
+          opacity: 1
+          transform: translate(-45%, -50%)
+
+
+/*交易明細、異動紀錄*/
+#entrust
+  .nav-tabs
+    border-bottom:0
+    +mobile-640
+      margin-top: 10px
+  .nav-tabs .nav-link
+    @extend %btn-choose
+    background: #fff
+    color: $color-gray
+    +border-all($color-gray)
+    border-radius: 5px
+    padding: 0 15px
+  .nav-item + .nav-item
+    margin-left: 10px
+  .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active, .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover
+    border-radius: 5px
+    color: $tertiary
+    +border-all($tertiary)
+    background: #fff
+  .filter-condition
+    align-items: center
+    justify-content: flex-start
+    border: 0
+  .filter-fund li:hover
+    background: transparent
+  &-change
+    // .common-style
+    //   tr:nth-child(odd)
+    //     background: $bg-gray
+    //   td
+    //     padding: 10px
+    //     &.category-th
+    //       justify-content: center
+    //       &::before
+    //         width: auto
+    //         min-width: auto
+  .account-table td:before
+    width: 80px
+    min-width: 80px
+  #entrust-repurchase
+    .account-table td:before
+      width: 145px
+      min-width: 145px
+.common-style
+  tr:nth-child(odd)
+    background: $bg-gray
+  td
+    padding: 10px
+    &.category-th
+      justify-content: center
+      &::before
+        width: auto
+        min-width: auto
+.table-title
+  +font-16
+  +font-bold
+  +pc-960
+    padding-top: 10px
+.options-style
+  // display: flex
+  .filter-condition
+    align-items: center
+    justify-content: flex-start
+    padding-bottom: 10px
+    margin-bottom: 10px
+    border: 0
+    flex-wrap: wrap
+  .filter-fund 
+    width: auto
+    display: flex
+    justify-content: flex-start
+    flex-wrap: wrap
+    li
+      color: $color-gray
+      +border-all($color-gray)
+      border-radius: 5px
+      padding: 0 15px
+      &:hover
+        color: $tertiary
+        +border-all($tertiary)
+        background: transparent
+    .active
+      color: $tertiary
+      +border-all($tertiary)
+      background: transparent
+  .select-date
+    li
+      &:hover
+        +border-all($color-blue)
+        color: $color-blue
+    .active
+      +border-all($color-blue)
+      color: $color-blue
+    .input-date
+      margin-left: 10px
+      +pc-1024
+        margin: 10px 0
+.input
+  &-date
+    display: flex
+    +pc-1024
+      width: 100%
+      // margin: 10px 0
+    +mobile-640
+      display: block
+    .datepicker_input
+      border: 1px solid $color-blue
+      border-radius: 5px
+      padding: 0 10px
+      line-height: 1.8rem
+    img
+      max-width: 30px
+      display: flex
+      align-items: center
+      padding: 5px
+      color: #fff
+      text-align: center
+      white-space: nowrap
+      background-color: $color-blue
+      border: 1px solid $color-blue
+      border-radius: 0.25rem
+    .input-group + .input-group
+      margin-left: 10px
+      +mobile-640
+        margin:10px 0 
+#detailTabContent
+  .account-content
+    &-left
+      +flex-center
+      // justify-content: flex-start
+      width: 95% 
+      +font-bold
+      .category-master,.category-feeder
+        margin-right: 20px
+        white-space: nowrap
+  .list
+    &-fund
+      padding: 20px 0
+    &-table
+      width: 100%
+      table-layout: fixed
+      margin-top: 10px
+      tr
+        line-height: 1.6rem
+        + tr
+          +border-top($color-line)
+      td
+        padding: 10px 0
+        &:last-child
+          text-align: right
+#details
+  .account-content
+    &-list
+      border: 0
+      margin: 0
+      padding: 0 10px
+      &:nth-child(even)
+        background: $bg-gray
+      
+.detail
+  &-tab
+    display: flex
+    &-pc
+      display: flex
+      p + p
+        margin-left: 10px
+    div
+      +flex-center
+      width: 95%
+  .account-table
+    tr
+      &:not(:first-child)
+        +border-bottom($color-line)  
+.feeder-add-btn, .expand-btn
+  +flex-center
+  margin-bottom: 8px
+  h2
+    margin: 0
+  .btn-new
+    @extend %btn-choose
+    background: #fff
+    border-radius: 5px
+    color: $color-blue
+    +border-all($color-blue)
+.expand-btn
+  .btn-new
+    color: $menu-bg
+    +border-all($menu-bg)
+    i
+      +font-12
+      margin-right: 0
+#record
+  .account-content-list
+    padding: 0 10px
+    margin: 0
+    border-top:0 
+    +.account-content-list
+      +border-top($color-line)
+.table-block
+  +.table-block
+    margin-top: 40px
+  
+/*-- 以下為行銷頁 --*/
+#index-block
+  color: #221d1d
+  article
+    padding-top: 60px
+  .section__block
+    max-width: 980px
+    padding: 70px 2%
+    overflow: visible
+    +mobile-480
+      padding: 30px 2%
+  .reduce-top
+    padding-top: 0
+  .circle-block
+    position: relative
+    max-width: 1180px
+// 背景區
+.bg
+  &-intro01
+    padding-top: 80px
+    background: url(../images/bg-intro01.jpg) no-repeat top left #fff 
+    +pc-960
+      background: transparent
+  &-intro02
+    background: url(../images/bg-intro02.jpg) no-repeat bottom right #fff 
+    +mobile-640
+      background: transparent
+  &-point
+    background: url(../images/bg-point.jpg) no-repeat bottom left/contain #ffeaea 
+  &-fund
+    background: url(../images/bg-fund.jpg) no-repeat bottom center/contain fixed #ffe1a7
+  &-activity
+    background: #fff6eb
+//  分隔線
+.line
+  &-bn
+    background: url(../images/bg-fund.jpg) no-repeat bottom right/contain fixed #f8dbaa
+// 跳窗登入
+.login
+  &-popup
+    line-height: 30px
+    padding: 0px 10px
+    background: $tertiary
+    color: #fff
+    cursor: pointer
+    +pc-960
+      line-height: 50px
+  &-block
+    p
+      text-align: center
+      +font-20
+      color: $tertiary
+      margin-bottom: 10px
+    .btn__block
+      margin-top: 20px
+      button
+        width: 30%
+      button, a
+        background: transparent
+        color: #000
+        height: auto
+        border-radius: 0
+        +font-16
+        padding: 0
+        &:hover
+          color: $secondary
+      button + button
+        border-left: 1px solid $color-gray
+        margin-left: 0
+    .modal-content
+      padding: 20px 30px
+  &-content
+    label
+      width: 100%
+      margin: 15px 0
+      display: inline-grid
+  &-input
+    margin-top: 5px
+    background: transparent
+    +border-bottom($color-gray)
+    +font-16
+    color: $menu-bg
+    letter-spacing: 1px
+    line-height: 1.6rem
+    border-radius: 0
+  &-btn
+    max-width: none
+    background: $tertiary
+    border-radius: 50px
+    +font-20
+    letter-spacing: 1px
+    margin-top: 15px
+    +btn-hover(#da7f00)
+    padding: 10px
+    color: #fff
+  &-close
+    position: absolute
+    right: 3%
+    top: 3%
+@media (min-width: 576px)
+  .modal-dialog 
+    max-width: 400px
+
+// KV
+.banner
+  &__block
+    position: relative
+    overflow: hidden
+  &-bg
+    img
+      &:nth-child(1)
+        +mobile-640
+          display: none
+      &:nth-child(2)
+        display: none
+        +mobile-640
+          display: block
+  &-ingots
+    position: absolute
+    width: 10.5%
+    bottom: 14%
+    left: 9%
+    transform: rotate(0deg) 
+    animation: bn-ingots infinite 2s
+    +mobile-640
+      width: 15%
+      bottom: 7.5%
+      left: 27%
+  &-title 
+    position: absolute
+    width: 40%
+    top: 15%
+    right: 10%
+    +mobile-640
+      display: none
+  &-btn
+    position: absolute
+    width: 20%
+    bottom: 27%
+    right: 20%
+    animation: btn-show infinite 1s
+    z-index: 2
+    +mobile-640
+      width: 65%
+      bottom: 48%
+      right: 15%
+@keyframes btn-show
+  0%
+    transform: scale(1)  
+  50%
+    transform: scale(0.95)
+  100%
+    transform: scale(1)
+@keyframes bn-ingots
+  0%
+    transform: rotate(0deg)  
+  50%
+    transform: rotate(15deg) 
+  100%
+    transform: rotate(0deg) 
+.coins
+  // &-block
+  &-item
+    position: absolute
+    top: -12%
+    left: 10%
+    width: 5%
+    opacity: 1
+    animation: coinDrop 1.5s ease-in forwards infinite
+    +mobile-640
+      top: 45%
+      animation: coinDrop-m 1.5s ease-in forwards infinite
+  &-one
+    animation-delay: 0.3s
+    left: 28%
+    +mobile-640
+      left: 58%
+  &-two
+    left: 23%
+    +mobile-640
+      left: 50%
+  &-three
+    animation-delay: 0.6s
+    left: 18%
+    +mobile-640
+      left: 40%
+  &-circle
+    display: none
+    opacity: 0
+    width: 4%
+    top: 4%
+    z-index: 2
+    animation: coinDrop-circle 1s ease-in forwards infinite
+    +mobile-640
+      width: 8%
+  &-four
+    animation-delay: 0.5s
+    left: 52%
+    +mobile-640
+      left: 55%
+  &-five
+    left: 44%
+    +mobile-640
+      left: 40%
+@keyframes coinDrop
+  1%
+    opacity: 1
+  99%
+    opacity: 0.3
+  100% 
+    opacity: 0
+    top: 29%
+    width: 2%
+@keyframes coinDrop-m
+  1%
+    opacity: 0.5
+  99%
+    opacity: 0.3
+  100% 
+    opacity: 0
+    top: 60%
+    width: 2%
+@keyframes coinDrop-circle
+  1%
+    opacity: 0
+  50%
+    opacity: 1
+  99%
+    opacity: 0.3
+  100% 
+    opacity: 0
+    top: 15%
+    width: 3%
+// 介紹
+.intro
+  &-block
+    position: relative
+    background: #fff6d6
+    border-radius: 20px
+    box-shadow: inset 0px 0px 20px rgb(255 194 100 / 60%)
+    padding: 50px 40px
+    +mobile-640
+      padding: 40px 20px
+  &-title
+    position: absolute
+    top: -90px
+    left: 0
+    right: 0
+    max-width: 480px
+    @extend %margin-auto
+    +mobile-480
+      top: -70px
+  &-content
+    margin-left: 1.6rem
+    li
+      +font-18
+      list-style: disc
+      letter-spacing: 1px
+      text-align: justify
+      +font-bold
+      +mobile-640
+        +font-16
+      + li
+        margin-top: 5px
+        +mobile-480
+          margin-top: 10px
+      strong
+        color: $secondary
+        +font-bold
+      i
+        margin: 0 5px
+  &-ingots
+    position: absolute
+    max-width: 190px
+    width: 100%
+    right: 0
+    bottom: -55px
+    +mobile-640
+      display: none
+
+// 循環圖
+.circle
+  &-block
+    position: relative
+    max-width: 1180px
+  &-title
+    position: absolute
+    width: 21.2%
+    top: 42%
+    left: 0
+    right: 0
+    +mobile-640
+      width: 35%
+      top: 45%
+  &-arrow
+    max-width: 1117px
+    @extend %margin-auto
+    img
+      &:nth-child(1)
+        +mobile-640
+          display: none
+      &:nth-child(2)
+        display: none
+        +mobile-640
+          display: block
+  &-bowl
+    position: absolute
+    width: 19.5%
+    top: 2%
+    left: 0
+    right: 0
+    display: none
+    +mobile-640
+      width: 37%
+    +mobile-480
+      width: 33%
+      // top: 2%
+  &-ingots01
+    position: absolute
+    width: 12.3%
+    bottom: 35%
+    right: 24%
+    display: none
+    +mobile-640
+      width: 25%
+      bottom: 31%
+      right: 3%
+    +mobile-480
+      width: 20%
+      bottom: 30%
+      right: 7%
+  &-ingots02
+    position: absolute
+    width: 17.4%
+    bottom: 32%
+    left: 20%
+    display: none
+    +mobile-640
+      width: 28%
+      bottom: 29%
+      left: 2%
+    +mobile-480
+      width: 23%
+      bottom: 29%
+      left: 6%
+  &-step
+    position: absolute
+    color: #fff
+    letter-spacing: 1px
+    height: 110px
+    display: flex
+    align-items: center
+    width: 26.3%
+    text-align: center
+    +pc-769
+      display: block
+    strong
+      color: #fee929
+    p
+      +font-20
+      +font-bold
+      letter-spacing: 1px
+      line-height: 1.8rem
+      text-shadow: 0px 0px 5px #680000
+      margin: 0 35px 0 33%
+      display: inline-block
+      text-align: justify
+      +pc-1024
+        +font-16
+        margin: 0 25px 0 33%
+      +pc-769
+        margin: 0
+      +mobile-480
+        +font-14
+        letter-spacing: 0
+    &-one
+      top: 30%
+      right: 6%
+      background: url(../images/img-circle-text01.png) no-repeat center/contain
+      +mobile-640
+        top: 38%
+        right: 2%
+      +mobile-480
+        top: 33%
+    &-two
+      left: 0
+      right: 0
+      bottom: 12.5%
+      margin: 0 auto
+      background: url(../images/img-circle-text02.png) no-repeat center/contain
+      padding-top: 15px
+      +pc-769
+        bottom: 16%
+      +mobile-640
+        bottom: 11%
+        width: 30%
+      +mobile-480
+        bottom: 8%
+    &-three
+      top: 30%
+      left: 4%
+      background: url(../images/img-circle-text03.png) no-repeat center/contain
+      +mobile-640
+        top: 38%
+        left: 2%
+      +mobile-480
+        top: 33%
+      p
+        margin-left: 28%
+        +pc-769
+          margin: 0
+    +pc-769
+      background: #b9261d
+      background: -moz-linear-gradient(top,  #b9261d 0%, #f3695f 100%)
+      background: -webkit-linear-gradient(top,  #b9261d 0%,#f3695f 100%)
+      background: linear-gradient(to bottom,  #b9261d 0%,#f3695f 100%)
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b9261d', endColorstr='#f3695f',GradientType=0 )
+      border-radius: 5px
+      height: auto
+      padding: 10px
+    +mobile-480
+      padding: 6px
+// 標題
+
+.title
+  &-block
+    text-align: center
+    +flex-center
+    justify-content: center
+    margin-bottom: 30px
+    img
+      max-width: 165px
+      margin: 3px 5px 0 0
+      +mobile-480
+        max-width: 130px
+    h2
+      font-family: 'Noto Sans TC'
+      font-size: 33px
+      +font-bold
+      text-align: center
+      margin-bottom: 0
+      +mobile-480
+        font-size: 26px
+  &-style
+    max-width: 370px
+    @extend %margin-auto
+    margin-bottom: 40px
+  &-style02
+    position: relative
+    z-index: 1
+    display: inline-block
+    &::before
+      content: ""
+      background: #f2a19a
+      height: 15px
+      width: 100%
+      display: block
+      position: absolute
+      bottom: -8px
+      z-index: -1
+      +mobile-480
+        height: 10px
+.title-p
+  +font-22
+  +font-bold
+  display: flex
+  align-items: center
+  margin-bottom: 10px
+  strong
+    color: $secondary
+    +font-bold
+  &::before
+    content: ''
+    height: 22px
+    width: 5px
+    background: $secondary
+    display: inline-block
+    border-radius: 20px
+    margin-right: 5px
+    margin-top: 2px
+// 限定特色
+.point
+  &-content
+    +flex-center
+    div + div
+      +pc-960
+        margin-top: 20px
+    +pc-960
+      display: block
+  &-number
+    font-family: Arial, Helvetica, sans-serif
+    font-size: 55px
+    color: #fff
+    font-weight: 900
+    margin-bottom: 10px
+  &-item
+    max-width: 270px
+    +shadow(rgb(228 206 206 / 60%))
+    border-radius: 20px
+    border-bottom-left-radius: 0
+    background: #fff
+    padding: 30px 20px
+    @extend %margin-auto
+    letter-spacing: 0.5px
+    text-align: justify
+    +pc-960
+      max-width: none
+    span
+      +font-16
+      b
+        color: $secondary
+  &-list
+    li
+      +font-18
+      letter-spacing: 1px
+      text-indent: -1.6rem
+      margin-left: 1.6rem
+      margin-bottom: 10px
+      text-align: justify
+      &::before
+        font: var(--fa-font-solid)
+        content: "\f35a"
+        margin-right: 7px
+  &-line
+    height: 60px
+    background: url(../images/line-point.jpg) no-repeat bottom
+    &-up
+      transform: rotate(180deg)
+.chart
+  &-img
+    max-width: 700px
+  &-caption
+    li
+      +font-12
+      color: $color-gray
+      // font-weight: 300
+      letter-spacing: 1px
+      list-style: disc
+      margin-left: 3%
+      text-align: justify
+// 基金組合
+.fundlist
+  &-block
+    & + .fundlist-block
+      margin-top: 30px
+  &-title
+    background: url(../images/img-fund-title.png) no-repeat center bottom
+    max-width: 370px
+    @extend %margin-auto
+    display: block
+    margin-bottom: 20px
+    +font-24
+    +font-bold
+    line-height: 66px
+    text-align: center
+    color: #fff
+    letter-spacing: 1.5px
+    text-align: center
+    padding: 4px 0 0 40px
+    +mobile-480
+      max-width: 320px
+      +font-20
+      line-height: 55px
+      background-size: contain
+    strong
+      color: $color-yellow
+  &-content
+    display: flex
+    justify-content: space-between
+  &-item
+    position: relative
+    +shadow(#dea538)
+    border-radius: 20px
+    background: #fff
+    padding: 20px 30px 80px 30px
+    max-width: 270px
+    @extend %margin-auto
+    margin-bottom: 20px
+    .title-p
+      +font-20
+      &::before
+        height: 20px
+        margin-top: 2px
+  &-mf
+    min-height: 110px
+    strong
+      background: #de8b00
+      color: #fff
+      padding: 5px 10px
+      margin-bottom: 7px
+      display: inline-block
+      border-radius: 30px
+    + .fundlist-mf
+      margin-top: 15px
+  &-name
+    letter-spacing: 1px
+    text-align: justify
+    +font-16
+    span
+      color:$color-light-gray
+.btn-fund,.btn-open
+  position: absolute
+  bottom: 4%
+  left: 0
+  right: 0
+  width: 80%
+  margin: 0 auto
+  border-radius: 0
+  font-size: 20px
+  +font-bold
+  max-width: none
+.btn-fund
+  background: $primary
+.btn-open
+  width: 40%
+  bottom: 10%
+  background: $secondary
+  +pc-960
+    max-width: 200px
+    width: 100%
+.owl-theme .owl-nav
+  position: absolute
+  top: 50%
+  transform: translateY(-100%)
+  width: 100%
+  display: flex
+  justify-content: space-between
+  align-items: center
+  +font-24
+  color: #6a3906
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot
+  margin: 0
+  width: auto
+.owl-theme .owl-dots .owl-dot span
+  background: #dea538
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span
+  background: #6a3906
+
+//優惠
+.discountlist
+  &-block
+    position: relative
+    border-radius: 20px
+    border-bottom-left-radius: 0
+    background: #ffc055
+    +shadow(#fff)
+    padding: 20px
+    margin-bottom: 60px
+    +mobile-480
+      padding: 10px
+  &-title
+    position: absolute
+    // background: url(../images/img-discount.png) no-repeat bottom
+    // width: 470px
+    // height: 80px
+    max-width: 470px
+    top: -20px
+    left: 0
+    right: 0
+    margin: 0 auto
+    +mobile-480
+      max-width: 360px
+      top: -15px
+    h2
+      line-height: 80px
+      color: #fff
+      strong
+        +font-bold
+        color: #fff100
+  &-content
+    padding: 80px 20px 50px
+    border-radius: 20px
+    border-bottom-left-radius: 0
+    border: 2px solid #fff
+    display: flex
+    justify-content: center
+    +pc-960
+      display: block
+    +mobile-480
+      padding: 40px 20px 30px
+  &-item
+    position: relative
+    background: #fff
+    box-shadow: 5px 5px 5px #c67d00
+    padding: 20px 20px 70px 20px
+    text-align: center
+    max-width: 350px
+    @extend %margin-auto
+    +pc-960
+      max-width: none
+    +mobile-480
+      padding: 15px 10px 70px 10px 
+    & + .discountlist-item
+      margin-left: 50px
+      +pc-960
+        margin: 30px 0 0 0
+  &-text
+    +font-22
+    line-height: 2rem
+    +font-bold
+    margin-top: 8px
+    +mobile-480
+      +font-18
+    p
+      +font-22
+      line-height: 2rem
+      +font-bold
+      display: flex
+      justify-content: center
+      +mobile-480
+        +font-18
+    strong
+      font-family: Arial
+      font-weight: 900
+      color: $secondary
+      font-size: 30px
+      +mobile-480
+        font-size: 26px
+.img-ingots
+  position: absolute
+  width: 20%
+  right: -7%
+  bottom: -10%
+  +pc-960
+    width: 25%
+    right: 2%
+    bottom: -7%
+  +mobile-480
+    width: 30%
+    right: 0
+    bottom: -6%
+// 活動辦法
+#activity
+  background: #ffeaea
+.activity
+  &__block
+    ul
+      a
+        color: $text-blue
+      p,b,a
+        +font-bold

@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <meta name="description" content="母子基金" />
+    <meta property="og:title" content="母子基金" />
+    <meta property="og:description" content="母子基金" />
+    <meta property="og:type" content="article" />
+    <!-- <meta property="og:url" content="https://www.anuefund.com/launch/ESG" />
+    <meta property="og:image" content="https://www.anuefund.com/launch/ESG/images/fb.jpg" /> -->
+    <meta property="og:site_name" content="鉅亨買基金" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="600" />
+    <meta property="og:image:height" content="315" />
+
+    <title>母子基金</title>
+    <link rel="icon" href="images/anuefund.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="assets/aos/aos.css" />
+    <link rel="stylesheet" type="text/css" href="assets/animate.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link href="https://code.jquery.com/ui/1.13.1/themes/smoothness/jquery-ui.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/guideline.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <script src="assets/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+    <script src="https://www.anuefund.com/FundSpec/JavaScriptLib/anueGA.js"></script>
+    <script src="https://www.anuefund.com/FundSpec/JavaScriptLib/AppierMethod.js"></script>
+  </head>
+
+  <body>
+    <!--GTM-->
+    <script src="https://www.anuefund.com/FundSpec/JavaScriptLib/anueGTM.js"></script>
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="https://www.anuefund.com/" target="_blank">
+            <img src="images/logo.svg" alt="鉅亨買基金" />
+          </a>
+          <!-- <h1>ESG 永續投資專區</h1> -->
+        </div>
+        <div id="menu-btn"><img src="images/menubtn.png" /></div>
+        <div class="menu">
+          <ul>
+            <li><a href="#">母子基金首頁</a></li>
+            <li><a href="#">投資特點</a></li>
+            <li><a href="#">申購優惠</a></li>
+            <li><a href="#">常見問題</a></li>
+            <li class="logout"><a href="#">登出</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <article>
+        <h1>母子基金 - 新申購 <i class="fa-solid fa-cart-shopping"></i></h1>
+        <section>
+          <div class="section__block">
+            <div class="stepper">
+              <ul class="nav nav-tabs process-steps" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="tab01" data-bs-toggle="tab" data-bs-target="#step01" type="button" role="tab" aria-controls="tab01" aria-selected="true">
+                    <span>1</span>
+                    <p>選擇</p>
+                  </button>
+                </li>
+                <li class="nav-item disabled" role="presentation">
+                  <button class="nav-link" id="tab02" data-bs-toggle="tab" data-bs-target="#step02" type="button" role="tab" aria-controls="tab02" aria-selected="false">
+                    <span>2</span>
+                    <p>設定</p>
+                  </button>
+                </li>
+                <li class="nav-item disabled" role="presentation">
+                  <button class="nav-link" id="tab03" data-bs-toggle="tab" data-bs-target="#step03" type="button" role="tab" aria-controls="tab03" aria-selected="false">
+                    <span>3</span>
+                    <p>確認</p>
+                  </button>
+                </li>
+                <li class="nav-item disabled" role="presentation">
+                  <button class="nav-link" id="tab04" data-bs-toggle="tab" data-bs-target="#step04" type="button" role="tab" aria-controls="tab04" aria-selected="false">
+                    <span>4</span>
+                    <p>完成</p>
+                  </button>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <!-- step 01 -->
+                <div class="tab-pane fade show active" id="step01" role="tabpanel" aria-labelledby="home-tab">
+                  <!-- <div class="process-content"></div> -->
+                  <ul class="nav nav-tabs theme-steps" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="tab-theme" data-bs-toggle="tab" data-bs-target="#content-theme" type="button">主題推薦 <i class="fa-solid fa-angle-right"></i></button>
+                    </li>
+                    <li class="nav-item disabled" role="presentation">
+                      <button class="nav-link" id="tab-customize" data-bs-toggle="tab" data-bs-target="#content-customize" type="button">自選基金 <i class="fa-solid fa-angle-right"></i></button>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="choice-MF-tab">
+                    <!-- 主題 -->
+                    <div class="tab-pane fade show active" id="content-theme" role="tabpanel" aria-labelledby="theme-tab">
+                      <div class="filter__block">
+                        <ul class="filter-fund">
+                          <li class="active">安聯精選</li>
+                          <li>台股精選</li>
+                          <li>摩根精選</li>
+                          <li>對應通膨</li>
+                          <li>科技趨勢</li>
+                          <li>消費趨勢</li>
+                        </ul>
+                      </div>
+                      <div class="master-fund">
+                        <h2>母基金</h2>
+                        <div class="master-name">
+                          安聯全球高成長科技基金 - A配息類股
+                        </div>
+                      </div>
+                      <div class="feeder-fund">
+                        <h2>子基金</h2>
+                        <div class="feeder-name">
+                          安聯收益成長基金 - AT累積類股(美元)
+                        </div>
+                        <div class="feeder-name">
+                          安聯亞洲創新基金 - A配息類股
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 自選 -->
+                    <div class="tab-pane fade" id="content-customize" role="tabpanel" aria-labelledby="customize-tab">
+                      <div class="master-fund">
+                        <h2>先選母基金<span>(若更換母基金則需重選子基金)</span></h2>
+                        <div class="master-name" data-bs-toggle="collapse" data-bs-target=".master-collapse" aria-expanded="true">
+                          安聯收益成長基金-AT累積類股(美元)
+                          <button class="btn-change">更換</button>
+                        </div>
+                        <div class="collapse show master-collapse filter__block">
+                          <!-- 境內境外 -->
+                          <div class="filter-condition flex-block">
+                            <p class="filter-title">境內境外</p>
+                            <ul class="filter-fund">
+                              <li class="active"><i class="fa-solid fa-circle-plus"></i>境內</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>境外</li>
+                            </ul>
+                          </div>
+                          <!-- 基金品牌 -->
+                          <div class="filter-condition flex-block collapse__block">
+                            <div class="flex-left">
+                              <p class="filter-title">基金品牌</p>
+                              <button class="btn-collapse" data-bs-toggle="collapse" data-bs-target="#collapse-List" aria-expanded="true" aria-controls="collapse-List"><i class="fa-solid fa-caret-up"></i> 收合</button>
+                            </div>
+                            <ul id="collapse-List" class="filter-fund collapse show">
+                              <li class="active"><i class="fa-solid fa-circle-plus"></i>全部</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>野村</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>PIMCO</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>貝萊德</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>富達</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>摩根</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>安聯</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>百達</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>復華</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>台新</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>摩根士丹利</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>景順</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>法巴</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>中信</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>瑞銀</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>富蘭克林</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>統一</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>駿利亨德森</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>元大</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>美盛</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>NN(L)</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>晉達</li>
+                            </ul>
+                          </div>
+                          <!-- 基金類型 -->
+                          <div class="filter-condition flex-block">
+                            <p class="filter-title">基金類型</p>
+                            <ul class="filter-fund">
+                              <li class="active"><i class="fa-solid fa-circle-plus"></i>股票型</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>平衡型</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>債券型</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>貨幣型</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>其他</li>
+                            </ul>
+                          </div>
+                          <!-- 基金清單 -->
+                          <div id="search-result">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                              <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="performance-tab" data-bs-toggle="tab" data-bs-target="#performance" type="button" role="tab" aria-controls="performance" aria-selected="true">績效表現</button>
+                              </li>
+                              <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="net-worth-tab" data-bs-toggle="tab" data-bs-target="#net-worth" type="button" role="tab" aria-controls="net-worth" aria-selected="false">最新淨值</button>
+                              </li>
+                              <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="dividend-tab" data-bs-toggle="tab" data-bs-target="#dividend" type="button" role="tab" aria-controls="dividend" aria-selected="false">配息資訊</button>
+                              </li>
+                              <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="rating-tab" data-bs-toggle="tab" data-bs-target="#rating" type="button" role="tab" aria-controls="social" aria-selected="false">基金評等</button>
+                              </li>
+                            </ul>
+                            <div class="tab-content table-content" id="myTabContent">
+                              <div class="tab-pane fade show active" id="performance" role="tabpanel" aria-labelledby="performance-tab">
+                                <img src="images/img01.jpg" alt="我是表格示意圖" />
+                                <p class="source">資料來源：Lipper；資料截至2021/12/3。</p>
+                                <ul class="pagination">
+                                  <li><a href="#">上一頁</a></li>
+                                  <li><a href="#">1</a></li>
+                                  <li><a class="active" href="#">2</a></li>
+                                  <li><a href="#">3</a></li>
+                                  <li><a href="#">4</a></li>
+                                  <li><a href="#">5</a></li>
+                                  <li><a href="#">6</a></li>
+                                  <li><a href="#">7</a></li>
+                                  <li><a href="#">下一頁</a></li>
+                                </ul>
+                              </div>
+                              <div class="tab-pane fade table-content" id="net-worth" role="tabpanel" aria-labelledby="net-worth-tab">
+                                <img src="images/img01.jpg" alt="我是表格示意圖" />
+                                <p class="source">資料來源：Lipper；資料截至2021/12/3。</p>
+                                <ul class="pagination">
+                                  <li><a href="#">上一頁</a></li>
+                                  <li><a href="#">1</a></li>
+                                  <li><a class="active" href="#">2</a></li>
+                                  <li><a href="#">3</a></li>
+                                  <li><a href="#">4</a></li>
+                                  <li><a href="#">5</a></li>
+                                  <li><a href="#">6</a></li>
+                                  <li><a href="#">7</a></li>
+                                  <li><a href="#">下一頁</a></li>
+                                </ul>
+                              </div>
+                              <div class="tab-pane fade table-content" id="dividend" role="tabpanel" aria-labelledby="dividend-tab">
+                                <img src="images/img01.jpg" alt="我是表格示意圖" />
+                                <p class="source">資料來源：Lipper；資料截至2021/12/3。</p>
+                                <ul class="pagination">
+                                  <li><a href="#">上一頁</a></li>
+                                  <li><a href="#">1</a></li>
+                                  <li><a class="active" href="#">2</a></li>
+                                  <li><a href="#">3</a></li>
+                                  <li><a href="#">4</a></li>
+                                  <li><a href="#">5</a></li>
+                                  <li><a href="#">6</a></li>
+                                  <li><a href="#">7</a></li>
+                                  <li><a href="#">下一頁</a></li>
+                                </ul>
+                              </div>
+                              <div class="tab-pane fade table-content" id="rating" role="tabpanel" aria-labelledby="rating-tab">
+                                <img src="images/img01.jpg" alt="我是表格示意圖" />
+                                <p class="source">資料來源：Lipper；資料截至2021/12/3。</p>
+                                <ul class="pagination">
+                                  <li><a href="#">上一頁</a></li>
+                                  <li><a href="#">1</a></li>
+                                  <li><a class="active" href="#">2</a></li>
+                                  <li><a href="#">3</a></li>
+                                  <li><a href="#">4</a></li>
+                                  <li><a href="#">5</a></li>
+                                  <li><a href="#">6</a></li>
+                                  <li><a href="#">7</a></li>
+                                  <li><a href="#">下一頁</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="feeder-fund">
+                        <h2>再選子基金<span>(可複選最多2檔)</span></h2>
+                        <div class="feeder-name" data-bs-toggle="collapse" data-bs-target=".feeder-collapse" aria-expanded="true">
+                          下方列表中選擇
+                          <button class="btn-change">更換</button>
+                        </div>
+                        <div class="feeder-name" data-bs-toggle="collapse" data-bs-target=".feeder-collapse" aria-expanded="true">
+                          下方列表中選擇
+                          <button class="btn-change">更換</button>
+                        </div>
+                        <div class="collapse feeder-collapse filter__block">
+                          <!-- 基金品牌 -->
+                          <div class="filter-condition flex-block collapse__block">
+                            <div class="flex-left">
+                              <p class="filter-title">基金品牌</p>
+                              <button class="btn-collapse" data-bs-toggle="collapse" data-bs-target="#collapse-List" aria-expanded="true" aria-controls="collapse-List"><i class="fa-solid fa-caret-up"></i> 收合</button>
+                            </div>
+                            <ul id="collapse-List" class="filter-fund collapse show">
+                              <li class="active"><i class="fa-solid fa-circle-plus"></i>全部</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>野村</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>PIMCO</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>貝萊德</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>富達</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>摩根</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>安聯</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>百達</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>復華</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>台新</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>摩根士丹利</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>景順</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>法巴</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>中信</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>瑞銀</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>富蘭克林</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>統一</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>駿利亨德森</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>元大</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>美盛</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>NN(L)</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>晉達</li>
+                            </ul>
+                          </div>
+                          <!-- 基金類型 -->
+                          <div class="filter-condition flex-block">
+                            <p class="filter-title">基金類型</p>
+                            <ul class="filter-fund">
+                              <li class="active"><i class="fa-solid fa-circle-plus"></i>股票型</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>平衡型</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>債券型</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>貨幣型</li>
+                              <li><i class="fa-solid fa-circle-plus"></i>其他</li>
+                            </ul>
+                          </div>
+                          <!-- 基金清單 -->
+                          <div id="search-result">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                              <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="performance-tab" data-bs-toggle="tab" data-bs-target="#performance" type="button" role="tab" aria-controls="performance" aria-selected="true">績效表現</button>
+                              </li>
+                              <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="net-worth-tab" data-bs-toggle="tab" data-bs-target="#net-worth" type="button" role="tab" aria-controls="net-worth" aria-selected="false">最新淨值</button>
+                              </li>
+                              <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="dividend-tab" data-bs-toggle="tab" data-bs-target="#dividend" type="button" role="tab" aria-controls="dividend" aria-selected="false">配息資訊</button>
+                              </li>
+                              <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="rating-tab" data-bs-toggle="tab" data-bs-target="#rating" type="button" role="tab" aria-controls="social" aria-selected="false">基金評等</button>
+                              </li>
+                            </ul>
+                            <div class="tab-content table-content" id="myTabContent">
+                              <div class="tab-pane fade show active" id="performance" role="tabpanel" aria-labelledby="performance-tab">
+                                <img src="images/img01.jpg" alt="我是表格示意圖" />
+                                <p class="source">資料來源：Lipper；資料截至2021/12/3。</p>
+                                <ul class="pagination">
+                                  <li><a href="#">上一頁</a></li>
+                                  <li><a href="#">1</a></li>
+                                  <li><a class="active" href="#">2</a></li>
+                                  <li><a href="#">3</a></li>
+                                  <li><a href="#">4</a></li>
+                                  <li><a href="#">5</a></li>
+                                  <li><a href="#">6</a></li>
+                                  <li><a href="#">7</a></li>
+                                  <li><a href="#">下一頁</a></li>
+                                </ul>
+                              </div>
+                              <div class="tab-pane fade table-content" id="net-worth" role="tabpanel" aria-labelledby="net-worth-tab">
+                                <img src="images/img01.jpg" alt="我是表格示意圖" />
+                                <p class="source">資料來源：Lipper；資料截至2021/12/3。</p>
+                                <ul class="pagination">
+                                  <li><a href="#">上一頁</a></li>
+                                  <li><a href="#">1</a></li>
+                                  <li><a class="active" href="#">2</a></li>
+                                  <li><a href="#">3</a></li>
+                                  <li><a href="#">4</a></li>
+                                  <li><a href="#">5</a></li>
+                                  <li><a href="#">6</a></li>
+                                  <li><a href="#">7</a></li>
+                                  <li><a href="#">下一頁</a></li>
+                                </ul>
+                              </div>
+                              <div class="tab-pane fade table-content" id="dividend" role="tabpanel" aria-labelledby="dividend-tab">
+                                <img src="images/img01.jpg" alt="我是表格示意圖" />
+                                <p class="source">資料來源：Lipper；資料截至2021/12/3。</p>
+                                <ul class="pagination">
+                                  <li><a href="#">上一頁</a></li>
+                                  <li><a href="#">1</a></li>
+                                  <li><a class="active" href="#">2</a></li>
+                                  <li><a href="#">3</a></li>
+                                  <li><a href="#">4</a></li>
+                                  <li><a href="#">5</a></li>
+                                  <li><a href="#">6</a></li>
+                                  <li><a href="#">7</a></li>
+                                  <li><a href="#">下一頁</a></li>
+                                </ul>
+                              </div>
+                              <div class="tab-pane fade table-content" id="rating" role="tabpanel" aria-labelledby="rating-tab">
+                                <img src="images/img01.jpg" alt="我是表格示意圖" />
+                                <p class="source">資料來源：Lipper；資料截至2021/12/3。</p>
+                                <ul class="pagination">
+                                  <li><a href="#">上一頁</a></li>
+                                  <li><a href="#">1</a></li>
+                                  <li><a class="active" href="#">2</a></li>
+                                  <li><a href="#">3</a></li>
+                                  <li><a href="#">4</a></li>
+                                  <li><a href="#">5</a></li>
+                                  <li><a href="#">6</a></li>
+                                  <li><a href="#">7</a></li>
+                                  <li><a href="#">下一頁</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btn__block">
+                    <button class="btn-next">下一步</button>
+                  </div>
+                </div>
+                <!-- step 02 -->
+                <div class="tab-pane fade" id="step02" role="tabpanel" aria-labelledby="profile-tab">
+                  <!-- <div class="tab-pane fade show active" id="content-theme" role="tabpanel" aria-labelledby="theme-tab"></div> -->
+                  <div class="mf-name">
+                    <span>我的循環富利寶</span>
+                    <button class="btn-name">修改名稱</button>
+                  </div>
+                  <div class="master-fund">
+                    <h2>我的母基金</h2>
+                    <div class="filter__block set__content">
+                      <div class="master-name name-style">
+                        <p>安聯全球高成長科技基金 - A配息類股</p>
+                      </div>
+                      <div class="master-set">
+                        <div class="master-set-content">
+                          <p class="mf-header">交易幣別</p>
+                          <div class="space-padding">
+                            <label class="radio-text" for="taiwan">
+                              <input type="radio" id="taiwan" name="currency" value="taiwan" checked />
+                              台幣
+                            </label>
+                            <label class="radio-text" for="foreign">
+                              <input type="radio" id="foreign" name="currency" value="foreign" />
+                              外幣
+                            </label>
+                          </div>
+                        </div>
+                        <div class="master-set-content">
+                          <p class="mf-header">申購金額</p>
+                          <div class="space-padding">
+                            <label for="master-amount">
+                              <input type="text" id="master-amount" name="master-amount" class="label-style" placeholder="最低 3,000" />
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="feeder-fund">
+                    <h2>我的子基金</h2>
+                    <div class="filter__block set__content">
+                      <div class="feeder-name name-style">
+                        <p>安聯收益成長基金 - AT累積類股(美元)</p>
+                      </div>
+                      <div class="feeder__content">
+                        <div class="feeder-left">
+                          <div class="feeder-img">
+                            <img src="images/img-mf01.png" alt="" />
+                            <p>母轉子設定</p>
+                          </div>
+                          <!-- 選擇日期 -->
+                          <div class="feeder-set">
+                            <div class="feeder-set-content">
+                              <p class="mf-header">轉入日期 (自選1天)</p>
+                              <div class="input-date space-padding">
+                                <div class="input-group">
+                                  <input type="text" name="chooseD" id="datepicker-D" class="datepicker_input form-control choose-D" />
+                                  <img src="images/img-calender.svg" alt="" />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="feeder-set-content">
+                              <p class="mf-header">轉入金額</p>
+                              <div class="space-padding">
+                                <label for="feeder-amount">
+                                  <input type="text" id="feeder-amount" name="feeder-amount" class="label-style" placeholder="最低 3,000" />
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- 啟用加碼 -->
+                          <div class="feeder-increase">
+                            <div class="mf-header">
+                              <label for="feeder-check01" data-bs-toggle="collapse" data-bs-target="#collapse-feeder01" aria-expanded="false">
+                                <input type="checkbox" id="feeder-check01" name="feeder-start" placeholder="最低 300,000" />
+                                啟用子基金加碼設定 <i class="fa-solid fa-circle-info"></i>
+                              </label>
+                            </div>
+                            <div id="collapse-feeder01" class="collapse">
+                              <div class="feeder-increase-buy space-padding">
+                                <div>
+                                  報酬率<span class="symbol">-</span>
+                                  <label for="feeder-percentage">
+                                    <input type="text" id="feeder-percentage" name="feeder-percentage" class="label-style m-to-f" placeholder="" />
+                                  </label>
+                                  %，
+                                </div>
+                                <div>
+                                  扣款總額
+                                  <label for="feeder-total">
+                                    <input type="text" id="feeder-total" name="feeder-total" class="label-style" placeholder="" />
+                                  </label>
+                                  元
+                                </div>
+                              </div>
+                              <div class="feeder-increase-buy space-padding">
+                                <div>
+                                  報酬率<span class="symbol">-</span>
+                                  <label for="feeder-percentage">
+                                    <input type="text" id="feeder-percentage" name="feeder-percentage" class="label-style m-to-f" placeholder="" />
+                                  </label>
+                                  %，
+                                </div>
+                                <div>
+                                  扣款總額
+                                  <label for="feeder-total">
+                                    <input type="text" id="feeder-total" name="feeder-total" class="label-style" placeholder="" />
+                                  </label>
+                                  元
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="feeder-right">
+                          <div class="feeder-img">
+                            <img src="images/img-mf02.png" alt="" />
+                            <p>子轉母設定</p>
+                          </div>
+                          <!-- 啟用停利 -->
+                          <div class="feeder-stop">
+                            <div class="mf-header">
+                              <label for="feeder-check02" data-bs-toggle="collapse" data-bs-target="#collapse-feeder02" aria-expanded="false">
+                                <input type="checkbox" id="feeder-check02" name="feeder-start" placeholder="" />
+                                啟用停利設定 <i class="fa-solid fa-circle-info"></i>
+                              </label>
+                            </div>
+                            <div id="collapse-feeder02" class="collapse">
+                              <div class="feeder-increase-buy space-padding">
+                                <div>
+                                  子基金報酬率<span class="symbol">+</span>
+                                  <label for="feeder-percentage">
+                                    <input type="text" id="feeder-percentage" name="feeder-percentage" class="label-style f-to-m" placeholder="" />
+                                  </label>
+                                  %，
+                                </div>
+                                轉申購回到母基金
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 優惠活動選擇  -->
+                  <div class="">
+                    <h2>優惠活動</h2>
+                    <div class="discount filter__block set__content">
+                      <p class="original-fee">單筆總手續費<strong>120</strong>元</p>
+                      <div class="discount-options">
+                        <label class="discount-check" for="employee">
+                          <input type="radio" class="radio-style" id="employee" name="discount" value="employee" checked />
+                          員工優惠 <span>0.00%</span>
+                        </label>
+                        <label class="discount-check" for="single-purchase">
+                          <input type="radio" class="radio-style" id="single-purchase" name="discount" value="single-purchase" />
+                          單筆申購手續費 <span>0.00% (5筆)</span>
+                        </label>
+                        <label class="discount-check" for="bonus-points">
+                          <input type="radio" class="radio-style" id="bonus-points" name="discount" value="bonus-points" />
+                          紅利點數折抵手續費（可用：9000 點，本次使用：200 點，剩餘點數：8800 點）
+                        </label>
+                      </div>
+                      <div class="label-style">折抵後優惠手續費 <strong>0</strong> 元</div>
+                    </div>
+                  </div>
+                  <div class="btn__block">
+                    <button class="btn-prev">上一步</button>
+                    <button class="btn-next">下一步</button>
+                  </div>
+                </div>
+                <!-- step 03 -->
+                <div class="tab-pane fade" id="step03" role="tabpanel" aria-labelledby="contact-tab">
+                  <!-- 母基金申購資訊 -->
+                  <div class="master-fund">
+                    <h2>母基金申購資訊</h2>
+                    <div class="filter__block set__content">
+                      <div class="master-name name-style">
+                        <p>安聯全球高成長科技基金 - A配息類股</p>
+                      </div>
+                      <div class="mf-table">
+                        <table class="rwd-table account-table">
+                          <tr>
+                            <th>交易幣別</th>
+                            <th>參考淨值 (日期)</th>
+                            <th>申購金額</th>
+                            <th>扣款帳號</th>
+                          </tr>
+                          <tr>
+                            <td data-th="交易幣別">台幣</td>
+                            <td data-th="參考淨值 (日期)">105.9200 (2022/09/12)</td>
+                            <td data-th="申購金額">300,000</td>
+                            <td data-th="扣款帳號">
+                              台幣 - 國泰世華商業銀行 <br />
+                              帳號：1234XXXX1688
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>優惠活動</th>
+                            <th>參考手續費</th>
+                            <th></th>
+                            <th></th>
+                          </tr>
+                          <tr>
+                            <td data-th="優惠活動">單筆 0 手續費</td>
+                            <td data-th="參考手續費">折抵後 0 元</td>
+                          </tr>
+                        </table>
+                      </div>
+                      <div class="file__block">
+                        <p class="file-title">相關文件</p>
+                        <div class="file-pdf">
+                          <div><img src="images/img-pdf.png" />公開說明書</div>
+                          <div><img src="images/img-pdf.png" />簡式/公開說明書</div>
+                          <div><img src="images/img-pdf.png" />近五年費用報酬率</div>
+                          <div><img src="images/img-pdf.png" />月報</div>
+                          <div><img src="images/img-pdf.png" />通路報酬率</div>
+                          <div><img src="images/img-pdf.png" />風險報告書</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 子基金投資計畫 -->
+                  <div class="feeder-fund">
+                    <h2>子基金投資計畫</h2>
+                    <div class="filter__block set__content">
+                      <div class="feeder-name name-style">
+                        <p>安聯全球高成長科技基金 - A配息類股</p>
+                      </div>
+                      <div class="mf-table">
+                        <p>母轉子設定</p>
+                        <table class="rwd-table account-table">
+                          <tr>
+                            <th>轉入日期</th>
+                            <th>轉入金額</th>
+                            <th colspan="2">加碼設定</th>
+                          </tr>
+                          <tr>
+                            <td data-th="轉入日期">08</td>
+                            <td data-th="轉入金額">3,000</td>
+                            <td data-th="加碼設定" colspan="2">報酬率<span class="m-to-f"> -10% </span>時，扣款總額<span> 4,000 </span>元</td>
+                          </tr>
+                        </table>
+                      </div>
+                      <div class="mf-table">
+                        <p>子轉母設定</p>
+                        <table class="rwd-table account-table">
+                          <tr>
+                            <th colspan="4">停利設定</th>
+                          </tr>
+                          <tr>
+                            <td data-th="停利設定" colspan="4">子基金報酬率<span class="f-to-m"> +15%</span>時，轉申購回到母基金</td>
+                          </tr>
+                        </table>
+                      </div>
+                      <div class="file__block">
+                        <p class="file-title">相關文件</p>
+                        <div class="file-pdf">
+                          <div><img src="images/img-pdf.png" />公開說明書</div>
+                          <div><img src="images/img-pdf.png" />簡式/公開說明書</div>
+                          <div><img src="images/img-pdf.png" />近五年費用報酬率</div>
+                          <div><img src="images/img-pdf.png" />月報</div>
+                          <div><img src="images/img-pdf.png" />通路報酬率</div>
+                          <div><img src="images/img-pdf.png" />風險報告書</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="file__block">
+                    <p class="file-title">母子基金理財服務條款</p>
+                    <p class="file-content">
+                      母子基金理財服務條款母子基金理財服務條款母子基金理財服務條款母子基金理財服務條款母子基金理財服務條款母子機金 母子基金理財服務條款母子基金理財服務條款母子基金理財服務條款母子基金理財服務條款
+                      母子基金理財服務條款母子基金理財服務條款 母子基金理財服務條款母子基金理財服務條款 母子基金理財服務條款母子基金理財服務條款母子基金理財服務條款母子基金理財服務條款母子基金理財服務條款母子
+                      母子基金理財服務條款母子基金理財服務條款母子基金理財服務條款母子基金理財服務條款母子基金理財 母子基金理財服務條款母子基金理財服務條款母子基金理財服務條款母子基金理財服務條款母子基金理財服務條款母子基金
+                    </p>
+                    <label for="agree01" class="check-agree"> <input type="checkbox" id="agree01" name="agree01" value="agree01"/>本人已於交易詳閱並同意以上相關文件及服務條款</label>
+                    <label for="agree02" class="check-agree"> <input type="checkbox" id="agree02" name="agree02" value="agree02"/>本人已閱讀並了解基金通路報酬揭露及風險預告</label>
+                    <div class="password-input">
+                      <label for="password-input">
+                        請輸入交易密碼
+                        <input type="text" id="password-input" class="password-style" name="password-input" />
+                      </label>
+                    </div>
+                  </div>
+                  <div class="btn__block">
+                    <button class="btn-prev">上一步</button>
+                    <button class="btn-next">下一步</button>
+                  </div>
+                </div>
+                <!-- step 04 -->
+                <div class="tab-pane fade" id="step04" role="tabpanel" aria-labelledby="contact-tab">
+                  <div class="mf-success">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>委託成功</span>
+                  </div>
+                  <!-- 母基金申購資訊 -->
+                  <div class="master-fund">
+                    <h2>母基金申購資訊</h2>
+                    <div class="filter__block set__content">
+                      <div class="master-name name-style">
+                        <p>安聯全球高成長科技基金 - A配息類股</p>
+                      </div>
+                      <div class="mf-table">
+                        <table class="rwd-table account-table">
+                          <tr>
+                            <th>交易幣別</th>
+                            <th>參考淨值 (日期)</th>
+                            <th>申購金額</th>
+                            <th>扣款帳號</th>
+                          </tr>
+                          <tr>
+                            <td data-th="交易幣別">台幣</td>
+                            <td data-th="參考淨值 (日期)">105.9200 (2022/09/12)</td>
+                            <td data-th="申購金額">300,000</td>
+                            <td data-th="扣款帳號">
+                              台幣 - 國泰世華商業銀行 <br />
+                              帳號：1234XXXX1688
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>優惠活動</th>
+                            <th>參考手續費</th>
+                            <th></th>
+                            <th></th>
+                          </tr>
+                          <tr>
+                            <td data-th="優惠活動">單筆 0 手續費</td>
+                            <td data-th="參考手續費">折抵後 0 元</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 子基金投資計畫 -->
+                  <div class="feeder-fund">
+                    <h2>子基金投資計畫</h2>
+                    <div class="filter__block set__content">
+                      <div class="feeder-name name-style">
+                        <p>安聯全球高成長科技基金 - A配息類股</p>
+                      </div>
+                      <div class="mf-table">
+                        <p>母轉子設定</p>
+                        <table class="rwd-table account-table">
+                          <tr>
+                            <th>轉入日期</th>
+                            <th>轉入金額</th>
+                            <th colspan="2">加碼設定</th>
+                          </tr>
+                          <tr>
+                            <td data-th="轉入日期">08</td>
+                            <td data-th="轉入金額">3,000</td>
+                            <td data-th="加碼設定" colspan="2">報酬率<span class="m-to-f"> -10% </span>時，扣款總額<span> 4,000 </span>元</td>
+                          </tr>
+                        </table>
+                      </div>
+                      <div class="mf-table">
+                        <p>子轉母設定</p>
+                        <table class="rwd-table account-table">
+                          <tr>
+                            <th colspan="4">停利設定</th>
+                          </tr>
+                          <tr>
+                            <td data-th="停利設定" colspan="4">子基金報酬率<span class="f-to-m"> +15%</span>時，轉申購回到母基金</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btn__block">
+                    <button class="btn-prev">繼續下單</button>
+                    <button class="btn-next">委託查詢/取消</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <!-- Footer -->
+    <footer></footer>
+    <!--js-->
+    <script src="assets/aos/aos.js"></script>
+    <script src="https://kit.fontawesome.com/52207513ca.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/js/datepicker-full.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

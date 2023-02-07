@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <meta name="description" content="母子基金" />
+    <meta property="og:title" content="母子基金" />
+    <meta property="og:description" content="母子基金" />
+    <meta property="og:type" content="article" />
+    <!-- <meta property="og:url" content="https://www.anuefund.com/launch/gagatest/ezpay/" />
+    <meta property="og:image" content="https://www.anuefund.com/launch/gagatest/ezpay/images/share-300.jpg" /> -->
+    <meta property="og:site_name" content="鉅亨買基金" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="300" />
+    <meta property="og:image:height" content="300" />
+
+    <title>母子基金</title>
+    <link rel="icon" href="images/anuefund.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="assets/aos/aos.css" />
+    <link rel="stylesheet" type="text/css" href="assets/animate.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link href="https://code.jquery.com/ui/1.13.1/themes/smoothness/jquery-ui.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/guideline.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <script src="assets/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+    <script src="https://www.anuefund.com/FundSpec/JavaScriptLib/anueGA.js"></script>
+    <script src="https://www.anuefund.com/FundSpec/JavaScriptLib/AppierMethod.js"></script>
+  </head>
+
+  <body>
+    <!--GTM-->
+    <script src="https://www.anuefund.com/FundSpec/JavaScriptLib/anueGTM.js"></script>
+    <header>
+      <nav>
+        <div class="logo logo-title">
+          <a href="https://www.anuefund.com/" target="_blank">
+            <img src="images/logo.svg" alt="鉅亨買基金" />
+          </a>
+          <h1>鉅寶盆</h1>
+        </div>
+        <div id="menu-btn"><img src="images/menubtn.png" /></div>
+        <div class="menu">
+          <ul>
+            <li><a href="#">母子基金首頁</a></li>
+            <li><a href="#">投資特點</a></li>
+            <li><a href="#">申購優惠</a></li>
+            <li><a href="index.html#question">常見問題</a></li>
+            <li class="logout"><a href="#">登出</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <article>
+        <section>
+          <div class="section__block account-summary" id="search-result">
+            <p class="fund-name">我的鉅寶盆 (MF7533967)</p>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="contract-tab" data-bs-toggle="tab" data-bs-target="#contract" type="button" role="tab" aria-controls="contract" aria-selected="true">契約明細</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="details-tab" data-bs-toggle="tab" data-bs-target="#details" type="button" role="tab" aria-controls="details" aria-selected="true">交易明細</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="record-tab" data-bs-toggle="tab" data-bs-target="#record" type="button" role="tab" aria-controls="record" aria-selected="false">異動紀錄</button>
+              </li>
+            </ul>
+            <div class="tab-content table-content options-style" id="detailTabContent">
+              <!-- 契約明細 -->
+              <div class="tab-pane fade show active" id="contract" role="tabpanel" aria-labelledby="contract-tab">
+                <!-- 母基金 -->
+                <div class="master-fund">
+                  <h2>母基金</h2>
+                  <div class="filter__block set__content">
+                    <div class="master-name name-style">
+                      <p>安聯全球高成長科技基金 - A配息類股</p>
+                    </div>
+                    <div class="mf-table">
+                      <table class="rwd-table account-table">
+                        <tr>
+                          <th>交易幣別</th>
+                          <th>母轉子次數</th>
+                          <th></th>
+                          <th></th>
+                          <th></th>
+                        </tr>
+                        <tr>
+                          <td data-th="交易幣別">台幣</td>
+                          <td data-th="母轉子次數">18次</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <!-- 子基金 -->
+                <div class="feeder-fund">
+                  <div class="feeder-add-btn">
+                    <h2>子基金</h2>
+                    <div class="btn-new">新增子基金 +</div>
+                  </div>
+                  <div class="filter__block set__content">
+                    <div class="feeder-name name-style">
+                      <p>安聯全球高成長科技基金 - A配息類股</p>
+                    </div>
+                    <div class="mf-table">
+                      <table class="rwd-table account-table">
+                        <tr>
+                          <th>轉入日期</th>
+                          <th>轉入金額</th>
+                          <th class="category-increase">增額轉入設定</th>
+                          <th>停利設定</th>
+                          <th>停利次數</th>
+                        </tr>
+                        <tr>
+                          <td data-th="轉入日期">08日</td>
+                          <td data-th="轉入金額">3,000</td>
+                          <td data-th="增額轉入設定">
+                            報酬率 -10% ，轉入總額 4,000 元<br />
+                            報酬率 -20% ，轉入總額 5,000 元
+                          </td>
+                          <td data-th="停利設定">報酬率 +10%</td>
+                          <td data-th="停利次數">6 次</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 交易明細 -->
+              <div class="tab-pane fade" id="details" role="tabpanel" aria-labelledby="details-tab">
+                <div class="filter-condition flex-block">
+                  <p class="filter-title">基金類別</p>
+                  <ul class="filter-fund">
+                    <li class="active">全部</li>
+                    <li>母基金</li>
+                    <li>子基金</li>
+                  </ul>
+                </div>
+                <div class="filter-condition flex-block">
+                  <p class="filter-title">交易類型</p>
+                  <ul class="filter-fund">
+                    <li class="active">全部</li>
+                    <li>申購</li>
+                    <li>贖回</li>
+                    <li>轉出</li>
+                    <li>轉入</li>
+                  </ul>
+                </div>
+                <div class="filter-condition flex-block select-date">
+                  <p class="filter-title">查詢期間</p>
+                  <ul class="filter-fund">
+                    <li>3 個月</li>
+                    <li>6 個月</li>
+                    <li>1 年</li>
+                    <li class="active">自行輸入</li>
+                  </ul>
+                  <div class="input-date">
+                    <div class="input-group">
+                      <input type="text" name="chooseD" id="datepicker-01" class="datepicker_input form-control choose-D" placeholder="起始日：YYYY/MM/DD"/>
+                      <img src="images/img-calender.svg" alt="" />
+                    </div>
+                    <div class="input-group">
+                      <input type="text" name="chooseD" id="datepicker-02" class="datepicker_input form-control choose-D" placeholder="結束日：YYYY/MM/DD"/>
+                      <img src="images/img-calender.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="account-content">
+                  <div class="expand-btn">
+                    <div class="account-content-title">交易明細 - 全部</div>
+                    <div class="btn-new">全部展開 <i class="fa-solid fa-chevron-down"></i></div>
+                  </div>
+                  <div class="account-content-tab detail-tab">
+                    <!-- <p>類別</p> -->
+                    <div>
+                      <p>類別/代碼/名稱</p>
+                      <p>交易日期</p>
+                    </div>
+                  </div>
+                  <!-- 清單 -->
+                  <div class="account-content-list">
+                    <div class="list-fund">
+                      <div class="account-content-left">
+                        <div class="list-name">
+                          <div class="category-master">母基金</div>
+                          A05144 安聯全球高成長科技基金 - A配息類股
+                        </div>
+                        <div class="list-rate">2022/05/03</div>
+                      </div>
+                      <div class="list-collapse" data-bs-toggle="collapse" data-bs-target="#fund-01" aria-expanded="false" aria-controls="fund-01">
+                        <i class="fa-solid fa-solid fa-chevron-down"></i>
+                      </div>
+                    </div>
+                    <div id="fund-01" class="collapse collapse-table">
+                      <table class="list-table">
+                        <tbody>
+                          <tr>
+                            <td>交易類型</td>
+                            <td>申購</td>
+                          </tr>
+                          <tr>
+                            <td>交易幣別</td>
+                            <td>台幣</td>
+                          </tr>
+                          <tr>
+                            <td>交易金額</td>
+                            <td>200,000</td>
+                          </tr>
+                          <tr>
+                            <td>淨值(日期)</td>
+                            <td>168.8</td>
+                          </tr>
+                          <tr>
+                            <td>參考匯率(日期)</td>
+                            <td>10.58 (2022/08/06)</td>
+                          </tr>
+                          <tr>
+                            <td>持有單位數</td>
+                            <td>29.56 (2022/08/06)</td>
+                          </tr>
+                          <tr>
+                            <td>費用*</td>
+                            <td>0</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="account-content-list">
+                    <div class="list-fund">
+                      <div class="account-content-left">
+                        <div class="list-name">
+                          <div class="category-feeder">子基金</div>
+                          B20074 安聯收益成長基金 - AT累積類股(美元)
+                        </div>
+                        <div class="list-rate">2022/05/03</div>
+                      </div>
+
+                      <div class="list-collapse" data-bs-toggle="collapse" data-bs-target="#fund-02" aria-expanded="false" aria-controls="fund-02">
+                        <i class="fa-solid fa-solid fa-chevron-down"></i>
+                      </div>
+                    </div>
+                    <div id="fund-02" class="collapse collapse-table">
+                      <table class="list-table">
+                        <tbody>
+                          <tr>
+                            <td>交易類型</td>
+                            <td>申購</td>
+                          </tr>
+                          <tr>
+                            <td>交易幣別</td>
+                            <td>台幣</td>
+                          </tr>
+                          <tr>
+                            <td>交易金額</td>
+                            <td>200,000</td>
+                          </tr>
+                          <tr>
+                            <td>淨值(日期)</td>
+                            <td>168.8</td>
+                          </tr>
+                          <tr>
+                            <td>參考匯率(日期)</td>
+                            <td>10.58 (2022/08/06)</td>
+                          </tr>
+                          <tr>
+                            <td>持有單位數</td>
+                            <td>29.56 (2022/08/06)</td>
+                          </tr>
+                          <tr>
+                            <td>費用*</td>
+                            <td>0</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <ul class="pagination">
+                    <li><a href="#">上一頁</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a class="active" href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">下一頁</a></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- 異動紀錄 -->
+              <div class="tab-pane fade" id="record" role="tabpanel" aria-labelledby="record-tab">
+                <div class="filter-condition flex-block">
+                  <p class="filter-title">異動項目</p>
+                  <ul class="filter-fund">
+                    <li class="active">全部</li>
+                    <li>投資設定</li>
+                    <li>子基金</li>
+                  </ul>
+                </div>
+                <div class="filter-condition flex-block select-date">
+                  <p class="filter-title">查詢期間</p>
+                  <ul class="filter-fund">
+                    <li>3 個月</li>
+                    <li>6 個月</li>
+                    <li>1 年</li>
+                    <li class="active">自行輸入</li>
+                  </ul>
+                  <div class="input-date">
+                    <div class="input-group">
+                      <input type="text" name="chooseD" id="datepicker-03" class="datepicker_input form-control choose-D" placeholder="起始日：YYYY/MM/DD"/>
+                      <img src="images/img-calender.svg" alt="" />
+                    </div>
+                    <div class="input-group">
+                      <input type="text" name="chooseD" id="datepicker-04" class="datepicker_input form-control choose-D" placeholder="結束日：YYYY/MM/DD"/>
+                      <img src="images/img-calender.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="account-content">
+                  <div class="account-content-title">異動紀錄 - 全部</div>
+                  <div class="account-content-tab detail-tab">
+                    <div>
+                      <p>異動項目</p>
+                      <p>異動日期</p>
+                    </div>
+                  </div>
+                  <!-- 清單 -->
+                  <div class="account-content-list">
+                    <div class="list-fund">
+                      <div class="account-content-left">
+                        <div class="list-name">
+                          投資設定
+                        </div>
+                        <div class="list-rate">2022/10/10</div>
+                      </div>
+                      <div class="list-collapse" data-bs-toggle="collapse" data-bs-target="#record-01" aria-expanded="false" aria-controls="record-01">
+                        <i class="fa-solid fa-solid fa-chevron-down"></i>
+                      </div>
+                    </div>
+                    <div id="record-01" class="collapse collapse-table">
+                      <div class="table-block">
+                        <div class="table-title">B20074 安聯收益成長基金 - AT累積類股(美元) </div>
+                        <table class="rwd-table account-table common-style">
+                          <tr>
+                            <th class="category-th"> </th>
+                            <th>原設定</th>
+                            <th>變更後</th>
+                          </tr>
+                          <tr>
+                            <td class="category-th">扣款日</td>
+                            <td data-th="原設定">08 日</td>
+                            <td data-th="變更後"><strong>18 日</strong></td>
+                          </tr>
+                          <tr>
+                            <td class="category-th">扣款金額</td>
+                            <td data-th="原設定">3,000 元</td>
+                            <td data-th="變更後"><strong>5,000 元</strong></td>
+                          </tr>
+                        </table>
+                      </div>
+                      <div class="table-block">
+                        <div class="table-title">B20003 安聯亞洲創新基金 - A配息類股</div>
+                        <table class="rwd-table account-table common-style">
+                          <tr>
+                            <th class="category-th"> </th>
+                            <th>原設定</th>
+                            <th>變更後</th>
+                          </tr>
+                          <tr>
+                            <td class="category-th">加碼設定</td>
+                            <td class="category-increase" data-th="原設定">
+                              報酬率 - 10% ，總扣款 4,000 元<br>
+                              報酬率 - 20% ，總扣款 5,000 元
+                            </td>
+                            <td data-th="變更後">
+                              <strong>
+                                報酬率 - 10% ，總扣款 4,000 元<br>
+                                報酬率 - 20% ，總扣款 5,000 元
+                              </strong>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="category-th">停利設定</td>
+                            <td data-th="原設定">報酬率 +15%</td>
+                            <td data-th="變更後"><strong>報酬率 +20%</strong></td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="account-content-list">
+                    <div class="list-fund">
+                      <div class="account-content-left">
+                        <div class="list-name">
+                          子基金
+                        </div>
+                        <div class="list-rate">2022/10/10</div>
+                      </div>
+                      <div class="list-collapse" data-bs-toggle="collapse" data-bs-target="#record-02" aria-expanded="false" aria-controls="record-02">
+                        <i class="fa-solid fa-solid fa-chevron-down"></i>
+                      </div>
+                    </div>
+                    <div id="record-02" class="collapse collapse-table">
+                      <div class="table-title">子基金異動 - 更換</div>
+                      <table class="rwd-table account-table common-style">
+                        <tr>
+                          <th class="category-th"> </th>
+                          <th>原設定</th>
+                          <th>變更後</th>
+                        </tr>
+                        <tr>
+                          <td class="category-th">基金名稱</td>
+                          <td data-th="原設定">安聯收益成長基金-AT累積類股(美元)</td>
+                          <td data-th="變更後"><strong>安聯亞洲創新基金-A配息類股</strong></td>
+                        </tr>
+                        <tr>
+                          <td class="category-th">扣款日</td>
+                          <td data-th="原設定">08 日</td>
+                          <td data-th="變更後"><strong>18 日</strong></td>
+                        </tr>
+                        <tr>
+                          <td class="category-th">扣款金額</td>
+                          <td data-th="原設定">3,000 元</td>
+                          <td data-th="變更後"><strong>5,000 元</strong></td>
+                        </tr>
+                        <tr>
+                          <td class="category-th">加碼設定</td>
+                          <td class="category-increase" data-th="原設定">
+                            報酬率 - 10% ，總扣款 4,000 元<br>
+                            報酬率 - 20% ，總扣款 5,000 元
+                          </td>
+                          <td data-th="變更後">
+                            <strong>
+                              報酬率 - 10% ，總扣款 4,000 元<br>
+                              報酬率 - 20% ，總扣款 5,000 元
+                            </strong>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="category-th">停利設定</td>
+                          <td data-th="原設定">報酬率 +15%</td>
+                          <td data-th="變更後"><strong>報酬率 +20%</strong></td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <ul class="pagination">
+                  <li><a href="#">上一頁</a></li>
+                  <li><a href="#">1</a></li>
+                  <li><a class="active" href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li><a href="#">6</a></li>
+                  <li><a href="#">7</a></li>
+                  <li><a href="#">下一頁</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="btn__block">
+              <button class="btn-next">返回</button>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <!-- Footer -->
+    <footer></footer>
+    <!--js-->
+    <script src="assets/aos/aos.js"></script>
+    <script src="https://kit.fontawesome.com/52207513ca.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/js/datepicker-full.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

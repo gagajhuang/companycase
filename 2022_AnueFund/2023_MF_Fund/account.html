@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <meta name="description" content="母子基金" />
+    <meta property="og:title" content="母子基金" />
+    <meta property="og:description" content="母子基金" />
+    <meta property="og:type" content="article" />
+    <!-- <meta property="og:url" content="https://www.anuefund.com/launch/gagatest/ezpay/" />
+    <meta property="og:image" content="https://www.anuefund.com/launch/gagatest/ezpay/images/share-300.jpg" /> -->
+    <meta property="og:site_name" content="鉅亨買基金" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="300" />
+    <meta property="og:image:height" content="300" />
+
+    <title>母子基金</title>
+    <link rel="icon" href="images/anuefund.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="assets/aos/aos.css" />
+    <link rel="stylesheet" type="text/css" href="assets/animate.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="assets/highcharts/chart.css" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/guideline.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <script src="assets/jquery-1.12.4.min.js"></script>
+    <script src="https://www.anuefund.com/FundSpec/JavaScriptLib/anueGA.js"></script>
+    <script src="https://www.anuefund.com/FundSpec/JavaScriptLib/AppierMethod.js"></script>
+  </head>
+
+  <body>
+    <!--GTM-->
+    <script src="https://www.anuefund.com/FundSpec/JavaScriptLib/anueGTM.js"></script>
+    <header>
+      <nav>
+        <div class="logo logo-title">
+          <a href="https://www.anuefund.com/" target="_blank">
+            <img src="images/logo.svg" alt="鉅亨買基金" />
+          </a>
+          <h1>鉅寶盆</h1>
+        </div>
+        <div id="menu-btn"><img src="images/menubtn.png" /></div>
+        <div class="menu">
+          <ul>
+            <li><a href="#">母子基金首頁</a></li>
+            <li><a href="#">投資特點</a></li>
+            <li><a href="#">申購優惠</a></li>
+            <li><a href="index.html#question">常見問題</a></li>
+            <li class="logout"><a href="#">登出</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <article>
+        <section>
+          <div class="section__block account-summary" id="search-result">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="total-tab" data-bs-toggle="tab" data-bs-target="#total" type="button" role="tab" aria-controls="total" aria-selected="true">帳戶總覽</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="entrust-tab" data-bs-toggle="tab" data-bs-target="#entrust" type="button" role="tab" aria-controls="entrust" aria-selected="false">委託查詢/取消</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="social-tab" data-bs-toggle="tab" data-bs-target="#social" type="button" role="tab" aria-controls="social" aria-selected="false">新申購</button>
+              </li>
+            </ul>
+            <div class="tab-content table-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="total" role="tabpanel" aria-labelledby="total-tab">
+                <div class="account-personal">潘OO小姐，您是<strong>積極型投資人</strong>，可購買 RR1-RR5 的基金，或重新檢視<strong>風險合適度評估</strong></div>
+                <div class="account-amount">
+                  <div class="account-amount-left">
+                    <div class="account-amount-item item-main-style">
+                      <p>總約當市值</p>
+                      <strong>1,000,000 元</strong>
+                    </div>
+                    <div class="account-amount-item item-main-style">
+                      <p>總投資損益</p>
+                      <strong>25,000 元</strong>
+                    </div>
+                    <div class="account-amount-item">
+                      <p>總投資成本</p>
+                      <strong>1,000,000 元</strong>
+                    </div>
+                    <div class="account-amount-item">
+                      <p>參考報酬率</p>
+                      <strong class="rate">2.05%</strong>
+                    </div>
+                  </div>
+                  <div class="account-amount-right">
+                    <figure class="highcharts-figure">
+                      <div id="chart"></div>
+                    </figure>
+                  </div>
+                </div>
+                <!-- 契約列表 -->
+                <div class="account-content">
+                  <div class="account-content-title">契約列表</div>
+                  <!-- 清單 -->
+                  <div class="filter__block set__content account-overview">
+                    <div class="account-content-list">
+                      <div class="mf-name">
+                        <span>我的循環富利寶 (MF7533967)</span>
+                      </div>
+                      <div id="fund-01">
+                        <table class="rwd-table account-table">
+                          <tr>
+                            <th>約當市值</th>
+                            <th>投資損益</th>
+                            <th>初始投入成本</th>
+                            <th>參考報酬率</th>
+                            <th>總停利次數</th>
+                          </tr>
+                          <tr>
+                            <td data-th="約當市值">205,000 元</td>
+                            <td data-th="投資損益">5,000 元</td>
+                            <td data-th="初始投入成本">200,000 元</td>
+                            <td data-th="參考報酬率"><strong>2.05%</strong></td>
+                            <td data-th="總停利次數">5 次</td>
+                          </tr>
+                        </table>
+                        <div class="account-content transaction-table">
+                          <div class="account-content-tab">
+                            <p>類別/代碼/名稱</p>
+                            <!-- <p>總投資金額</p>
+                            <p>明細</p> -->
+                          </div>
+                          <!-- 純標頭 -->
+                          <div class="tab-title">
+                            <table class="rwd-table account-table">
+                              <tr>
+                                <th>類別</th>
+                                <th class="category-name">基金代碼/名稱</th>
+                                <th>約當市值</th>
+                                <th>投資損益</th>
+                                <th>投資成本</th>
+                                <th>參考報酬率</th>
+                                <th> </th>
+                              </tr>
+                            </table>
+                          </div>
+                          <!-- 資料內容 -->
+                          <!-- 母基金 -->
+                          <div class="transaction-list">
+                            <!-- 只有m版顯示 -->
+                            <div class="tab-mobile">
+                              <div>
+                                <div class="category-master">母基金</div>
+                                <div class="category-name">B20002 安聯全球高成長科技基金-A配息類股(美元)</div>  
+                              </div>
+                              <div class="tab-mobile-right">
+                                <button class="btn-increase">加碼</button>
+                                <div class="list-collapse" data-bs-toggle="collapse" data-bs-target="#fund-content01" aria-expanded="true" aria-controls="fund-content01">
+                                  <i class="fa-solid fa-chevron-down"></i>
+                                </div>
+                              </div>
+                            </div>
+                            <div id="fund-content01" class="collapse show collapse-table">
+                              <table class="rwd-table account-table">
+                                <tr>
+                                  <td class="category-master" data-th="類別">母基金</td>
+                                  <td class="category-name" data-th="基金代碼/名稱">B20002 安聯全球高成長科技基金-A配息類股(美元)</td>
+                                  <td class="remark-icon" data-th="約當市值 ⓘ" data-bs-toggle="modal" data-bs-target="#remark-modal">165,000 元 <span>ⓘ</span></td>
+                                  <td data-th="投資損益">5,000 元</td>
+                                  <td data-th="投資成本">160,000 元</td>
+                                  <td data-th="參考報酬率"><strong>2.05%</strong></td>
+                                  <td data-th=""><button class="btn-increase">加碼</button></td>
+                                </tr>
+                              </table>
+                            </div>
+                          </div>
+                          <!-- 子基金 -->
+                          <div class="transaction-list">
+                            <!-- 只有m版顯示 -->
+                            <div class="tab-mobile">
+                              <div>
+                                <div class="category-feeder">子基金</div>
+                                <div class="category-name">B20074 安聯收益成長基金-AT累積類股(美元)</div>  
+                              </div>
+                              <div class="tab-mobile-right">
+                                <button class="btn-modify">異動</button>
+                                <div class="list-collapse" data-bs-toggle="collapse" data-bs-target="#fund-content02" aria-expanded="true" aria-controls="fund-content02">
+                                  <i class="fa-solid fa-chevron-down"></i>
+                                </div>
+                              </div>
+                            </div>
+                            <div id="fund-content02" class="collapse show collapse-table">
+                              <table class="rwd-table account-table">
+                                <tr>
+                                  <td class="category-feeder" data-th="類別">子基金</td>
+                                  <td class="category-name" data-th="基金代碼/名稱">B20074 安聯收益成長基金-AT累積類股(美元)</td>
+                                  <td class="remark-icon" data-th="約當市值 ⓘ" data-bs-toggle="modal" data-bs-target="#remark-modal">22,000 元 <span>ⓘ</span></td>
+                                  <td data-th="投資損益">2,000 元</td>
+                                  <td data-th="投資成本">20,000 元</td>
+                                  <td data-th="參考報酬率"><strong>2.05%</strong></td>
+                                  <td data-th=""><button class="btn-modify">異動</button></td>
+                                </tr>
+                              </table>
+                            </div>
+                          </div>
+                          <!-- remark-modal -->
+                          <div class="modal fade remark__blcok" id="remark-modal" tabindex="-1" aria-labelledby="remark-modal" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                <div class="modal-header">母子基金</div>
+                                <div class="modal-body">
+                                  母子基金母子基金母子基金母子基金母子基金母子基金
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">返回</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                      <div class="account-content-btn">
+                        <button class="btn-act">贖回</button>
+                        <button class="btn-act">明細</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="remark__list">
+                  <ul>
+                    <li>註1：備註文字備註文字備註文字備註文字備註文字備註文字備註文字備註文字備註文字備註文字</li>
+                    <li>註1：備註文字備註文字備註文字備註文字備註文字備註文字備註文字備註文字備註文字備註文字aaaaaaaaaaa</li>
+                    <li>註1：備註文字備註文字備註文字備註文字備註文字備註文字備註文字備註文字備註文字備註文字</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- 委託查詢/取消 -->
+              <div class="tab-pane fade table-content" id="entrust" role="tabpanel" aria-labelledby="entrust-tab">
+                <div class="filter-condition flex-block">
+                  <p class="filter-title">交易類型</p>
+                  <ul class="nav nav-tabs" id="entrustTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <div class="nav-link active" id="buy-tab" data-bs-toggle="tab" data-bs-target="#entrust-buy" role="tab" aria-controls="buy" aria-selected="true">申購</div>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <div class="nav-link" id="change-tab" data-bs-toggle="tab" data-bs-target="#entrust-change" role="tab" aria-controls="change" aria-selected="false">異動</div>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <div class="nav-link" id="repurchase-tab" data-bs-toggle="tab" data-bs-target="#entrust-repurchase" role="tab" aria-controls="repurchase" aria-selected="false">贖回</div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="tab-content" id="entrustTabContent">
+                  <!-- 委託明細 - 申購 -->
+                  <div class="tab-pane fade show active" id="entrust-buy" role="tabpanel" aria-labelledby="buy-tab">
+                    <div class="account-content">
+                      <div class="account-content-title">委託明細 - 申購</div>
+                      <div class="account-content-tab">
+                        <p>選取</p>
+                        <!-- <p>交易類別</p> -->
+                      </div>
+                      <!-- 清單 -->
+                      <div class="entrust">
+                        <!-- 1 -->
+                        <div class="account-content-list">
+                          <div class="list-fund">
+                            <div class="list-name">
+                              <label for="fund-check01" class="fund-check">
+                                <input type="checkbox" id="fund-check01" name="fund-check" value="fund-check">
+                                <div>
+                                  我的聚寶盆(MF7533967)
+                                  <!-- <p>(MF7533967)</p> -->
+                                </div>
+                              </label>
+                            </div>
+                            <div class="paid-money">
+                              委託成功
+                              <p class="list-collapse" data-bs-toggle="collapse" data-bs-target="#mf-list01-1" aria-expanded="true" aria-controls="mf-list01-1"><i class="fa-solid fa-chevron-down"></i></p>
+                            </div>
+                          </div>
+                          <div>
+                            <table class="rwd-table account-table">
+                              <tr>
+                                <th>委託日</th>
+                                <th>生效日</th>
+                                <th>申購幣別</th>
+                                <th>申購金額</th>
+                                <th>手續費</th>
+                              </tr>
+                              <tr>
+                                <td data-th="委託日">
+                                  2022/05/02 <br />
+                                  15:00:00
+                                </td>
+                                <td data-th="生效日">2022/05/03</td>
+                                <td data-th="申購幣別">台幣</td>
+                                <td data-th="申購金額">200,000 元</td>
+                                <td data-th="手續費">0 元</td>
+                              </tr>
+                            </table>
+                          </div>
+                          <div id="mf-list01-1" class="account-content transaction-table collapse">
+                            <div class="account-content-tab">
+                              <p>類別/代碼/名稱</p>
+                              <!-- <p>總投資金額</p>
+                              <p>明細</p> -->
+                            </div>
+                            <!-- 純標頭 -->
+                            <div class="tab-title">
+                              <table class="rwd-table account-table">
+                                <tr>
+                                  <th>類別</th>
+                                  <th class="category-name">基金代碼/名稱</th>
+                                  <th>扣款日</th>
+                                  <th>轉入金額</th>
+                                  <th class="category-increase">加碼設定</th>
+                                  <th>停利設定</th>
+                                </tr>
+                              </table>
+                            </div>
+                            <!-- 資料內容 -->
+                            <!-- 母基金 -->
+                            <div class="transaction-list">
+                              <!-- 只有m版顯示 -->
+                              <div class="tab-mobile">
+                                <div>
+                                  <div class="category-master">母基金</div>
+                                  <div class="category-name">B20002 安聯全球高成長科技基金-A配息類股(美元)</div>  
+                                </div>
+                              </div>
+                              <div>
+                                <table class="rwd-table account-table">
+                                  <tr>
+                                    <td class="category-master" data-th="類別">母基金</td>
+                                    <td class="category-name" data-th="基金代碼/名稱">B20002 安聯全球高成長科技基金-A配息類股(美元)</td>
+                                    <td data-th="扣款日"> - </td>
+                                    <td data-th="轉入金額"> - </td>
+                                    <td class="category-increase" data-th="加碼設定"> - </td>
+                                    <td data-th="停利設定"> - </td>
+                                  </tr>
+                                </table>
+                              </div>
+                            </div>
+                            <!-- 子基金 -->
+                            <div class="transaction-list">
+                              <!-- 只有m版顯示 -->
+                              <div class="tab-mobile">
+                                <div>
+                                  <div class="category-feeder">子基金</div>
+                                  <div class="category-name">B20074 安聯收益成長基金-AT累積類股(美元)</div>  
+                                </div>
+                              </div>
+                              <div>
+                                <table class="rwd-table account-table">
+                                  <tr>
+                                    <td class="category-feeder" data-th="類別">子基金</td>
+                                    <td class="category-name" data-th="基金代碼/名稱">B20074 安聯收益成長基金-AT累積類股(美元)</td>
+                                    <td data-th="扣款日">08 日</td>
+                                    <td data-th="轉入金額">3,000 元</td>
+                                    <td class="category-increase" data-th="加碼設定">
+                                      報酬率 - 10% ，總扣款 4,000 元<br>
+                                      報酬率 - 20% ，總扣款 5,000 元
+                                    </td>
+                                    <td data-th="停利設定">報酬率 + 10%</td>
+                                  </tr>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- 2 -->
+                        <div class="account-content-list">
+                          <div class="list-fund">
+                            <div class="list-name">
+                              <label for="fund-check02" class="fund-check">
+                                <input type="checkbox" id="fund-check02" name="fund-check" value="fund-check">
+                                <div>
+                                  我的聚寶盆2(MF7533967)
+                                  <!-- <p>(MF7533967)</p> -->
+                                </div>
+                              </label>
+                            </div>
+                            <div class="paid-money">
+                              委託成功
+                              <p class="list-collapse" data-bs-toggle="collapse" data-bs-target="#mf-list01-2" aria-expanded="true" aria-controls="mf-list01-2"><i class="fa-solid fa-chevron-down"></i></p>
+                            </div>
+                          </div>
+                          <div>
+                            <table class="rwd-table account-table">
+                              <tr>
+                                <th>委託日</th>
+                                <th>生效日</th>
+                                <th>申購幣別</th>
+                                <th>申購金額</th>
+                                <th>手續費</th>
+                              </tr>
+                              <tr>
+                                <td data-th="委託日">
+                                  2022/05/02 <br />
+                                  15:00:00
+                                </td>
+                                <td data-th="生效日">2022/05/03</td>
+                                <td data-th="申購幣別">台幣</td>
+                                <td data-th="申購金額">200,000 元</td>
+                                <td data-th="手續費">0 元</td>
+                              </tr>
+                            </table>
+                          </div>
+                          <div id="mf-list01-2" class="account-content transaction-table collapse">
+                            <div class="account-content-tab">
+                              <p>類別/代碼/名稱</p>
+                              <!-- <p>總投資金額</p>
+                              <p>明細</p> -->
+                            </div>
+                            <!-- 純標頭 -->
+                            <div class="tab-title">
+                              <table class="rwd-table account-table">
+                                <tr>
+                                  <th>類別</th>
+                                  <th class="category-name">基金代碼/名稱</th>
+                                  <th>扣款日</th>
+                                  <th>轉入金額</th>
+                                  <th class="category-increase">加碼設定</th>
+                                  <th>停利設定</th>
+                                </tr>
+                              </table>
+                            </div>
+                            <!-- 資料內容 -->
+                            <!-- 母基金 -->
+                            <div class="transaction-list">
+                              <!-- 只有m版顯示 -->
+                              <div class="tab-mobile">
+                                <div>
+                                  <div class="category-master">母基金</div>
+                                  <div class="category-name">B20002 安聯全球高成長科技基金-A配息類股(美元)</div>  
+                                </div>
+                              </div>
+                              <div>
+                                <table class="rwd-table account-table">
+                                  <tr>
+                                    <td class="category-master" data-th="類別">母基金</td>
+                                    <td class="category-name" data-th="基金代碼/名稱">B20002 安聯全球高成長科技基金-A配息類股(美元)</td>
+                                    <td data-th="扣款日"> - </td>
+                                    <td data-th="轉入金額"> - </td>
+                                    <td class="category-increase" data-th="加碼設定"> - </td>
+                                    <td data-th="停利設定"> - </td>
+                                  </tr>
+                                </table>
+                              </div>
+                            </div>
+                            <!-- 子基金 -->
+                            <div class="transaction-list">
+                              <!-- 只有m版顯示 -->
+                              <div class="tab-mobile">
+                                <div>
+                                  <div class="category-feeder">子基金</div>
+                                  <div class="category-name">B20074 安聯收益成長基金-AT累積類股(美元)</div>  
+                                </div>
+                              </div>
+                              <div>
+                                <table class="rwd-table account-table">
+                                  <tr>
+                                    <td class="category-feeder" data-th="類別">子基金</td>
+                                    <td class="category-name" data-th="基金代碼/名稱">B20074 安聯收益成長基金-AT累積類股(美元)</td>
+                                    <td data-th="扣款日">08 日</td>
+                                    <td data-th="轉入金額">3,000 元</td>
+                                    <td class="category-increase" data-th="加碼設定">
+                                      報酬率 - 10% ，總扣款 4,000 元<br>
+                                      報酬率 - 20% ，總扣款 5,000 元
+                                    </td>
+                                    <td data-th="停利設定">報酬率 + 10%</td>
+                                  </tr>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="password-input">
+                      <label for="password-input">
+                        請輸入交易密碼
+                        <input type="text" id="password-input" class="password-style" name="password-input" />
+                      </label>
+                    </div>
+                    <div class="btn__block">
+                      <button class="btn-prev">清除選擇</button>
+                      <button class="btn-next">取消委託</button>
+                    </div>
+                  </div>
+
+                  <!-- 委託明細 - 異動 -->
+                  <div class="tab-pane fade" id="entrust-change" role="tabpanel" aria-labelledby="change-tab">
+                    <div class="account-content">
+                      <div class="account-content-title">委託明細 - 異動</div>
+                      <div class="account-content-tab">
+                        <p>選取</p>
+                        <!-- <p>交易類別</p> -->
+                      </div>
+                      <!-- 清單 -->
+                      <div class="entrust">
+                        <!-- 1 -->
+                        <div class="account-content-list">
+                          <div class="list-fund">
+                            <div class="list-name">
+                              <label for="fund-check" class="fund-check">
+                                <input type="checkbox" id="fund-check" name="fund-check" value="fund-check">
+                                <div>
+                                  我的聚寶盆(MF7533967)
+                                  <!-- <p>(MF7533967)</p> -->
+                                </div>
+                              </label>
+                            </div>
+                            <div class="paid-money">
+                              委託成功
+                              <p class="list-collapse" data-bs-toggle="collapse" data-bs-target="#mf-list02-1" aria-expanded="true" aria-controls="mf-list02-1"><i class="fa-solid fa-chevron-down"></i></p>
+                            </div>
+                          </div>
+                          <div>
+                            <table class="rwd-table account-table">
+                              <tr>
+                                <th>委託日</th>
+                                <th>生效日</th>
+                                <th>異動項目</th>
+                              </tr>
+                              <tr>
+                                <td data-th="委託日">
+                                  2022/05/02 <br />
+                                  15:00:00
+                                </td>
+                                <td data-th="生效日">2022/05/03</td>
+                                <td data-th="異動項目">投資設定</td>
+                              </tr>
+                            </table>
+                          </div>
+                          <div id="mf-list02-1" class="account-content collapse">
+                            <div class="account-content-tab">
+                              <p>異動內容</p>
+                            </div>
+                            <div class="table-title">B20003 安聯亞洲創新基金-A配息類股</div>
+                            <div>
+                              <table class="rwd-table account-table common-style">
+                                <tr>
+                                  <th class="category-th"> </th>
+                                  <th>原設定</th>
+                                  <th>變更後</th>
+                                </tr>
+                                <tr>
+                                  <td class="category-th">扣款日</td>
+                                  <td data-th="原設定">08 日</td>
+                                  <td data-th="變更後"><strong>18 日</strong></td>
+                                </tr>
+                                <tr>
+                                  <td class="category-th">扣款金額</td>
+                                  <td data-th="原設定">3,000 元</td>
+                                  <td data-th="變更後"><strong>5,000 元</strong></td>
+                                </tr>
+                                <tr>
+                                  <td class="category-th">加碼設定</td>
+                                  <td class="category-increase" data-th="原設定">
+                                    報酬率 - 10% ，總扣款 4,000 元<br>
+                                    報酬率 - 20% ，總扣款 5,000 元
+                                  </td>
+                                  <td data-th="變更後">
+                                    <strong>
+                                      報酬率 - 10% ，總扣款 4,000 元<br>
+                                      報酬率 - 20% ，總扣款 5,000 元
+                                    </strong>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="category-th">停利設定</td>
+                                  <td data-th="原設定">報酬率 +15%</td>
+                                  <td data-th="變更後"><strong>報酬率 +20%</strong></td>
+                                </tr>
+                              </table>
+                            </div>
+                            
+                          </div>
+                        </div>
+                        <!-- 2 -->
+                        <div class="account-content-list">
+                          <div class="list-fund">
+                            <div class="list-name">
+                              <label for="fund-check02" class="fund-check">
+                                <input type="checkbox" id="fund-check02" name="fund-check02" value="fund-check">
+                                <div>
+                                  我的聚寶盆2(MF7533967)
+                                  <!-- <p>(MF7533967)</p> -->
+                                </div>
+                              </label>
+                            </div>
+                            <div class="paid-money">
+                              委託成功
+                              <p class="list-collapse" data-bs-toggle="collapse" data-bs-target="#mf-list02-2" aria-expanded="true" aria-controls="mf-list02-2"><i class="fa-solid fa-chevron-down"></i></p>
+                            </div>
+                          </div>
+                          <div>
+                            <table class="rwd-table account-table">
+                              <tr>
+                                <th>委託日</th>
+                                <th>生效日</th>
+                                <th>異動項目</th>
+                              </tr>
+                              <tr>
+                                <td data-th="委託日">
+                                  2022/05/02 <br />
+                                  15:00:00
+                                </td>
+                                <td data-th="生效日">2022/05/03</td>
+                                <td data-th="異動項目">子基金</td>
+                              </tr>
+                            </table>
+                          </div>
+                          <div id="mf-list02-2" class="account-content collapse">
+                            <div class="account-content-tab">
+                              <p>異動內容</p>
+                            </div>
+                            <div class="table-title">子基金異動 - 更換</div>
+                            <div>
+                              <table class="rwd-table account-table common-style">
+                                <tr>
+                                  <th class="category-th"> </th>
+                                  <th>原設定</th>
+                                  <th>變更後</th>
+                                </tr>
+                                <tr>
+                                  <td class="category-th">扣款日</td>
+                                  <td data-th="原設定">08 日</td>
+                                  <td data-th="變更後"><strong>18 日</strong></td>
+                                </tr>
+                                <tr>
+                                  <td class="category-th">扣款金額</td>
+                                  <td data-th="原設定">3,000 元</td>
+                                  <td data-th="變更後"><strong>5,000 元</strong></td>
+                                </tr>
+                                <tr>
+                                  <td class="category-th">加碼設定</td>
+                                  <td class="category-increase" data-th="原設定">
+                                    報酬率 - 10% ，總扣款 4,000 元<br>
+                                    報酬率 - 20% ，總扣款 5,000 元
+                                  </td>
+                                  <td data-th="變更後">
+                                    <strong>
+                                      報酬率 - 10% ，總扣款 4,000 元<br>
+                                      報酬率 - 20% ，總扣款 5,000 元
+                                    </strong>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="category-th">停利設定</td>
+                                  <td data-th="原設定">報酬率 +15%</td>
+                                  <td data-th="變更後"><strong>報酬率 +20%</strong></td>
+                                </tr>
+                              </table>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="password-input">
+                      <label for="password-input">
+                        請輸入交易密碼
+                        <input type="text" id="password-input" class="password-style" name="password-input" />
+                      </label>
+                    </div>
+                    <div class="btn__block">
+                      <button class="btn-prev">清除選擇</button>
+                      <button class="btn-next">取消委託</button>
+                    </div>
+                  </div>
+                  <!-- 委託明細 - 贖回 -->
+                  <div class="tab-pane fade" id="entrust-repurchase" role="tabpanel" aria-labelledby="repurchase-tab">
+                    <div class="account-content">
+                      <div class="account-content-title">委託明細 - 申購</div>
+                      <div class="account-content-tab">
+                        <p>選取</p>
+                        <!-- <p>交易類別</p> -->
+                      </div>
+                      <!-- 清單 -->
+                      <div class="entrust">
+                        <!-- 1 -->
+                        <div class="account-content-list">
+                          <div class="list-fund">
+                            <div class="list-name">
+                              <label for="fund-check03" class="fund-check">
+                                <input type="checkbox" id="fund-check03" name="fund-check" value="fund-check">
+                                <div>
+                                  我的聚寶盆(MF7533967)
+                                  <!-- <p>(MF7533967)</p> -->
+                                </div>
+                              </label>
+                            </div>
+                            <div class="paid-money">
+                              委託成功
+                              <p class="list-collapse" data-bs-toggle="collapse" data-bs-target="#mf-list03-1" aria-expanded="true" aria-controls="mf-list03-1"><i class="fa-solid fa-chevron-down"></i></p>
+                            </div>
+                          </div>
+                          <div>
+                            <table class="rwd-table account-table">
+                              <tr>
+                                <th>委託日</th>
+                                <th>生效日</th>
+                                <th>交易幣別</th>
+                                <th>預估贖回(含在途)</th>
+                                <th>初始投入成本</th>
+                                <th>參考報酬率</th>
+                              </tr>
+                              <tr>
+                                <td data-th="委託日">
+                                  2022/05/02 <br />
+                                  15:00:00
+                                </td>
+                                <td data-th="生效日">2022/05/03</td>
+                                <td data-th="交易幣別">台幣</td>
+                                <td data-th="預估贖回(含在途)">268,000 元</td>
+                                <td data-th="初始投入成本">200,000 元</td>
+                                <td data-th="參考報酬率"><strong>2.05%</strong></td>
+                              </tr>
+                            </table>
+                          </div>
+                          <div id="mf-list03-1" class="account-content transaction-table collapse">
+                            <div class="account-content-tab">
+                              <p>類別/代碼/名稱</p>
+                              <!-- <p>總投資金額</p>
+                              <p>明細</p> -->
+                            </div>
+                            <!-- 純標頭 -->
+                            <div class="tab-title">
+                              <table class="rwd-table account-table">
+                                <tr>
+                                  <th>類別</th>
+                                  <th class="category-name">基金代碼/名稱</th>
+                                  <th>單位數(含在途)</th>
+                                  <th>參考淨值</th>
+                                  <th>參考匯率</th>
+                                  <th>預估贖回(含在途)</th>
+                                  <th>參考報酬率</th>
+                                </tr>
+                              </table>
+                            </div>
+                            <!-- 資料內容 -->
+                            <!-- 母基金 -->
+                            <div class="transaction-list">
+                              <!-- 只有m版顯示 -->
+                              <div class="tab-mobile">
+                                <div>
+                                  <div class="category-master">母基金</div>
+                                  <div class="category-name">B20002 安聯全球高成長科技基金-A配息類股(美元)</div>  
+                                </div>
+                              </div>
+                              <div>
+                                <table class="rwd-table account-table">
+                                  <tr>
+                                    <td class="category-master" data-th="類別">母基金</td>
+                                    <td class="category-name" data-th="基金代碼/名稱">B20002 安聯全球高成長科技基金-A配息類股(美元)</td>
+                                    <td data-th="單位數(含在途)">165</td>
+                                    <td data-th="參考淨值">100</td>
+                                    <td data-th="參考匯率">29.56</td>
+                                    <td class="remark-icon" data-th="預估贖回(含在途) ⓘ">160,000 元 <span>ⓘ</span></td>
+                                    <td data-th="參考報酬率"><strong>2.05%</strong></td>
+                                  </tr>
+                                </table>
+                              </div>
+                            </div>
+                            <!-- 子基金 -->
+                            <div class="transaction-list">
+                              <!-- 只有m版顯示 -->
+                              <div class="tab-mobile">
+                                <div>
+                                  <div class="category-feeder">子基金</div>
+                                  <div class="category-name">B20074 安聯收益成長基金-AT累積類股(美元)</div>  
+                                </div>
+                              </div>
+                              <div>
+                                <table class="rwd-table account-table">
+                                  <tr>
+                                    <td class="category-feeder" data-th="類別">子基金</td>
+                                    <td class="category-name" data-th="基金代碼/名稱">B20074 安聯收益成長基金-AT累積類股(美元)</td>
+                                    <td data-th="單位數(含在途)">220</td>
+                                    <td data-th="參考淨值">212</td>
+                                    <td data-th="參考匯率">29.56</td>
+                                    <td class="remark-icon" data-th="預估贖回(含在途) ⓘ">20,000 元 <span>ⓘ</span></td>
+                                    <td data-th="參考報酬率"><strong>2.05%</strong></td>
+                                  </tr>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                       
+                      </div>
+                    </div>
+                    <div class="password-input">
+                      <label for="password-input">
+                        請輸入交易密碼
+                        <input type="text" id="password-input" class="password-style" name="password-input" />
+                      </label>
+                    </div>
+                    <div class="btn__block">
+                      <button class="btn-prev">清除選擇</button>
+                      <button class="btn-next">取消委託</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade table-content" id="social" role="tabpanel" aria-labelledby="social-tab">
+                
+                <ul class="pagination">
+                  <li><a href="#">上一頁</a></li>
+                  <li><a href="#">1</a></li>
+                  <li><a class="active" href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li><a href="#">6</a></li>
+                  <li><a href="#">7</a></li>
+                  <li><a href="#">下一頁</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <!-- Footer -->
+    <footer></footer>
+    <!--js-->
+    <script src="assets/aos/aos.js"></script>
+    <script src="https://kit.fontawesome.com/52207513ca.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/variable-pie.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="assets/highcharts/chart.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
