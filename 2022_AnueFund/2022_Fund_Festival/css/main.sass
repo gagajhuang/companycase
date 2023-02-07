@@ -1,0 +1,357 @@
+@import _variables
+@import _mixin
+
+%margin-auto
+  width: 100%
+  margin:0 auto
+
+%mobile480-none
+  +mobile-480 
+    display: none
+%btn-base
+  font-size: 1rem
+  color: #fff
+  padding: 7px 12px
+  white-space: nowrap
+  cursor: pointer
+  +pc-1024
+    max-width: 800px
+    margin: 0 auto
+    width: 100%
+
+body
+  color: $text
+.section__block 
+  max-width: 960px
+sup
+  color: $main-text
+//menu
+.menu
+  .opentrack
+    padding: 0px 18px
+    color: #fff
+    line-height: 60px
+    background:$secondary
+    cursor: pointer
+    +font-bold
+    &:hover
+      background: #e76545
+// 背景區
+// article
+.banner
+  &__block
+    position: relative
+    overflow: hidden
+    background: url(../images/bg-banner.jpg) no-repeat bottom center/cover
+    height: 920px
+    .scroll-arrow
+      a
+        position: absolute
+        display: block
+        left: 50%
+        bottom: 5%
+        transform: translateX(-15px)
+        color: #fff
+        font-size: 30px
+        animation: scroll-down 1s infinite
+        cursor: pointer
+    +mobile-640
+      height: 600px
+  &-pc
+    max-width: 650px
+    margin-top: 100px
+    cursor: pointer
+@keyframes scroll-down
+  0% 
+    bottom: 5%
+  50% 
+    bottom: 6%
+  100% 
+    bottom: 5%
+ 
+.airplane
+  position: absolute
+  animation: airplane-act 3s 0.5s forwards
+  transform: translate(-20%, 80%)
+  +pc-1366
+    animation: airplane-act2 2s 0.5s forwards
+    transform: translate(-50%, 90%)
+  +pc-960
+    display: none
+
+@keyframes airplane-act
+  0% 
+    transform: translate(-60%, 110%)
+  100% 
+    transform: translate(-20%, 80%) 
+
+@keyframes airplane-act2
+  0% 
+    transform: translate(-60%, 90%)
+  100% 
+    transform: translate(-50%, 80%) 
+
+// 大綱
+h2
+  // font-family: 'Noto Sans TC'
+  max-width: 550px
+  @extend %margin-auto
+.discount
+  &-content
+    text-align: center
+    +flex-center
+    margin-top: 60px
+    +pc-960
+      display: block
+  &-style
+    position: relative
+    background: $color-yellow
+    padding: 15px
+    border-radius: 20px
+    max-width: 370px
+    @extend %margin-auto
+    +pc-960
+      &:nth-child(2)
+        margin-top: 50px
+    img
+      position: absolute
+      max-width: 110px
+      top: -40px
+      left: -10px
+    h3
+      font-family: 'Noto Sans TC'
+      +font-bold
+      color: $color-discount
+      font-size: 30px
+      span
+        color: $main-text
+        font-family: 'Noto Sans TC'
+        +font-bold
+        font-size: 40px
+  &-new
+    background: #ffe2d6
+  &-text
+    background: #fff
+    border-radius: 20px
+    margin-top:10px
+    padding: 15px
+    +font-20
+    letter-spacing: 1px
+    p
+      +font-bold
+      line-height: 1.75rem
+    strong
+      font-family: 'Arial'
+      font-weight: 900
+      font-size: 1.75rem
+      color: $secondary
+  &-btn
+    background: $main-text
+    border-radius: 50px
+    padding: 7px 30px
+    margin-top: 10px
+    cursor: pointer
+    +btn-hover($primary)
+    color: #fff
+    +font-bold
+    a
+      color: #fff
+      +font-bold
+// 基金清單
+.fund
+  &-tab
+    +flex-center
+    div
+      +img-hover
+  &-img
+    height: 100px
+    margin-bottom: 30px
+    background: url(../images/title-fund.png) no-repeat bottom center/cover
+  &-name
+    +font-bold
+#fund__block
+  background: url(../images/bg-all.jpg) no-repeat bottom center/contain fixed
+.fundlist
+  &__block
+    font-size: 1.125rem
+    line-height: 1.375rem
+    + .fundlist__block
+      margin-top: 70px
+    .remark
+      text-align: center
+      margin-top: 10px
+      +font-16
+  &-style
+    position: relative
+    margin: 70px 0 100px 0
+    border: 3px solid #ccc8c0
+    padding: 70px 40px 40px
+    border-radius: 50px
+    background: #f7f7f7
+    li:not(:last-child)
+      margin-bottom: 20px
+      vertical-align: bottom
+      border-bottom: 1px solid #565345
+      padding-bottom: 20px
+  &-title
+    position: absolute
+    left: 50%
+    transform: translateX(-110px)
+    max-width: 220px
+    @extend %margin-auto
+    height: 80px
+    top: -30px
+    background: url(../images/bg-title.png) no-repeat center/contain
+    font-size: 1.875rem
+    line-height: 55px
+    +font-bold
+    letter-spacing: 1px
+    color: #fff
+    text-align: center
+    span
+      font-size: 1.875rem
+      +font-bold
+      color: #fff100
+  &__content
+    display: none
+    // 基金表格
+    .tableblock
+      max-width: 800px
+      text-align: justify
+      line-height: 2.2rem
+      font-size: 1rem
+      margin-top: 10px
+      @extend %margin-auto
+      table
+        width: 100%
+        border:1px solid $color-light-gray
+        th
+          background: #d0d0d0
+          padding: 5px 0
+          +font-bold
+          font-size: 1.125rem
+          vertical-align: middle
+          padding: 0 2%
+          &:nth-child(1)
+            width: 28%
+          +mobile-480 
+            font-size: 1rem
+            line-height: 1.5rem
+        td
+          padding: 5px 0
+          width: 15%
+          background: #fff
+    .chart__caption
+      text-align: justify
+.list
+  &-content
+    // 基金按鈕
+    .btn__block
+      +mobile-480 
+        display: flex
+    .btnbuy
+      @extend %btn-base
+      background: $secondary
+      margin-left: 10px
+      +pc-1024
+        margin-left: 0
+    .fundinfor
+      @extend %btn-base
+      background: $tertiary
+      +flex-center
+      justify-content: center
+    .btn
+      &-fund-intro
+        @extend %btn-base
+        background: $tertiary
+  &-name
+    +flex-center
+    color:#fff
+    +pc-1024
+      display: block
+    &:hover
+      .fund-name
+        color: $tertiary
+        +font-bold
+  &-title
+    +flex-center
+    align-items: end
+    +pc-1024
+      padding-bottom: 10px
+    span
+      color: #00555f
+      +font-bold
+    p
+      display: inline
+      color: #666666
+    a
+      color:$text
+  &-left
+    display: flex
+  &-icon
+    max-height: 25px
+    color: $text
+    +font-bold
+    padding-right: 5px
+    margin-right: 5px
+    +mobile-480
+      border:0
+    .fas
+      margin-right: 5px
+      font-size: 1.4rem
+      vertical-align: middle
+#activity
+  background: #e3f2ff
+.activity
+  &__block
+    span
+      color: $text
+      +font-bold
+    ul
+      p
+        color: $main-text
+  &__table
+    width: 100%
+    // max-width: 650px
+    border: 1px solid $color-light-gray
+    background: #fff
+    margin: 15px auto
+    line-height: 2rem
+    +mobile-480 
+      font-size: 1rem
+    // tr:nth-child(even)
+    //   background: #e4e4e4
+    tr:not(:last-child)
+      border: 1px solid $color-light-gray
+    th
+      +font-bold
+      background: #e4e4e4
+      &:last-child
+        text-align: left
+      +mobile-480 
+        vertical-align: middle
+        line-height: 1.5rem
+    td
+      &:first-child
+        width: 15%
+        +mobile-480
+          width: 18%
+      &:nth-child(even)
+        +font-bold
+        color: $secondary
+        width: 12%
+        +mobile-480
+          width: 28%
+      &:last-child
+        text-align: left
+    sup
+      vertical-align: super
+      font-size: smaller
+      color: $color-blue
+
+    
+      
+      
+
+  
+

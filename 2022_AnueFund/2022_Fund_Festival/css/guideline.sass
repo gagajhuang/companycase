@@ -1,0 +1,508 @@
+// 此檔案請勿更動
+@import _variables
+@import _mixin
+
+/* 統一樣式 */
+%margin-auto
+  width: 100%
+  margin:0 auto
+%btn-base
+  max-width: 200px
+  width: 100%
+  font-size: 22px 
+  padding: 8px 15px 9px 16px
+  transition: $trans-time
+  text-align: center
+  color: #fff
+  text-align: center
+  cursor: pointer
+%title-line
+  content: ''
+  width: 60px
+  height: 20px
+  background: url(../images/lineblack.png) no-repeat center center
+  display: inline-block
+  +mobile-480
+    width: 30px
+    margin: -1px 6px
+%content-space
+  margin: 20px 0 40px 0
+
+%font18
+  font-size: 1.125rem
+  line-height: 1.6rem
+%font16
+  font-size: 1rem
+  line-height: 1.5rem
+%list-point
+  display: inline
+  color: #ffbd23
+%activity-block
+  text-align: justify
+  letter-spacing: 1px
+  word-break: break-all
+  @extend %font18
+  li
+    margin-bottom: 10px
+
+%btn-nonewidth
+  +mobile-480
+    max-width: none
+
+/* 選單 */
+header
+  +position-center(fixed)
+  top: 0
+  z-index: 9999
+nav
+  +flex-center
+  width: 100%
+  padding: 0 50px
+  box-sizing: border-box
+  overflow: hidden
+  background: $menu-bg
+  height: 60px
+  +pc-960 
+    padding: 0 15px
+.logo 
+  a
+    max-width: 130px
+.fa
+  padding: 0 5px
+#menu-btn 
+  display: none
+  cursor: pointer
+  +pc-960
+    display: block
+  img 
+    max-width: 28px
+.menu 
+  +pc-960 
+    +position-center(absolute)
+    max-height: 0px
+    overflow: hidden
+    transition: all 1s
+    top: 60px
+    z-index: 100
+    background: $menu-bg
+    text-align: center
+    &-show
+      max-height: 1000px
+  ul 
+    li
+      float: left
+      +pc-960 
+        float: none
+        border-bottom: 1px solid #656e79
+  a 
+    padding: 0px 18px
+    color: #fff
+    @extend %font16
+    line-height: 60px
+    +pc-960
+      line-height: 50px
+    &:hover 
+      color: $tertiary
+
+/* 內容 */
+main 
+  overflow: hidden
+  display: block
+section
+  position: relative
+.section
+  &__block
+    @extend %margin-auto
+    max-width: 1280px
+    padding: 60px 2%
+    +pc-960
+      padding: 30px 6%
+    +mobile-480
+      padding: 30px 2%
+
+/* 焦點優惠 */
+h1 
+  +title(#000, 30px, 30px)
+  +mobile-480
+    font-size: 25px
+    margin: 10px auto
+
+.bg-three-point 
+  background: #e9e0dd
+
+.point-content 
+  img
+    max-width: 220px
+.col3
+  +mobile-min-640 
+    +flex-center
+    justify-content: center
+
+/* 精選基金 */
+.bg-gry
+  background: #f3f3f3
+.title__block
+  &:after
+    @extend %title-line
+  &:before
+    @extend %title-line
+  b
+    color: #dc7f00
+    +font-bold
+
+.fund
+  &-name
+    font-size: 1.25rem
+    line-height: 1.6rem
+    +font-bold
+    p
+      color: $color-gray
+      +font-bold
+    +mobile-480
+      font-size: 22px
+  &-advantage
+    @extend %font18
+    ul
+      list-style: disc
+      padding-left: 20px
+    p
+      +font-bold
+      display: inline
+
+/* 按鈕：立即開戶、推薦基金、基金資訊 */
+.btn
+  &__block
+    +flex-center
+    justify-content: center
+    text-align: center
+    div + div
+      margin-left: 20px
+    a
+      color: #fff
+      text-align: center
+    i
+      margin-left: 5px
+    +mobile-480
+      clear: both
+      display: block
+      div + div
+        margin-left: 0
+  &-open
+    @extend %btn-base
+    background: $tertiary
+    +btn-hover(#c57800)
+    @extend %btn-nonewidth
+    +mobile-640 
+      width: 100%
+  &-fund
+    @extend %btn-base
+    background: $primary
+    +btn-hover(#b1000c)
+    @extend %btn-nonewidth
+  &-infor
+    @extend %btn-base
+    background: $color-gray
+    +btn-hover(#272727)
+    @extend %btn-nonewidth
+
+/* 圖表區 */
+.chart
+  &__block
+    @extend %margin-auto
+    @extend %content-space
+    text-align: center
+    h3
+      +border-bottom(#000)
+      +title(#000, 23px, 40px)
+      display: inline
+  &__caption
+    text-align: center
+    font-size: 12px
+    letter-spacing: 1px
+    padding-top: 10px
+    line-height: 16px
+    color: $color-gray
+    +mobile-640 
+      text-align: justify
+    p
+      display: inline-block
+      text-align: justify
+    span
+      display: inline
+      color: #ab6f6f
+table
+  width: 100%
+  text-align: center
+  background: #fff
+.table
+  &__block
+    @extend %margin-auto
+    @extend %content-space
+    th 
+      background: $bg-gary
+      font-size: 1.125rem
+      +font-bold
+      padding: 10px 0
+      color: #fff
+      +mobile-480
+        font-size: 0.9rem 
+    tr
+      &:nth-child(odd)
+        background: #cecece
+    td
+      @extend %font16
+      padding: 10px 5px
+      vertical-align: middle
+
+/* RWD 表格 */
+.rwd
+  &-table
+    margin-bottom: 10px
+  +mobile-480 
+    th
+      display: none
+    td
+      display: block
+      line-height: 25px
+      &:first-child
+        background: $bg-gary
+        color: #fff
+        width: 100%
+        font-size: 20px
+      &:before
+        width: 100%
+        content: attr(data-th)
+        float: left
+        +font-bold
+.img
+  &__block
+    @extend %margin-auto
+    max-width: 600px
+
+/* 上標符號 */
+sup 
+  color: $primary
+  display: inline-block
+.supred
+  color: $color-blue
+
+/* 影片區 */
+#video
+  margin-bottom: 50px
+.video
+  &__list
+    @extend %margin-auto
+    @extend %activity-block
+  &__block
+    display: flex
+    @extend %font18
+    h3 
+      color: $secondary
+      +font-bold
+      font-size: 22px
+      +border-bottom(#ccc)
+      line-height: 35px
+      margin-bottom: 15px
+    ul
+      list-style: none
+      padding: 0
+      @extend %font16
+      text-indent: -1.4em
+      padding-left: 1.4em
+      li
+        &:before
+          font-family: "Font Awesome 5 Free"
+          font-weight: 600
+          content: "\f35a"
+          padding-right: 5px
+  &__show
+    width: 100%
+    margin-right: 2%
+
+/* 活動辦法 */
+.activity
+  &__block
+    @extend %activity-block
+    a
+      display: inline
+      +font-bold
+    ul
+      overflow: hidden
+      padding-left: 40px
+      list-style: disc
+      +mobile-640
+        padding-left: 20px
+      li
+        margin-bottom: 10px
+      b
+        +font-bold
+      p
+        color: $secondary
+        +font-bold
+        display: inline
+
+/* footer */  
+footer 
+  color: #fff
+  background: $menu-bg
+  padding-bottom: 10px
+  overflow: hidden
+  @extend %font16
+  text-align: center
+  a 
+    color: #259bbf
+    display: unset
+    &:hover
+      color: #81e0e4
+.footer
+  &__block
+    @extend %margin-auto
+    max-width: 1280px
+    padding: 70px 40px
+    overflow: hidden
+    +mobile-480
+      padding: 30px 2% 60px 2%
+  &__btn
+    text-align: center
+    font-size: 24px
+    cursor: pointer
+    margin-bottom: 20px
+    transition: $trans-time
+    color: #dddddd
+    i
+      padding-left: 10px
+    &:hover
+      color: #fff
+  .showcontent
+    max-height: 100vh
+    height: auto
+
+/* 詳細說明 */    
+.description
+  &__block
+    text-align: justify
+    line-height: 25px
+    letter-spacing: 1px
+    display: none
+    ul
+      list-style: disc
+      padding-left: 5%
+      li
+        margin-bottom: 10px
+    a
+      display: inline-block
+      +font-bold
+    p
+      @extend %list-point
+
+    .extra-list
+      color: #ceb981
+      p
+        @extend %list-point
+    .companyinfor
+      margin-top: 50px
+      text-align: center
+      p
+        display: block
+        font-size: 14px
+        color: #fff
+
+/* 分享列 */
+.scrollingBox
+  display: flex
+  width: 100%
+  position: fixed
+  bottom: 10px
+  left: 10px
+  z-index: 99
+  .btn 
+    display: inline-block
+    border-radius: 50%
+    width: 40px
+    height: 40px
+    margin: 0 4px
+    cursor: pointer
+    opacity: 0.8
+  svg 
+    display: inline-block
+    border: 0
+    width: 100%
+    height: 100%
+  .fb 
+    background: #4267b2
+  .line 
+    background: #00b700
+  .email 
+    background: #19acda
+  .goTop 
+    background: $color-gray
+    display: none
+    color: #fff
+  .fixedLink 
+    max-width: 165px
+    margin: 0 2px
+.goTop 
+  a 
+    display: inline
+    
+.share
+  &__blcok
+    position: fixed
+    z-index: 10000
+    top: 50%
+    transform: translateY(-50%)
+    right: 0
+    background: rgba(255,255,255,0.8)
+    padding: 5px
+    +pc-769
+      display: flex
+      top: auto
+      transform: translateY(0)
+      bottom: 0
+      left: 0
+      text-align: center
+  &-icon
+    max-width: 45px
+    @extend %margin-auto
+    color: #fff
+    -webkit-writing-mode: vertical-lr
+    writing-mode: vertical-lr 
+    line-height: 45px
+    padding: 10px 0
+    font-size: 1.125rem
+    +font-bold
+    letter-spacing: 0.1rem
+    cursor: pointer
+    transition: 0.5s
+    +pc-769
+      max-width: none
+      -webkit-writing-mode: horizontal-tb
+      writing-mode: horizontal-tb
+      line-height: 20px
+      display: flex
+      justify-content: center
+      align-items: center
+    img
+      max-width: 18px
+      display: inline
+      +pc-769
+        display: block
+        margin: 0
+    &.opentrack
+      background: $primary
+      &:hover
+        background: #aa0000
+    &.copy-url
+      background: #ff6a46
+      &:hover
+        background: #ed431a
+  &-icon + .share-icon
+    margin-top: 5px
+    +pc-769
+      margin: 0 0 0 5px
+
+hr
+  +mobile-480
+    display: none
+
+

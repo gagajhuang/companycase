@@ -1,0 +1,461 @@
+.fundlist__content .tableblock, .fundlist-title, .discount-style, h2 {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.list-content .btn-fund-intro, .list-content .fundinfor, .list-content .btnbuy {
+  font-size: 1rem;
+  color: #fff;
+  padding: 7px 12px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+@media (max-width: 1024px) {
+  .list-content .btn-fund-intro, .list-content .fundinfor, .list-content .btnbuy {
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+body {
+  color: #333333;
+}
+
+.section__block {
+  max-width: 960px;
+}
+
+sup {
+  color: #e00617;
+}
+
+.menu .opentrack {
+  padding: 0px 18px;
+  color: #fff;
+  line-height: 60px;
+  background: #ef4e28;
+  cursor: pointer;
+  font-weight: bold;
+}
+.menu .opentrack:hover {
+  background: #e76545;
+}
+
+.banner__block {
+  position: relative;
+  overflow: hidden;
+  background: url(../images/bg-banner.jpg) no-repeat bottom center/cover;
+  height: 920px;
+}
+.banner__block .scroll-arrow a {
+  position: absolute;
+  display: block;
+  left: 50%;
+  bottom: 5%;
+  transform: translateX(-15px);
+  color: #fff;
+  font-size: 30px;
+  animation: scroll-down 1s infinite;
+  cursor: pointer;
+}
+@media (max-width: 640px) {
+  .banner__block {
+    height: 600px;
+  }
+}
+.banner-pc {
+  max-width: 650px;
+  margin-top: 100px;
+  cursor: pointer;
+}
+
+@keyframes scroll-down {
+  0% {
+    bottom: 5%;
+  }
+  50% {
+    bottom: 6%;
+  }
+  100% {
+    bottom: 5%;
+  }
+}
+.airplane {
+  position: absolute;
+  animation: airplane-act 3s 0.5s forwards;
+  transform: translate(-20%, 80%);
+}
+@media (max-width: 1366px) {
+  .airplane {
+    animation: airplane-act2 2s 0.5s forwards;
+    transform: translate(-50%, 90%);
+  }
+}
+@media (max-width: 960px) {
+  .airplane {
+    display: none;
+  }
+}
+
+@keyframes airplane-act {
+  0% {
+    transform: translate(-60%, 110%);
+  }
+  100% {
+    transform: translate(-20%, 80%);
+  }
+}
+@keyframes airplane-act2 {
+  0% {
+    transform: translate(-60%, 90%);
+  }
+  100% {
+    transform: translate(-50%, 80%);
+  }
+}
+h2 {
+  max-width: 550px;
+}
+
+.discount-content {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+}
+@media (max-width: 960px) {
+  .discount-content {
+    display: block;
+  }
+}
+.discount-style {
+  position: relative;
+  background: #fff3d6;
+  padding: 15px;
+  border-radius: 20px;
+  max-width: 370px;
+}
+@media (max-width: 960px) {
+  .discount-style:nth-child(2) {
+    margin-top: 50px;
+  }
+}
+.discount-style img {
+  position: absolute;
+  max-width: 110px;
+  top: -40px;
+  left: -10px;
+}
+.discount-style h3 {
+  font-family: "Noto Sans TC";
+  font-weight: bold;
+  color: #08385e;
+  font-size: 30px;
+}
+.discount-style h3 span {
+  color: #e00617;
+  font-family: "Noto Sans TC";
+  font-weight: bold;
+  font-size: 40px;
+}
+.discount-new {
+  background: #ffe2d6;
+}
+.discount-text {
+  background: #fff;
+  border-radius: 20px;
+  margin-top: 10px;
+  padding: 15px;
+  font-size: 1.25rem;
+  line-height: 1.6rem;
+  letter-spacing: 1px;
+}
+.discount-text p {
+  font-weight: bold;
+  line-height: 1.75rem;
+}
+.discount-text strong {
+  font-family: "Arial";
+  font-weight: 900;
+  font-size: 1.75rem;
+  color: #ef4e28;
+}
+.discount-btn {
+  background: #e00617;
+  border-radius: 50px;
+  padding: 7px 30px;
+  margin-top: 10px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+}
+.discount-btn:hover {
+  background: #cc0000;
+}
+.discount-btn a {
+  color: #fff;
+  font-weight: bold;
+}
+
+.fund-tab {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.fund-tab div {
+  transition: 0.5s;
+}
+.fund-tab div:hover {
+  transform: scale(0.95);
+}
+.fund-img {
+  height: 100px;
+  margin-bottom: 30px;
+  background: url(../images/title-fund.png) no-repeat bottom center/cover;
+}
+.fund-name {
+  font-weight: bold;
+}
+
+#fund__block {
+  background: url(../images/bg-all.jpg) no-repeat bottom center/contain fixed;
+}
+
+.fundlist__block {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+}
+.fundlist__block + .fundlist__block {
+  margin-top: 70px;
+}
+.fundlist__block .remark {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1rem;
+  line-height: 1.2rem;
+}
+.fundlist-style {
+  position: relative;
+  margin: 70px 0 100px 0;
+  border: 3px solid #ccc8c0;
+  padding: 70px 40px 40px;
+  border-radius: 50px;
+  background: #f7f7f7;
+}
+.fundlist-style li:not(:last-child) {
+  margin-bottom: 20px;
+  vertical-align: bottom;
+  border-bottom: 1px solid #565345;
+  padding-bottom: 20px;
+}
+.fundlist-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-110px);
+  max-width: 220px;
+  height: 80px;
+  top: -30px;
+  background: url(../images/bg-title.png) no-repeat center/contain;
+  font-size: 1.875rem;
+  line-height: 55px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #fff;
+  text-align: center;
+}
+.fundlist-title span {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #fff100;
+}
+.fundlist__content {
+  display: none;
+}
+.fundlist__content .tableblock {
+  max-width: 800px;
+  text-align: justify;
+  line-height: 2.2rem;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+.fundlist__content .tableblock table {
+  width: 100%;
+  border: 1px solid #b3b3b3;
+}
+.fundlist__content .tableblock table th {
+  background: #d0d0d0;
+  padding: 5px 0;
+  font-weight: bold;
+  font-size: 1.125rem;
+  vertical-align: middle;
+  padding: 0 2%;
+}
+.fundlist__content .tableblock table th:nth-child(1) {
+  width: 28%;
+}
+@media (max-width: 480px) {
+  .fundlist__content .tableblock table th {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+.fundlist__content .tableblock table td {
+  padding: 5px 0;
+  width: 15%;
+  background: #fff;
+}
+.fundlist__content .chart__caption {
+  text-align: justify;
+}
+
+@media (max-width: 480px) {
+  .list-content .btn__block {
+    display: flex;
+  }
+}
+.list-content .btnbuy {
+  background: #ef4e28;
+  margin-left: 10px;
+}
+@media (max-width: 1024px) {
+  .list-content .btnbuy {
+    margin-left: 0;
+  }
+}
+.list-content .fundinfor {
+  background: #f9a532;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+}
+.list-content .btn-fund-intro {
+  background: #f9a532;
+}
+.list-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+@media (max-width: 1024px) {
+  .list-name {
+    display: block;
+  }
+}
+.list-name:hover .fund-name {
+  color: #f9a532;
+  font-weight: bold;
+}
+.list-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: end;
+}
+@media (max-width: 1024px) {
+  .list-title {
+    padding-bottom: 10px;
+  }
+}
+.list-title span {
+  color: #00555f;
+  font-weight: bold;
+}
+.list-title p {
+  display: inline;
+  color: #666666;
+}
+.list-title a {
+  color: #333333;
+}
+.list-left {
+  display: flex;
+}
+.list-icon {
+  max-height: 25px;
+  color: #333333;
+  font-weight: bold;
+  padding-right: 5px;
+  margin-right: 5px;
+}
+@media (max-width: 480px) {
+  .list-icon {
+    border: 0;
+  }
+}
+.list-icon .fas {
+  margin-right: 5px;
+  font-size: 1.4rem;
+  vertical-align: middle;
+}
+
+#activity {
+  background: #e3f2ff;
+}
+
+.activity__block span {
+  color: #333333;
+  font-weight: bold;
+}
+.activity__block ul p {
+  color: #e00617;
+}
+.activity__table {
+  width: 100%;
+  border: 1px solid #b3b3b3;
+  background: #fff;
+  margin: 15px auto;
+  line-height: 2rem;
+}
+@media (max-width: 480px) {
+  .activity__table {
+    font-size: 1rem;
+  }
+}
+.activity__table tr:not(:last-child) {
+  border: 1px solid #b3b3b3;
+}
+.activity__table th {
+  font-weight: bold;
+  background: #e4e4e4;
+}
+.activity__table th:last-child {
+  text-align: left;
+}
+@media (max-width: 480px) {
+  .activity__table th {
+    vertical-align: middle;
+    line-height: 1.5rem;
+  }
+}
+.activity__table td:first-child {
+  width: 15%;
+}
+@media (max-width: 480px) {
+  .activity__table td:first-child {
+    width: 18%;
+  }
+}
+.activity__table td:nth-child(even) {
+  font-weight: bold;
+  color: #ef4e28;
+  width: 12%;
+}
+@media (max-width: 480px) {
+  .activity__table td:nth-child(even) {
+    width: 28%;
+  }
+}
+.activity__table td:last-child {
+  text-align: left;
+}
+.activity__table sup {
+  vertical-align: super;
+  font-size: smaller;
+  color: #2c67ae;
+}
+
+/*# sourceMappingURL=main.css.map */
