@@ -1,0 +1,1309 @@
+// #mission-quiz, #mission-match{
+#mission-game{
+  opacity: 0;
+  pointer-events: none;
+  &.loaded {
+      opacity: 1;
+      pointer-events: auto;
+  }
+}
+//問答任務
+#june-mission-quiz, #july-mission-quiz, #august-mission-quiz{
+  position: relative;
+  // opacity: 0;
+  height: 1080px;
+  background: -moz-linear-gradient(top,  #0089d1 0%, #01b6ad 42%);
+  background: -webkit-linear-gradient(top,  #0089d1 0%,#01b6ad 42%);
+  background: linear-gradient(to bottom,  #0089d1 0%,#01b6ad 42%);
+  @include pc-1080{
+    height: 218vw;
+    padding-top: 60px;
+  }
+  @include mobile(640px){
+    height: 100vh;
+    min-height: 850px;
+  }
+  // 初始化
+  img{
+    display: block;
+  }
+  // 圖片
+  .img{
+    &-bg{
+      position: absolute;
+      width: 104%;
+      left: 50%;
+      transform: translateX(-50%);
+      @include pc-1080{
+        width: 93vw;
+      }
+    }
+    &-top{
+      top: -18px;
+      @include pc-1080{
+        top: -2vw;
+      }
+    }
+    &-bottom{
+      bottom: -25px;
+      z-index: 1;
+      @include pc-1080{
+        z-index: 0;
+        bottom: vwMobile(-20)
+      }
+      img{
+        &:nth-child(1){
+          @include pc-1080{
+            display: none;
+          }
+        }
+        &:nth-child(2){
+          display: none;
+          @include pc-1080{
+            width: vwMobile(700);
+            display: block;
+            
+          }
+        }
+      }
+    }
+    &-hat{
+      position: absolute;
+      top: -65px;
+      left: 50%;
+      transform: translateX(-50%);
+      @include pc-1080{
+        width: 25vw;
+        top: -7.8vw;
+      }
+    }
+    &-line{
+      position: absolute;
+      right: 0;
+      top: 9%;
+      overflow: hidden;
+      @include pc-1080{
+        top: 2.4%;
+      }
+      img{
+        &:nth-child(1){
+          @include pc-1080{
+            display: none;
+          }
+        }
+        &:nth-child(2){
+          display: none;
+          @include pc-1080{
+            width: vwMobile(332);
+            display: block;
+          }
+        }
+      }
+    }
+    &-animal{
+      position: absolute;
+      right: 0;
+      z-index: 2;
+      bottom: -30%;
+      right: 0%;
+      @include pc-1080{
+        bottom: -45vw;
+        width: 42vw;
+        display: none;
+      }
+      &-m{
+        position: absolute;
+        bottom: 20vw;
+        width: 35%;
+        right: 20%;
+        display: none;
+        @include pc-1080{
+          display: block;
+        }
+      }
+    }
+  }
+  .mission-block{
+    height: 100%;
+    // height: calc(100% - 60px);
+    background: url("../images/mission/june/quiz/bg-block.png") no-repeat top/cover;
+    @include pc-1080{
+      background: url("../images/mission/june/quiz/bg-block-m.png") no-repeat 80% 4vw/cover
+    }
+    @include mobile(640px){
+      height: 100vh;
+      min-height: 850px;
+      // background-position: bottom;
+    }
+  }
+  .quiz{
+    &-content{
+      position: relative;
+      top: 20%;
+      @include margin-auto;
+      max-width: 1010px;
+      width: 100%;
+      max-width: 940px;
+      height: 480px;
+      border-radius: 70px;
+      padding: 30px 0 50px 0;
+      background: -moz-linear-gradient(top,  rgb(1 182 173 / 90%) 0%, rgb(1 131 125 / 90%) 50%);
+      background: -webkit-linear-gradient(top,  rgb(1 182 173 / 90%) 0%, rgb(1 131 125 / 90%) 50%);
+      background: linear-gradient(to bottom, rgb(1 182 173 / 90%) 0%, rgb(1 131 125 / 90%) 50%);
+      @include pc-1080{
+        top: 15%;
+        width: 89.5vw;
+        height: vw(1050);
+        border-radius: 10vw;
+        padding: 8vw 0 0 0;
+      }
+    }
+    &-theme{
+      margin-left: 45px;
+      @include pc-1080{
+        padding: 0 2%;
+        margin-left: 0;
+      }
+      &-name{
+        display: flex;
+        justify-content: start;
+        align-items: flex-end;
+        margin-top: 30px;
+        @include pc-1080{
+          justify-content: center;
+          margin-left: 8vw;
+          margin-top: 0;
+        }
+      }
+      &-img{
+        position: absolute;
+        left: 75px;
+        top: 175px;
+        @include pc-1080{
+          display: none;
+        }
+      } 
+      p{
+        @include font-line(42);
+        line-height: 3.5rem;
+        font-weight: 600;
+        display: inline-block;
+        background: #fff;
+        padding: 0px 30px 3px;
+        border-radius: 50px;
+        letter-spacing: 5px;
+        color: #23607c;
+        margin-right: 10px;
+        @include pc-1080{
+          justify-content: center;
+          font-size: vwMobile(50);
+          line-height: vwMobile(70);
+          padding: 0 vwMobile(40) vwMobile(7);
+        }
+      }
+      img{
+        // margin-left: vw2X(15);
+        @include pc-1080{
+          width: vwMobile(90);
+        }
+      }
+      span{
+        @include font-line(21);
+        color: #fff;
+        letter-spacing: 3px;
+        display: block;
+        padding: vw2X(40) 0;
+        @include pc-1080{
+          text-align: center;
+          font-size: 4vw;
+          line-height: 5vw;
+        }
+      }
+      
+    }
+    // 問題區
+    &-list{
+      position: absolute;
+      top: 105px;
+      right: -22px;
+      max-width: 785px;
+      height: 550px;
+      @include margin-auto;
+      background: url('../images/mission/june/quiz/bg-cloud.png') no-repeat 15px top;
+      @include pc-1080{
+        // top: 40vw;
+        top: vw(300);
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        background: url('../images/mission/june/quiz/bg-cloud-m.png') no-repeat center top/contain;
+        height: 85vw;
+        width: 82vw;
+      }
+      &-num{
+        @include flex-center;
+        margin-top: 45px;
+        @include pc-1080{
+          margin: vwMobile(35) vwMobile(30) 0 0;
+          // align-items: flex-end;
+        }
+        p{
+          font-family: Arial, "Helvetica Neue";
+          font-weight: 900;
+          font-size: 4.5rem;
+          text-align: center;
+          color: $quizColor;
+          @include pc-1080{
+            font-size: 11vw;
+          }
+        }   
+        img{
+          @include pc-1080{
+            width: vwMobile(127);
+            position: absolute;
+            right: 20%;
+            top: 0;
+          }
+        }
+      }
+      &-topic{
+        max-width: 550px;
+        @include margin-auto;
+        @include font-line(21);
+        line-height: 1.65rem;
+        color: #0078b6;
+        font-weight: 500;
+        text-align: center;
+        padding: 20px 0 8px;
+        letter-spacing: 2px;
+        white-space: pre-wrap;
+        @include pc-1080{
+          font-size: vwMobile(26);
+          line-height: 4.5vw;
+          padding: vwMobile(25) 0;
+          max-width: none;
+          width: 74vw;
+        }
+        @include mobile(640px){
+          width: 78vw;
+        }
+        span{
+          display: inline-block;
+          width: 60px;
+          border-bottom: 2px solid #0078b6;
+          @include pc-1080{
+            width: 30px;
+            border-bottom: 1px solid #0078b6;
+          }
+        }
+      }
+    }
+    
+  }
+  .choice{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 450px;
+    @include margin-auto;
+    @include pc-1080{
+      max-width: 400px;
+      width: 45vw;
+      margin: 0 auto;
+    }
+    &-item{
+      position: relative;
+      width: calc( 100%/ 2)- 4%;
+      height: 40px;
+      background: #40babf;
+      border-radius: 10px;
+      box-shadow: inset 2px 2px 3px 0px #8ee5ea;
+      margin: 1% 2%;
+      color: #fff;
+      text-align: center;
+      @include font-line(20);
+      line-height: 38px;
+      letter-spacing: 2px;
+      cursor: pointer;
+      &::before{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        box-shadow: inset -2px -2px 3px 0px #279da3;
+        border-radius: 10px;
+        pointer-events: none;
+      }
+      @include pc-1080{
+        width: 100vw;
+        margin-bottom: 3vw;
+        height: 8vw;
+        line-height: 7.5vw;
+        font-size: 4vw;
+        
+      }
+    }
+    &-wrong{
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 9;
+      overflow: hidden;
+      letter-spacing: 2px;
+      display: none;
+      &-modal{
+        max-width: 200px;
+        @include margin-auto;
+        padding: 30px;
+        border: 2px solid $borderColor;
+        border-radius: 10px;
+        background: #fff;
+        text-align: center;
+        color: $primaryColor;
+        @include font-line(16);
+        font-weight: 500;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      &-close{
+        background: $primaryColor;
+        color: #fff;
+        cursor: pointer;
+        margin-top: 20px;
+        border-radius: 30px;
+        padding: 10px 10px 10px 15px;
+      }   
+    } 
+  }  
+  // 進度條樣式
+  .stepper{
+    &-block{
+      @include flex-center;
+      @include margin-auto;
+      margin-top: 7%;
+      .done{
+        background: $quizColor;
+        color: #fff;
+      }
+      @include pc-1080{
+        margin-top: 2vw;
+        // margin-top: 0;
+      }
+    }
+    &-item{
+      margin: 5px;
+      @include pc-1080{
+        margin: 2.5vw;
+      }
+    }
+    &-button{
+      width: 10px;
+      height: 10px;
+      background: #9a9898;
+      border-radius: 50%;
+      padding: 0;
+      border: 0;
+      @include pc-1080{
+        width: 2vw;
+        height: 2vw;
+      }
+    }   
+  }
+  .scanlight{
+    background: linear-gradient(-70deg, #80e5e0, #22afd9 50%, #80e5e0);
+    background-size: 200% 100%;
+    border-radius: 10px;
+    animation: answerLights 2s linear 0s infinite;
+  }
+  @keyframes answerLights{
+    0%{
+      background-position: 0 0
+    } 
+    50%{
+      background-position: -100% 0
+    }
+    100%{
+      background-position: -200% 0
+    }
+  } 
+}
+
+// 配對任務
+#june-mission-match, #july-mission-match{
+  height: vh2X(1080);
+  padding-top: 60px;
+  @include pc-1080{
+    height: vhMobile(750); //總寬vh
+    background: #0c8dd0;
+  }
+  .mission-block{
+    height: vh2X(1080);
+    // height: calc(vh2X(1080) - 60px);
+    background: url('../images/mission/june/match/bg-block.jpg') no-repeat center top/cover;
+    @include pc-1080{
+      height: vwMobile(1334); //內容背景vw
+      background: url("../images/mission/june/match/bg-block-m.jpg") no-repeat center/cover;
+    }
+  }
+  .match{
+    &-title{
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 0 0 25px 25px;
+      box-shadow: inset -3px -3px 9px 0px #e0e0e0;
+      background: #fff;
+      @include flex-center;
+      display: inline-flex;
+      // padding: 35px 30px;
+      padding: vh2X(40);
+      text-align: center;
+      @include pc-1080{
+        width: 80%;
+        text-align: left;
+        padding: vhMobile(16);
+      }
+      img{
+        @include pc-1080{
+          width: 20vw;
+        }
+      }
+      &-text{
+        @include pc-1080{
+          margin-left: 2%;
+        }
+        p{
+          // @include font-line(40);
+          font-size: vh2X(40);
+          line-height: vh2X(50);
+          letter-spacing: vh2X(5);
+          font-weight: 900;
+          color: $matchTextColor;
+          border-bottom: 3px solid;
+          padding: 0px 50px 5px;
+          margin-bottom: 10px;
+          @include pc-1080{
+            font-size: 6vw;
+            line-height: 8vw;
+            padding: 0 0 5px;
+            border-bottom: 2px solid;
+            margin-bottom: vhMobile(5);
+          }
+        }
+        span{
+          // @include font-line(18);
+          font-size: vh2X(20);
+          line-height: vh2X(28);
+          letter-spacing: 1px;
+          font-weight: 500;
+          color: $matchTextColor;
+          @include pc-1080{
+            font-size: 3.5vw;
+            line-height: 4vw;
+          }
+        }
+      }
+    }
+    &__main{
+      max-width: 1220px;
+      width: vh2X(1220);
+      margin: 0 auto;
+      position: relative;
+      @include pc-1080{
+        // width: vwMobile(750);
+        width: 100%
+      }
+    }
+  }
+  .img{
+    &-sun{
+      position: absolute;
+      width: 18.9%;
+      left: 0;
+      top: -17%;
+      @include pc-1080{
+        width: vwMobile(158);
+        top: vwMobile(60);
+        left: vwMobile(42);
+      }
+    }
+  }
+  .earth{
+    position: relative;
+    width: vh2X(660);
+    margin: 0 auto;
+    margin-top: vh2X(33);
+    @include pc-1080{
+      width: 100%
+    }
+    p{
+      text-align: center;
+      font-size: vh2X(24);
+      font-weight: 400;
+      color: #fff;
+      letter-spacing: 2px;
+      filter: drop-shadow(2px 2px 3px #22426b);
+      @include pc-1080{
+        font-size: vwMobile(28);
+      }
+      &::after{
+        content: '';
+        display: block;
+        width: 0;
+        margin: vh2X(15) auto 0 auto;
+        border-style: solid;
+        border-width: vh2X(10) vh2X(7.5) 0 vh2X(7.5);
+        border-color: #fff transparent transparent transparent;
+      }
+    }
+    img{
+      width: 100%;
+    }
+    .img{
+      &-earth{
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        @include pc-1080{
+          width: vwMobile(530);
+          margin-top: vwMobile(220);
+        }
+      }
+    }
+  }
+  .item{
+    &-style{
+      
+      animation: itemAct 1s infinite;
+    }
+    &-location01{
+      position: absolute;
+      width: 61.8%;
+      left: -8%;
+      top: 14%;
+      cursor: pointer;
+      
+      @include pc-1080{
+        // width: vwMobile(245);
+        width: 48.5%;
+        left: 5%;
+        top: 35%;
+      }
+    }
+    &-location02{
+      position: absolute;
+      width: 51.7%;
+      right: -4%;
+      top: 22%;
+      cursor: pointer;
+      @include pc-1080{
+        // width: vwMobile(195);
+        width: 40.3%;
+        right: 13%;
+        top: 40%;
+      }
+    }
+    &-location03{
+      position: absolute;
+      width: 57.2%;
+      bottom: 1%;
+      right: 12%;
+      cursor: pointer;
+      @include pc-1080{
+        // width: vwMobile(177);
+        width: 42%;
+        bottom: -4%;
+        right: 29%;
+      }
+    }
+    @keyframes itemAct {
+      0%{
+        transform: scale(1);
+      }
+      50%{
+        transform: scale(0.98);
+      }
+      100%{
+        transform: scale(1);
+      }
+    }
+  }
+  
+  // 分類
+  .category{
+    width: 100%;
+    &-item{
+      position: absolute;
+      cursor: pointer;
+      width: 19.7%;
+      height: vh2X(253);
+      padding-top: 5%;
+      background: url('../images/mission/june/match/bg-category.png') no-repeat center/contain;
+      @include pc-1080{
+        width: vwMobile(222);
+        height: vwMobile(210);
+        padding-top: vwMobile(30);
+      } 
+      &::after{
+        content: '';
+        display: block;
+        width: 0;
+        border-style: solid;
+        border-width: vh2X(12) 0 vh2X(12) vh2X(15);
+        border-color: transparent transparent transparent #fff;
+        filter: drop-shadow(2px 2px 3px #22426b);
+        position: absolute;
+        top: 48%;
+        left: -10%;
+        @include pc-1080{
+          display: none;
+        }
+      }
+      p{
+        text-align: center;
+        color: #fff;
+        // font-size: vh2X(28);
+        font-size: vh2X(26);
+        letter-spacing: 1.5px;
+        filter: drop-shadow(2px 2px 3px #22426b);
+        margin-top: vh2X(10);
+        @include pc-1080{
+          // font-size: vwMobile(28);
+          font-size: vwMobile(24);
+        }
+      }
+      img{
+        margin: 0 auto;
+        display: block;
+        width: 72.3%;
+      }
+    }
+    &-item-01{
+      right: 0;
+      top: 0;
+      @include pc-1080{
+        right: 2%;
+        top: 8%;
+      } 
+    }
+    &-item-02{
+      right: 3%;
+      bottom: 8%;
+      @include pc-1080{
+        right: 4%;
+        top: auto;
+        bottom: -21%;
+      } 
+    }
+    &-item-03{
+      left: 0;
+      bottom: 16%;
+      transform: scaleX(-1);
+      p, img{
+        transform: scaleX(-1);
+      }
+      @include pc-1080{
+        left: 4%;
+        bottom: -21%;
+      } 
+    }
+    .add-arrowAct{
+      &::after{
+        animation: arrowAct 0.8s infinite;
+      }
+    }
+    @keyframes arrowAct {
+      0%{
+        left: -10%;
+      }
+      50%{
+        left: -12%;
+      }
+      100%{
+        left: -10%;
+      }
+    }  
+  }
+ 
+  .selected{
+    z-index: 3;
+  }
+  .completed{
+    opacity: 0.2;
+    pointer-events: none;
+    animation: none;
+  }
+  .mask{
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: vh2X(1080);
+    // height: calc(vh2X(1080) - 60px);
+    top: 60px;
+    display: none;
+    transition: 0.5s;
+    animation: maskAct 0.5s;
+    @include pc-1080{
+      height: vwMobile(1334);
+    } 
+    @include mobile(640px){
+      height: vhMobile(750); 
+    } 
+    @keyframes maskAct {
+      0%{
+        opacity: 0;
+      }
+      40%{
+        opacity: 1;
+      }
+    }
+  }
+  .mask-show{
+    display: block;
+  }
+  .wrongshake{
+    animation: shakeAct 3 0.2s;
+  }
+  @keyframes shakeAct {
+    0%{
+      transform: rotate(-5deg);
+    }
+    50%{
+      transform: rotate(5deg);
+    }
+    100%{
+      transform: rotate(-5deg);
+    }
+  }
+
+}
+.popip__main-new{
+  max-width: 660px;
+  width: 100%;
+  margin: 0 auto;
+  transform: translateY(50%);
+  @include pc-1080{
+    width: vwMobile(588);
+    max-width: none;
+    transform: none;
+    margin-top: vwMobile(180);
+  }
+  .popup{
+    &-new-box{
+      position: relative;
+      width: 100%;
+      padding: 10px 0;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: flex-end;
+      text-align: center;
+      background: linear-gradient(45deg, #0091bd 0%, #74dbbe 100%);
+      border-radius: 30px;
+      min-height: 330px;
+      display: none;
+      @include pc-1080{
+        min-height: vwMobile(585);
+      }
+    }
+    &-content{
+      width: 70%;
+      margin:0 2% 12% 0;
+      @include pc-1080{
+        width: 55%;
+      }
+    }
+    &-dialog {
+      position: absolute;
+      top: -35%;
+      right: 10%;
+      background: #fff;
+      border-radius: 50px;
+      padding: 70px 40px;
+      color: #159fbd;
+      @include font-line(18);
+      line-height: 32px;
+      letter-spacing: 2px;
+      font-weight: 500;
+      text-align: center;
+      @include pc-1080{
+        width: vwMobile(420);
+        top: vwMobile(-120);
+        right: vwMobile(-50);
+        padding: vwMobile(86) vwMobile(15);
+        line-height: vwMobile(40);
+        border-radius: vwMobile(70);
+        letter-spacing: vwMobile(1);
+      }
+      &::after{
+        content: '';
+        position: absolute;
+        left: vh2X(50);
+        bottom: vh2X(-55);
+        width: vh2X(50);
+        height: vh2X(87);
+        background: url('../images/mission/june/bg-dialog-arrow.png') no-repeat center/contain;
+        @include pc-1080{
+          bottom: vh2X(-45);
+          width: vwMobile(50);
+        }
+      } 
+      
+    }
+    &-green-point{
+      @include flex-center;
+      color: #fff;
+      img{
+        @include pc-1080{
+          width: vwMobile(210);
+        }
+      }
+      span{
+        padding-left: 5px;
+        font-family: arial;
+        @include font-line(20);
+        
+      }
+    }
+    &-text{
+      @include font-line(18);
+      letter-spacing: 1px;
+      color: #fff;
+      @include pc-1080{
+        font-size: vwMobile(24);
+        line-height: vwMobile(30);
+        // word-break: keep-all;
+      }
+      span{
+        @include pc-1080{
+          display: block;
+        }
+      }
+    }
+    &-btn{
+      &-block{
+        position: absolute;
+        bottom: 5%;
+        right: 4%;
+        max-width: 450px;
+        width: 100%;
+        @include flex-center;
+        @include pc-1080{
+          position: relative;
+          display: block;
+          right: 0;
+          bottom: 0;
+          top: vwMobile(20);
+        }
+      }
+      &-style{
+        width: 100%;
+        max-width: 200px;
+        height: 40px;
+        display: inline-block;
+        background: $matchTextColor;
+        color: #fff;
+        text-decoration: none;
+        padding: 0 15px;
+        border-radius: 30px;
+        white-space: nowrap;
+        @include font-line(20);
+        line-height: 40px;
+        letter-spacing: 1px;
+        cursor: pointer;
+        @include pc-1080{
+          max-width: none;
+          border-radius: vwMobile(50);
+          width: vwMobile(220);
+          height: vwMobile(63);
+          font-size: vwMobile(28);
+          line-height: vwMobile(63);
+        }
+        + .popup-btn-style{
+          margin-left: 10px;
+          @include pc-1080{
+            margin-left: 0;
+            margin-top: vwMobile(10);
+          }
+        }
+      }
+      
+    }
+    &--show{
+      display: flex;
+    }
+  }
+  .completed-text{
+    white-space: pre-wrap;
+    @include pc-1080{
+      font-size: vwMobile(26);
+      line-height: vwMobile(38);
+    }
+  }
+  .img{
+    &-athlete{
+      position: absolute;
+      bottom: 0;
+      left: 3%;
+      height: 383px;
+      width: 252px;
+      background: url("../images/mission/june/img-lin.png") no-repeat top/cover;
+      @include pc-1080{
+        width: vwMobile(256);
+        height: vwMobile(500);
+        background-size: contain;
+        background-position: bottom;
+      }
+    }
+    &-electricity{
+      position: absolute;
+      top: -14%;
+      left: 5%;
+      @include pc-1080{
+        width: vwMobile(40);
+        top: vwMobile(-40);
+        left: vwMobile(25);
+        bottom: auto;
+      }
+    }
+    &-coin{
+      position: absolute;
+      bottom: -25%;
+      right: -4%;
+      @include pc-1080{
+        width: vwMobile(85);
+        top: vwMobile(-30);
+        right: vwMobile(35);
+        bottom: auto;
+      }
+    }
+    &-leaf{
+      position: absolute;
+      bottom: 8%;
+      right: -2%;
+      @include pc-1080{
+        width: vwMobile(106);
+        top: vwMobile(130);
+        bottom: auto;
+        right: 0;
+        z-index: 1;
+      }
+    }
+  }
+  .btn{
+    &-bonus{
+      @include flex-center;
+      display: inline-flex;
+      font-size: 15px;
+      @include pc-1080{
+        font-size: vwMobile(18);
+      }
+      img{
+        width: 66%;
+        margin-right: 5px;
+      }
+      
+    }
+  }
+  .wrong-box{
+    max-width: 580px;
+    @include margin-auto;
+    padding: 0;
+    @include pc-1080{
+      width: vwMobile(580);
+      max-width: none;
+      min-height: vwMobile(315);
+    }
+    .popup{
+      &-content{
+        margin-bottom: 7vw;
+      }
+      &-dialog{
+        right: -5%;
+        padding: 75px 20px;
+        border-radius: 4vw;
+        max-width: 330px;
+        width: 100%;
+        @include pc-1080{
+          max-width: none;
+          width: vwMobile(360);
+          top: vwMobile(-100);
+          right: vwMobile(-50);
+          padding: vwMobile(70) vwMobile(10);
+          line-height: vwMobile(40);
+          border-radius: vwMobile(70);
+          min-height: vwMobile(45);
+        }
+        @include mobile(640px){
+          // padding: vwMobile(50) vwMobile(20);
+          padding: vwMobile(70) vwMobile(20);
+        }
+        .wrong-text{
+          white-space: pre-wrap;
+          @include pc-1080{
+            font-size: vwMobile(24);
+            line-height: vwMobile(34);
+          }
+          @include mobile(640px){
+            font-size: vwMobile(26);
+            line-height: vwMobile(32);
+          }
+        }
+      }
+      &-btn-block{
+        right: 0;
+        width: 53%;
+        bottom: 20%;
+        @include pc-1080{
+          position: relative;
+          display: block;
+          right: -2vw;
+          bottom: 0;
+          top: 0;
+          width: 100%;
+        }
+      }
+    }
+    .img{
+      &-coin{
+        top: -13%;
+        right: 15%;
+        bottom: auto;
+      }
+      &-leaf{
+        position: absolute;
+        bottom: -30%;
+        right: 8%;
+        @include pc-1080{
+          top: auto;
+          width: vwMobile(106);
+          bottom: vwMobile(-45);
+          right: vwMobile(50);
+          z-index: 1;
+        }
+      }
+      &-athlete{
+        @include pc-1080{
+          width: vwMobile(256);
+          height: vwMobile(380);
+          background-size: cover;
+          background-position: top;
+        }
+      }
+    }
+    .btn{
+      &-try{
+        @include font-line(24);
+        height: 50px;
+        line-height: 50px;
+        @include pc-1080{
+          height: vwMobile(63);
+          font-size: vwMobile(28);
+          line-height: vwMobile(63);
+        }
+      }
+    }
+  }
+  .finish-box{
+    position: relative;
+    background: transparent;
+    border: 2px solid #eeeeee;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 70px;
+    font-size: 23px;
+    line-height: 36px;
+    @include pc-1080{
+      max-width: none;
+      min-height: auto;
+      font-size: vwMobile(38);
+      line-height: vwMobile(58);
+      padding: vwMobile(15);
+      border-radius: vwMobile(80);
+    }
+    
+    .img{
+      &-leaf{
+        bottom: -10%;
+        left: -25%;
+        right: auto;
+        @include pc-1080{
+          width: vwMobile(156);
+          bottom: vwMobile(-50);
+          left: vwMobile(-20);
+          top: auto;
+        }
+      }
+      &-coin{
+        top: -13%;
+        bottom: auto;
+        @include pc-1080{
+          width: vwMobile(156);
+          top: -10%;
+          right: -5%;
+        }
+      }
+      &-electricity{
+        top: 0%;
+        left: 5%;
+        width: 7%;
+      }
+      &-electricity2{
+        width: 6%;
+        position: absolute;
+        bottom: 11%;
+        right: 12%;
+        transform: rotate(45deg);
+        @include pc-1080{
+          bottom: 0%;
+          right: 3%;
+        }
+      }
+    }
+    .popup-content{
+      background: #eeeeee;
+      width: 100%;
+      margin: 0;
+      border-radius: 70px;
+      height: 410px;
+      @include pc-1080{
+        height: vwMobile(420);
+        border-radius: vwMobile(80);
+      }
+    }
+    .popup-green-point{
+      color: #05b3ac;
+    }
+    .finish-text{
+      color: #05b3ac;
+      margin-top: 25%;
+      display: block;
+      @include pc-1080{
+        margin-top: vwMobile(80);
+      }
+    }
+    
+  }
+  #popup-btn-close-new{
+    position: absolute;
+    top: -25%;
+    right: 6%;
+    @include pc-1080{
+      top: 0;
+    }
+  }
+}
+
+// 七月
+#july-mission-quiz{
+  .mission-block{
+    background: url(../images/mission/july/quiz/bg-block.png) no-repeat top/cover;
+    @include pc-1080{
+      background: url(../images/mission/july/quiz/bg-block-m.jpg) no-repeat top/cover;
+    }
+  }
+  .quiz{
+    &-content{
+      background: -moz-linear-gradient(top,  rgb(0 120 182 / 90%) 0%, rgb(0 89 135 / 90%) 50%);
+      background: -webkit-linear-gradient(top,  rgb(0 120 182 / 90%) 0%, rgb(0 89 135 / 90%) 50%);
+      background: linear-gradient(to bottom, rgb(0 120 182 / 90%) 0%, rgb(0 89 135 / 90%) 50%);
+    }
+    &-theme{
+      &-name{
+        @include pc-1080{
+          margin-left: 4vw;
+        }
+      }
+      
+    }
+    &-list{
+      background: url('../images/mission/july/quiz/bg-cloud.png') no-repeat 15px top/contain;
+      @include pc-1080{
+        background: url('../images/mission/june/quiz/bg-cloud-m.png') no-repeat center top/contain;
+      }
+    }
+  }
+  .img{
+    &-animal{
+      bottom: -12%;
+      right: 10%;
+    }
+  }
+  .choice-item{
+    background: #3a67ad;
+    box-shadow: inset 2px 2px 3px 0px #5a85c8;
+    &::before{
+      box-shadow: inset -2px -2px 3px 0px #335a98;
+    }
+  }
+  .scanlight{
+    background: linear-gradient(-70deg, #698bd7, #5079d5 50%, #698bd7);
+    background-size: 200% 100%;
+  }
+}
+
+// 八月
+#august-mission-quiz{
+  .mission-block{
+    background: url(../images/mission/august/quiz/bg-block.jpg) no-repeat top/cover;
+    @include pc-1080{
+      background: url(../images/mission/august/quiz/bg-block-m.jpg) no-repeat top/cover;
+    }
+  }
+  .quiz{
+    &-content{
+      background: -moz-linear-gradient(top,  rgba(3 158 204 / 90%) 0%, rgb(40 172 196 / 90%) 50%);
+      background: -webkit-linear-gradient(top,  rgb(3 158 204 / 90%) 0%, rgb(40 172 196 / 90%) 50%);
+      background: linear-gradient(to bottom, rgb(3 158 204 / 90%) 0%, rgb(40 172 196 / 90%) 50%);
+    }
+    &-theme{
+      &-name{
+        @include pc-1080{
+          margin-left: 4vw;
+        }
+      }
+    }
+    &-list{
+      background: url('../images/mission/july/quiz/bg-cloud.png') no-repeat 15px top/contain;
+      top: 125px;
+      @include pc-1080{
+        top: vw(300);
+        background: url('../images/mission/june/quiz/bg-cloud-m.png') no-repeat center top/contain;
+      }
+    }
+  }
+  .stepper{
+    &-block{
+      margin-top: 5%;
+    }
+  }
+  .img{
+    &-animal{
+      bottom: -22%;
+      right: 6%;
+      &-m{
+        @include pc-1080{
+          right: 10%;
+        }
+      }
+    }
+  }
+  .choice-item{
+    background: #39bfe0;
+    box-shadow: inset 2px 2px 3px 0px #7cd5eb;
+    &::before{
+      box-shadow: inset -2px -2px 3px 0px #2c97e2;
+    }
+  }
+}
+

@@ -1,0 +1,484 @@
+//任務列表
+#app {
+  background-image: url(../images/mission/sep/bg.jpg);
+  background-repeat: repeat;
+  background-size: 10px;
+}
+#mission {
+  opacity: 0;
+  pointer-events: none;
+  &.loaded {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  &-bonus, &-points{
+    .mission-item-title{
+      padding-left: 30px;
+      @include pc-1080 {
+        padding-left: vw(35);
+      }
+    }
+    .mission-item-text{
+      color: #004d6e;
+    }
+  }
+}
+.mission {
+  &-lists-block {
+    // display: none;
+    position: relative;
+    padding: 145px 0 155px;
+    background: url(../images/mission/sep/bg-mission.png) no-repeat top/cover;
+    @include pc-1080 {
+      padding: 60px 0 vw(425);
+      background: url(../images/mission/sep/bg-mission-m.png) no-repeat
+        center/contain;
+    }
+  }
+  &-outline {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    @include pc-1080 {
+      margin-top: vw(135);
+    }
+    &-text {
+      margin-top: 15px;
+      @include pc-1080 {
+        margin-top: vw(55);
+      }
+      p {
+        @include font-line(20);
+        @include flex-center;
+        color: $matchTextColor;
+        font-weight: 500;
+        @include pc-1080 {
+          font-size: vw(38);
+          line-height: vw(60);
+        }
+      }
+      img {
+        width: 150px;
+        margin-left: 10px;
+        @include pc-1080 {
+          width: vw(277);
+        }
+      }
+    }
+  }
+  &-title {
+    display: inline-block;
+    padding: 3px;
+    border-radius: 10vw;
+    background-image: linear-gradient(to top right, #0091bc 50%, #74dbbf 60%);
+    &-border {
+      background: #fff;
+      border-radius: 10vw;
+      padding: 0 5px 3px 5px;
+      border: 0;
+    }
+    h2 {
+      text-align: center;
+      @include font-line(43);
+      background: linear-gradient(to top right, #0091bc 50%, #74dbbf 60%);
+      background: -webkit-linear-gradient(45deg, #0091bc 50%, #74dbbf 60%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      margin: 0px 35px;
+      font-weight: 800;
+      @include pc-1080 {
+        font-size: 8vw;
+        line-height: 12vw;
+      }
+    }
+  }
+  &-lists {
+    max-width: 800px;
+    display: grid;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    grid-template-columns: repeat(auto-fill, 360px);
+    grid-gap: 10px;
+    @include margin-auto;
+    margin-top: -25px;
+    @include pc-1080 {
+      margin-top: vw(120);
+      display: flex;
+      grid-gap: 0;
+      max-width: none;
+    }
+  }
+  &-bonus {
+    &-img {
+      position: relative;
+      &::before {
+        content: "";
+        display: block;
+        background: url(../images/mission/sep/img-coin01.png) no-repeat
+          center/contain;
+        width: 59px;
+        height: 61px;
+        position: absolute;
+        left: 20px;
+        top: 5px;
+        animation: iconAct infinite 2.5s 1s;
+        @include pc-1080 {
+          width: vw(112);
+          height: vw(116);
+          left: vw(66);
+          top: vw(25);
+        }
+      }
+      &::after {
+        content: "";
+        display: block;
+        background: url(../images/mission/sep/img-coin02.png) no-repeat
+          center/contain;
+        width: 48px;
+        height: 46px;
+        position: absolute;
+        right: 45px;
+        bottom: 15px;
+        animation: iconAct infinite 2.5s;
+        @include pc-1080 {
+          width: vw(92);
+          height: vw(86);
+          right: vw(60);
+          bottom: vw(50);
+        }
+        
+      }
+      @keyframes iconAct {
+        0%{
+          transform: translateY(0);
+        }
+        50%{
+          transform: translateY(5px);
+        }
+        100%{
+          transform: translateY(0);
+        }
+      }
+      .img {
+        &-light {
+          position: absolute;
+          &-01 {
+            width: 23px;
+            height: 59px;
+            left: 105px;
+            top: -20px;
+            @include pc-1080 {
+              width: vw(41);
+              height: vw(111);
+              left: vw(210);
+              top: vw(-30);
+            }
+          }
+          &-02 {
+            width: 41px;
+            height: 19px;
+            right: 15px;
+            bottom: 62px;
+            @include pc-1080 {
+              width: vw(78);
+              height: vw(35);
+              right: vw(10);
+              bottom: vw(150);
+            }
+          }
+        }
+      }
+      .img-animate{
+        animation: mainImg infinite 2.5s;
+      }
+    }
+  }
+  &-points {
+    .img-animate{
+      animation: mainImg infinite 2.5s 1s;
+    }
+  }
+  @keyframes mainImg {
+    0%{
+      transform: translateY(0);
+    }
+    50%{
+      transform: translateY(10px);
+    }
+    100%{
+      transform: translateY(0);
+    }
+  }
+}
+.mission-item {
+  position: relative;
+  cursor: pointer;
+  margin-top: 60px;
+  transition: 0.5s;
+  @include pc-1080 {
+    width: vw(675);
+    margin: 0 vw(40);
+    opacity: 0.5;
+  }
+  &-title {
+    padding-bottom: 15px;
+    font-size: 30px;
+    color: $primaryColor;
+    text-align: center;
+    border-bottom: 2px solid $primaryColor;
+    font-weight: 800;
+    @include flex-center;
+    align-items: flex-start;
+    gap: 0 10px;
+    @include pc-1080 {
+      font-size: vw(70);
+      padding-bottom: vw(30);
+      gap: 0 vw(15);
+    }
+    
+    img {
+      &:nth-child(2) {
+        display: none;
+      }
+      @include pc-1080 {
+        &:nth-child(1) {
+          display: none;
+        }
+        &:nth-child(2) {
+          width: vw(147);
+          display: block;
+          position: relative;
+          left: vw(10);
+          top: vw(8);
+        }
+      }
+    }
+  }
+  &-box {
+    position: relative;
+    margin-top: 35px;
+    @include pc-1080 {
+      margin-top: vw(50);
+    }
+    &::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 15px;
+      position: absolute;
+      background: #a37a00;
+      border-radius: 15px;
+      box-shadow: 0px 0px 0px 2px #dfaa0b inset;
+      z-index: 1;
+      @include pc-1080 {
+        top: vw(30);
+      }
+    }
+  }
+  &-content {
+    position: relative;
+    border-radius: 15px;
+    border: 2px solid #dfaa0b;
+    background: linear-gradient(50deg, #dda601 0%, #ffe7a0 70%, #dda601 100%);
+    overflow: hidden;
+    z-index: 2;
+    text-align: center;
+    padding: 30px 25px;
+    @include pc-1080 {
+      padding: vw(50) vw(25) vw(80) vw(25);
+    }
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: -12px;
+      width: 360px;
+      height: 327px;
+      background: url(../images/mission/sep/bg-radial.png) no-repeat center;
+      z-index: -1;
+      opacity: 0.625;
+      animation: circleLight 25s linear infinite;
+      @include pc-1080 {
+        width: vw(678);
+        height: vw(627);
+        top: vw(15);
+        background: url(../images/mission/sep/bg-radial.png) no-repeat center/90%;
+      }
+      @keyframes circleLight {
+        0%{
+          transform: rotate(0deg);
+        }
+        100%{
+          transform: rotate(360deg);
+        }
+      }
+    }
+  }
+  &-img {
+    max-width: 263px;
+    width: 100%;
+    @include pc-1080 {
+      max-width: none;
+    }
+  }
+  &-text {
+    text-align: center;
+    @include font-line(18);
+    color: #fff;
+    letter-spacing: 2px;
+    min-height: 64px;
+    font-weight: 500;
+    @include pc-1080 {
+      min-height: vw(116);
+    }
+    p {
+      @include flex-center;
+      align-items: flex-start;
+      white-space: nowrap;
+      @include pc-1080 {
+        font-size: vw(35);
+        line-height: vw(54);
+      }
+    }
+    img {
+      width: 125px;
+      margin: 0 5px;
+      @include pc-1080 {
+        width: vw(265);
+      }
+    }
+  }
+  &-btn {
+    width: 45%;
+    background-color: $primaryColor;
+    margin: 30px auto 0;
+    // padding: vw2X(10) 0 vw2X(12);
+    height: 42px;
+    border-radius: 30px;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    line-height: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    @include pc-1080 {
+      width: vw(347);
+      height: vw(90);
+      border-radius: vw(50);
+      font-size: vw(35);
+      line-height: vw(89);
+      margin-top: vw(55);
+    }
+  }
+}
+
+// 每月任務
+.mission-month {
+  .mission-item-content {
+    border: 2px solid #4fb3cd;
+    background: $primaryColor;
+    &::before {
+      content: none;
+    }
+  }
+  .mission-item-box {
+    &::after {
+      background-color: #05718c;
+      box-shadow: 0px 0px 0px 2px #4fb3cd inset;
+    }
+  }
+  .mission-item-content {
+    background: linear-gradient(45deg, #0091bc 0%, #74dbbf 85%);
+    background: -webkit-linear-gradient(45deg, #0091bc 0%, #74dbbf 85%);
+    text-align: center;
+  }
+  .icon-athlete {
+    position: absolute;
+    left: 3%;
+    bottom: 29%;
+    @include pc-1080 {
+      width: vw(148);
+      bottom: vw(200);
+      left: vw(50);
+    }
+  }
+}
+// 尚未開啟
+.not-opened {
+  cursor: auto;
+  .mission-item-content {
+    background: $notOpenColor;
+    border: 2px solid $notOpenColor;
+  }
+  .mission-item-box {
+    &::after {
+      background-color: #626262;
+      box-shadow: 0px 0px 0px 2px $notOpenColor inset;
+    }
+  }
+  .mission-item-text {
+    font-size: 30px;
+    font-weight: 600;
+    @include pc-1080 {
+      font-size: vw(60);
+    }
+  }
+  .mission-item-btn {
+    background: $notOpenColor;
+  }
+}
+
+.bg-sun {
+  position: absolute;
+  top: vw(440);
+  width: 100%;
+  display: none;
+  @include pc-1080 {
+    display: block;
+  }
+}
+
+// swiper 樣式
+.swiper-container {
+  overflow: hidden;
+  position: relative;
+  @include pc-1080 {
+    padding-bottom: vw(160);
+  }
+}
+.swiper-slide-active {
+  opacity: 1;
+}
+.swiper-horizontal > .swiper-pagination-bullets {
+  @include flex-center;
+  z-index: 1;
+  .swiper-pagination-bullet {
+    width: vw(28);
+    height: vw(28);
+    padding: vw(5);
+    background: #0091bc;
+    opacity: 1;
+    margin: 0 vw(15);
+  }
+  .swiper-pagination-bullet-active {
+    width: vw(33);
+    height: vw(33);
+    display: inline-block;
+    border-radius: 50%;
+    background: linear-gradient(to top, #0091bc 20%, #74dbbf 80%);
+    &::after {
+      content: "";
+      display: block;
+      width: vw(33);
+      height: vw(33);
+      background: #fff;
+      border-radius: 50%;
+    }
+  }
+}
+
+[v-cloak] {
+  display: none;
+}

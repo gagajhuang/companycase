@@ -1,0 +1,322 @@
+#marathon {
+
+    min-height: 100vh;
+    background: url('/images/marathon/bg.png') #1d85c7 center top no-repeat;
+
+    @include tablet {
+        background: url('/images/marathon/bg_mb.png') #0478c1 center vwMobile(738) no-repeat;
+        background-size: vwMobile(750) vwMobile(578);
+    }
+
+    > .center {
+        padding: 107px 0 200px;
+        @include tablet {
+            padding: calc(vwMobile(64) + 62px) 0 vwMobile(200);
+        }
+    }
+
+    .page__caption {
+        position: relative;
+        left: 21px;
+        width: 365px;
+        height: 102px;
+        font-size: 0;
+        text-indent: -5000px;
+        margin: 0 auto 27px;
+        background: url('/images/marathon/caption.png') 0 0 no-repeat;
+        @include tablet {
+            left: vwMobile(-8);
+            width: vwMobile(390);
+            height: vwMobile(108);
+            margin: 0 auto vwMobile(33);
+            background-image: url('/images/marathon/caption_mb.png');
+            background-size: contain;
+        }
+    }
+
+    .page__description {
+        position: relative;
+        // left: 22px;
+        color: #fff;
+        font-size: 24.72px;
+        font-weight: 400;
+        text-align: center;
+        letter-spacing: 2.5px;
+        line-height: 1.66;
+        margin-bottom: 22px;
+        padding-left: 40px;
+
+        @include tablet {
+            // left: 0;
+            font-size: vwMobile(28);
+            letter-spacing: vwMobile(2.5);
+            line-height: 1.54;
+            padding-left: vwMobile(2);
+            margin-bottom: vwMobile(33);
+        }
+
+        img {
+            height: 46px;
+            margin: 0 3px;
+            vertical-align: top;
+            @include tablet {
+                height: vwMobile(44);
+                margin: 0 vwMobile(3);
+            }
+        }
+
+    }
+
+    .page__logos {
+        position: relative;
+        // left: 14px;
+        height: 79px;
+        margin-bottom: 28px;
+        @include tablet {
+            height: vwMobile(111);
+            margin-bottom: vwMobile(36);
+            // padding-left: vwMobile(20);
+        }
+    }
+
+    .page__logos__row {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        pointer-events: none;
+        padding-left: 30px;
+        box-sizing: border-box;
+        @include tablet {
+            padding-left: vw(4);
+        }
+
+    }
+
+    .page__logos__image {
+        width: 80px;
+        height: 79px;
+        margin: 0 7.5px;
+        background-image: url('/images/marathon/logos.png');
+        background-repeat: no-repeat;
+        @include tablet {
+            width: vwMobile(110);
+            height: vwMobile(109);
+            margin: 0 vwMobile(11);
+            background-image: url('/images/marathon/logos_mb.png');
+            background-size: vwMobile(912) vwMobile(109);
+        }
+    }
+
+    @for $i from 1 through 9 {
+        .page__logos__image-#{$i} {
+            background-position: #{($i - 1) * -84}px 0;
+            opacity: 0;
+            transform: scale(0);
+            transition: .35s ease;
+            transition-property: transform, opacity;
+            @include tablet {
+                background-position: vwMobile(($i - 1) * -114) 0;
+            }
+        }
+        .page__logos--row-1 .page__logos__image-#{$i} {
+            @if $i < 5 {
+                transition-delay: #{.3 + .05 * $i}s;
+            } @else {
+                transition-delay: #{.05 + .05 * ($i - 4)}s;
+            }
+        }
+        .page__logos--row-2 .page__logos__image-#{$i} {transition-delay: #{.1 + .05 * $i}s;}
+    }
+
+    .page__logos--row-1 .page__logos__row-1 .page__logos__image,
+    .page__logos--row-2 .page__logos__row-2 .page__logos__image {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .page__form {
+        position: relative;
+        left: 22px;
+        width: 660px;
+        height: 318px;
+        margin: 0 auto;
+        padding: 33px 0 0;
+        background: url('/images/marathon/form.png') 0 0 no-repeat;
+        box-sizing: border-box;
+        @include tablet {
+            left: vwMobile(6);
+            width: vwMobile(580);
+            height: vwMobile(558);
+            padding: vwMobile(48) 0 0;
+            background-image: url('/images/marathon/form_mb.png');
+            background-size: contain;
+        }
+    }
+
+    .page__form__title {
+        position: relative;
+        left: -3px;
+        color: #fff;
+        font-size: 34.6px;
+        font-weight: 500;
+        text-align: center;
+        letter-spacing: 4px;
+        margin-bottom: 27px;
+        @include tablet {
+            left: vwMobile(2);
+            font-size: vwMobile(42);
+            letter-spacing: vwMobile(4);
+            margin-bottom: vwMobile(40);
+        }
+    }
+
+    .page__form__input {
+        position: relative;
+        left: 2px;
+        display: block;
+        width: 318px;
+        height: 84px;
+        color: #19a3bf;
+        font-size: 34px;
+        letter-spacing: 2px;
+        text-align: center;
+        // text-transform: uppercase;
+        margin: 0 auto 26px;
+        padding: 0 0 0 2px;
+        border: 0;
+        border-radius: 14px;
+        box-sizing: border-box;
+        background: #ffffff;
+        box-shadow: rgba(255,255,255,1) 0 0 3px, rgba(255,255,255,1) 0 0 5px, rgba(0,0,0,.15) inset 0 0 7px;
+        @include tablet {
+            left: vwMobile(2);
+            width: vwMobile(380);
+            height: vwMobile(98);
+            font-size: vwMobile(38);
+            letter-spacing: vwMobile(2);
+            margin: 0 auto vwMobile(43);
+            padding-left: vwMobile(2);
+            border-radius: vwMobile(18);
+            box-shadow: rgba(255,255,255,1) 0 0 vwMobile(3), rgba(255,255,255,1) 0 0 vwMobile(5), rgba(0,0,0,.15) inset 0 0 vw(14);
+        }
+        &:focus {
+            outline: 0;
+        }
+    }
+
+    .page__form__button {
+        position: relative;
+        left: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 213px;
+        height: 47px;
+        color: #0393bc;
+        font-size: 20.4px;
+        font-weight: 600;
+        text-align: center;
+        letter-spacing: 2px;
+        margin: 0 auto 27px;
+        padding-left: 2px;
+        padding-bottom: 2px;
+        border-radius: 47px;
+        background: #fff;
+        box-sizing: border-box;
+        cursor: pointer;
+        @include tablet {
+            left: vwMobile(6);
+            width: vwMobile(324);
+            height: vwMobile(72);
+            font-size: vwMobile(31);
+            letter-spacing: vwMobile(4);
+            margin: 0 auto vwMobile(30);
+            padding-left: vwMobile(2);
+            padding-bottom: vwMobile(0);
+            border-radius: vwMobile(35);
+        }
+        &.fetching {
+            opacity: 0.7;
+            pointer-events: none;
+        }
+    }
+
+    .page__form__note {
+        color: #fff;
+        font-size: 13px;
+        text-align: center;
+        letter-spacing: 1px;
+        padding-right: 32px;
+        @include tablet {
+            font-size: vwMobile(22);
+            letter-spacing: vwMobile(1.25);
+            text-indent: vwMobile(19);
+            padding-right: 0;
+        }
+    }
+
+    .page__gifts {
+        position: relative;
+        > div {
+            position: absolute;
+            left: 50%;
+            background-image: url('/images/marathon/gifts.png');
+            background-repeat: no-repeat;
+            transform: scale(0.9);
+            @include tablet {
+                background-image: url('/images/marathon/gifts_mb.png');
+                background-size: vwMobile(660) vwMobile(241);
+                transform: scale(1);
+            }
+        }
+    }
+
+    .page__gifts-delight {
+        top: -97px;
+        width: 205px;
+        height: 191px;
+        margin-left: 133px;
+        background-position: 0 0;
+        z-index: 1;
+        @include tablet {
+            top: vwMobile(-120);
+            width: vwMobile(217);
+            height: vwMobile(241);
+            margin-left: vwMobile(-102);
+        }
+    }
+
+    .page__gifts-eeyo {
+        top: -137px;
+        width: 206px;
+        height: 185px;
+        margin-left: -355px;
+        background-position: -210px 0;
+        @include tablet {
+            top: vwMobile(-134);
+            width: vwMobile(189);
+            height: vwMobile(180);
+            margin-left: vwMobile(-297);
+            background-position: vwMobile(-220) 0;
+        }
+    }
+
+    .page__gifts-garmin {
+        top: -186px;
+        width: 163px;
+        height: 171px;
+        margin-left: 300px;
+        background-position: -420px 0;
+        @include tablet {
+            top: vwMobile(-135);
+            width: vwMobile(203);
+            height: vwMobile(214);
+            margin-left: vwMobile(118);
+            background-position: vwMobile(-440) 0;
+        }
+    }
+
+}

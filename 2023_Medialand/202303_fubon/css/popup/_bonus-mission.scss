@@ -1,0 +1,12 @@
+#popup-bonus-mission {
+
+    .quantity {
+        position: relative;
+        top: -2px;
+        font-size: .75em;
+        @include tablet {
+            top: vw(-2)
+        }
+    }
+
+}

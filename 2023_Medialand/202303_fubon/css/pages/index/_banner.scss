@@ -1,0 +1,884 @@
+#index-main {
+
+    $root: &;
+
+    height: calc(vh2X(1080) - 62px);
+    background: url('/images/index/banner/background_v2.jpg') center top no-repeat;
+    background-size: auto 100%;
+    // background-image: url('/images/index/banner/background-2.png'), url('/images/index/banner/background.png'), linear-gradient(0deg, rgba(222,238,243,1) 0%, rgba(249,249,249,1) 50%, rgba(249,249,249,1) 100%);
+    // background-size: vh2X(3080) vh2X(1080), vh2X(2920) vh2X(831), 100% 100%;
+    // background-position: center center, center vh2X(170), 0 0;
+    // background-repeat: no-repeat, no-repeat, no-repeat;
+    z-index: 2!important;
+
+    @include tablet {
+        height: vw(1811);
+        margin-top: 62px;
+        background: url('/images/index/banner/background_mb_v2.jpg') #f4f4f4 center top no-repeat;
+        background-size: vw(1080) vw(1811);
+    }
+
+    // 活動 Logo
+    .index__main__header__logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: vh2X(704);
+        height: vh2X(158);
+        margin-top: vh2X(-336);
+        margin-left: vh2X(-794);
+        background: url('/images/index/banner/logo_v2.png') 0 0 no-repeat;
+        background-size: contain;
+        
+        @include tablet {
+            top: vw(92);
+            left: vw(39);
+            width: vw(628);
+            height: vw(138);
+            margin: 0;
+            background-image: url('/images/index/banner/logo_mb_v2.png');
+        }
+
+        @at-root #{$root} .index__main__header__logo {
+            opacity: 0;
+            transform: translateX(vh2X(-100));
+            transition: .35s ease .15s;
+            transition-property: opacity, transform;
+            @include tablet {
+                transform: translateX(vw(-100));
+            }
+        }
+        @at-root #{$root}.play .index__main__header__logo {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    // 活動文字
+    .index__main__header__text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        color: #fff;
+        font-size: vh2X(25);
+        font-weight: 400;
+        letter-spacing: vh2X(1.75);
+        line-height: 1.68;
+        margin-top: vh2X(-148);
+        margin-left: vh2X(-756);
+
+        @include tablet {
+            top: vw(1053);
+            left: vw(87);
+            font-size: vw(38);
+            letter-spacing: vw(2.5);
+            line-height: 1.7105;
+            margin: 0;
+        }
+
+        @at-root #{$root} .index__main__header__text {
+            opacity: 0;
+            transform: translateX(vh2X(-100));
+            transition: .35s ease .3s;
+            transition-property: opacity, transform;
+            @include tablet {
+                transform: translateX(vw(-100));
+            }
+        }
+        @at-root #{$root}.play .index__main__header__text {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        img {
+            position: absolute;
+            display: inline-block;
+            height: vh2X(45);
+            margin-left: vh2X(6);
+            // vertical-align: middle;
+            @include tablet {
+                height: vw(66);
+                margin-left: vw(4);
+            }
+        }
+    }
+
+    // 玩法點我看
+    #index-main-btn-guide {
+        span {
+            display: inline-block;
+            color: #004d6e;
+            font-size: vh2X(23);
+            font-weight: 500;
+            line-height: 1.9;
+            border-bottom: #004d6e 1px solid;
+            margin-top: vh2X(4);
+            
+            @include tablet {
+                font-size: vw(35);
+                border-bottom-width: vw(2.5);
+                margin-top: vw(4);
+            }
+        }
+    }
+
+    // 立即參加
+    #index-btn-active2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: vh2X(288);
+        height: vh2X(62);
+        color: #fff;
+        font-size: vh2X(33.7);
+        font-weight: 500;
+        letter-spacing: vh2X(6);
+        margin-top: vh2X(24);
+        margin-left: vh2X(-54);
+        padding: 0 vh2X(38) vh2X(2) vh2X(50);
+        border: #fff vh2X(3) solid;
+        border-radius: vh2X(62);
+        background: #d83f4f;
+        box-sizing: border-box;
+        cursor: pointer;
+        animation: bannerJoinRipple .5s linear infinite;
+        transition: filter .5s ease;
+
+        @include tablet {
+            width: vw(358);
+            height: vw(97);
+            font-size: vw(50);
+            letter-spacing: vw(10);
+            margin-top: vw(30);
+            margin-left: vw(-42);
+            padding: 0 vw(38) vw(2) vw(54);
+            border: #fff vw(3) solid;
+            border-radius: vw(97);
+        }
+
+        @include hover {
+            &:hover {
+                filter: brightness(115%);
+            }
+        }
+        &::after {
+            --choice-arrow-x: 80%;
+            content: '';
+            position: relative;
+            top: vh2X(1);
+            width: vh2X(12);
+            height: vh2X(20);
+            background: url('/images/index/banner/arrow.png') 0 0 no-repeat;
+            background-size: contain;
+            animation: choiceArrowMove .75s ease-in-out infinite;
+
+            @include tablet {
+                top: vw(2);
+                width: vw(16);
+                height: vw(29);
+                background-image: url('/images/index/banner/arrow_mb.png');
+            }
+        }
+    }
+
+    // 常駐按鈕
+    #index-main-btn-mission {
+        position: fixed;
+        bottom: vh2X(64);
+        right: 0;
+        width: vh2X(182);
+        height: vh2X(302);
+        cursor: pointer;
+        mask: url('/images/index/banner/shortcut.png');
+        mask-size: contain;
+        overflow: hidden;
+        transition: .5s ease;
+        transition-property: filter, transform;
+        z-index: 3;
+        
+        @include tablet {
+            bottom: vw(162);
+            width: vw(246);
+            height: vw(403);
+            mask-image: url('/images/index/banner/shortcut_mb.png');
+        }
+
+        &.hide {
+            transform: translateX(100%);
+        }
+        img {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            &.desktop {
+                display: block;
+                @include tablet {
+                    display: none;
+                }
+            }
+            &.mobile {
+                display: none;
+                @include tablet {
+                    display: block;
+                }
+            }
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: vh2X(1000);
+            height: vh2X(1000);
+            border-radius: 50%;
+            background: rgb(255,255,255);
+            background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 30%), rgba(255,255,255,0) 100%;
+            animation: bannerShortcutMove 5s ease infinite;
+            mix-blend-mode: soft-light;
+            pointer-events: none;
+            z-index: 2;
+
+            @include tablet {
+                width: vw(1000);
+                height: vw(1000);
+            }
+        }
+        @include hover {
+            &:hover {
+                filter: brightness(115%);
+            }
+        }
+    }
+
+    // 運動員們
+
+    $athletes: #{$root} '.index__main__athlete';
+
+    .index__main__athlete__card {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background-image: url('/images/index/banner/athletes.png');
+        background-repeat: no-repeat;
+        background-size: vh2X(1050) auto;
+        @include tablet {
+            top: 0;
+            left: 0;
+            margin: 0!important;
+            background-image: url('/images/index/banner/athletes_mb.png');
+            background-size: vw(1260) vw(705);
+        }
+
+
+
+        @at-root #{$root} .index__main__athlete__card {
+            opacity: 0;
+            transform: translateX(vh2X(100));
+            transition: .45s ease;
+            transition-property: opacity, transform;
+            @include tablet {
+                transform: translateX(vw(100));
+            }
+        }
+        @at-root #{$root}.play .index__main__athlete__card {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+
+        
+        &::before {
+            position: absolute;
+            content: '';
+            width: vh2X(113);
+            height: vh2X(33);
+            background-image: url('/images/index/banner/athletes-name.png');
+            background-repeat: no-repeat;
+            background-size: vh2X(360) vh2X(33);
+            @include tablet {
+                width: vw(177);
+                height: vw(51);
+                background-image: url('/images/index/banner/athletes-name_mb.png');
+                background-size: vw(540) vw(51);
+            }
+
+            @at-root #{$root} .index__main__athlete__card::before {
+                opacity: 0;
+                transform: translateY(vh2X(50));
+                transition: .4s ease;
+                transition-property: opacity, transform;
+                @include tablet {
+                    transform: translateY(vw(50));
+                }
+            }
+            @at-root #{$root}.play .index__main__athlete__card::before {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+    }
+
+    .index__main__athlete__card.chen {
+        width: vh2X(322);
+        height: vh2X(436);
+        margin-top: vh2X(-183);
+        margin-left: vh2X(-53);
+        background-position: 0 0;
+        z-index: 1;
+        transition-delay: .5s;
+        @include tablet {
+            top: vw(373);
+            left: vw(161);
+            width: vw(388);
+            height: vw(525);
+        }
+        &::before {
+            top: vh2X(180);
+            left: vh2X(-10);
+            background-position: 0 0;
+            transition-delay: .65s;
+            @include tablet {
+                top: vw(184);
+                left: vw(-80);
+                background-position: 0 0;
+            }
+        }
+    }
+
+    .index__main__athlete__card.kuo {
+        width: vh2X(332);
+        height: vh2X(548);
+        margin-top: vh2X(-244);
+        margin-left: vh2X(111);
+        background-position: vh2X(-350) 0;
+        z-index: 2;
+        transition-delay: .7s;
+        @include tablet {
+            top: vw(301);
+            left: vw(362);
+            width: vw(400);
+            height: vw(660);
+            background-position: vw(-420) 0;
+        }
+        &::before {
+            top: vh2X(409);
+            left: vh2X(34);
+            background-position: vh2X(-120) 0;
+            transition-delay: .8s;
+            @include tablet {
+                top: vw(499);
+                left: vw(85);
+                background-position: vw(-180) 0;
+            }
+        }
+    }
+
+    .index__main__athlete__card.lin {
+        width: vh2X(346);
+        height: vh2X(587);
+        margin-top: vh2X(-263);
+        margin-left: vh2X(271);
+        background-position: vh2X(-700) 0;
+        z-index: 3;
+        transition-delay: .9s;
+        @include tablet {
+            top: vw(271);
+            left: vw(537);
+            width: vw(416);
+            height: vw(705);
+            background-position: vw(-840) 0;
+        }
+        &::before {
+            top: vh2X(242);
+            left: vh2X(205);
+            background-position: vh2X(-240) 0;
+            transition-delay: .95s;
+            @include tablet {
+                top: vw(379);
+                left: vw(313);
+                background-position: vw(-360) 0;
+            }
+        }
+    }
+
+    .index__main__line-1 {
+        position: absolute;
+        bottom: vh2X(860);
+        left: 50%;
+        width: vh2X(503);
+        height: 0;
+        margin: 0 0 0 vh2X(-668);
+        background: url('/images/index/banner/line-1.png') center bottom no-repeat;
+        background-size: vh2X(503) vh2X(205);
+        transition: height .25s ease;
+        pointer-events: none;
+        @at-root #{$root}.play .index__main__line-1 {
+            height: vh2X(205);
+            @include tablet {
+                height: vw(76);
+            }
+        }
+        @include tablet {
+            bottom: vw(1735);
+            left: vw(148);
+            width: vw(420);
+            // height: vw(76);
+            margin: 0;
+            background-image: url('/images/index/banner/line-1_mb.png');
+            background-size: vw(420) vw(76);
+            background-repeat: no-repeat;
+        }
+    }
+
+    .index__main__line-2 {
+        position: absolute;
+        width: 100%;
+        height: 0%;
+        background: url('/images/index/banner/line-2.png') center top no-repeat;
+        background-size: auto calc(vh2X(1080) - 62px);
+        transition: height .55s ease .35s;
+        pointer-events: none;
+        @at-root #{$root}.play .index__main__line-2 {
+            height: 100%;
+            @include tablet {
+                height: vw(1045);
+            }
+        }
+        @include tablet {
+            top: 0;
+            left: 0;
+            width: vw(1080);
+            // height: vw(1045);
+            margin: 0;
+            background-image: url('/images/index/banner/line-2_mb.png');
+            background-size: vw(1080) vw(1045);
+            background-repeat: no-repeat;
+        }
+    }
+
+    // .index__main__athlete__card {
+    //     position: absolute;
+    //     bottom: 0;
+    //     left: 50%;
+    //     width: vh2X(594);
+    //     background-position: 0 0;
+    //     background-repeat: no-repeat;
+    //     background-size: contain;
+    //     transform-origin: left bottom;
+    //     transition: all .5s ease;
+    //     transition-property: transform, filter;
+    //     will-change: transform, filter;
+    //     cursor: pointer;
+    //     -webkit-tap-highlight-color: transparent;
+
+    //     @include tablet {
+    //         top: 0;
+    //         bottom: auto;
+    //         left: 0;
+    //         width: vw(594);
+    //         transform-origin: left top;
+    //     }
+    // }
+
+    // .index__main__athlete__card::before {
+    //     content: '';
+    //     position: absolute;
+    //     bottom: vh2X(138);
+    //     left: vh2X(32);
+    //     width: vh2X(336);
+    //     height: vh2X(84);
+    //     background-image: url('/images/index/banner/button-join.png');
+    //     background-repeat: no-repeat;
+    //     background-size: vh2X(336) vh2X(270);
+    //     pointer-events: none;
+        
+    //     @include tablet {
+    //         bottom: vw(142);
+    //         left: vw(38);
+    //         width: vw(321);
+    //         height: vw(79);
+    //         background-image: url('/images/index/banner/button-join_mb.png');
+    //         background-size: vw(321) vw(246);
+    //     }
+    // }
+
+    // .index__main__athlete__card.lin {
+    //     height: vh2X(879);
+    //     transform: translate(vh2X(-235), vh2X(-62)) scale(1);
+    //     background-image: url('/images/index/banner/athlete-lin.png');
+    //     z-index: 2;
+
+    //     @include tablet {
+    //         height: vw(838);
+    //         transform: translate(vw(10), vw(136)) scale(1);
+    //         background-image: url('/images/index/banner/athlete-lin_mb.png');
+    //     }
+
+    //     &::before {
+    //         opacity: 1;
+    //     }
+
+    //     @at-root #{$athletes}.kuo .index__main__athlete__card.lin {
+    //         transform: translate(vh2X(-218), vh2X(-115)) scale(0.572);
+    //         filter: saturate(0.3) brightness(0.8) contrast(1.2);
+            
+    //         @include tablet {
+    //             transform: translate(vw(58), vw(327)) scale(0.567);
+    //         }
+
+    //         &::before {
+    //             opacity: 0;
+    //         }
+    //     }
+        
+    //     @at-root #{$athletes}.chen .index__main__athlete__card.lin {
+    //         transform: translate(vh2X(-262), vh2X(-210)) scale(0.572);
+    //         filter: saturate(0.3) brightness(0.8) contrast(1.2);
+            
+    //         @include tablet {
+    //             transform: translate(vw(32), vw(337)) scale(0.5616);
+    //         }
+
+    //         &::before {
+    //             opacity: 0;
+    //         }
+    //     }
+    // }
+
+    // .index__main__athlete__card.kuo {
+    //     height: vh2X(815);
+    //     transform: translate(vh2X(246), vh2X(-137)) scale(0.596);
+    //     background-image: url('/images/index/banner/athlete-kuo.png');
+    //     filter: saturate(0.3) brightness(0.8) contrast(1.2);
+    //     z-index: 2;
+            
+    //     @include tablet {
+    //         height: vw(777);
+    //         transform: translate(vw(457), vw(492)) scale(0.5739);
+    //         background-image: url('/images/index/banner/athlete-kuo_mb.png');
+    //     }
+
+    //     &::before {
+    //         opacity: 0;
+    //     }
+
+    //     @at-root #{$athletes}.kuo .index__main__athlete__card.kuo {
+    //         transform: translate(vh2X(64), vh2X(-76)) scale(1);
+    //         filter: none;
+            
+    //         @include tablet {
+    //             transform: translate(vw(283), vw(231)) scale(1);
+    //             z-index: 1;
+    //         }
+
+    //         &::before {
+    //             opacity: 1;
+    //         }
+    //     }
+        
+    //     @at-root #{$athletes}.chen .index__main__athlete__card.kuo {
+    //         transform: translate(vh2X(-30), vh2X(-65)) scale(0.596);
+    //         filter: saturate(0.3) brightness(0.8) contrast(1.2);
+            
+    //         @include tablet {
+    //             transform: translate(vw(240), vw(440)) scale(0.5845);
+    //         }
+
+    //         // &::before {
+    //         //     opacity: 0;
+    //         // }
+    //     }
+
+
+    //     &::before {
+    //         left: vh2X(39);
+    //         background-position: 0 vh2X(-90);
+            
+    //         @include tablet {
+    //             left: vw(37);
+    //             background-position: 0 vw(-82);
+    //         }
+
+    //     }
+    // }
+
+    // .index__main__athlete__card.chen {
+    //     height: vh2X(877);
+    //     transform: translate(vh2X(570), vh2X(-238)) scale(0.545);
+    //     background-image: url('/images/index/banner/athlete-chen.png');
+    //     filter: saturate(0.3) brightness(0.8) contrast(1.2);
+        
+    //     @include tablet {
+    //         height: vw(838);
+    //         transform: translate(vw(764), vw(360)) scale(0.5246);
+    //         background-image: url('/images/index/banner/athlete-chen_mb.png');
+    //     }
+
+    //     &::before {
+    //         opacity: 0;
+    //     }
+
+    //     @at-root #{$athletes}.kuo .index__main__athlete__card.chen {
+    //         @include tablet {
+    //             transform: translate(vw(737), vw(464)) scale(0.5405);
+    //             z-index: 3;
+    //         }
+    //     }
+
+    //     @at-root #{$athletes}.chen .index__main__athlete__card.chen {
+    //         transform: translate(vh2X(300), vh2X(-83)) scale(1);
+    //         filter: none;
+            
+    //         @include tablet {
+    //             transform: translate(vw(502), vw(50)) scale(1);
+    //         }
+
+    //         &::before {
+    //             opacity: 1;
+    //         }
+    //     }
+
+
+    //     &::before {
+    //         left: vh2X(38);
+    //         background-position: 0 vh2X(-180);
+            
+    //         @include tablet {
+    //             left: vw(37);
+    //             background-position: 0 vw(-164);
+    //         }
+
+    //     }
+    // }
+
+    // 對話框們
+    .index__main__athlete__dialog {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: vh2X(374);
+        height: vh2X(201);
+        padding-bottom: vh2X(46);
+        background-image: url('/images/index/banner/dialog.png');
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-size: vh2X(1122) vh2X(201);
+        transition: all .35s ease;
+        transition-property: transform, opacity;
+        will-change: transform, opacity;
+        box-sizing: border-box;
+        // pointer-events: none;
+            
+        @include tablet {
+            left: 0;
+            width: vw(520);
+            height: vw(269);
+            padding-bottom: vw(61);
+            background-image: url('/images/index/banner/dialog_mb.png');
+            background-size: vw(1584) vw(269);
+        }
+
+    }
+
+    .index__main__athlete__dialog.lin {
+        color: #864590;
+        margin-top: vh2X(156);
+        margin-left: vh2X(186);
+        background-position: 0 0;
+        transform: translateY(0);
+        opacity: 1;
+        
+        @include tablet {
+            top: vw(69);
+            left: vw(403);
+            margin: 0;
+        }
+
+        @at-root #{$athletes}.kuo .index__main__athlete__dialog.lin,
+        #{$athletes}.chen .index__main__athlete__dialog.lin {
+            transform: translateY(vh2X(50));
+            opacity: 0;
+            
+            @include tablet {
+                transform: translateY(vw(100));
+            }
+
+        }
+    }
+
+    .index__main__athlete__dialog.kuo {
+        color: #53bb9f;
+        margin-top: vh2X(148);
+        margin-left: vh2X(-4);
+        background-position: vh2X(-374) 0;
+        transform: translateY(vh2X(50));
+        opacity: 0;
+        
+        @include tablet {
+            top: vw(62);
+            left: vw(112);
+            width: vw(512);
+            // height: vw(299);
+            margin: 0;
+            padding-bottom: vw(59);
+            background-position: vw(-528) 0;
+            transform: translateY(vw(100));
+        }
+
+        @at-root #{$athletes}.kuo .index__main__athlete__dialog.kuo {
+            transform: translateY(0);
+            opacity: 1;
+            
+            @include tablet {
+                
+            }
+
+        }
+    }
+
+    .index__main__athlete__dialog.chen {
+        // height: vh2X(231);
+        color: #f7c248;
+        margin-top: vh2X(141);
+        margin-left: vh2X(226);
+        background-position: vh2X(-748) 0;
+        transform: translateY(vh2X(50));
+        opacity: 0;
+        
+        @include tablet {
+            top: vw(76);
+            left: vw(162);
+            width: vw(523);
+            // height: vw(319);
+            margin: 0;
+            padding-bottom: vw(59);
+            background-position: vw(-1056) 0;
+            transform: translateY(vw(100));
+        }
+
+        @at-root #{$athletes}.chen .index__main__athlete__dialog.chen {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .dialog__rank {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: vh2X(95);
+        height: 100%;
+        display: none;
+        
+        @include tablet {
+            flex-shrink: 0;
+            width: vw(123);
+        }
+
+        &-text {
+            font-size: vh2X(20);
+            font-weight: 600;
+            padding-left: vh2X(10);
+            
+            @include tablet {
+                font-size: vw(30);
+                padding-left: vw(6);
+            }
+
+        }
+        &-number {
+            font-size: vh2X(78);
+            font-weight: 900;
+            font-style: italic;
+            text-indent: vh2X(-4);
+            
+            @include tablet {
+                font-size: vw(100);
+                text-indent: vw(-6);
+            }
+
+        }
+    }
+
+    .dialog__info {
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .dialog__people {
+        display: flex;
+        align-items: center;
+        height: vh2X(52);
+        padding-left: vh2X(18);
+        font-size: vh2X(24);
+        font-weight: 600;
+        letter-spacing: vh2X(1.5);
+        display: none;
+        
+        @include tablet {
+            height: vw(74);
+            padding-left: vw(23);
+            font-size: vw(30);
+            letter-spacing: vw(2);
+        }
+
+        &-number {
+            margin-left: vh2X(8);
+            
+            @include tablet {
+                margin-left: vw(9);
+            }
+
+        }
+    }
+
+    .dialog__desc {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        height: vh2X(102);
+        color: #004a62;
+        font-size: vh2X(22);
+        font-weight: 500;
+        letter-spacing: vh2X(2);
+        line-height: vh2X(28);
+        padding-left: vh2X(38);
+        
+        @include tablet {
+            height: vw(204);
+            font-size: vw(32);
+            letter-spacing: vw(4);
+            line-height: vw(40);
+            padding-left: vw(48);
+        }
+
+        br.desktop {
+            display: block;
+            @include tablet {
+                display: none;
+            }
+        }
+
+        br.mobile {
+            display: none;
+            @include tablet {
+                display: block;
+            }
+        }
+
+        span {
+            @include tablet {
+                display: none;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,27 @@
+// RWD Breakpoints
+
+$rwdS: 1080;
+$rwdM: 1024;
+$rwdL: 1280;
+$rwdX: 1600;
+$rwd2X: 1920;
+$rwd2Y: 1080;
+
+$rwdMobile: 750;
+
+// Devices
+$pc: $rwdS + px;
+$desktop: $rwdM + px;
+$mobile: $rwdMobile + px;
+
+$primaryColor: #004c69;
+$secondaryColor: #5accbf;
+$kuoColor: #50b399;
+$linColor: #864590;
+$chenColor: #f4ba45;
+$borderColor:#4fb3cd;
+
+// June
+$quizColor: #2498d2;
+$matchTextColor: #004c69;
+$notOpenColor:#777777;

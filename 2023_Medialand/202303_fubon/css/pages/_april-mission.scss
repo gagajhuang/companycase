@@ -1,0 +1,506 @@
+#april-mission, #may-mission {
+
+    --marquee-right-y: #{vw(-261)};
+    --marquee-bottom-x: #{vw(252)};
+    --marquee-left-y: #{vw(261)};
+
+    position: relative;
+    padding-top: 60px;
+
+    opacity: 0;
+    pointer-events: none;
+
+    &.loaded {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    @include pc {
+        padding-top: 60px;
+    }
+
+    > .center {
+        @include pc {
+            overflow: hidden;
+        }
+    }
+
+    .mission__caption {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: sticky;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: vw(142);
+        border-bottom: #0097bc vw(2) solid;
+        background: linear-gradient(47deg, rgba(0,145,188,1) 0%, rgba(0,145,188,1) 40%, rgba(116,219,191,1) 60%, rgba(116,219,191,1) 100%);
+        box-sizing: border-box;
+        z-index: 2;
+
+        @include pc {
+            position: relative;
+            top: auto;
+            width: 540px;
+            height: 68px;
+            margin: 68px auto 0;
+            border-radius: 68px;
+            border: #0097bc 2px solid;
+        }
+
+        p {
+            color: #004c69;
+            font-size: vw(72);
+            font-weight: 900;
+            text-align: center;
+            letter-spacing: vw(8);
+            text-indent: vw(14);
+            padding-bottom: vw(4);
+            @include pc {
+                font-size: 30px;
+                font-weight: 900;
+                letter-spacing: 3px;
+                text-indent: 9px;
+                padding-bottom: 4px;
+            }
+        }
+
+    }
+
+    .mission__marquees {
+
+        position: relative;
+        z-index: 1;
+
+        @include pc {
+            display: none;
+        }
+
+        > div {
+            position: fixed;
+            top: calc(60px + #{vw(142)});
+            height: calc(100% - 60px - #{vw(142)});
+            background-color: #fff;
+            background-image: url(../images/mission/april/mission-marquee-vertical.png);
+            background-position: center 0;
+            background-repeat: repeat-y;
+            background-size: vw(34) vw(261);
+            z-index: -1;
+            box-sizing: border-box;
+        }
+
+        .mission__marquee-right {
+            right: 0;
+            width: vw(83);
+            border-left: #009cb3 vw(2) solid;
+            animation: aprilMissionMarqueeRight 1s linear infinite;
+        }
+
+        .mission__marquee-bottom {
+            top: auto;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: vw(72);
+            border-top: #009cb3 vw(2) solid;
+            background-image: url(../images/mission/april/mission-marquee-horizontal.png);
+            background-position: 0 center;
+            background-repeat: repeat-x;
+            background-size: vw(252) vw(35);
+            animation: aprilMissionMarqueeBottom 1s linear infinite;
+        }
+
+        .mission__marquee-left {
+            left: 0;
+            width: vw(83);
+            border-right: #009cb3 vw(2) solid;
+            animation: aprilMissionMarqueeLeft 1s linear infinite;
+        }
+
+    }
+
+    .mission__description {
+
+        padding-top: vw(90);
+
+        @include pc {
+            padding-top: 30px;
+        }
+
+        p {
+            color: #004c69;
+            font-size: vw(38);
+            font-weight: 500;
+            text-align: center;
+            line-height: 1.71;
+            letter-spacing: vw(4);
+            padding-left: vw(18);
+            @include pc {
+                font-size: 18px;
+                line-height: 1.611;
+                letter-spacing: 2px;
+                padding-left: 0;
+            }
+        }
+
+    }
+
+    .mission__frame {
+        position: relative;
+        width: vw(746);
+        height: vw(702);
+        // margin: vw(20) auto vw(702 - 664);
+        margin: vw(20) auto 0;
+        @include pc {
+            width: 335px;
+            height: 315px;
+            margin-top: 20px;
+        }
+        &-back,
+        &-front {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: vw(672);
+            border: #4fb3cc vw(4) solid;
+            border-radius: vw(20);
+            background: #004c69;
+            box-sizing: border-box;
+            overflow: hidden;
+            transform: translate3d(0,0,0);
+            @include pc {
+                height: 302px;
+                border: #4fb3cc 2px solid;
+                border-radius: 20px;
+            }
+        }
+        &-back {
+            top: vw(29);
+            @include pc {
+                top: 13px;
+            }
+        }
+        &-front {
+            background: url(../images/mission/april/mission-frame.png) 0 0 repeat;
+            background-size: vw(20) vw(17);
+            @include pc {
+                background: url(../images/mission/april/mission-frame_pc.png) 0 0 repeat;
+                background-size: 9px 9px;
+            }
+        }
+    }
+
+    .step-2 .mission__frame {
+        padding-bottom: vw(38);
+        @include pc {
+            padding-bottom: 20px;
+        }
+    }
+
+    .mission__upload {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../images/mission/april/mission-upload.png) center center no-repeat;
+        background-size: vw(492) vw(491);
+        @include pc {
+            background: url(../images/mission/april/mission-upload_pc.png) center center no-repeat;
+            background-size: 233px 233px;
+        }
+    }
+
+    .step-2 .mission__upload {display: none;}
+
+    .mission__file {
+        display: none;
+    }
+
+    .mission__avatar {
+        display: none;
+        width: 100%;
+        height: 100%;
+        canvas, img {
+            display: block;
+            width: 100%!important;
+            height: 100%!important;
+            object-fit: cover;
+            object-position: center center;
+        }
+        canvas {
+            // display: none;
+        }
+    }
+
+    .step-2 .mission__avatar {
+        display: block;
+    }
+
+    .mission__notice {
+        // display: none;
+        padding-top: vw(70);
+        // padding-bottom: vw(110);
+        @include pc {
+            padding-top: 32px;
+        }
+        p {
+            display: none;
+            color: #d98f7c;
+            font-size: vw(34);
+            font-weight: 500;
+            text-align: center;
+            letter-spacing: vw(1.5);
+            padding-left: vw(26);
+            @include pc {
+                font-size: 15px;
+                letter-spacing: 1px;
+                padding-left: 2px;
+            }
+        }
+    }
+
+    .step-1 .mission__notice p:nth-child(1) {display: block;}
+    .step-2 .mission__notice {
+        padding-top: vw(30);
+        // padding-bottom: vw(110);
+        @include pc {
+            padding-top: 12px;
+        }
+    }
+    .step-2 .mission__notice p:nth-child(2) {display: block;}
+
+    .mission__buttons {
+
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-top: vw(110);
+        padding-bottom: vw(185);
+
+        @include pc {
+            width: 560px;
+            margin: 0 auto;
+            padding-top: 45px;
+            // padding-bottom: 256px;
+            padding-bottom: 100px;
+        }
+
+        a {
+            display: none;
+            text-decoration: none;
+            margin: 0 vw(12) vw(24);
+            @include pc {
+                margin: 0 6px 12px;
+            }
+        }
+
+    }
+
+    .mission__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: vw(337);
+        height: vw(87);
+        color: #ffffff;
+        font-size: vw(34);
+        font-weight: 500;
+        letter-spacing: vw(1);
+        border-radius: vw(87);
+        background: #004d6e;
+        @include pc {
+            width: 164px;
+            height: 44px;
+            font-size: 20px;
+            letter-spacing: 1px;
+            border-radius: 44px;
+        }
+    }
+
+    .step-1 .mission__button--upload {display: flex;}
+    .step-2 .mission__button--change,
+    .step-2 .mission__button--download,
+    .step-2 .mission__button--back,
+    .step-2 .mission__button--share {
+        display: flex;
+        width: vw(377);
+        @include pc {
+            width: 175px;
+        }
+    }
+
+    .mission__ascii-hidden {
+        width: 0;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .mission__ascii-canvas {
+        position: relative;
+        display: inline-block;
+        // &::before {
+        //     content: '';
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     width: 100%;
+        //     height: 100%;
+        //     background: url(../images/mission/april/mission-gradient.jpg) center center no-repeat;
+        //     background-size: contain;
+        //     z-index: 1;
+        //     mix-blend-mode: screen;
+        // }
+        &::after {
+            // content: '';
+            // position: absolute;
+            // top: 0;
+            // left: 0;
+            // width: 100%;
+            // height: 100%;
+            // background: url(../images/mission/april/mission-logo.png) center center no-repeat;
+            // background-size: contain;
+            // z-index: 2;
+        }
+        pre {
+            // // color: rgba(255,255,255,1);
+            // background-image: linear-gradient(0deg,#17bdc3 0, #177bca 100%);
+            // background-clip: text;
+            // -webkit-background-clip: text;
+        }
+    }
+
+    .mission__generating {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        min-height: calc(100vh + 60px);
+        background-image: url(../images/bg.jpg);
+        background-repeat: repeat;
+        background-size: vw(21) vw(21);
+        z-index: 3;
+        @include pc {
+            position: fixed;
+            min-height: 0;
+            background-size: 10px 10px;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(../images/loading-bgm.png) center calc(50% + 60px) no-repeat;
+            background-size: vw(905) vw(1650);
+            @include pc {
+                background: url(../images/mission/april/mission-loading_pc.png) center center no-repeat;
+                background-size: contain;
+            }
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            top: calc(50% + 60px);
+            left: 50%;
+            width: vw(607);
+            height: vw(96);
+            background: url(../images/mission/april/mission-generating.png) center center no-repeat;
+            background-size: vw(607) vw(96);
+            transform: translate(-50%, -50%);
+            @include pc {
+                top: 50%;
+                left: 50%;
+                width: 296px;
+                height: 47px;
+                background: url(../images/mission/april/mission-generating_pc.png) center center no-repeat;
+                background-size: auto;
+            }
+        }
+    }
+
+    @keyframes aprilMissionMarqueeRight {
+        0% {background-position: center 0;}
+        100% {background-position: center var(--marquee-right-y);}
+    }
+
+    @keyframes aprilMissionMarqueeBottom {
+        0% {background-position: 0 center;}
+        100% {background-position: var(--marquee-bottom-x) center;}
+    }
+
+    @keyframes aprilMissionMarqueeLeft {
+        0% {background-position: center 0;}
+        100% {background-position: center var(--marquee-left-y);}
+    }
+
+}
+
+#popup-april-mission-complete, #popup-may-mission-complete {
+    margin-top: 14.5vw;
+    padding-bottom: vw(20);
+    overflow: visible;
+    @include pc {
+        margin-top: 40px;
+        padding-bottom: 40px;
+    }
+    #popup-april-mission-complete-avatar,
+    #popup-may-mission-complete-avatar {
+        margin: -90px 0 15px;
+    }
+    #popup-april-mission-complete-avatar img,
+    #popup-may-mission-complete-avatar img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+    }
+    .popup__main__box__main__text {
+        @include pc {
+            font-size: 22px;
+            line-height: 1.681818;
+        }
+    }
+    .popup__main__box__main__intro__text__line__col__green-point {
+        width: vw(482);
+        margin-top: vw(40);
+        @include pc {
+            width: 273px;
+            height: auto;
+            margin-top: 16px;
+        }
+    }
+    .popup__main__box__main__btns {
+        @include pc {
+            flex-basis: 100%;
+            padding-top: 26px;
+        }
+    }
+    .popup__main__box__main__btn {
+        @include pc {
+            width: 210px;
+            font-size: 22px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-align: center;
+            margin: 0 auto 20px;
+            padding-right: 0;
+            padding-left: 0;
+            box-sizing: border-box;
+        }
+    }
+    #popup-april-mission-complete-btn-to-list, #popup-may-mission-complete-btn-to-list {
+        display: block;
+        text-decoration: none;
+    }
+}

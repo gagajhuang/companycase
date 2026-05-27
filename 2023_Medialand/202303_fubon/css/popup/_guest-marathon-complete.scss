@@ -1,0 +1,179 @@
+#popup-guest-marathon-complete {
+
+    $scale: 0.8;
+    // $scale_mb: 0.51;
+
+    position: relative;
+    width: 703px * $scale;
+    height: 623px * $scale;
+    padding: 0;
+    background: url('/images/popup/guest-marathon-complete.png') 0 0 no-repeat;
+    background-size: contain;
+
+    @include tablet {
+        width: vw(1000);
+        height: vw(886);
+        background-size: vw(1000) vw(886);
+    }
+
+    // &::before {
+    //     content: '';
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     background: url('/images/popup/guest-mission-complete_athlete.png') 0 0 no-repeat;
+    //     background-size: contain;
+    //     pointer-events: none;
+    // }
+
+    .popup__main__box__main__dialog {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        position: absolute;
+        top: 44px * $scale;
+        left: 275px * $scale;
+        width: 382px * $scale;
+        height: 268px * $scale;
+        color: #159fbd;
+        font-size: 26px * $scale;
+        font-weight: 500;
+        letter-spacing: .1em;
+        text-align: left;
+        line-height: 38px * $scale;
+        padding-left: 56px * $scale;
+        padding-bottom: 18px * $scale;
+        box-sizing: border-box;
+        @include tablet {
+            top: vw(63);
+            left: vw(391);
+            width: vw(543);
+            height: vw(380);
+            font-size: vw(37);
+            line-height: vw(54);
+            padding-left: vw(80);
+            padding-bottom: vw(20);
+        }
+        span {
+            position: relative;
+            top: 2px * $scale;
+            color: #ecbb48;
+            font-size: 52px * $scale;
+            font-weight: 700;
+            margin: 0 6px * $scale 0;
+            @include tablet {
+                top: vw(2);
+                font-size: vw(74);
+                margin: 0 vw(7) 0;
+            }
+        }
+    }
+
+    .popup__main__box__main__text {
+
+        // display: flex;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 415px * $scale;
+        left: 304px * $scale;
+        width: 300px * $scale;
+        height: 100px * $scale;
+        font-size: 24px * $scale;
+        line-height: 36px * $scale;
+        letter-spacing: .15em;
+
+        @include tablet {
+            top: vw(640);
+            left: vw(489);
+            width: vw(440);
+            height: vw(155);
+            font-size: vw(37);
+            line-height: vw(55);
+        }
+
+        p:nth-child(2) {
+            display: none;
+        }
+
+        @at-root .popup__main__box--registered .popup__main__box__main__text {
+            p:nth-child(1) {
+                display: none;
+            }
+            p:nth-child(2) {
+                display: block!important;
+            }
+        }
+
+        span {
+            letter-spacing: .1em;
+            font-size: 27px * $scale;
+            padding-left: .3em;
+            @include tablet {
+                font-size: vw(41);
+            }
+        }
+
+    }
+
+    .popup__main__box__main__buttons {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        position: absolute;
+        top: 384px * $scale;
+        left: 338px * $scale;
+        width: 268px * $scale;
+        color: #fff;
+        text-align: center;
+
+        @include tablet {
+            top: vw(539);
+            left: vw(480);
+            width: vw(378);
+        }
+
+        li {
+            margin-top: 20px * $scale;
+
+            @include tablet {
+                margin-top: vw(28);
+            }
+        }
+    }
+
+    .popup__main__box__main__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 268px * $scale;
+        height: 65px * $scale;
+        font-size: 22px * $scale;
+        border-radius: 26px * $scale;
+        cursor: pointer;
+        @include tablet {
+            width: vw(378);
+            height: vw(92);
+            font-size: vw(31.35);
+            border-radius: vw(37);
+        }
+        &--facebook {
+            background-color: #3a5ca9;
+            box-shadow: #1c3c84 0 6px * $scale 0;
+            @include tablet {
+                box-shadow: #1c3c84 0 vw(8) 0;
+            }
+        }
+        &--line {
+            background-color: #07bb04;
+            box-shadow: #028b00 0 6px * $scale 0;
+            @include tablet {
+                box-shadow: #028b00 0 vw(8) 0;
+            }
+        }
+    }
+
+}

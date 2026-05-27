@@ -1,0 +1,19 @@
+#popup-share.popup__basic {
+
+    @include tablet {
+        padding-top: vw(180)!important;
+    }
+
+    .popup__main__box__main__share-btn {
+        @include tablet {
+            flex-direction: column;
+        }
+        img {
+            cursor: pointer;
+            @include tablet {
+                width: vw(400);
+            }
+        }
+    }
+
+}
