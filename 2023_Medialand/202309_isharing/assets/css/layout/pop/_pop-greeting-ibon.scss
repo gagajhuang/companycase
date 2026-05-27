@@ -1,0 +1,326 @@
+#pop-greeting-ibon {
+
+    display: none;
+    position: relative;
+    width: 490px;
+    color: #a098a3;
+    letter-spacing: 1px;
+    margin: 100px auto;
+    padding: 70px 50px 66px;
+    border-radius: 45px;
+    background: #f6f3ec;
+
+    @include tablet {
+        width: 622px;
+        padding: 136px 40px 106px;
+        border-radius: 47px;
+    }
+
+    @include mobile {
+        width: vw(622);
+        letter-spacing: vw(1);
+        margin: vw(100) auto;
+        padding: vw(136) vw(40) vw(106);
+        border-radius: vw(47);
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -36px;
+        left: -17px;
+        width: 499px;
+        height: 107px;
+        // background: url('/assets/images/common/pop-deco.png') 0 0 no-repeat;
+        background-size: contain;
+        pointer-events: none;
+        @include tablet {
+            top: -43px;
+            left: -37px;
+            width: 657px;
+            height: 162px;
+            // background-image: url('/assets/images/common/pop-deco_m.png');
+        }
+        @include mobile {
+            top: vw(-43);
+            left: vw(-37);
+            width: vw(657);
+            height: vw(162);
+        }
+    }
+
+    a {
+        color: #9c77a9;
+    }
+
+    .text {
+        font-size: 20px;
+        text-align: center;
+        line-height: lineHeight(20, 30);
+        @include tablet {
+            font-size: 28px;
+            font-weight: 400;
+        }
+        @include mobile {
+            font-size: vw(28);
+        }
+    }
+
+    .message {
+        color: #906c9c;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: lineHeight(24, 30);
+        text-align: center;
+        margin-bottom: 30px;
+        @include tablet {
+            // font-size: 36px;
+            font-size: 30px;
+            margin-bottom: 28px;
+        }
+        @include mobile {
+            // font-size: vw(36);
+            font-size: vw(30);
+            margin-bottom: vw(28);
+        }
+    }
+
+    .note {
+        color: #3C3C3C;
+        font-size: 18px;
+        letter-spacing: .5px;
+        line-height: lineHeight(16, 28);
+        padding: 22px 34px;
+        margin: 25px 0 22px;
+        background: #e7e6e5;
+        @include tablet {
+            font-size: 30px;
+            line-height: lineHeight(24, 44);
+            padding: 32px 38px;
+            margin: 45px 36px 36px;
+        }
+        @include mobile {
+            font-size: vw(30);
+            letter-spacing: vw(.5);
+            padding: vw(32) vw(38);
+            margin: vw(45) vw(36) vw(36);
+        }
+    }
+
+}
+
+#pop-greeting-ibon {
+
+    width: 456px;
+    color: #000;
+    font-size: 21px;
+    font-family: 'Noto Serif TC', 'Times New Roman', 'Times', serif;
+    letter-spacing: .5px;
+    line-height: lineHeight(21, 34);
+    padding: 30px 30px 46px;
+    border-radius: 10px;
+    background: #fff;
+
+    @include tablet {
+        width: 652px;
+        font-size: 30px;
+        letter-spacing: 0;
+        line-height: lineHeight(30, 48);
+        padding: 44px 44px 66px;
+    }
+
+    @include mobile {
+        width: vw(652);
+        font-size: vw(30);
+        padding: vw(44) vw(44) vw(66);
+        border-radius: vw(10);
+    }
+
+    &::before {
+        content: none;
+    }
+
+    .text {
+        text-align: left;
+        @include tablet {
+            font-size: 30px;
+            white-space: nowrap;
+        }
+        @include mobile {
+            font-size: vw(30);
+        }
+        span {
+            display: inline-block;
+            color: #fff;
+            margin-bottom: 6px;
+            margin-left: -2px;
+            padding: 0 12px 1px;
+            border-radius: 6px;
+            background: #cf0022;
+            @include tablet {
+                margin-bottom: 11px;
+                margin-left: -6px;
+                padding: 0 18px 3px;
+            }
+            @include mobile {
+                margin-bottom: vw(11);
+                margin-left: vw(-6);
+                padding: 0 vw(18) vw(3);
+                border-radius: vw(6);
+            }
+        }
+        img {
+            position: relative;
+            top: -2px;
+            width: 63px;
+            margin-left: 7px;
+            vertical-align: middle;
+            @include tablet {
+                top: -4px;
+                width: 91px;
+                margin-left: 9px;
+            }
+            @include mobile {
+                top: vw(-4);
+                width: vw(91);
+                margin-left: vw(9);
+            }
+        }
+    }
+
+    .image {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        border: #d7d7d7 2px solid;
+        @include tablet {
+            margin-top: 23px;
+            margin-bottom: 23px;
+            border-width: 1px;
+        }
+        @include mobile {
+            margin-top: vw(23);
+            margin-bottom: vw(23);
+        }
+        img {
+            display: block;
+            width: 220px;
+            height: auto;
+            margin: 0 auto;
+            padding: 23px 0;
+            @include tablet {
+                width: 320px;
+                padding: 33px 0;
+            }
+            @include mobile {
+                width: vw(320);
+                padding: vw(33) 0;
+            }
+        }
+    }
+
+    .btns {
+        padding-top: 28px;
+        @include tablet {
+            padding-top: 42px;
+        }
+        @include mobile {
+            padding-top: vw(42);
+        }
+    }
+
+    .btn-save {
+        color: #fff;
+        font-size: 25px;
+        font-weight: 500;
+        line-height: 1.2;
+        padding: 16px 20px 19px 24px;
+        border-radius: 10px;
+        background: #90c31f;
+        @include tablet {
+            font-size: 36px;
+            letter-spacing: .5px;
+            padding: 19px 25px 23px 28px;
+        }
+        @include mobile {
+            font-size: vw(36);
+            letter-spacing: vw(.5);
+            padding: vw(19) vw(25) vw(23) vw(28);
+            border-radius: vw(10);
+        }
+    }
+
+}
+
+#pop-greeting-ibon .pop-close {
+    position: absolute;
+    top: -31px;
+    right: -30px;
+    width: 80px;
+    height: 80px;
+    @include hide-text;
+    background: url('/assets/images/common/menu-toggler-close.png') 0 0 no-repeat;
+    background-size: contain;
+    @include tablet {
+        top: -28px;
+        right: -25px;
+        width: 112px;
+        height: 112px;
+    }
+    @include mobile {
+        top: vw(-28);
+        right: vw(-25);
+        width: vw(112);
+        height: vw(112);
+    }
+    @include hover {
+        &:hover {
+        }
+    }
+    @at-root .no-deco & {
+        top: 0;
+        right: 0;
+        width: 60px;
+        height: 60px;
+        background: url('/assets/images/common/pop-close.png') center center no-repeat;
+        background-size: 20px 20px;
+        @include tablet {
+            width: 80px;
+            height: 80px;
+            background-size: 33px 33px;
+        }
+        @include mobile {
+            width: vw(80);
+            height: vw(80);
+            background-size: vw(33) vw(33);
+        }
+    }
+}
+
+// pop
+// #pop,
+// .pop__main {
+//   // display: block;
+// }
+#pop-greeting-ibon .text {
+    color: #000;
+    strong {
+        color: #3a0707;
+    }
+    span {
+        transform: none;
+        padding: 0 8px 1px;
+        letter-spacing: 1px;
+        font-size: 21px;
+    }
+}
+#pop-greeting-ibon .btns {
+    text-align: center;
+    margin: 34px 0 20px 0;
+}
+#pop-greeting-ibon .pop-close {
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background: url(/assets/images/common/pop-close.png) no-repeat center/40%;
+}

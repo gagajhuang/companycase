@@ -1,0 +1,202 @@
+#pop-record_draw {
+
+    width: 380px;
+    margin-top: 228px;
+    margin-bottom: 228px;
+    padding-top: 70px;
+    padding-bottom: 74px;
+
+    @include tablet {
+        width: 586px;
+        margin-top: 204px;
+        margin-bottom: 204px;
+        padding-top: 119px;
+        padding-bottom: 111px;
+    }
+
+    @include mobile {
+        width: vw(586);
+        margin-top: vw(204);
+        margin-bottom: vw(204);
+        padding-top: vw(119);
+        padding-bottom: vw(111);
+    }
+
+    .pop__header {
+        margin-bottom: 0;
+    }
+
+    .pop__text {
+
+        @include tablet {
+
+        }
+
+        @include mobile {
+            
+        }
+
+    }
+
+    .pop__cost {
+        color: #83ffbd;
+    }
+
+    .pop__gift {
+        color: #fff100;
+    }
+
+    .pop__buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 8px;
+
+        @include tablet {
+            flex-direction: column;
+            padding-top: 27px;
+        }
+
+        @include mobile {
+            padding-top: vw(27);
+        }
+
+        li:first-child {
+            @include tablet {
+                margin-bottom: 33px;
+            }
+            @include mobile {
+                margin-bottom: vw(33);
+            }
+        }
+
+    }
+
+    .pop__button {
+
+        justify-content: flex-start;
+
+        height: 43px;
+        font-size: 20px;
+
+        margin: 0 5px;
+        padding-right: 22px;
+        padding-bottom: 2px;
+        padding-left: 22px;
+        border-radius: 7px;
+
+        @include tablet {
+            width: 310px;
+            height: 88px;
+            font-size: 36px;
+            letter-spacing: #{PsdLetterSpacing(50, 36)}px;
+
+            margin: 0;
+            padding-right: 0;
+            
+            padding-bottom: 4px;
+            padding-left: 66px;
+            border-width: 4px;
+            border-radius: 10px;
+        }
+        @include mobile {
+            width: vw(310);
+            height: vw(88);
+            font-size: vw(36);
+            letter-spacing: vw(PsdLetterSpacing(50, 36));
+            
+            padding-bottom: vw(4);
+            padding-left: vw(66);
+            border-width: vw(4);
+            border-radius: vw(10);
+        }
+        &::after {
+            content: '';
+            width: 8px;
+            height: 10px;
+            margin-bottom: -2px;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            @include tablet {
+                width: 10px;
+                height: 15px;
+                margin-bottom: -6px;
+                // background-image: url('../images/record/icon-arrow_red_m.png');
+            }
+            @include mobile {
+                width: vw(10);
+                height: vw(15);
+                margin-bottom: vw(-6);
+                background-size: contain;
+            }
+        }
+        
+        &-back {
+
+            flex-direction: row-reverse;
+            background-color: #fff;
+
+            @include tablet {
+                justify-content: flex-end;
+            }
+
+            &::after {
+                margin-right: 5px;
+                background-image: url('../images/record/icon-arrow_red-left.png');
+                @include tablet {
+                    margin-right: 9px;
+                    background-image: url('../images/record/icon-arrow_red-left_m.png');
+                }
+                @include mobile {
+                    margin-right: vw(9);
+                    background-size: contain;
+                }
+            }
+
+        }
+
+        &-confirm {
+
+            padding-right: 19px;
+            padding-left: 24px;
+
+            @include tablet {
+                padding-right: 0;
+                padding-left: 68px;
+            }
+
+            @include mobile {
+                padding-left: vw(68);
+            }
+
+            &::after {
+                margin-left: 6px;
+                background-image: url('../images/record/icon-arrow_red.png');
+                @include tablet {
+                    margin-left: 9px;
+                    background-image: url('../images/record/icon-arrow_red_m.png');
+                }
+                @include mobile {
+                    margin-left: vw(9);
+                    background-size: contain;
+                }
+            }
+
+        }
+
+    }
+
+    .pop__close {
+        top: 26px;
+        right: -59px;
+        @include tablet {
+            top: -37px;
+            right: -60px
+        }
+        @include mobile {
+            top: vw(-37);
+            right: vw(-60)
+        }
+    }
+
+}

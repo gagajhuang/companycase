@@ -1,0 +1,186 @@
+#pop-record_draw-form {
+
+    width: 460px;
+    margin-top: 95px;
+    margin-bottom: 95px;
+    padding-top: 89px;
+    padding-bottom: 54px;
+
+    @include tablet {
+        width: 586px;
+        margin-top: 204px;
+        margin-bottom: 204px;
+        padding-top: 95px;
+        padding-bottom: 70px;
+    }
+
+    @include mobile {
+        width: vw(586);
+        margin-top: vw(204);
+        margin-bottom: vw(204);
+        padding-top: vw(95);
+        padding-bottom: vw(70);
+    }
+
+    .pop__form {
+
+        padding-top: 29px;
+
+        @include tablet {
+            padding-top: 35px;
+        }
+
+        @include mobile {
+            padding-top: vw(35);
+        }
+
+        .pop__field {
+            padding: 0 34px 0 37px;
+            margin-bottom: 20px;
+            @include tablet {
+                padding: 0 24px 0 28px;
+                margin-bottom: 30px;
+            }
+            @include mobile {
+                padding: 0 vw(24) 0 vw(28);
+                margin-bottom: vw(30);
+            }
+        }
+
+        input {
+            width: 100%;
+            height: 45px;
+            color: #000;
+            font-size: 18px;
+            font-family: $fontFamilyNotoSans;
+            letter-spacing: #{PsdLetterSpacing(50, 18)}px;
+            margin: 0;
+            padding: 0 18px;
+            border: 0;
+            border-radius: 0;
+            background: #fff;
+            appearance: none;
+            @include tablet {
+                height: 92px;
+                font-size: 28px;
+                letter-spacing: #{PsdLetterSpacing(50, 28)}px;
+                padding: 0 16px;
+            }
+            @include mobile {
+                height: vw(92);
+                font-size: vw(28);
+                letter-spacing: vw(PsdLetterSpacing(50, 28));
+                padding: 0 vw(16);
+            }
+        }
+
+    }
+
+    .pop__buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 22px;
+
+        @include tablet {
+            flex-direction: column;
+            padding-top: 12px;
+        }
+
+        @include mobile {
+            padding-top: vw(12);
+        }
+
+    }
+
+    .pop__button {
+
+        justify-content: flex-start;
+
+        height: 43px;
+        font-size: 20px;
+
+        margin: 0 5px;
+        padding-right: 20px;
+        padding-bottom: 2px;
+        padding-left: 23px;
+        border-radius: 7px;
+
+        @include tablet {
+            width: 308px;
+            height: 88px;
+            font-size: 36px;
+            letter-spacing: #{PsdLetterSpacing(50, 36)}px;
+
+            margin: 0;
+            padding-right: 0;
+            
+            padding-bottom: 4px;
+            padding-left: 68px;
+            border-width: 4px;
+            border-radius: 10px;
+        }
+        @include mobile {
+            width: vw(308);
+            height: vw(88);
+            font-size: vw(36);
+            letter-spacing: vw(PsdLetterSpacing(50, 36));
+            
+            padding-bottom: vw(4);
+            padding-left: vw(68);
+            border-width: vw(4);
+            border-radius: vw(10);
+        }
+        &::after {
+            content: '';
+            width: 8px;
+            height: 10px;
+            margin-bottom: -2px;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            @include tablet {
+                width: 10px;
+                height: 15px;
+                margin-bottom: -6px;
+            }
+            @include mobile {
+                width: vw(10);
+                height: vw(15);
+                margin-bottom: vw(-6);
+                background-size: contain;
+            }
+        }
+        
+        &-confirm {
+
+            &::after {
+                margin-left: 6px;
+                background-image: url('../images/record/icon-arrow_red.png');
+                @include tablet {
+                    margin-left: 9px;
+                    background-image: url('../images/record/icon-arrow_red_m.png');
+                }
+                @include mobile {
+                    margin-left: vw(9);
+                    background-size: contain;
+                }
+            }
+
+        }
+
+    }
+
+    .pop__close {
+        top: 26px;
+        right: -59px;
+        @include tablet {
+            top: -37px;
+            right: -60px
+        }
+        @include mobile {
+            top: vw(-37);
+            right: vw(-60)
+        }
+    }
+
+}

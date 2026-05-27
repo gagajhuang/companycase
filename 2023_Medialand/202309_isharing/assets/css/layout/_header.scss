@@ -1,0 +1,483 @@
+#header {
+
+    position: relative;
+    z-index: 1;
+
+    .header__toggler {
+
+        position: absolute;
+        top: 50px;
+        left: 55px;
+        width: 104px;
+        height: 87px;
+        background: url('../images/common/header-toggler.png') 0 0 no-repeat;
+
+        @include tablet {
+            top: 64px;
+            left: 34px;
+            width: 154px;
+            height: 131px;
+            background-image: url('../images/common/header-toggler_m.png');
+            background-size: 316px 131px;
+            z-index: 1;
+        }
+
+        @include mobile {
+            top: vw(64);
+            left: vw(34);
+            width: vw(154);
+            height: vw(131);
+            background-size: vw(316) vw(131);
+        }
+
+        &:active {
+            background-position: -106px 0;
+            @include tablet {
+                background-position: -158px 0;
+            }
+            @include mobile {
+                background-position: vw(-158) 0;
+            }
+        }
+
+        @include hover {
+
+            &:hover {
+                background-position: -106px 0;
+                @include tablet {
+                    background-position: -158px 0;
+                }
+                @include mobile {
+                    background-position: vw(-158) 0;
+                }
+            }
+
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 52px;
+            background: #000000;
+            transform: translate(54px, -100%);
+            pointer-events: none;
+            @include tablet {
+                width: 6px;
+                height: 66px;
+                transform: translate(81px, -100%);
+            }
+            @include mobile {
+                width: vw(6);
+                height: vw(66);
+                transform: translate(vw(81), -100%);
+            }
+        }
+
+    }
+
+    .header__replay {
+
+        position: absolute;
+        top: 153px;
+        left: 24px;
+        width: 65px;
+        height: 57px;
+        background: url('../images/common/header-replay.png') 0 0 no-repeat;
+
+        @include tablet {
+            top: 279px;
+            left: 78px;
+            width: 96px;
+            height: 84px;
+            background-image: url('../images/common/header-replay_m.png');
+            background-size: 200px 84px;
+        }
+
+        @include mobile {
+            top: vw(279);
+            left: vw(78);
+            width: vw(96);
+            height: vw(84);
+            background-size: vw(200) vw(84);
+        }
+
+        &:active {
+            background-position: -68px 0;
+            @include tablet {
+                background-position: -100px 0;
+            }
+            @include mobile {
+                background-position: vw(-100) 0;
+            }
+        }
+
+        @include hover {
+
+            &:hover {
+                background-position: -68px 0;
+                @include tablet {
+                    background-position: -100px 0;
+                }
+                @include mobile {
+                    background-position: vw(-100) 0;
+                }
+            }
+
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 155px;
+            background: #000000;
+            transform: translate(23px, -99%);
+            pointer-events: none;
+            @include tablet {
+                width: 6px;
+                height: 90px;
+                transform: translate(34px, -99%);
+            }
+            @include mobile {
+                width: vw(6);
+                height: vw(90);
+                transform: translate(vw(34), -99%);
+            }
+        }
+
+    }
+
+    .header__back {
+        
+        position: absolute;
+        top: 120px;
+        left: 908px;
+        width: 55px;
+        height: 50px;
+        background: url('../images/common/header-back.png') 0 0 no-repeat;
+
+        @include tablet {
+            top: 148px;
+            left: 637px;
+            width: 85px;
+            height: 77px;
+            background-image: url('../images/common/header-back_m.png');
+            background-size: 176px 77px;
+        }
+
+        @include mobile {
+            top: vw(148);
+            left: vw(637);
+            width: vw(85);
+            height: vw(77);
+            background-size: vw(176) vw(77);
+        }
+
+        &:active {
+            background-position: -60px 0;
+            @include tablet {
+                background-position: -88px 0;
+            }
+            @include mobile {
+                background-position: vw(-88) 0;
+            }
+        }
+
+        @include hover {
+
+            &:hover {
+                background-position: -60px 0;
+                @include tablet {
+                    background-position: -88px 0;
+                }
+                @include mobile {
+                    background-position: vw(-88) 0;
+                }
+            }
+
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 132px;
+            background: #000000;
+            transform: translate(28px, -91%);
+            pointer-events: none;
+            @include tablet {
+                width: 6px;
+                height: 168px;
+                transform: translate(43px, -89%);
+            }
+            @include mobile {
+                width: vw(6);
+                height: vw(168);
+                transform: translate(vw(43), -89%);
+            }
+        }
+
+    }
+
+    .header__sound {
+        
+        position: absolute;
+        top: 209px;
+        left: 925px;
+        width: 58px;
+        height: 58px;
+        background: url('../images/common/header-sound.png') 0 0 no-repeat;
+        z-index: -1;
+
+        @include tablet {
+            top: 338px;
+            left: 639px;
+            width: 86px;
+            height: 86px;
+            background-image: url('../images/common/header-sound_m.png');
+            background-size: 176px 176px;
+        }
+
+        @include mobile {
+            top: vw(338);
+            left: vw(639);
+            width: vw(86);
+            height: vw(86);
+            background-size: vw(176) vw(176);
+        }
+        
+        &:active {
+            background-position: -60px 0;
+            @include tablet {
+                background-position: -88px 0;
+            }
+            @include mobile {
+                background-position: vw(-88) 0;
+            }
+        }
+
+        &.status--muted {
+            background-position: 0 -60px;
+            @include tablet {
+                background-position: 0 -88px;
+            }
+            @include mobile {
+                background-position: 0 vw(-88);
+            }
+            &:active {
+                background-position: -60px -60px;
+                @include tablet {
+                    background-position: -88px -88px;
+                }
+                @include mobile {
+                    background-position: vw(-88) vw(-88);
+                }
+            }
+        }
+
+        @include hover {
+
+            &:hover {
+                background-position: -60px 0;
+                @include tablet {
+                    background-position: -88px 0;
+                }
+                @include mobile {
+                    background-position: vw(-88) 0;
+                }
+            }
+
+            &.status--muted:hover {
+                background-position: -60px -60px;
+                @include tablet {
+                    background-position: -88px -88px;
+                }
+                @include mobile {
+                    background-position: vw(-88) vw(-88);
+                }
+            }
+
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 212px;
+            background: #000000;
+            transform: translate(27px, -99%);
+            pointer-events: none;
+            @include tablet {
+                width: 6px;
+                height: 118px;
+                transform: translate(41px, -99%);
+            }
+            @include mobile {
+                width: vw(6);
+                height: vw(118);
+                transform: translate(vw(41), -99%);
+            }
+        }
+
+    }
+
+    audio {
+        width: 0;
+        height: 0;
+        display: none;
+        opacity: 0;
+    }
+
+    /** */
+
+    // .replay {
+    //     top: 143px;
+    //     left: 43px;
+    //     width: 85px;
+    //     height: 75px;
+    //     background: url('/assets/images/common/replay.png') 0 0 no-repeat;
+    //     @include hover {
+    //         &:hover {
+    //             background-position: 0 -76px;
+    //         }
+    //     }
+    //     @include tablet {
+    //         top: 178px;
+    //         left: 42px;
+    //         width: 102px;
+    //         height: 89px;
+    //         background-image: url('/assets/images/common/replay_m.png');
+    //         background-size: contain;
+    //     }
+    //     @include mobile {
+    //         top: vw(178);
+    //         left: vw(42);
+    //         width: vw(102);
+    //         height: vw(89);
+    //     }
+    // }
+
+    // .back {
+    //     top: 152px;
+    //     right: 31px;
+    //     width: 50px;
+    //     height: 50px;
+    //     background: url('/assets/images/common/back.png') 0 0 no-repeat;
+    //     background-size: 100% auto;
+    //     @media (max-width: 1024px) {
+    //         right: 45px;
+    //     }
+    //     @include hover {
+    //         &:hover {
+    //             background-position: 0 -50px;
+    //         }
+    //     }
+    //     @include tablet {
+    //         top: 296px;
+    //         right: auto;
+    //         left: 56px;
+    //         width: 75px;
+    //         height: 75px;
+    //         background-image: url('/assets/images/common/back_m.png');
+    //     }
+    //     @include mobile {
+    //         top: vw(296);
+    //         left: vw(56);
+    //         width: vw(75);
+    //         height: vw(75);
+    //     }
+    // }
+
+    // .btn-playmusic {
+    //     top: 218px;
+    //     right: 31px;
+    //     width: 50px;
+    //     height: 50px;
+    //     background: url('/assets/images/common/btn-music-on.png') 0 0 no-repeat;
+    //     background-size: 100% auto;
+    //     @media (max-width: 1024px) {
+    //         right: 45px;
+    //     }
+    //     @include hover {
+    //         &:hover {
+    //             opacity: 0.7;
+    //         }
+    //     }
+    //     @include tablet {
+    //         top: 387px;
+    //         right: auto;
+    //         left: 56px;
+    //         width: 75px;
+    //         height: 75px;
+    //         // background-image: url('/assets/images/common/back_m.png');
+    //     }
+    //     @include mobile {
+    //         top: vw(387);
+    //         left: vw(56);
+    //         width: vw(75);
+    //         height: vw(75);
+    //     }
+    // }
+    // .btn-playmusic.is-muted {
+    //     background: url('/assets/images/common/btn-music-off.png') 0 0 no-repeat;
+    //     background-size: 100% auto;
+    // }
+}
+// audio {
+//     width: 0;
+//     height: 0;
+//     display: none;
+//     opacity: 0;
+// }
+// .countdown {
+//     top: 11px;
+//     right: -7px;
+//     width: 128px;
+//     height: 124px;
+//     background: url('/assets/images/common/countdown-timer.png') 0 0 no-repeat;
+//     @media (max-width: 1024px) {
+//         right: 7px;
+//     }
+//     @include tablet {
+//         top: 26px;
+//         right: 29px;
+//         width: 169px;
+//         height: 166px;
+//         background-image: url('/assets/images/common/countdown-timer_m.png');
+//         background-size: contain;
+//     }
+//     @include mobile {
+//         top: vw(26);
+//         right: vw(29);
+//         width: vw(169);
+//         height: vw(166);
+//     }
+//     span {
+//         position: absolute;
+//         top: 54px;
+//         left: 30px;
+//         width: 72px;
+//         color: #857c88;
+//         font-size: 14.6px;
+//         font-weight: 600;
+//         text-align: center;
+//         line-height: 24px;
+//         letter-spacing: 2px;
+//         @include tablet {
+//             top: 71px;
+//             left: 38px;
+//             width: 98px;
+//             font-size: 19px;
+//             // font-weight: 500;
+//             line-height: 34px;
+//         }
+//         @include mobile {
+//             top: vw(71);
+//             left: vw(38);
+//             width: vw(98);
+//             font-size: vw(19);
+//             line-height: vw(34);
+//         }
+//     }
+// }

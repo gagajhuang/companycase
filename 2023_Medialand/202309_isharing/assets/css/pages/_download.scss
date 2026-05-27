@@ -1,0 +1,309 @@
+#download {
+  .inner {
+    text-align: center;
+    background: url("/assets/images/greeting/bg-description.png") no-repeat 96%
+      410px;
+    margin-bottom: 30px;
+    @include tablet {
+      background: transparent;
+    }
+  }
+  .caption {
+    width: 801px;
+    height: 435px;
+    margin-left: 40px;
+    margin-bottom: 17px;
+    background: url("/assets/images/download/caption.png") no-repeat
+      bottom/contain;
+    z-index: 1;
+    @include tablet {
+      width: 659px;
+      height: 784px;
+      margin: 0 auto;
+      background: url("/assets/images/download/caption_m.png") no-repeat
+        bottom/contain;
+      z-index: 1;
+    }
+    @include mobile {
+      width: vw(659);
+      height: vw(784);
+      margin-bottom: vw(30);
+    }
+  }
+
+  .text-xl {
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #c6e6ff;
+    @include tablet {
+      margin-bottom: 15px;
+    }
+    @include mobile {
+      margin-bottom: vw(15);
+    }
+    span {
+      text-transform: none;
+    }
+  }
+
+  .description {
+    color: $primaryColor;
+    font-size: 18px;
+    text-align: center;
+    line-height: lineHeight(18, 30);
+    margin: 11px 0 38px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    @include tablet {
+      font-size: 30px;
+      font-weight: 400;
+      letter-spacing: 0;
+      line-height: lineHeight(30, 55);
+      margin-bottom: 40px;
+      margin: 0 auto;
+    }
+    @include mobile {
+      font-size: vw(30);
+    }
+    &-extra {
+      display: block;
+      color: #fff600;
+      font-size: 18px;
+      text-align: center;
+      line-height: lineHeight(18, 30);
+      margin-top: 20px;
+      margin-bottom: 53px;
+      font-weight: 500;
+      @include tablet {
+        font-size: 30px;
+        font-weight: 600;
+        letter-spacing: 0;
+        line-height: lineHeight(30, 55);
+        margin-top: 20px;
+        margin-bottom: 40px;
+      }
+      @include mobile {
+        font-size: vw(30);
+        margin-top: vw(20);
+        margin-bottom: vw(40);
+      }
+    }
+  }
+  .description-space {
+    @include tablet {
+      margin-top: -15px;
+    }
+    @include mobile {
+      margin-top: vw(-15);
+    }
+  }
+  .color-light {
+    color: #fff100;
+  }
+  .mobile-block {
+    display: none;
+    @include tablet {
+      display: block;
+    }
+  }
+  .mobile-inline {
+    display: block;
+    @include tablet {
+      display: none;
+    }
+  }
+  .box {
+    width: 670px;
+    margin: 0 auto;
+    // margin-top: 43px;
+    @include tablet {
+      width: 100%;
+      border-radius: 0;
+      border-right: 0;
+      border-left: 0;
+    }
+    .box-title {
+      padding: 0;
+    }
+    .box-content {
+      border: 4px solid #000;
+      padding: 50px;
+      background: #d0171a;
+      @include tablet {
+        border-right: none;
+        border-left: none;
+        padding: 90px 50px;
+      }
+      @include mobile {
+        padding: vw(90) vw(50);
+      }
+      img {
+        display: block;
+      }
+    }
+  }
+  .btn-style {
+    height: 40px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    padding: 0 20px 0 25px;
+    border-radius: 6px;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 0 5px;
+    cursor: pointer;
+  }
+
+  // 以下客製頁面
+  .description-space {
+    @include tablet {
+      padding: 0 52px 90px;
+    }
+    @include mobile {
+      padding: 0 vw(52) vw(90);
+    }
+  }
+  .row-downloads {
+    @include tablet {
+      gap: 67px 0;
+      margin-top: 67px;
+    }
+    @include mobile {
+      gap: vw(67) 0;
+      margin-top: vw(67);
+    }
+  }
+  .row-downloads-img {
+    width: 150px;
+    margin: 0 auto;
+    display: block;
+    @include tablet {
+      width: 486px;
+    }
+    @include mobile {
+      width: vw(486);
+    }
+  }
+  .btn-download {
+    background: #008de6;
+    color: #fff;
+    font-weight: 500;
+    padding: 0 15px;
+    margin-top: 20px;
+    @include tablet {
+      width: 228px;
+      font-size: 36px;
+      height: 80px;
+      margin-top: 42px;
+    }
+    @include mobile {
+      width: vw(228);
+      font-size: vw(36);
+      height: vw(80);
+      margin-top: vw(42);
+    }
+  }
+  .icon-btn-download {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: sub;
+    @include tablet {
+      width: 1em;
+      height: 1em;
+      min-width: 24px;
+      min-height: 24px;
+      margin-top: -3px;
+      vertical-align: middle;
+    }
+    // @include mobile {
+    // }
+  }
+  .deco-heartflake {
+    .box-title {
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 137px;
+        height: 97px;
+        background: url(/assets/images/download/box-title.png) center/contain;
+        @include tablet {
+          width: 264px;
+          height: 174px;
+        }
+        @include mobile {
+          width: vw(264);
+          height: vw(174);
+        }
+      }
+    }
+  }
+  .deco-sock {
+    .box-title {
+      font-size: 24px;
+      text-align: center;
+      line-height: lineHeight(24, 30);
+      margin-bottom: 40px;
+      letter-spacing: PsdLetterSpacing(100, 24) + px;
+    }
+    .box-content {
+      margin-top: 50px;
+      @include tablet {
+        margin-top: 100px;
+      }
+      @include mobile {
+        margin-top: vw(100);
+      }
+    }
+  }
+  .row-wallpapers {
+    gap: 10px;
+    @include tablet {
+      justify-content: center;
+      width: 650px;
+      gap: 20px;
+    }
+    @include mobile {
+      width: vw(650);
+      gap: vw(20);
+    }
+  }
+  .wallpapers-desk {
+    width: 180px;
+    @include tablet {
+      width: 315px;
+      // &:last-child {
+      //   margin-right: calc(315px + 20px);
+      // }
+    }
+    @include mobile {
+      width: vw(315);
+      // &:last-child {
+      //   margin-right: calc(vw(315) + vw(20));
+      // }
+    }
+  }
+  .wallpapers-mobile {
+    width: 132px;
+    @include tablet {
+      width: 310px;
+      // &:last-child {
+      //   margin-right: calc(310px + 20px);
+      // }
+    }
+    @include mobile {
+      width: vw(310);
+      // &:last-child {
+      //   margin-right: calc(vw(310) + vw(20));
+      // }
+    }
+  }
+}

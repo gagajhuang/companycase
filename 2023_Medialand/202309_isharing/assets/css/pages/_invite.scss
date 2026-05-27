@@ -1,0 +1,398 @@
+#invite {
+
+    padding-top: 28px;
+
+    @include tablet {
+        padding-top: 56px;
+    }
+
+    @include mobile {
+        padding-top: vw(56);
+    }
+
+    .invite__caption {
+
+        width: 931px;
+        height: 607px;
+        margin: 0 0 0 36px;
+        background: url('../images/invite/caption.png') 0 0 no-repeat;
+
+        @include tablet {
+            width: 750px;
+            height: 778px;
+            margin: 0 auto;
+            background-image: url('../images/invite/caption_m.png');
+            background-size: contain;
+        }
+
+        @include mobile {
+            width: vw(750);
+            height: vw(778);
+        }
+
+    }
+
+    .invite__content {
+
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-top: -179px;
+        padding-bottom: 50px;
+
+        @include tablet {
+            margin-top: -15px;
+            padding-bottom: 100px;
+        }
+
+        @include mobile {
+            margin-top: vw(-15);
+            padding-bottom: vw(100);
+        }
+
+    }
+
+    // .invite__title {
+    //     color: #c6e6ff;
+    //     font-size: 30px;
+    //     font-weight: 600;
+    //     text-align: center;
+    //     letter-spacing: #{PsdLetterSpacing(50, 30)}px;
+    //     padding-left: #{PsdLetterSpacing(50, 30)}px;
+    //     margin-bottom: 52px;
+    //     @include tablet {
+    //         font-size: 48px;
+    //         letter-spacing: #{PsdLetterSpacing(50, 48)}px;
+    //         padding-left: #{PsdLetterSpacing(50, 48)}px;
+    //         margin-bottom: 104px;
+    //     }
+        
+    //     @include mobile {
+    //         font-size: vw(48);
+    //         letter-spacing: vw(PsdLetterSpacing(50, 48));
+    //         padding-left: vw(PsdLetterSpacing(50, 48));
+    //         margin-bottom: vw(104);
+    //     }
+    // }
+
+    .invite__text {
+        color: #fff;
+        font-size: 18px;
+        line-height: lineHeight(18, 30);
+        letter-spacing: #{PsdLetterSpacing(50, 18)}px;
+        text-align: center;
+        @include tablet {
+            font-size: 30px;
+            line-height: lineHeight(30, 55);
+            letter-spacing: #{PsdLetterSpacing(50, 30)}px;
+        }
+        @include mobile {
+            font-size: vw(30);
+            letter-spacing: vw(PsdLetterSpacing(50, 30));
+        }
+        .invite__highlight {
+            color: #fff100;
+            &:first-child {
+                color: #fff;
+                @include tablet {
+                    display: block;
+                    color: #fff100;
+                }
+            }
+        }
+        a {
+            color: #fff100;
+            padding-bottom: 2px;
+            border-bottom: #fff100 1px solid;
+            @include tablet {
+                display: inline-block;
+            }
+            @include mobile {
+                margin: 0 vw(6);
+            }
+        }
+    }
+
+    .invite__box {
+        position: relative;
+        width: 670px;
+        margin: 43px auto 0;
+        padding: 60px 0 60px;
+        border: #000000 4px solid;
+        background: #d0171a;
+
+        @include tablet {
+            width: 100%;
+            padding: 118px 0 126px;
+            border-top-width: 6px;
+            border-bottom-width: 6px;
+            border-right-width: 0;
+            border-left-width: 0;
+        }
+
+        @include mobile {
+            padding: vw(118) 0 vw(126);
+            border-top-width: vw(6);
+            border-bottom-width: vw(6);
+        }
+    }
+
+    .invite__box-header {
+        text-align: center;
+    }
+
+    .invite__box-title {
+        color: #fff;
+        font-size: 24px;
+        line-height: 1;
+        letter-spacing: #{PsdLetterSpacing(100, 24)}px;
+        padding-left: #{PsdLetterSpacing(100, 24)}px;
+        @include tablet {
+            font-size: 48px;
+            letter-spacing: #{PsdLetterSpacing(50, 48)}px;
+            padding-left: #{PsdLetterSpacing(50, 48)}px;
+        }
+        @include mobile {
+            font-size: vw(48);
+            letter-spacing: vw(PsdLetterSpacing(50, 48));
+            padding-left: vw(PsdLetterSpacing(50, 48));
+        }
+    }
+
+    .invite__box-content {
+    }
+
+    .invite__field {
+
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+
+        margin-top: 40px;
+
+        @include tablet {
+            margin-top: 83px;
+        }
+
+        @include mobile {
+            margin-top: vw(83);
+        }
+
+        input {
+            width: 334px;
+            height: 43px;
+            color: #888888;
+            font-size: 16px;
+            font-family: $fontFamilyNotoSans;
+            letter-spacing: #{PsdLetterSpacing(50, 16)}px;
+            margin: 0 9px 0 0;
+            padding: 0 14px;
+            border: #000 3px solid;
+            border-radius: 0;
+            background: #fff;
+            appearance: none;
+            @include tablet {
+                width: 432px;
+                height: 88px;
+                font-size: 22px;
+                letter-spacing: #{PsdLetterSpacing(50, 22)}px;
+                margin: 0 18px 0 0;
+                padding: 0 18px;
+                border-width: 4px;
+            }
+            @include mobile {
+                width: vw(432);
+                height: vw(88);
+                font-size: vw(22);
+                letter-spacing: vw(PsdLetterSpacing(50, 22));
+                margin: 0 vw(18) 0 0;
+                padding: 0 vw(18);
+                border-width: vw(4);
+            }
+        }
+
+    }
+
+    .invite__buttons {
+        margin-top: 30px;
+        @include tablet {
+            margin-top: 60px;
+        }
+        @include mobile {
+            margin-top: vw(60);
+        }
+        ul {
+            display: flex;
+            justify-content: center;
+        }
+        li {
+            margin: 0 5px;
+            @include tablet {
+                margin: 0 10px;
+            }
+            @include mobile {
+                margin: 0 vw(10);
+            }
+        }
+        .invite__button {
+            display: flex;
+            justify-content: center;
+            width: 104px;
+            padding-right: 0;
+            padding-left: 0;
+            @include tablet {
+                width: 244px;
+            }
+            @include mobile {
+                width: vw(244);
+            }
+            &::before {
+                content: '';
+                width: 18px;
+                height: 18px;
+                margin-right: 5px;
+                background-position: 0 0;
+                background-repeat: no-repeat;
+                @include tablet {
+                    margin-bottom: -4px;
+                    margin-right: 8px;
+                }
+                @include mobile {
+                    margin-bottom: vw(-6);
+                    margin-right: vw(8);
+                    background-size: contain;
+                }
+            }
+        }
+        .invite__button-facebook {
+            background: #487de9;
+            &::before {
+                background-image: url('../images/common/icon-facebook.png');
+                @include tablet {
+                    width: 39px;
+                    height: 39px;
+                    background-image: url('../images/common/icon-facebook_m.png');
+                }
+                @include mobile {
+                    width: vw(39);
+                    height: vw(39);
+                }
+            }
+        }
+        .invite__button-line {
+            background: #67b72e;
+            &::before {
+                background-image: url('../images/common/icon-line.png');
+                @include tablet {
+                    width: 36px;
+                    height: 36px;
+                    background-image: url('../images/common/icon-line_m.png');
+                }
+                @include mobile {
+                    width: vw(36);
+                    height: vw(36);
+                }
+            }
+        }
+    }
+
+    .invite__button {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 42px;
+        color: #ffffff;
+        font-size: 20px;
+        padding: 0 11px 0 13px;
+        border-radius: 7px;
+        background: #e95f5f;
+
+        @include tablet {
+            height: 88px;
+            font-size: 36px;
+            letter-spacing: #{PsdLetterSpacing(50, 36)}px;
+            // margin: 0 auto;
+            padding: 0 57px 4px 59px;
+            border-width: 4px;
+            border-radius: 10px;
+        }
+        
+        @include mobile {
+            height: vw(88);
+            font-size: vw(36);
+            letter-spacing: vw(PsdLetterSpacing(50, 36));
+            padding: 0 vw(57) vw(4) vw(59);
+            border-width: vw(4);
+            border-radius: vw(10);
+        }
+
+    }
+
+    .invite__congrats {
+        text-align: center;
+        margin-top: 32px;
+        @include tablet {
+            margin-top: 68px;
+        }
+        @include mobile {
+            margin-top: vw(68);
+        }
+        .invite__text {
+            display: inline-block;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: #{PsdLetterSpacing(50, 24)}px;
+            border-bottom: #fff 1px solid;
+            padding-bottom: 10px;
+            padding-left: 6px;
+            @include tablet {
+                display: inline;
+                font-size: 40px;
+                letter-spacing: 0;
+                line-height: 68px;
+                border-bottom-width: 2px;
+                padding-bottom: 7px;
+                padding-left: 3px;
+            }
+            @include mobile {
+                font-size: vw(40);
+                line-height: vw(68);
+                border-bottom-width: vw(2);
+                padding-bottom: vw(7);
+                padding-left: vw(3);
+            }
+        }
+        span {
+            position: relative;
+            top: 2px;
+            color: #fff100;
+            font-size: 36px;
+            font-weight: 900;
+            margin: 0 3px;
+            @include tablet {
+                top: 4px;
+                font-size: 60px;
+                margin: 0 5px;
+            }
+            @include mobile {
+                top: vw(4);
+                font-size: vw(60);
+                margin: 0 vw(5);
+            }
+        }
+    }
+
+    .desktop {
+        @include tablet {
+            display: none;
+        }
+    }
+
+    .mobile {
+        display: none;
+        @include tablet {
+            display: block;
+        }
+    }
+}

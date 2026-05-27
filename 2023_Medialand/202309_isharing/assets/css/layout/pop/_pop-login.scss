@@ -1,0 +1,75 @@
+#pop-login,
+#pop-login_notice {
+
+    .pop__buttons {
+        padding-top: 22px;
+        @include tablet {
+            padding-top: 26px;
+        }
+        @include mobile {
+            padding-top: vw(26);
+        }
+    }
+
+    .pop__button {
+        align-items: center;
+        justify-content: flex-start;
+        height: 43px;
+        padding-bottom: 2px;
+        border-radius: 7px;
+        @include tablet {
+            height: 88px;
+            padding-bottom: 4px;
+            border-width: 4px;
+            border-radius: 11px;
+        }
+        @include mobile {
+            height: vw(88);
+            padding-bottom: vw(4);
+            border-width: vw(4);
+            border-radius: vw(11);
+        }
+    }
+
+    .pop__button-fb-login {
+        width: 104px;
+        color: #fff;
+        font-size: 20px;
+        margin: 0 auto;
+        padding-left: 17px;
+        background: #487de9;
+        @include tablet {
+            width: 242px;
+            font-size: 36px;
+            padding-left: 52px;
+        }
+        @include mobile {
+            width: vw(242);
+            font-size: vw(36);
+            padding-left: vw(52);
+        }
+        &::before {
+            content: '';
+            width: 19px;
+            height: 19px;
+            margin-right: 4px;
+            margin-bottom: -2px;
+            background: url('../images/common/icon-facebook.png') 0 0 no-repeat;
+            @include tablet {
+                width: 39px;
+                height: 39px;
+                margin-right: 9px;
+                margin-bottom: -6px;
+                background-image: url('../images/common/icon-facebook_m.png');
+            }
+            @include mobile {
+                width: vw(39);
+                height: vw(39);
+                margin-right: vw(9);
+                margin-bottom: vw(-6);
+                background-size: contain;
+            }
+        }
+    }
+
+}

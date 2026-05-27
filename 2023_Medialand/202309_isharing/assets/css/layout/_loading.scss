@@ -1,0 +1,59 @@
+#loading {
+
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #5d000c;
+    z-index: 10;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 520px;
+        height: 520px;
+        background: url('../images/common/loading-butterfly.png') 0 0 no-repeat;
+        transform: translate(-50%, -50%);
+        animation: loadingButterfly 1s ease infinite;
+        @include tablet {
+            width: 750px;
+            height: 750px;
+            background-image: url('../images/common/loading-butterfly_m.png');
+        }
+        @include mobile {
+            width: vw(750);
+            height: vw(750);
+            background-size: vw(1500) vw(750);
+        }
+    }
+
+    &::after {
+        animation-delay: .5s;
+        background-position: -520px 0;
+        opacity: 0;
+        @include tablet {
+            background-position: -750px 0;
+        }
+        @include mobile {
+            background-position: vw(-750) 0;
+        }
+    }
+
+    @keyframes loadingButterfly {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+}

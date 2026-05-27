@@ -1,0 +1,415 @@
+.pop__main--lottery {
+
+    width: 332px;
+    height: 530px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    background: url('../images/record/pop-record_lottery.png') 0 0 no-repeat;
+
+    @include tablet {
+        width: 546px;
+        height: 939px;
+        margin-top: 96px;
+        margin-bottom: 96px;
+        background-image: url('../images/record/pop-record_lottery_m.png');
+    }
+
+    @include mobile {
+        width: vw(546);
+        height: vw(939);
+        margin-top: vw(96);
+        margin-bottom: vw(96);
+        background-size: contain;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -26px;
+        left: 50%;
+        width: 61px;
+        height: 71px;
+        background: url('../images/record/icon-snowflake.png') 0 0 no-repeat;
+        background-size: contain;
+        transform: translateX(-50%);
+        z-index: 1;
+        @include tablet {
+            top: -43px;
+            width: 99px;
+            height: 115px;
+            background-image: url('../images/record/icon-snowflake_m.png');
+        }
+        @include mobile {
+            top: vw(-43);
+            width: vw(99);
+            height: vw(115);
+            background-size: contain;
+        }
+    }
+
+    // .pop__glow {
+    //     filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.7));
+    // }
+
+    .pop__header {
+        position: relative;
+        width: 311px;
+        height: 187px;
+        margin: 11px auto 0;
+        background: url('../images/record/pop-record_lottery-header.png') 0 0 no-repeat;
+        @include tablet {
+            width: 512px;
+            height: 308px;
+            margin-top: 17px;
+            background-image: url('../images/record/pop-record_lottery-header_m.png');
+        }
+        @include mobile {
+            width: vw(512);
+            height: vw(308);
+            margin-top: vw(17);
+            background-size: contain;
+        }
+
+        // 中金幣獎需要顯示金幣 icon
+        @at-root #pop-record_lottery-coins .pop__header::before {
+            content: '';
+            position: absolute;
+            top: 43px;
+            left: 66px;
+            width: 178px;
+            height: 156px;
+            background: url('../images/record/pop-record_lottery-coins.png') 0 0 no-repeat;
+
+            @include tablet {
+                top: 74px;
+                left: 105px;
+                width: 298px;
+                height: 260px;
+                background-image: url('../images/record/pop-record_lottery-coins_m.png');
+            }
+
+            @include mobile {
+                top: vw(74);
+                left: vw(105);
+                width: vw(298);
+                height: vw(260);
+                background-size: contain;
+            }
+        }
+
+        // 沒中獎需要更換背景
+        @at-root #pop-record_lottery-lose .pop__header {
+            background-image: url('../images/record/pop-record_lottery-header-lose.png');
+            @include tablet {
+                background-image: url('../images/record/pop-record_lottery-header-lose_M.png');
+            }
+        }
+    }
+
+    .pop__content {
+        color: #000;
+        text-align: center;
+        padding-top: 32px;
+        @include tablet {
+            padding-top: 74px;
+        }
+        @include mobile {
+            padding-top: vw(74);
+        }
+    }
+
+    .pop__text {
+        font-size: 16px;
+        line-height: lineHeight(16, 24);
+        @include tablet {
+            width: 490px;
+            font-size: 26px;
+            line-height: lineHeight(26, 40);
+            margin: 0 auto;
+        }
+        @include mobile {
+            width: vw(490);
+            font-size: vw(26);
+        }
+    }
+
+    .pop__result {
+        color: #f21a1d;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 1;
+        margin-top: 4px;
+        margin-bottom: 25px;
+        @include tablet {
+            font-size: 48px;
+            margin-top: 6px;
+            margin-bottom: 27px;
+        }
+        @include mobile {
+            font-size: vw(48);
+            margin-top: vw(6);
+            margin-bottom: vw(27);
+        }
+    }
+
+    .pop__buttons {
+        display: flex;
+        flex-direction: column;
+        padding-top: 25px;
+
+        @include tablet {
+            padding-top: 41px;
+        }
+
+        @include mobile {
+            padding-top: vw(41);
+        }
+
+        li {
+            margin: 0 auto;
+            &:first-child {
+                margin-bottom: 13px;
+                @include tablet {
+                    margin-bottom: 35px;
+                }
+                @include mobile {
+                    margin-bottom: vw(35);
+                }
+            }
+        }
+    }
+
+    .pop__button {
+        height: 43px;
+        font-size: 20px;
+        padding: 0 20px 0px 25px;
+        border-radius: 7px;
+
+        @include tablet {
+            height: 88px;
+            font-size: 36px;
+            padding: 0 62px 2px 70px;
+            border-width: 4px;
+            border-radius: 9px;
+        }
+
+        @include mobile {
+            height: vw(88);
+            font-size: vw(36);
+            padding: 0 vw(62) vw(2) vw(70);
+            border-width: vw(4);
+            border-radius: vw(9);
+        }
+
+        &::after {
+            content: '';
+            width: 8px;
+            height: 10px;
+            margin-left: 7px;
+            background-image: url('../images/record/icon-arrow_red.png');
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-size: contain;
+            @include tablet {
+                width: 10px;
+                height: 15px;
+                margin-left: 10px;
+                background-image: url('../images/record/icon-arrow_red_m.png');
+            }
+            @include mobile {
+                width: vw(10);
+                height: vw(15);
+                margin-left: vw(10);
+            }
+        }
+
+    }
+
+    .pop__button-again {
+        color: #fff;
+        background: #3293f6;
+        &:active {
+            background-color: #0061c4;
+        }
+        @include hover {
+            &:hover {
+                background-color: #0061c4;
+            }
+        }
+    }
+
+    .pop__button-draw {
+        color: #fff;
+        background: #ff639a;
+        &:active {
+            background-color: #db1a5e;
+        }
+        @include hover {
+            &:hover {
+                background-color: #db1a5e;
+            }
+        }
+        &::after {
+            background-image: url('../images/record/icon-arrow_yellow.png');
+            @include tablet {
+                background-image: url('../images/record/icon-arrow_yellow_m.png');
+            }
+        }
+    }
+
+    .pop__button-rule {
+        color: #000;
+        background: #fff;
+        // &:active {
+        //     background-color: #db1a5e;
+        // }
+        // @include hover {
+        //     &:hover {
+        //         background-color: #db1a5e;
+        //     }
+        // }
+    }
+
+    .pop__close {
+        top: 124px!important;
+        right: -39px!important;
+        @include tablet {
+            top: 108px!important;
+            right: -70px!important;
+        }
+        @include mobile {
+            top: vw(108)!important;
+            right: vw(-70)!important;
+        }
+        &::before {
+            @include tablet {
+                height: 206px!important;
+            }
+            @include mobile {
+                height: vw(206)!important;
+            }
+        }
+    }
+
+    .desktop {
+        @include tablet {
+            display: none;
+        }
+    }
+
+}
+
+#pop-record_lottery-gift {
+
+    width: 332px;
+    // height: 610px;
+    height: auto;
+    background-image: url('../images/record/pop-record_lottery-gift.png');
+    background-position: center top;
+    background-size: 100.25% auto;
+
+    @include tablet {
+        width: 546px;
+        // height: 1099px;
+        background-image: url('../images/record/pop-record_lottery-gift_m.png');
+        background-size: 100% auto;
+    }
+
+    @include mobile {
+        width: vw(546);
+        // height: vw(1099);
+    }
+
+    .pop__content {
+        padding-top: 35px;
+        padding-bottom: 50px;
+        background: url('../images/record/pop-record_lottery-gift_body.png') center top no-repeat;
+        background-size: 100% 100%;
+        @include tablet {
+            padding-top: 76px;
+            padding-bottom: 84px;
+        }
+        @include mobile {
+            padding-top: vw(76);
+            padding-bottom: vw(84);
+        }
+    }
+
+    .pop__gift {
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        width: 218px;
+        height: 218px;
+        transform: translateX(-52%);
+        pointer-events: none;
+        @include tablet {
+            top: 16px;
+            width: 360px;
+            height: 360px;
+        }
+        @include mobile {
+            top: vw(16);
+            width: vw(360);
+            height: vw(360);
+        }
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            transform-origin: center 95%;
+            transform: scale(0.82);
+        }
+    }
+
+    .pop__result {
+        line-height: 1.25;
+        padding: 0 24px;
+        margin-top: 2px;
+        margin-bottom: 18px;
+        @include tablet {
+            padding: 0 62px;
+            margin-top: 6px;
+            margin-bottom: 22px;
+        }
+        @include mobile {
+            padding: 0 vw(62);
+            margin-top: vw(6);
+            margin-bottom: vw(22);
+        }
+    }
+
+    .pop__image {
+        width: 286px;
+        margin: 6px auto -14px;
+        border: #e4e4e4 1px solid;
+        @include tablet {
+            width: 428px;
+            margin: 13px auto 9px;
+            border-width: 2px;
+        }
+        @include mobile {
+            width: vw(428);
+            margin: vw(13) auto vw(9);
+            border-width: vw(2);
+        }
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .pop__buttons {
+        li:first-child {
+            margin-bottom: 12px;
+            @include tablet {
+                margin-bottom: 33px;
+            }
+            @include mobile {
+                margin-bottom: vw(33);
+            }
+        }
+    }
+
+}

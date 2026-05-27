@@ -1,0 +1,43 @@
+/*--------------- Swiper ---------------*/
+
+.swiper {
+
+    position: relative;
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: 30px;
+        height: 30px;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: 0 0;
+        &:hover {
+            background-position: 0 bottom;
+        }
+        @include tablet {
+            width: 86px;
+            height: 86px;
+            background-size: contain;
+        }
+        @include mobile {
+            width: vw(86);
+            height: vw(86);
+        }
+    }
+
+    .swiper-button-prev {
+        background-image: url('/assets/images/common/swiper-prev-arrow.png');
+        @include tablet {
+            background-image: url('/assets/images/common/swiper-prev-arrow_m.png');
+        }
+    }
+
+    .swiper-button-next {
+        background-image: url('/assets/images/common/swiper-next-arrow.png');
+        @include tablet {
+            background-image: url('/assets/images/common/swiper-next-arrow_m.png');
+        }
+    }
+
+}
+

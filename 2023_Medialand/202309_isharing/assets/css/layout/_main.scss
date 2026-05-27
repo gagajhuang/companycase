@@ -1,0 +1,60 @@
+#main {
+
+    position: relative;
+    z-index: 0;
+
+    .section {
+
+        position: relative;
+
+        .inner {
+            // &::before {
+            //     display: block;
+            //     content: '';
+            //     padding-top: 24px;
+            // }
+        }
+
+        // 做到目前看起來非首頁的頁面都會有裝飾用的背景，背景的圖樣也沒有規則可以直接 repeat，所以這邊使用整張圖
+        &:not(#index) {
+
+            // background: url('/assets/images/common/background.png') center top no-repeat;
+
+            @include tablet {
+                background: none;
+            }
+
+            .inner {
+                @include tablet {
+                    max-width: 100%;
+                }
+            }
+
+        }
+
+    }
+
+    &.with-wreath {
+        // .section {
+        //     padding-bottom: 247px;
+        //     @include tablet {
+        //         padding-bottom: 0;
+        //     }
+        // }
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 385px;
+            // margin-top: -247px;
+            background: url('../images/common/wreath.png') center 0 no-repeat; // 設計直接給了一整塊 + 花圈左右側挖空
+            @include tablet {
+                height: vw(679);
+                // margin-top: 0;
+                background-image: url('../images/common/wreath_m.png');
+                background-size: contain;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+
+    <!-- 全站書籤圖示 -->
+    <link rel="icon" sizes="256x256" href="assets/images/icon/favicon.png" />
+    <link rel="apple-touch-icon" sizes="256x256" href="assets/images/icon/favicon.png" />
+
+    <!-- SEO, SMO -->
+    <title>愛・Sharing 2023</title>
+
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:url" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/vendors/swiper.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/revision.css" />
+    <!-- 臨時修正使用的 CSS，可任意編輯設定 -->
+
+    <!-- JS -->
+    <script src="assets/js/libs/jquery.min.js"></script>
+    <script src="assets/js/libs/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.3.3/pixi.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="assets/js/libs/load-image.all_5.14.0.min.js"></script>
+    <script src="assets/js/libs/swiper.min.js"></script>
+    <script src="assets/js/libs/snow.js"></script>
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/main.js"></script>
+  </head>
+  <body>
+    <div id="flakes"></div>
+    <div id="container">
+      <div id="container__inner">
+        <div id="loading"></div>
+        <header id="header">
+          <div class="header__inner inner">
+            <a class="header__toggler" href="#" title="單元選單"></a>
+            <a class="header__replay" href="#" title="播放影片"></a>
+          </div>
+        </header>
+        <main id="main" class="with-wreath">
+          <section id="greeting" class="section greeting-step">
+            <div class="inner">
+              <h2 class="caption text-hide">寄送旅行賀卡</h2>
+              <p class="text-center weight-500 text-xl color-lightgreen kerning-1 description-space"></p>
+              <p class="description weight-400 color-primary kerning-1"></p>
+              <!-- step1 -->
+              <div id="box-step-1" class="box box-dark box-step deco-none">
+                <div class="box-title"></div>
+                <div class="box-content">
+                  <div class="box-video">
+                    <div class="exhibition-block">
+                      <video class="video-demo" autoplay playsinline preload>
+                        <source src="assets/videos/01.mp4" type="video/mp4" />
+                      </video>
+                    </div>
+                    <div class="video-choice">
+                      <div class="desktop"></div>
+                      <div class="swiper mobile visible-tablet">
+                        <div class="swiper-container">
+                          <div class="swiper-wrapper"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btns btns-step align-items-center">
+                    <div class="button btn-style btn video-clear">清除選擇</div>
+                    <div class="button btn-style btn next">下一步</div>
+                  </div>
+                </div>
+              </div>
+              <!-- step2 -->
+              <div id="box-step-2" class="box box-dark box-step deco-none">
+                <div class="box-title"></div>
+                <div class="box-content">
+                  <div class="box-video">
+                    <div class="exhibition-block">
+                      <video class="video-show video-01" playsinline preload>
+                        <source src="assets/videos/01.mp4" type="video/mp4" />
+                      </video>
+                      <video class="video-show video-02" playsinline preload>
+                        <source src="assets/videos/02.mp4" type="video/mp4" />
+                      </video>
+                      <video class="video-show video-03" playsinline preload>
+                        <source src="assets/videos/03.mp4" type="video/mp4" />
+                      </video>
+                      <video class="video-show video-04" playsinline preload>
+                        <source src="assets/videos/04.mp4" type="video/mp4" />
+                      </video>
+                    </div>
+                    <div class="music-choice">
+                      <div class="desktop">
+                        <div class="music-item" data-id="1">
+                          <img src="assets/images/greeting/img-isharing.png" alt="" />
+                        </div>
+                        <div class="music-item" data-id="2">
+                          <img src="assets/images/greeting/img-spain.png" alt="" />
+                        </div>
+                        <div class="music-item" data-id="3">
+                          <img src="assets/images/greeting/img-flamenco.png" alt="" />
+                        </div>
+                        <div class="music-item" data-id="4">
+                          <img src="assets/images/greeting/img-christmas.png" alt="" />
+                        </div>
+                        <div class="music-item" data-id="5">
+                          <img src="assets/images/greeting/img-carmen.png" alt="" />
+                        </div>
+                      </div>
+                      <div class="swiper mobile visible-tablet">
+                        <div class="swiper-container">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide music-item" data-id="1">
+                              <img src="assets/images/greeting/img-isharing.png" alt="" />
+                            </div>
+                            <div class="swiper-slide music-item" data-id="2">
+                              <img src="assets/images/greeting/img-spain.png" alt="" />
+                            </div>
+                            <div class="swiper-slide music-item" data-id="3">
+                              <img src="assets/images/greeting/img-flamenco.png" alt="" />
+                            </div>
+                            <div class="swiper-slide music-item" data-id="4">
+                              <img src="assets/images/greeting/img-christmas.png" alt="" />
+                            </div>
+                            <div class="swiper-slide music-item" data-id="5">
+                              <img src="assets/images/greeting/img-carmen.png" alt="" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="music-source"></div>
+                    </div>
+                  </div>
+                  <div class="btns btns-step align-items-center">
+                    <div class="button btn-style btn prev">上一步</div>
+                    <div class="button btn-style btn next">下一步</div>
+                  </div>
+                </div>
+              </div>
+              <!-- step3 -->
+              <div id="box-step-3" class="box box-dark box-step deco-none">
+                <div class="box-title"></div>
+                <div class="box-content">
+                  <div class="swiper">
+                    <div class="swiper-container card-choice">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide" data-cardId="1">
+                          <img src="assets/images/greeting/img-card1.jpg" />
+                        </div>
+                        <div class="swiper-slide" data-cardId="2">
+                          <img src="assets/images/greeting/img-card2.jpg" />
+                        </div>
+                        <div class="swiper-slide" data-cardId="3">
+                          <img src="assets/images/greeting/img-card3.jpg" />
+                        </div>
+                        <div class="swiper-slide" data-cardId="4">
+                          <img src="assets/images/greeting/img-card4.jpg" />
+                        </div>
+                        <div class="swiper-slide"></div>
+                      </div>
+                      <div class="swiper-button">
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btns btns-step align-items-center">
+                    <div class="button btn-style btn prev">上一步</div>
+                    <div class="button btn-style btn-event btn next">
+                      下一步
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- step4 -->
+              <div id="box-step-4" class="box box-dark box-step deco-none">
+                <div class="box-title"></div>
+                <div class="box-content">
+                  <div class="card">
+                    <div class="form pos-a">
+                      <div class="photo">
+                        <input class="input-file" type="file" accept="image/gif, image/jpg, image/jpeg, image/png" />
+                        <div id="photoEditor" class="pos-a"></div>
+                        <a id="upload" class="pos-a" href="#">
+                          <div class="button btn-style btn-upload">
+                            上傳照片
+                          </div>
+                        </a>
+                      </div>
+                      <!-- <div class="name"></div> -->
+                      <div class="name sender">
+                        <input class="input-text" type="text" maxlength="4" placeholder="請填寫寄件者" />
+                      </div>
+                      <div class="name recipient">
+                        <input class="input-text" type="text" maxlength="4" placeholder="請填寫收件者" />
+                      </div>
+                      <div class="show-text"></div>
+                      <textarea class="message" placeholder="建議36個字內" maxlength="36"></textarea>
+                    </div>
+                  </div>
+                  <div class="btns btns-step align-items-center">
+                    <div class="button btn-style btn prev">上一步</div>
+                    <div class="button btn-style btn next">下一步</div>
+                  </div>
+                </div>
+              </div>
+              <!-- step5 預覽賀卡 -->
+              <div id="box-step-5" class="box box-dark box-step deco-none">
+                <div class="box-title"></div>
+                <div class="box-content">
+                  <div class="card">
+                    <div class="finish-play">
+                      <img src="assets/images/greeting/icon-play.png" alt="" />
+                    </div>
+                    <div class="part-01">
+                      <div class="selected-card"></div>
+                      <div class="sender-name"></div>
+                      <div class="photo">
+                        <img src="" alt="" />
+                      </div>
+                    </div>
+                    <div class="part-02 card-end">
+                      <div class="recipient-name"></div>
+                      <p class="message"></p>
+                      <div class="sender-name"></div>
+                    </div>
+                    <div class="exhibition-block">
+                      <video class="video-show video-01" playsinline preload>
+                        <source src="assets/videos/01.mp4" type="video/mp4" />
+                      </video>
+                      <video class="video-show video-02" playsinline preload>
+                        <source src="assets/videos/02.mp4" type="video/mp4" />
+                      </video>
+                      <video class="video-show video-03" playsinline preload>
+                        <source src="assets/videos/03.mp4" type="video/mp4" />
+                      </video>
+                      <video class="video-show video-04" playsinline preload>
+                        <source src="assets/videos/04.mp4" type="video/mp4" />
+                      </video>
+                    </div>
+                    <div class="music-source"></div>
+                  </div>
+                  <div class="btns btns-step align-items-center">
+                    <div class="button btn-style btn prev">上一步</div>
+                    <div class="button btn-style btn next">完成賀卡</div>
+                  </div>
+                </div>
+              </div>
+              <!-- step6 -->
+              <div id="box-step-6" class="box box-dark box-step deco-none">
+                <div class="box-title"></div>
+                <div class="box-content">
+                  <div class="card">
+                    <div class="finish-play">
+                      <img src="assets/images/greeting/icon-play.png" alt="" />
+                    </div>
+                    <div class="part-01">
+                      <div class="selected-card"></div>
+                      <div class="sender-name"></div>
+                      <div class="photo">
+                        <img src="" alt="" />
+                      </div>
+                    </div>
+                    <div class="part-02 card-end">
+                      <div class="recipient-name"></div>
+                      <p class="message"></p>
+                      <div class="sender-name"></div>
+                    </div>
+                    <div class="exhibition-block">
+                      <video class="video-show video-01" playsinline preload>
+                        <source src="assets/videos/01.mp4" type="video/mp4" />
+                      </video>
+                      <video class="video-show video-02" playsinline preload>
+                        <source src="assets/videos/02.mp4" type="video/mp4" />
+                      </video>
+                      <video class="video-show video-03" playsinline preload>
+                        <source src="assets/videos/03.mp4" type="video/mp4" />
+                      </video>
+                      <video class="video-show video-04" playsinline preload>
+                        <source src="assets/videos/04.mp4" type="video/mp4" />
+                      </video>
+                    </div>
+                    <div class="music-source"></div>
+                  </div>
+                  <div class="share__block">
+                    <div class="share-copy">
+                      <input id="copyinput" class="input-text" type="text" value="https://www.google.com/" />
+                      <div class="button btn-style btn-copy">複製</div>
+                    </div>
+                    <div class="btns-share">
+                      <a href="#" class="button btn-style btn-fb">
+                        <img class="icon-btn-fb" src="assets/images/greeting/icon-fb.png" alt="" />
+                        分享
+                      </a>
+                      <a href="#" class="button btn-style btn-line">
+                        <img class="icon-btn-line" src="assets/images/greeting/icon-line.png" alt="" />
+                        分享
+                      </a>
+                      <a href="#" class="button btn-style btn-ibon event-end btn-share-ibon">
+                        ibon列印
+                      </a>
+                    </div>
+                  </div>
+                  <div class="btns btns-step btn-again align-items-center">
+                    <div class="button btn-style btn btn-event next">
+                      再寄一張賀卡
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- step7 ibon-->
+              <div id="box-step-7" class="box box-dark box-step deco-none">
+                <div class="box-title"></div>
+                <div class="box-content">
+                  <div class="card">
+                    <div class="selected-card"></div>
+                    <div class="print-content">
+                      <div class="sender-name">花花花花</div>
+                      <div class="recipient-name">花花花花</div>
+                      <p class="message">聖誕快樂！聖誕快樂！聖誕快樂！聖誕快樂！聖誕快樂！聖誕快樂！聖誕快樂！聖</p>
+                    </div>
+                    <div class="photo">
+                      <img src="" alt="" />
+                    </div>
+                    <video class="video-show" playsinline>
+                      <source src="assets/videos/01.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                  <div class="btns-share">
+                    <a href="#" class="button btn-style btn-ibon event-end">
+                      取得ibon列印序號
+                    </a>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- 合圖的部分，包含卡片正面、背面以及 ibon 列印，移除 hide-block 可以查看 -->
+          <div id="print" class="hide-block">
+          <!-- <div id="print" class=""> -->
+            <!-- <div class="card"></div> -->
+            <canvas id="greetingCard"></canvas>
+            <button id="make">生成圖片</button>
+            <div class="make-img"></div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <div id="greeting-animation" class="">
+      <!-- class 若有 receive 是別人收到卡片的狀態， .message 的內容會顯示；反之沒有 receive 則為在製作卡片的流程內，會顯示略過影片按鈕 -->
+      <div class="greeting-container">
+        <img class="loading-img" src="assets/images/greeting/img-loading.png" alt="" />
+
+        <div class="greeting-making">
+          <p class="making-text">賀卡製作中</p>
+          <div class="progress-bar">
+            <div class="progress-fill"></div>
+          </div>
+        </div>
+
+        <div class="message text-center kerning-1">
+          <p class="making-text">祝福傳送中...</p>
+          <div class="progress-bar">
+            <div class="progress-fill"></div>
+          </div>
+          <p class="receive-text">
+            Macro Hsieh 寄了張賀卡給你<br />
+            趕快打開看看！
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="pop">
+      <div class="pop__container">
+        <div id="pop-greeting-ibon" class="pop__main">
+          <p class="text">
+            單張售價：0元 <strong>(每日免費名額)</strong><br />
+            取件編號：<strong>6105 9163 70</strong>
+          </p>
+          <div class="image">
+            <img src="https://fakeimg.pl/320x320/?text=1:1 QRCode" />
+          </div>
+          <p class="text">
+            <span>列印步驟</span><br />
+            請至全台 ibon 櫃台<img src="assets/images/common/icon-ibon.png" /><br />
+            點選首頁左上「代碼輸入 / 掃描」下載檔案
+          </p>
+          <div class="btns align-items-center">
+            <ul>
+              <li>
+                <a href="#" class="btn btn-save kerning-1">點選按鈕以儲存此畫面</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- PSD 沒有關閉按鈕，如有需要解開註解即可 -->
+          <a href="#" class="pop-close">關閉</a>
+        </div>
+      </div>
+    </div>
+    <div id="menu">
+      <div class="menu__inner inner">
+        <div id="user" class="menu__user">
+          <div class="user__avatar">
+            <div class="user__image">
+              <img src="assets/images/common/user-image.jpg" alt="使用者頭像" />
+            </div>
+          </div>
+          <div class="user__name">
+            <a href="#">請登入</a>
+            <!-- <span>使用者名稱</span> -->
+            <!--
+                      製作說明：
+                      未登入時為 <a href="#">請登入</a>
+                      登入後為 <span>使用者名稱</span>
+                  -->
+          </div>
+        </div>
+        <nav class="menu__navigation">
+          <ul>
+            <li><a href="#">首頁</a></li>
+            <li><a href="#">我的雪鈴金幣</a></li>
+            <li><a href="#">認識愛．Sharing</a></li>
+            <li><a href="#">邀請璀璨好友</a></li>
+            <li><a href="#">分享愛的消息</a></li>
+            <li><a href="#">活動辦法</a></li>
+            <li><a href="#">寄送璀璨時刻</a></li>
+            <li><a href="#">隱私權政策</a></li>
+            <li><a href="#">愛的璀璨週</a></li>
+          </ul>
+        </nav>
+        <a class="menu__toggler" href="#"></a>
+        <a class="menu__facebook" href="#" target="_blank"></a>
+      </div>
+    </div>
+    <script>
+      let app, stage, photoEditor, photoEditorStage; // PixiJS
+
+      let greetingCard; // ibon 列印用的 canvas
+
+      let clickTimer = null;
+      let clickTimerCounter = 0;
+      let isMyPhoto = false;
+
+      let swiperStep1 = null, // Step 1 的 Swiper
+        swiperStep2 = null, // Step 2 的 Swiper
+        swiperStep3 = null, // Step 3 的 Swiper
+        imageFile = null, // 使用者選擇的圖檔
+        myCard = {
+          // 使用者產生的賀卡，這邊存 canvas
+          canvas: null,
+          image: null, // 正面卡片的圖檔存在這 (格式為 base64)
+        };
+
+      $(function () {
+        // 目前的步驟
+        let currentStep = 1;
+
+        // 已選擇影片
+        let videoArray = [];
+
+        // 影片
+        let videos = [
+          { id: "1", img: "img-video1.jpg", video: "01.mp4" },
+          { id: "2", img: "img-video2.jpg", video: "02.mp4" },
+          { id: "3", img: "img-video3.jpg", video: "03.mp4" },
+          { id: "4", img: "img-video4.jpg", video: "04.mp4" },
+          { id: "5", img: "img-video5.jpg", video: "05.mp4" },
+          { id: "6", img: "img-video6.jpg", video: "06.mp4" },
+          { id: "7", img: "img-video7.jpg", video: "07.mp4" },
+          { id: "8", img: "img-video8.jpg", video: "08.mp4" },
+          { id: "9", img: "img-video9.jpg", video: "09.mp4" },
+        ];
+
+        // 音樂
+        let music = [
+          { id: "1", name:"isharing", music: "isharing.mp3" },
+          { id: "2", name:"spain", music: "spain.mp3" },
+          { id: "3", name:"flamenco", music: "flamenco.mp3" },
+          { id: "4", name:"christmas", music: "christmas.mp3" },
+          { id: "5", name:"carmen", music: "carmen.mp3" },
+        ];
+
+        // 片頭版型
+        let cardStyle = 1;
+
+        // 步驟文字、function
+        let step = [
+          {
+            step: "Step 1",
+            desc: "依序挑選喜愛的4段影片，製作成動態賀卡",
+            callback: function () {
+              $(".video-choice .desktop").html("");
+
+              videoArray = [];
+              // console.log(videoArray)
+              videos.forEach((ele) => {
+                $(".video-choice .desktop").append(`<div class="video-item" data-id="${ele.id}"><img src="assets/images/greeting/${ele.img}" alt="" /></div>`);
+                $(".video-choice .swiper-wrapper").append(`<div class="swiper-slide video-item" data-id="${ele.id}"><img src="assets/images/greeting/${ele.img}" alt="" /></div>`);
+              });
+              $(".swiper-wrapper:last-child").append($('<div class="swiper-slide video-item"></div>'));
+
+              // 點擊預覽影片
+              $(".desktop .video-item").on("click", function (e) {
+                e.preventDefault();
+                let videoItem = e.currentTarget;
+                videoShow(videoItem);
+              });
+
+              // 待處理事件=> pc 跟mobile 有共用到
+              $(window).resize(function () {});
+
+              if (swiperStep1 !== null) return;
+              swiperStep1 = new Swiper("#box-step-1 .swiper-container", {
+                slidesPerView: 4,
+                spaceBetween: 22,
+                loop: false,
+                autoplay: false,
+                on: {
+                  click: function (e) {
+                    const videoItem = e.target.closest(".video-item");
+                    if (videoItem) {
+                      e.stopPropagation();
+                      videoShow(videoItem);
+                    }
+                  },
+                },
+              });
+              
+              const videoSources = [
+                "assets/videos/01.mp4", 
+                "assets/videos/02.mp4", 
+                "assets/videos/03.mp4", 
+                "assets/videos/04.mp4", 
+                "assets/videos/05.mp4",
+                "assets/videos/06.mp4",
+                "assets/videos/07.mp4",
+                "assets/videos/08.mp4",
+                "assets/videos/09.mp4",
+              ];
+              const videoAll = [];
+              // 執行預載
+              async function preloadVideos() {
+                for (const source of videoSources) {
+                  const video = await preloadVideo(source);
+                  videos.push(video);
+                }
+                
+                // 所有影片都已預載完成，你可以在這裡執行進一步的操作
+                // 例如將它們加入到 HTML 中或進行其他處理
+              }
+
+              // 預載單個影片
+              function preloadVideo(source) {
+                return new Promise((resolve, reject) => {
+                  const xhr = new XMLHttpRequest();
+                  xhr.open("GET", source);
+                  xhr.responseType = "blob";
+
+                  xhr.onload = function() {
+                    if (xhr.status === 200) {
+                      const videoBlob = xhr.response;
+                      const videoObjectURL = URL.createObjectURL(videoBlob);
+                      const videoElement = document.createElement("video");
+                      videoElement.src = videoObjectURL;
+                      videoElement.oncanplay = function() {
+                        resolve(videoElement);
+                      };
+                      videoElement.onerror = function() {
+                        reject("影片加載失敗：" + source);
+                      };
+                    } else {
+                      reject("無法下載影片：" + source);
+                    }
+                  };
+
+                  xhr.send();
+                });
+              }
+
+              // 呼叫預載影片的函數
+              preloadVideos().then(() => {
+                console.log('preloadVideos!!')
+              }).catch(error => {
+                console.error(error);
+              });
+            },
+          },
+          {
+            step: "Step 2",
+            desc: "選一首曲子，搭配你的動態賀卡",
+            callback: function () {
+              // 音樂播放 + 加入陣列
+              music.forEach((ele) => {
+                playFun(ele);
+              });
+              var musicItem = document.querySelectorAll(".music-item")
+              
+              $("#box-step-2 .music-item").on("click", function (e) {
+                for (let i = 0; i < musicItem.length; i++) {
+                  if (musicItem[i].dataset.id =="1") {
+                    musicItem[i].children[0].src = "assets/images/greeting/img-isharing.png"
+                  }
+                  if (musicItem[i].dataset.id =="2") {
+                    musicItem[i].children[0].src = "assets/images/greeting/img-spain.png"
+                  }
+                  if (musicItem[i].dataset.id =="3") {
+                    musicItem[i].children[0].src = "assets/images/greeting/img-flamenco.png"
+                  }
+                  if (musicItem[i].dataset.id =="4") {
+                    musicItem[i].children[0].src = "assets/images/greeting/img-christmas.png"
+                  }
+                  if (musicItem[i].dataset.id =="5") {
+                    musicItem[i].children[0].src = "assets/images/greeting/img-carmen.png"
+                  }
+                }
+                music.forEach((ele) => {
+                  let musicID = e.currentTarget.dataset.id;
+                  let musicImg = e.currentTarget.children[0];
+
+                  if (musicID == ele.id) {
+                    videoArray.splice(4, 1);
+
+                    setTimeout(() => {
+                      musicImg.src= `assets/images/greeting/img-${ele.name}-play.png`;
+                    }, 100);
+
+                    $("#box-step-2 .music-source").empty();
+                    $("#box-step-2 .music-source").append(`
+                      <audio autoplay>
+                        <source src="assets/music/${ele.music}" type="audio/mpeg" />
+                      </audio>
+                    `);
+                    videoArray.push({ musicSrc: ele.music });
+                    console.log("音樂添加：", videoArray);
+                  }
+                  
+                });
+              });
+              
+  
+              if (swiperStep2 !== null) return;
+              swiperStep2 = new Swiper("#box-step-2 .swiper-container", {
+                slidesPerView: 3,
+                spaceBetween: 40,
+                loop: false,
+                autoplay: false,
+              });
+            },
+          },
+          {
+            step: "Step 3",
+            desc: "選擇片頭版型",
+            callback: function () {
+              if (swiperStep3 !== null) return;
+              swiperStep3 = new Swiper("#box-step-3 .swiper-container", {
+                loop: false,
+                autoplay: false,
+                breakpoints: {
+                  1000: {
+                    slidesPerView: 2,
+                    spaceBetween: 35,
+                    slidesPerView: "auto",
+                    loop: false,
+                    autoplay: false,
+                  },
+                },
+                navigation: {
+                  nextEl: "#box-step-3 .swiper-button-next",
+                  prevEl: "#box-step-3 .swiper-button-prev",
+                },
+                on: {
+                  slideChange: function () {
+                    cardStyle = swiperStep3.realIndex + 1;
+                  },
+                },
+              });
+            },
+          },
+          {
+            step: "Step 4",
+            desc: "填寫祝福文字，讓你的賀卡充滿璀璨",
+            callback: function () {},
+          },
+          {
+            step: "Step 5",
+            desc: "預覽賀卡",
+            callback: function () {
+              resetCard(5);
+
+              $("#box-step-5 .selected-card").addClass(`selected-card-0${cardStyle}`);
+              $("#box-step-5 .sender-name").addClass(`sender-name-0${cardStyle}`).text($(".sender input").val());
+              $("#box-step-5 .recipient-name").text($(".recipient input").val());
+              $("#box-step-5 .message").text($("#box-step-4 .message").val());
+
+              // 照片
+              $("#box-step-5 .photo").addClass(`photo-0${cardStyle}`);
+              var photo = photoEditor.view.toDataURL();
+              var preview = $("<img>");
+              preview.attr("src", photo);
+              $("#box-step-5 .photo img").remove();
+              $("#box-step-5 .photo").append(preview);
+            },
+          },
+          {
+            step: "Step 6",
+            desc: "寄送賀卡",
+            callback: function () {
+              $("#box-step-6 .selected-card, #box-receive .selected-card").addClass(`selected-card-0${cardStyle}`);
+              $("#box-step-6 .sender-name, #box-receive .sender-name").addClass(`sender-name-0${cardStyle}`).text($(".sender input").val());
+              $("#box-step-6 .recipient-name, #box-receive .recipient-name").text($(".recipient input").val());
+              $("#box-step-6 .message, #box-receive .message").text($("#box-step-4 .message").val());
+              // 照片
+              $("#box-step-6 .photo, #box-receive .photo").addClass(`photo-0${cardStyle}`);
+              var photo = photoEditor.view.toDataURL();
+              var preview = $("<img>");
+              preview.attr("src", photo);
+              $("#box-step-6 .photo img, #box-receive .photo img").remove();
+              $("#box-step-6 .photo, #box-receive .photo").append(preview);
+            },
+          },
+          {
+            step: "寄送賀卡 - ibon 列印",
+            desc: '列印序號產生後，您賀卡的內容即無法修正，<br class="visible-tablet">請於送出前再次確認',
+            before: function() {
+              $("#box-step-7 .selected-card").addClass(`selected-card-0${cardStyle}`);
+              $("#box-step-7 .print-content").addClass(`print-content-0${cardStyle}`);
+
+              $("#box-step-7 .sender-name").addClass(`sender-name-0${cardStyle}`).text($(".sender input").val());
+              $("#box-step-7 .recipient-name").text($(".recipient input").val());
+              $("#box-step-7 .message").text($("#box-step-4 .message").val());
+
+              // 照片
+              $("#box-step-7 .photo").addClass(`photo-0${cardStyle}`);
+              var photo = photoEditor.view.toDataURL();
+              var preview = $("<img>");
+              preview.attr("src", photo);
+              $("#box-step-7 .photo img").remove();
+              $("#box-step-7 .photo").append(preview);
+
+              // 影片
+              $("#box-step-7 .video-show source").attr("src", `assets/videos/${videoArray[0].videoUrl}`)
+              
+              var videoShow = document.querySelector("#box-step-7 .video-show");
+                videoShow.load();
+                videoShow.addEventListener("canplay", function () {
+                  videoShow.play();
+                  setTimeout(() => {
+                    videoShow.pause();
+                  }, 100);
+                });
+              
+              setTimeout(() => {
+                createCard();
+              }, 500);
+            } 
+              
+          },
+        ];
+        
+        // 產出 Canvas 
+         var createCard = function() {
+            html2canvas(document.querySelector('#box-step-7 .card'), {
+              backgroundColor: null
+            }).then(canvas => {
+              canvas.removeAttribute('style');
+              myCard.canvas = canvas;
+              myCard.image = canvas.toDataURL('image/png');
+              // var card = myCard.canvas; //主體
+              // $('#print .card').append(card);
+            });  
+          }
+
+        // 產生 ibon 列印用的圖
+        greetingCard = document.getElementById('greetingCard');
+        greetingCard.width = 390;
+        greetingCard.height = 600;
+        var ctx = greetingCard.getContext('2d');
+        var cardIbon = new Image();
+        cardIbon.onload = function() {
+          ctx.drawImage(cardIbon, 0, 0, 390, 600);
+          $('#print .make-img').html('<img src="' + greetingCard.toDataURL('image/png') + '">');
+        }
+        $("#make").click(function(){
+          cardIbon.src = myCard.image;
+        })
+
+        // 點擊上一步
+        $(".btns-step .prev").on("click", function (e) {
+          e.preventDefault();
+          changeStep("prev");
+        });
+
+        // 點擊下一步
+        $(".btns-step .next").on("click", function (e) {
+          e.preventDefault();
+          changeStep("next");
+        });
+
+        $(".btn-share-ibon").on("click", function (e) {
+          e.preventDefault();
+          changeStep("next");
+        });
+
+        // Step1 清空影片
+        $(".video-clear").on("click", function (e) {
+          e.preventDefault();
+          videoArray = [];
+          $(".video-item").removeClass("active");
+        });
+        // Step 1 影片切換
+        function videoShow(videoItem) {
+          let videoNum = videoItem.dataset.id;
+          if (typeof videoNum == "undefined") {
+            return;
+          } else {
+            videoActive(videoItem, videoNum);
+          }
+        }
+
+        // Step 1 已選擇影片+ 預覽
+        function videoActive(videoItem, videoNum) {
+          
+          videos.forEach((item) => {
+            if (videoNum == item.id) {
+              // 更換預覽
+              $(".video-demo").find("source").attr("src", `assets/videos/${item.video}`);
+              // 轉場動畫 + 播放
+              $(".video-demo").removeClass("fade-in");
+              setTimeout(() => {
+                $(".video-demo").addClass("fade-in");
+                $(".video-demo")[0].load();
+                $(".video-demo")[0].play();
+              }, 100);
+              // 加入或刪除已選擇影片陣列
+              const isActive = videoItem.classList.contains("active");
+
+              if (isActive) {
+                videoItem.classList.remove("active");
+                
+                const videoId = videoItem.getAttribute("data-videoId");
+                if (videoId) {
+                  const indexToRemove = videoArray.findIndex((videoObject) => videoObject.videoUrl === item.video);
+                  
+                  if (indexToRemove !== -1) {
+                    videoArray.splice(indexToRemove, 1); // 刪除已選影片
+                    videoItem.removeAttribute("data-videoId"); // 删除 data-videoId
+                    // console.log(videoArray);
+
+                    // data-videoId 重新分配
+                    $(".video-item.active").each(function (index, ele) {
+                      var getvideoId = $(this).attr("data-videoId");
+                      if (getvideoId) {
+                        if (+getvideoId > +videoId) {
+                          $(this).attr("data-videoId" , +getvideoId - 1);
+                        }
+                      }
+                    });
+                    // console.log('isActive', videoArray);
+                  }
+                }
+                // console.log("移除影片：", videoArray);
+              } else {
+                if (videoArray.length < 4) {
+                  videoItem.classList.add("active");
+                  videoItem.setAttribute("data-videoId", videoArray.length + 1);
+
+                  const getVideoId = videoItem.getAttribute("data-videoId");
+                  var videoObject = {
+                    dataVideoId: getVideoId,
+                    videoUrl: item.video,
+                  };
+                  videoArray.push(videoObject);
+                  // console.log("影片添加：", videoArray);
+                }
+              }
+            }
+          });
+          
+        }
+
+        // step 2 播放影片 + 選音樂
+        function playFun(ele) {
+          var videoShow01 = document.querySelector("#box-step-2 .video-01");
+          var videoShow01Source = videoShow01.querySelector("source");
+          var videoShow02 = document.querySelector("#box-step-2 .video-02");
+          var videoShow02Source = videoShow02.querySelector("source");
+          var videoShow03 = document.querySelector("#box-step-2 .video-03");
+          var videoShow03Source = videoShow03.querySelector("source");
+          var videoShow04 = document.querySelector("#box-step-2 .video-04");
+          var videoShow04Source = videoShow04.querySelector("source");
+          
+          // 音樂播放 + 加入陣列
+          $("#box-step-2 .music-item").on("click", function (e) {
+
+            $(".video-show").removeClass("fade-out");
+            playVideo(videoShow01, videoShow01Source, 0);
+
+            let musicID = e.currentTarget.dataset.id;
+            if (musicID == ele.id) {
+              videoArray.splice(4, 1);
+              $("#box-step-2 .music-source").empty();
+              $("#box-step-2 .music-source").append(`
+                <audio autoplay>
+                  <source src="assets/music/${ele.music}" type="audio/mpeg" />
+                </audio>
+              `);
+              videoArray.push({ musicSrc: ele.music });
+              console.log("音樂添加：", videoArray);
+            }
+
+          });
+
+          videoShow01.addEventListener("ended", function (e) {
+            e.target.classList.add("fade-out");
+            playVideo(videoShow02, videoShow02Source, 1);
+          });
+
+          videoShow02.addEventListener("ended", function (e) {
+            e.target.classList.add("fade-out");
+            playVideo(videoShow03, videoShow03Source, 2);
+          });
+          videoShow03.addEventListener("ended", function (e) {
+            e.target.classList.add("fade-out");
+            playVideo(videoShow04, videoShow04Source, 3);
+          });
+
+          function playVideo(videoShow, videoShowSource, index) {
+            videoShowSource.src = `assets/videos/${videoArray[index].videoUrl}`;
+            videoShow.classList.add("fade-in");
+            videoShow.load();
+            videoShow.addEventListener("canplay", function () {
+              videoShow.play();
+            });
+          }
+        }
+
+        // Step 4 點擊上傳照片
+        $(document).on("click", "#upload, #box-step-4 .photo img", function (e) {
+          e.preventDefault();
+          $(this).siblings(".input-file").trigger("click");
+        });
+
+        // Step 4 將選擇要上傳的圖片放入框中
+        var transfer = function (img) {
+            if (!(img.src || img instanceof HTMLCanvasElement)) {
+              alert("圖檔載入失敗");
+            } else {
+              imageFile = img.src || img.toDataURL("image/jpeg");
+              loadPhoto(imageFile);
+              $("#box-step-4 .photo").addClass("hasPhoto");
+            }
+          },
+          checkFile = function (file, options) {
+            if (!loadImage(file, transfer, options)) {
+              alert("您的瀏覽器不支援 URL 或 FileReader API，建議使用系統預設並更新到最新版本的瀏覽器");
+            }
+          };
+
+        // Step 4 點擊上傳照片後，處理圖片(處理 EXIF 旋轉)
+        $(".input-file").change(function (e) {
+          e.preventDefault();
+          imageFile == null;
+          e = e.originalEvent;
+          var target = e.dataTransfer || e.target,
+            file = target && target.files && target.files[0],
+            options = {
+              maxWidth: 840,
+              maxHeight: 840,
+              canvas: true,
+              crop: false,
+            };
+          if (!file) {
+            return;
+          }
+          loadImage.parseMetaData(file, function (data) {
+            if (data.exif) {
+              options.orientation = data.exif.get("Orientation");
+            }
+            checkFile(file, options);
+          });
+        });
+
+        // photoEditor pixi
+
+        photoEditor = new PIXI.Application({
+          width: 280,
+          height: 280,
+          antialias: true,
+          transparent: true,
+          resolution: 1,
+          forceCanvas: true,
+          preserveDrawingBuffer: true,
+        });
+
+        photoEditor.view.id = "myPhoto";
+        document.querySelector("#photoEditor").appendChild(photoEditor.view);
+        photoEditor.renderer.autoDensity = true;
+        photoEditor.renderer.plugins.interaction.autoPreventDefault = true;
+        photoEditor.renderer.view.style.touchAction = "none";
+
+        photoEditorStage = new PIXI.Container();
+
+        function loadPhoto(path) {
+          var loader = new PIXI.Loader();
+          loader.add("photo", path);
+          loader.load(function (loader, resources) {
+            createPhoto(path, resources.photo.texture.width, resources.photo.texture.height);
+          });
+        }
+
+        function createPhoto(path, width, height) {
+          texture = PIXI.Texture.from(path);
+
+          var photo = new PIXI.Sprite(texture);
+
+          photo.interactive = true;
+          photo.buttonMode = true;
+
+          // 縮放
+          var frameRatio = 280 / 280;
+          var photoRatio = width / height;
+
+          var ratio = frameRatio > photoRatio ? 280 / width : 280 / height;
+          photo.scale.set(ratio);
+
+          // 設定中心
+          photo.anchor.set(0.5);
+
+          // 綁定事件
+          photo
+            .on("mousedown", onDragStart)
+            .on("touchstart", onDragStart)
+            .on("mouseup", onDragEnd)
+            .on("mouseupoutside", onDragEnd)
+            .on("touchend", onDragEnd)
+            .on("touchendoutside", onDragEnd)
+            .on("mousemove", onDragMove)
+            .on("touchmove", onDragMove);
+
+          // 照片起始位置
+          photo.position.x = photoEditor.view.width / 2;
+          photo.position.y = photoEditor.view.height / 2;
+
+          if (photoEditorStage.children.length != 0) {
+            for (i = photoEditorStage.children.length - 1; i >= 0; i--) {
+              photoEditorStage.removeChild(photoEditorStage.children[i]);
+            }
+          }
+          // 加入照片
+          photoEditorStage.addChild(photo);
+        }
+        requestAnimationFrame(animate);
+
+        var startX = 0,
+          startY = 0;
+
+        function animate() {
+          requestAnimationFrame(animate);
+          photoEditor.renderer.render(photoEditorStage);
+        }
+
+        function onDragStart(event) {
+          // console.log(event.data.originalEvent.target.id);
+          if (event.data.originalEvent.target.id === "myPhoto") {
+            isMyPhoto = true;
+            clickTimer = setInterval(function () {
+              clickTimerCounter++;
+            }, 100);
+          }
+          this.data = event.data;
+          this.alpha = 0.5;
+          this.dragging = true;
+          startX = this.data.getLocalPosition(this.parent).x - this.x;
+          startY = this.data.getLocalPosition(this.parent).y - this.y;
+        }
+
+        function onDragEnd() {
+          this.alpha = 1;
+          this.dragging = false;
+          this.data = null;
+          startX = 0;
+          startY = 0;
+          if (clickTimerCounter <= 0 && isMyPhoto) {
+            $("#box-step-4").find(".input-file").trigger("click");
+          }
+          clearInterval(clickTimer);
+          clickTimerCounter = 0;
+          isMyPhoto = false;
+        }
+
+        function onDragMove() {
+          if (this.dragging) {
+            var newPosition = this.data.getLocalPosition(this.parent);
+            this.position.x = newPosition.x - startX;
+            this.position.y = newPosition.y - startY;
+          }
+        }
+
+        // step 5 點擊播放
+        $("#box-step-5 .finish-play").on("click", function (e) {
+          e.preventDefault();
+          $(this).fadeOut("fast");
+          setTimeout(() => {
+            playFullVideo(5);
+          }, 500);
+          videoAnimate(5);
+        });
+
+        // step 6 點擊播放
+        $("#box-step-6 .finish-play").on("click", function (e) {
+          e.preventDefault();
+          $(this).fadeOut("fast");
+          setTimeout(() => {
+            playFullVideo(6);
+          }, 500);
+          videoAnimate(6);
+        });
+
+        // step 5、6 轉場動畫
+        function videoAnimate(step) {
+          setTimeout(() => {
+            $(`#box-step-${step} .part-01`).fadeOut("slow");
+          }, 6000);
+        }
+
+        // step 5、6 影片播放
+        function playFullVideo(step) {
+          var videoShow01 = document.querySelector(`#box-step-${step} .video-01`);
+          var videoShow01Source = videoShow01.querySelector("source");
+          var videoShow02 = document.querySelector(`#box-step-${step} .video-02`);
+          var videoShow02Source = videoShow02.querySelector("source");
+          var videoShow03 = document.querySelector(`#box-step-${step} .video-03`);
+          var videoShow03Source = videoShow03.querySelector("source");
+          var videoShow04 = document.querySelector(`#box-step-${step} .video-04`);
+          var videoShow04Source = videoShow04.querySelector("source");
+
+          $(`#box-step-${step} .music-source`).append(`
+            <audio autoplay loop>
+              <source src="assets/music/${videoArray[4].musicSrc}" type="audio/mpeg" />
+            </audio>
+          `);
+
+          $(".video-show").removeClass("fade-out");
+          playVideo(videoShow01, videoShow01Source, 0);
+
+          videoShow01.addEventListener("ended", function (e) {
+            e.target.classList.add("fade-out");
+            playVideo(videoShow02, videoShow02Source, 1);
+          });
+
+          videoShow02.addEventListener("ended", function (e) {
+            e.target.classList.add("fade-out");
+            playVideo(videoShow03, videoShow03Source, 2);
+          });
+          videoShow03.addEventListener("ended", function (e) {
+            e.target.classList.add("fade-out");
+            playVideo(videoShow04, videoShow04Source, 3);
+            
+            // 金色遮罩
+            $(`#box-step-${step} .part-02`).fadeIn("slow");
+            setTimeout(() => {
+              $(`#box-step-${step} .recipient-name`).fadeIn("slow");
+            }, 1000);
+            setTimeout(() => {
+              $(`#box-step-${step} .message`).fadeIn("slow");
+            }, 2000);
+            setTimeout(() => {
+              $(`#box-step-${step} .sender-name`).fadeIn("slow");
+            }, 3000);
+          });
+
+          // 音樂 loop 在影片結束也一起停止
+          videoShow04.addEventListener("ended", function (e) {
+            $(".music-source audio").each(function() {
+              this.pause();
+            });
+          });
+
+          function playVideo(videoShow, videoShowSource, index) {
+            videoShowSource.src = `assets/videos/${videoArray[index].videoUrl}`;
+            videoShow.classList.add("fade-in");
+            videoShow.load();
+            videoShow.addEventListener("canplay", function () {
+              videoShow.play();
+            });
+          }
+          
+        }
+
+        // 上一步重置
+        function resetCard(step) {
+          $(`#box-step-${step} .finish-play`).show();
+          $(`#box-step-${step} .part-01`).show();
+          $(`#box-step-${step} .part-02`).hide();
+          var videoShow = document.querySelector(`#box-step-${step} .video-show`);
+          videoShow.pause();
+        }
+
+        // Step 6 Unbind Click, 再寄一張賀卡(取消原本下一步的動作)
+        $("#box-step-6 .btns-step .btn-event").unbind("click");
+        $("#box-step-6 .btns-step .btn-event.next").on("click", function (e) {
+          e.preventDefault();
+          location.reload();
+        });
+
+        // Step 7 取得ibon列印序號
+        $("#box-step-7 .btn-event").on("click", function (e) {
+          e.preventDefault();
+          OPEN_POPUP("#pop-greeting-ibon");
+        });
+
+        // 上一步、下一步
+        function changeStep(action) {
+          $(".music-source").empty();
+          $(".video-show")[0].pause();
+          if (action == "prev") {
+            currentStep--;
+            if (currentStep < 1) currentStep = 1;
+          } else {
+            switch (currentStep + 1) {
+              // 檢查欄位
+              case 2:
+                if (videoArray.length < 4) {
+                  alert("請選擇4支影片");
+                  return;
+                }
+                break;
+              case 3:
+                if (videoArray.length < 5) {
+                  alert("請選擇1首音樂");
+                  return;
+                }
+                break;
+              case 5:
+                if (imageFile == null) {
+                  alert("請選擇你想上傳的照片");
+                  return;
+                } else if ($(".sender input").val() == "") {
+                  alert("請填寫寄件者名稱");
+                  return;
+                } else if ($(".recipient input").val() == "") {
+                  alert("請填寫收件者名稱");
+                  return;
+                } else if ($(".message").val() == "") {
+                  alert("請填寫你想和對方說的話");
+                  return;
+                }
+                break;
+            }
+
+            currentStep++;
+
+            if (currentStep > step.length) currentStep = step.length;
+          }
+
+          setStep();
+        }
+
+        // 設定步驟文字、呼叫 function
+        function setStep() {
+          if (typeof step[currentStep - 1].before !== "undefined") {
+            step[currentStep - 1].before();
+          }
+
+          $("#box-step-" + currentStep)
+            .show()
+            .siblings(".box-step")
+            .hide();
+          $("#greeting > .inner > .text-xl").html(step[currentStep - 1].step); // 步驟
+          $("#greeting > .inner > .description").html(step[currentStep - 1].desc);
+          if (currentStep > 1) {
+            $("html, body")
+              .stop()
+              .animate({ scrollTop: $("#greeting > .inner > .text-xl").offset().top }, 500);
+          }
+
+          if (typeof step[currentStep - 1].callback !== "undefined") {
+            step[currentStep - 1].callback();
+          }
+        }
+
+        setStep();
+      });
+    </script>
+  </body>
+</html>

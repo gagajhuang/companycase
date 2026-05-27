@@ -1,0 +1,98 @@
+/*--------------- Box ---------------*/
+
+.box {
+
+    $box: &;
+
+    position: relative;
+    margin: 0 auto;
+    border: #f6f3ec 1px solid;
+    border-radius: 50px;
+
+    @include mobile {
+        border-radius: vw(50);
+    }
+
+    &-dark {
+        background: #9671a3;
+        a { color: $secondaryColor; }
+        #{$box}-title {
+            &::before {
+                background-image: url('/assets/images/common/box-deco-1.png');
+            }
+        }
+    }
+    &-light {
+        background: #bc98c5;
+        a {
+            color: #e7d4e8;
+            @include tablet {
+                color: #efe8f1;
+            }
+        }
+        #{$box}-title {
+            &::before {
+                background-image: url('/assets/images/common/box-deco-1.png');
+                // background-image: url('/assets/images/common/box-deco-2.png');
+            }
+        }
+    }
+
+    &-title {
+        color: #fff;
+        font-size: 24px;
+        font-weight: 600;
+        text-align: center;
+        letter-spacing: 2px;
+        padding: 28px 0;
+        @include tablet {
+            font-size: 36px;
+            letter-spacing: 3px;
+            padding: 38px 0;
+        }
+        @include mobile {
+            font-size: vw(36);
+            letter-spacing: vw(3);
+            padding: vw(38) 0;
+        }
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            content: '';
+            width: 38px;
+            height: 43px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            transform: translate(-50%, -50%);
+            @include mobile {
+                width: vw(38);
+                height: vw(43);
+            }
+        }
+    }
+
+    &-content {
+        padding: 10px 0 38px;
+        @include tablet {
+            padding: 26px 0 70px;
+        }
+        @include mobile {
+            padding: vw(26) 0 vw(70);
+        }
+    }
+
+    .brand-logo {
+        object-fit: cover;
+    }
+
+    .brand-name {
+        width: 100%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+}
+

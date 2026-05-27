@@ -1,0 +1,1 @@
+import{a0 as s,Z as t}from"./B1oVwC2a.js";const a=s("auth",{state:()=>({authenticated:!1,token:null}),actions:{setToken(e){this.token=e;const o=t("token",{secure:!0});o.value=e,this.token=e,this.authenticated=!0},revokeToken(){const e=t("token",{secure:!0});e.value=null,this.token=null,this.authenticated=!1}}});export{a as u};

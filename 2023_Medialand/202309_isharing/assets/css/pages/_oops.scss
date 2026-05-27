@@ -1,0 +1,128 @@
+#oops {
+
+    min-height: 100vh;
+    overflow: hidden;
+
+    .oops__caption {
+        width: 779px;
+        height: 396px;
+        margin-bottom: 60px;
+        margin-left: 106px;
+        background: url('../images/oops/caption.png') 0 0 no-repeat;
+        background-size: contain;
+        @include tablet {
+            width: 687px;
+            height: 565px;
+            margin-right: auto;
+            margin-bottom: 90px;
+            margin-left: auto;
+            background-image: url('../images/oops/caption_m.png');
+            transform: translateX(-4px);
+        }
+        @include mobile {
+            width: vw(687);
+            height: vw(565);
+            margin-bottom: vw(90);
+            background-size: vw(687) vw(565);
+            transform: translateX(vw(-4));
+        }
+    }
+
+    .oops__text {
+        color: #fff;
+        font-size: 30px;
+        font-weight: 500;
+        text-align: center;
+        letter-spacing: #{PsdLetterSpacing(100, 30)}px;
+        padding-left: #{PsdLetterSpacing(100, 30)}px;
+        margin-bottom: 40px;
+        @include tablet {
+            font-size: 48px;
+            letter-spacing: #{PsdLetterSpacing(100, 48)}px;
+            padding-left: #{PsdLetterSpacing(100, 48)}px;
+            margin-bottom: 104px;
+        }
+        @include mobile {
+            font-size: vw(48);
+            letter-spacing: vw(PsdLetterSpacing(100, 48));
+            padding-left: vw(PsdLetterSpacing(100, 48));
+            margin-bottom: vw(104);
+        }
+    }
+
+    .oops__button {
+        align-items: center;
+        justify-content: center;
+        width: 260px;
+        height: 64px;
+        font-size: 28px;
+        letter-spacing: #{PsdLetterSpacing(200, 28)}px;
+        padding-bottom: 2px;
+        padding-left: #{PsdLetterSpacing(200, 28)}px;
+        margin: 0 auto 100px;
+        border-radius: 8px;
+        border-width: 3px;
+        box-shadow: rgba(0, 0, 0, 1) 0 3px 0;
+        @include tablet {
+            width: 308px;
+            height: 88px;
+            font-size: 36px;
+            letter-spacing: #{PsdLetterSpacing(50, 36)}px;
+            // padding-bottom: 2px;
+            padding-left: #{PsdLetterSpacing(50, 36)}px;
+            // margin: 0 auto 100px;
+            border-radius: 9px;
+            border-width: 4px;
+            box-shadow: rgba(0, 0, 0, 1) 0 4px 0;
+        }
+        @include mobile {
+            width: vw(308);
+            height: vw(88);
+            font-size: vw(36);
+            letter-spacing: vw(PsdLetterSpacing(50, 36));
+            padding-bottom: vw(2);
+            padding-left: vw(PsdLetterSpacing(50, 36));
+            margin: 0 auto vw(100);
+            border-radius: vw(9);
+            border-width: vw(4);
+            box-shadow: rgba(0, 0, 0, 1) 0 vw(4) 0;
+        }
+        &:active {
+            box-shadow: none;
+        }
+        @include hover {
+            &:hover {
+                box-shadow: none;
+            }
+        }
+        &::after {
+            content: '';
+            width: 10px;
+            height: 15px;
+            margin-left: 3px;
+            background: url('../images/oops/icon-arrow_red.png') 0 0 no-repeat;
+            @include tablet {
+                background-image: url('../images/oops/icon-arrow_red_m.png');
+            }
+            @include mobile {
+                width: vw(10);
+                height: vw(15);
+                margin-top: vw(6);
+                margin-left: vw(7);
+                background-size: vw(10) vw(15);
+            }
+        }
+        @include hover {
+            &:hover::after {
+                transform: translateX(2px);
+                @include tablet {
+
+                }
+                @include mobile {
+                    
+                }
+            }
+        }
+}
+
+}

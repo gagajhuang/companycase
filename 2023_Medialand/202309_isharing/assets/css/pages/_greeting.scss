@@ -1,0 +1,1875 @@
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// #main.with-wreath::after {
+//   background: url("/assets/images/greeting/bg-greeting.png") center 0 no-repeat;
+//   @include tablet {
+//     height: 749px;
+//     background: url("/assets/images/greeting/bg-greeting_m.png") no-repeat
+//       bottom/contain;
+//   }
+//   @include mobile {
+//     height: vw(749);
+//   }
+// }
+// 影片播放樣式
+%video-show-block {
+  .card {
+    width: 330px;
+    height: 587px;
+    margin: 0 auto;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    // @extend %flex-center;
+    @include tablet {
+      width: 460px;
+      height: 820px;
+    }
+    @include mobile {
+      width: vw(460);
+      height: vw(820);
+    }
+    .card-content {
+      display: none;
+    }
+    // 撥放鍵
+    .finish-play {
+      position: absolute;
+      z-index: 6;
+      width: 100%;
+      height: 100%;
+      background: rgb(221 40 64 / 90%);
+      @extend %flex-center;
+      cursor: pointer;
+      img {
+        position: absolute;
+        width: 97px;
+        @include tablet {
+          width: 145px;
+        }
+        @include mobile {
+          width: vw(145);
+        }
+      }
+    }
+    // Part01
+    .part-01 {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 5;
+      // display: none;
+      .selected-card {
+        position: relative;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        &-01 {
+          background: url("../images/greeting/cards/card1.png") no-repeat
+            center/contain;
+        }
+        &-02 {
+          background: url("../images/greeting/cards/card2.png") no-repeat
+            center/contain;
+        }
+        &-03 {
+          background: url("../images/greeting/cards/card3.png") no-repeat
+            center/contain;
+        }
+        &-04 {
+          background: url("../images/greeting/cards/card4.png") no-repeat
+            center/contain;
+        }
+      }
+      .photo {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        border-radius: 50%;
+        overflow: hidden;
+        background: #412649;
+        &-01 {
+          margin: 44px 0 0 139px;
+          width: 103px;
+          height: 103px;
+          @include tablet {
+            margin: 59px 0 0 191px;
+            width: 148px;
+            height: 148px;
+          }
+          @include mobile {
+            margin: vw(59) 0 0 vw(191);
+            width: vw(148);
+            height: vw(148);
+          }
+        }
+        &-02 {
+          margin: 319px 0 0 110px;
+          width: 110px;
+          height: 110px;
+          @include tablet {
+            margin: 445px 0 0 152px;
+            width: 154px;
+            height: 154px;
+          }
+          @include mobile {
+            margin: vw(445) 0 0 vw(152);
+            width: vw(154);
+            height: vw(154);
+          }
+        }
+        &-03 {
+          margin: 121px 0 0 76px;
+          width: 175px;
+          height: 175px;
+          @include tablet {
+            margin: 168px 0 0 104px;
+            width: 245px;
+            height: 245px;
+          }
+          @include mobile {
+            margin: vw(168) 0 0 vw(104);
+            width: vw(245);
+            height: vw(245);
+          }
+        }
+        &-04 {
+          margin: 357px 0 0 107px;
+          width: 114px;
+          height: 114px;
+          @include tablet {
+            margin: 497px 0 0 150px;
+            width: 160px;
+            height: 160px;
+          }
+          @include mobile {
+            margin: vw(497) 0 0 vw(150);
+            width: vw(160);
+            height: vw(160);
+          }
+        }
+        img {
+          width: 100%;
+        }
+      }
+      .sender-name {
+        position: absolute;
+        z-index: 3;
+        left: 0;
+        right: 0;
+        top: 0;
+        &-01 {
+          color: #927f4c;
+          font-size: 23px;
+          transform: rotate(90deg);
+          top: 500px;
+          left: -33px;
+          right: auto;
+          width: 124px;
+          text-align: left;
+          @include tablet {
+            font-size: 34px;
+            top: 690px;
+            left: -41px;
+            width: 173px;
+          }
+          @include mobile {
+            font-size: vw(34);
+            top: vw(690);
+            left: vw(-41);
+            width: vw(173);
+          }
+        }
+        &-02 {
+          padding-top: 24px;
+          color: #fff;
+          font-size: 20px;
+          @include tablet {
+            padding-top: 30px;
+            font-size: 31px;
+          }
+          @include mobile {
+            padding-top: vw(30);
+            font-size: vw(31);
+          }
+        }
+        &-03 {
+          padding-top: 300px;
+          color: #ffee99;
+          font-size: 20px;
+          @include tablet {
+            padding-top: 420px;
+            font-size: 28px;
+          }
+          @include mobile {
+            padding-top: vw(420);
+            font-size: vw(28);
+          }
+        }
+        &-04 {
+          padding-top: 493px;
+          color: #fff;
+          font-size: 16px;
+          letter-spacing: 2px;
+          @include tablet {
+            padding-top: 668px;
+            font-size: 39px;
+          }
+          @include mobile {
+            padding-top: vw(668);
+            font-size: vw(39);
+          }
+        }
+      }
+    }
+    // Part02
+    .part-02 {
+      display: none;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      font-weight: 400;
+      z-index: 6;
+      &.card-end {
+        background: url("../images/greeting/cards/card-end.png") no-repeat
+          center/contain;
+      }
+      .recipient-name {
+        display: none;
+        font-size: 48px;
+        letter-spacing: 6px;
+        color: #2d2510;
+        text-shadow: 0px 0px 20px rgb(255 253 207);
+        margin-top: 100px;
+        @include tablet {
+          font-size: 67px;
+          letter-spacing: 6px;
+          text-shadow: 0px 0px 20px rgb(255 253 207);
+          margin-top: 142px;
+        }
+        @include mobile {
+          font-size: vw(67);
+          letter-spacing: 6px;
+          text-shadow: 0px 0px 20px rgb(255 253 207);
+          margin-top: vw(142);
+        }
+      }
+      .message {
+        display: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        right: 0;
+        width: 240px;
+        margin: 0 auto;
+        font-size: 15px;
+        line-height: 35px;
+        letter-spacing: 1px;
+        text-align: center;
+        text-shadow: 0px 0px 10px rgb(37 24 12 / 75%);
+        word-break: break-all;
+        @include tablet {
+          width: 336px;
+          font-size: 21px;
+          line-height: 49px;
+        }
+        @include mobile {
+          width: vw(336);
+          font-size: vw(21);
+          line-height: vw(49);
+        }
+      }
+      .sender-name {
+        display: none;
+        font-size: 24px;
+        letter-spacing: 1.5px;
+        margin-top: 300px;
+        text-shadow: 0px 0px 10px rgb(37 24 12 / 75%);
+        @include tablet {
+          font-size: 34px;
+          margin-top: 412px;
+        }
+        @include mobile {
+          font-size: vw(34);
+          margin-top: vw(412);
+        }
+      }
+    }
+
+    &.flip {
+      transform: rotateY(180deg);
+    }
+
+    canvas,
+    img {
+      backface-visibility: hidden;
+      overflow: hidden;
+    }
+  }
+  a.flip {
+    position: relative;
+    display: inline-block;
+    color: #d7f22e;
+    font-size: 16px;
+    text-indent: 3px;
+    margin-top: 15px;
+    margin-left: 21px;
+    border-bottom: #d7f22e 1px solid;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 60%;
+      left: -32px;
+      width: 21px;
+      height: 21px;
+      background: url("../images/greeting/icon-flip.png") 0 0 no-repeat;
+      background-size: 100% auto;
+      transform: translateY(-50%);
+    }
+    @include hover {
+      &:hover {
+        color: #f6ffbf;
+        &::before {
+          background-position: 0 -21px;
+        }
+      }
+    }
+    @include tablet {
+      font-size: 24px;
+      text-indent: 2px;
+      margin-top: 25px;
+      margin-left: 33px;
+      &::before {
+        left: -48px;
+        width: 33px;
+        height: 33px;
+        background-image: url("../images/greeting/icon-flip_m.png");
+      }
+    }
+    @include mobile {
+      font-size: vw(24);
+      text-indent: vw(2);
+      margin-top: vw(25);
+      margin-left: vw(33);
+      &::before {
+        left: vw(-48);
+        width: vw(33);
+        height: vw(33);
+      }
+    }
+  }
+}
+#greeting {
+  // 共用區
+  .inner {
+    text-align: center;
+    background: url("../images/greeting/bg-description.png") no-repeat 96%
+      410px;
+    // background: url("/assets/images/greeting/bg-description.png") no-repeat 96%
+    //   410px;
+    margin-bottom: 30px;
+    @include tablet {
+      background: transparent;
+    }
+  }
+  .caption {
+    width: 801px;
+    height: 435px;
+    margin-left: 40px;
+    margin-bottom: 17px;
+    background: url("../images/greeting/caption.png") no-repeat
+      bottom/contain;
+    z-index: 1;
+    @include tablet {
+      width: 659px;
+      height: 914px;
+      margin: 0 auto;
+      background: url("../images/greeting/caption_m.png") no-repeat
+        bottom/contain;
+      z-index: 1;
+    }
+    @include mobile {
+      width: vw(659);
+      height: vw(914);
+      margin-bottom: vw(30);
+    }
+  }
+
+  .text-xl {
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #c6e6ff;
+    @include tablet {
+      margin-bottom: 15px;
+    }
+    @include mobile {
+      margin-bottom: vw(15);
+    }
+    span {
+      text-transform: none;
+    }
+  }
+
+  .description {
+    color: $primaryColor;
+    font-size: 18px;
+    text-align: center;
+    line-height: lineHeight(18, 30);
+    margin: 11px 0 38px;
+    letter-spacing: 1px;
+    @include tablet {
+      font-size: 30px;
+      font-weight: 400;
+      letter-spacing: 0;
+      line-height: lineHeight(30, 55);
+      margin-bottom: 40px;
+    }
+    @include mobile {
+      font-size: vw(30);
+      margin-bottom: vw(40);
+    }
+  }
+  .description-space {
+    @include tablet {
+      margin-top: -95px;
+    }
+    @include mobile {
+      margin-top: vw(-95);
+    }
+  }
+  .color-light {
+    color: #fff100;
+  }
+  .box {
+    width: 670px;
+    margin: 0 auto;
+    @include tablet {
+      width: 648px;
+    }
+    @include mobile {
+      width: vw(648);
+    }
+    .box-title {
+      padding: 0;
+    }
+    .box-content {
+      border: 4px solid #000;
+      padding: 50px;
+      background: #d0171a;
+      @include tablet {
+        border-right: none;
+        border-left: none;
+        padding: 90px 52px;
+      }
+      @include mobile {
+        padding: vw(90) vw(52);
+      }
+      img {
+        display: block;
+      }
+    }
+  }
+  .btn-style {
+    height: 40px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    padding: 0 20px 0 25px;
+    border-radius: 6px;
+    display: inline-flex;
+    justify-content: center;
+    gap: 0 5px;
+    cursor: pointer;
+    @include tablet {
+      padding: 0 60px 0 65px;
+      height: 80px;
+      font-size: 36px;
+      gap: 0 13px;
+    }
+    @include mobile {
+      padding: 0 vw(60) 0 vw(65);
+      height: vw(80);
+      font-size: vw(36);
+      gap: 0 vw(13);
+    }
+  }
+  // 以下客製頁面
+  // 影片 + 音樂
+  .box-video {
+    display: flex;
+    gap: 0 25px;
+    @include tablet {
+      flex-direction: column;
+      gap: 42px 0;
+    }
+    @include mobile {
+      gap: vw(42) 0;
+    }
+  }
+  .exhibition-block {
+    width: 330px;
+    height: 587px;
+    margin: 0 auto;
+    position: relative;
+    @include tablet {
+      width: 460px;
+      height: 820px;
+    }
+    @include mobile {
+      width: vw(460);
+      height: vw(820);
+    }
+  }
+  .video-choice,
+  .music-choice {
+    width: 210px;
+    height: 587px;
+    background: #990003;
+    padding: 18px;
+    margin: 0 auto;
+    @include tablet {
+      width: 646px;
+      height: 220px;
+      overflow: hidden;
+      padding: 35px 41px;
+      position: relative;
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        height: 220px;
+        width: 20%;
+        background: linear-gradient(100grad, #99000300 10%, #990003 55%);
+      }
+    }
+    @include mobile {
+      width: vw(646);
+      height: vw(220);
+      padding: vw(35) vw(41);
+      &::before {
+        height: vw(220);
+      }
+    }
+    .desktop {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px 7px;
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+  .video-show,
+  .video-demo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 330px;
+    height: 100%;
+    @include tablet {
+      width: 460px;
+    }
+    @include mobile {
+      width: vw(460);
+      height: vw(820);
+    }
+  }
+  .video-01{
+    z-index: 4;
+  }
+  .video-02{
+    z-index: 3;
+    opacity: 0;
+  }
+  .video-03{
+    z-index: 2;
+    opacity: 0;
+  }
+  .video-04{
+    z-index: 1;
+    opacity: 0;
+  }
+  .fade-in {
+    animation: videoIn 1s forwards;
+  }
+  @keyframes videoIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .fade-out {
+    animation: videoOut 1s forwards;
+  }
+  @keyframes videoOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .btns-step {
+    padding-top: 45px;
+    display: flex;
+    justify-content: center;
+    gap: 0 10px;
+    @include tablet {
+      padding-top: 80px;
+      gap: 0 21px;
+    }
+    @include mobile {
+      padding-top: vw(80);
+      gap: 0 vw(21);
+    }
+    .btn-event {
+      @include tablet {
+        padding-right: 64px;
+        padding-left: 67px;
+      }
+      @include mobile {
+        padding-right: vw(64);
+        padding-left: vw(67);
+      }
+    }
+  }
+  
+  .next {
+    &::after {
+      content: "";
+      display: block;
+      width: 8px;
+      height: 12px;
+      background: url(../images/greeting/icon-arrow.png) no-repeat
+        bottom/contain;
+      @include tablet {
+        width: 10px;
+        height: 15px;
+      }
+      @include mobile {
+        width: vw(10);
+        height: vw(15);
+      }
+    }
+  }
+  .prev {
+    background: #fff;
+    &::before {
+      content: "";
+      display: block;
+      width: 8px;
+      height: 12px;
+      background: url(../images/greeting/icon-arrow.png) no-repeat top/contain;
+      transform: rotate(180deg);
+      @include tablet {
+        width: 10px;
+        height: 15px;
+      }
+      @include mobile {
+        width: vw(10);
+        height: vw(15);
+      }
+    }
+  }
+
+  .box-step,
+  #box-receive {
+    // display: none;
+    @include tablet {
+      width: 100%;
+      border-radius: 0;
+      border-right: 0;
+      border-left: 0;
+    }
+  }
+
+  #box-step-1 {
+    .video-clear {
+      background: #fff;
+    }
+    .video {
+      &-item {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        img {
+          width: 82px;
+          height: 103px;
+          @include tablet {
+            // width: 120px;
+            // height: 150px;
+            width: 100%;
+            height: 100%;
+          }
+        }
+        &.active {
+          &::after {
+            content: attr(data-videoId);
+            display: block;
+            width: 82px;
+            height: 103px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(24, 144, 232, 0.8);
+            box-shadow: 0px 0px 0px 3px #fff inset;
+            font-size: 56px;
+            font-style: italic;
+            line-height: 95px;
+            text-align: center;
+            @include tablet {
+              // width: 120px;
+              // height: 150px;
+              width: 100%;
+              height: 100%;
+              font-size: 84px;
+              line-height: 142px;
+            }
+            @include mobile {
+              font-size: vw(84);
+              line-height: vw(142);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #box-step-2 {
+    .box-content {
+      text-align: center;
+    }
+    .music-item {
+      margin: 0 auto;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        transform: scale(0.95);
+      }
+      img {
+        width: 144px;
+        @include tablet {
+          width: 192px;
+        }
+        @include mobile {
+          width: vw(192);
+        }
+      }
+    }
+  }
+
+  #box-step-3 {
+    .card-choice {
+      position: relative;
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: -2%;
+        z-index: 2;
+        height: 29.3333333333vw;
+        width: 20%;
+        height: 102%;
+        background: linear-gradient(100grad, #d0171a00 10%, #d0171a 55%);
+      }
+      img {
+        margin: 0 auto;
+        width: 330px;
+        @include tablet {
+          width: 100%;
+        }
+      }
+    }
+    .swiper-slide {
+      &:last-child{
+        display: none;
+      }
+      @include tablet {
+        width: 460px;
+        &:last-child{
+          display: block;
+          width: 150px;
+        }
+      }
+      @include mobile {
+        width: vw(460);
+        &:last-child{
+          width: vw(150);
+        }
+      }
+    }
+    .swiper-button {
+      @include tablet {
+        display: none;
+      }
+      
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 36px;
+      background: url("../images/greeting/icon-arrow-black.png") no-repeat;
+    }
+    .swiper-button-prev {
+      transform: rotate(180deg);
+    }
+    
+  }
+
+  #box-step-4 {
+    .card {
+      position: relative;
+      display: inline-block;
+      overflow: hidden;
+      width: 330px;
+      height: 587px;
+      border: 2px solid #fff;
+      background: #fe5573;
+      @include tablet {
+        width: 460px;
+        height: 820px;
+      }
+      @include mobile {
+        width: vw(460);
+        height: vw(820);
+      }
+    }
+    .form {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      color: #000;
+      font-size: 16px;
+      font-weight: 400;
+      text-align: left;
+      line-height: lineHeight(16, 25);
+      @extend %flex-center;
+      flex-direction: column;
+      gap: 5px 0;
+      @include tablet {
+        font-size: 31px;
+        gap: 10px 0;
+      }
+      @include tablet {
+        font-size: vw(31);
+        gap: vw(10) 0;
+      }
+    }
+    #upload {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      color: #fff;
+      @extend %flex-center;
+    }
+    .photo {
+      position: relative;
+      width: 280px;
+      height: 280px;
+      margin: 0 auto;
+      background: #fff;
+      overflow: hidden;
+      @include tablet {
+        width: 390px;
+        height: 390px;
+      }
+      @include mobile {
+        width: vw(390);
+        height: vw(390);
+      }
+    }
+    .btn-upload {
+      background: #008de6;
+      color: #fff;
+      white-space: nowrap;
+      font-weight: 500;
+      padding: 0 20px 0 16px;
+      &::before {
+        content: "";
+        display: block;
+        width: 18px;
+        height: 17px;
+        background: url("../images/greeting/icon-upload.png") 0 0 no-repeat;
+        background-size: contain;
+        @include tablet {
+          width: 36px;
+          height: 35px;
+        }
+        @include mobile {
+          width: vw(36);
+          height: vw(35);
+        }
+      }
+    }
+    .info {
+      @include tablet {
+        white-space: nowrap;
+      }
+    }
+    .name {
+      width: 280px;
+      height: 45px;
+      background: rgb(169 0 30 / 40%);
+      font-size: 16px;
+      padding: 0 16px;
+      @extend %flex-center;
+      @include tablet {
+        font-size: 22px;
+        width: 390px;
+        height: 62px;
+      }
+      @include mobile {
+        font-size: vw(22);
+        width: vw(390);
+        height: vw(62);
+      }
+      .input-text {
+        width: 100%;
+        background: transparent;
+        border: 0;
+        color: #fff;
+        margin-left: 6px;
+        font-weight: 500;
+        letter-spacing: 1.5px;
+      }
+      &::before {
+        content: "FROM";
+        display: block;
+        width: 52px;
+        height: 33px;
+        color: #ffef95;
+        font-style: italic;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        @include tablet {
+          font-size: 16px;
+          width: 75px;
+          height: 40px;
+        }
+        @include mobile {
+          font-size: vw(16);
+          width: vw(75);
+          height: vw(40);
+        }
+      }
+    }
+    .recipient {
+      &::before {
+        content: "TO";
+      }
+    }
+    .message {
+      display: block;
+      width: 280px;
+      height: 160px;
+      background: rgb(169 0 30 / 40%);
+      border: 0;
+      color: #fff;
+      letter-spacing: 1.5px;
+      word-break: break-all;
+      @include tablet {
+        width: 390px;
+        height: 223px;
+      }
+      @include mobile {
+        width: vw(390);
+        height: vw(223);
+      }
+    }
+    ::placeholder {
+      color: #fff;
+    }
+
+    #myPhoto {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .photo.hasPhoto {
+      #upload {
+        display: none;
+      }
+    }
+    #photoEditor {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  #box-step-5,
+  #box-step-6,
+  #box-receive {
+    @extend %video-show-block;
+  }
+
+  #box-step-6 {
+    .share__block {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px 0;
+      @include tablet {
+        margin-top: 86px;
+        gap: 60px 0;
+      }
+      @include mobile {
+        margin-top: vw(86);
+        gap: vw(60) 0;
+      }
+      .btn-style {
+        color: #fff;
+        font-weight: 400;
+        padding: 0 15px;
+        @include tablet {
+          padding: 0 58px;
+        }
+        @include mobile {
+          padding: 0 vw(58);
+        }
+        img {
+          width: 18px;
+          @include tablet {
+            width: 36px;
+          }
+          @include mobile {
+            width: vw(36);
+          }
+        }
+      }
+    }
+    .share-copy,
+    .btns-share {
+      @extend %flex-center;
+      gap: 0 10px;
+      @include tablet {
+        gap: 0 20px;
+      }
+      @include mobile {
+        gap: 0 vw(20);
+      }
+    }
+    .btns-share {
+      @include tablet {
+        flex-wrap: wrap;
+      }
+      @include tablet {
+        gap: 20px;
+      }
+      @include mobile {
+        gap: vw(20);
+      }
+    }
+    #copyinput {
+      width: 330px;
+      height: 40px;
+      border: 3px solid #000;
+      color: #888888;
+      padding-left: 20px;
+      @include tablet {
+        width: 428px;
+        height: 85px;
+        border: 4px solid #000;
+      }
+      @include mobile {
+        width: vw(428);
+        height: vw(85);
+        border: vw(4) solid #000;
+      }
+    }
+    .btn {
+      &-copy {
+        margin-top: -1px;
+        background: #e95f5f;
+        @include tablet {
+          margin-top: -5px;
+        }
+        @include mobile {
+          margin-top: vw(-5);
+        }
+      }
+      &-fb {
+        background: #487de9;
+      }
+      &-line {
+        background: #67b72e;
+      }
+      &-ibon {
+        background: #00933e;
+      }
+      &-again {
+        padding-top: 20px;
+        @include tablet {
+          padding-top: 60px;
+        }
+        @include mobile {
+          padding-top: vw(60);
+        }
+      }
+    }
+  }
+
+  #box-step-7 {
+    canvas {
+      backface-visibility: hidden;
+      overflow: hidden;
+      width: 390px;
+    }
+    .ibon {
+      &-image {
+        position: relative;
+        width: 390px;
+        margin: 0 auto;
+        @include tablet {
+          width: 552px;
+          height: 850px;
+        }
+        @include mobile {
+          width: vw(552);
+          height: vw(850);
+        }
+        img {
+          width: 100%;
+        }
+      }
+      &-content {
+        position: absolute;
+        width: 305px;
+        bottom: 10px;
+        right: 10px;
+        @include tablet {
+          width: 430px;
+          right: 15px;
+          bottom: 15px;
+        }
+        @include mobile {
+          width: vw(430);
+          right: vw(15);
+          bottom: vw(15);
+        }
+      }
+      &-name {
+        color: #000;
+        font-size: 20px;
+        font-style: italic;
+        @include tablet {
+          font-size: 22px;
+        }
+        @include mobile {
+          font-size: vw(22);
+        }
+        span {
+          font-size: 30px;
+          margin-left: 12px;
+          @include tablet {
+            font-size: 32px;
+            margin-left: 15px;
+          }
+          @include mobile {
+            font-size: vw(32);
+            margin-left: vw(15);
+          }
+        }
+      }
+      &-text {
+        color: #806d51;
+        margin-top: 5px;
+        letter-spacing: 1px;
+        line-height: 18px;
+        text-align: left;
+        @include tablet {
+          font-size: 20px;
+          line-height: 25px;
+          margin-top: 8px;
+        }
+        @include mobile {
+          font-size: vw(20);
+          line-height: vw(25);
+          margin-top: vw(8);
+        }
+      }
+    }
+    .btn-ibon {
+      background: #00933e;
+      color: #fff;
+      font-weight: 400;
+      margin-top: 50px;
+      @include tablet {
+        margin-top: 80px;
+      }
+      @include mobile {
+        margin-top: vw(80);
+      }
+      &::after {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 12px;
+        background: url(../images/greeting/ibon/icon-arrow.png) no-repeat
+          bottom/contain;
+        @include tablet {
+          width: 10px;
+          height: 15px;
+        }
+        @include mobile {
+          width: vw(10);
+          height: vw(15);
+        }
+      }
+    }
+  }
+
+  #box-receive {
+    display: block;
+
+    @include tablet {
+      margin-bottom: 38px;
+    }
+
+    @include mobile {
+      margin-bottom: vw(38);
+    }
+
+    .description {
+      margin-bottom: 2px;
+      @include mobile {
+        margin-bottom: vw(2);
+      }
+    }
+  }
+
+  .swiper {
+    .swiper-button-next,
+    .swiper-button-prev {
+      margin-top: -15px;
+      @include tablet {
+        margin-top: -43px;
+      }
+      @include mobile {
+        margin-top: vw(-43);
+      }
+    }
+
+    .swiper-button-prev {
+      left: 62px;
+      @include tablet {
+        left: 11px;
+      }
+      @include mobile {
+        left: vw(11);
+      }
+    }
+
+    .swiper-button-next {
+      right: 62px;
+      @include tablet {
+        right: 11px;
+      }
+      @include mobile {
+        right: vw(11);
+      }
+    }
+  }
+}
+
+#print,
+#box-step-7 {
+  .card {
+    width: 390px;
+    height: 600px;
+    margin: 0 auto;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    position: relative;
+    overflow: hidden;
+    @include tablet {
+      width: 552px;
+      height: 850px;
+    }
+    @include mobile {
+      width: vw(552);
+      height: vw(850);
+    }
+  }
+  .print-content {
+    position: absolute;
+    z-index: 3;
+    &-01 {
+      width: 368px;
+      top: 505px;
+      right: 10px;
+      @include tablet {
+        width: 520px;
+        right: 15px;
+        top: 725px;
+      }
+      @include mobile {
+        width: vw(520);
+        right: vw(15);
+        top: vw(725);
+      }
+      .sender-name {
+        transform: rotate(90deg);
+        position: absolute;
+        top: 30px;
+        left: -21px;
+        color: #927f4c;
+        font-size: 20px;
+        width: 90px;
+        text-align: left;
+        @include tablet {
+          top: 34px;
+          left: -28px;
+          font-size: 27px;
+          width: 128px;
+        }
+        @include mobile {
+          top: vw(34);
+          left: vw(-28);
+          font-size: vw(27);
+          width: vw(128);
+        }
+      }
+      .recipient-name {
+        text-align: left;
+        color: #000;
+        font-size: 30px;
+        font-style: italic;
+        margin-left: 170px;
+        @include tablet {
+          font-size: 32px;
+          margin-left: 80px;
+        }
+        @include mobile {
+          font-size: vw(32);
+          margin-left: vw(80);
+        }
+      }
+      .message {
+        color: #806d51;
+        margin-top: 5px;
+        letter-spacing: 1px;
+        line-height: 18px;
+        text-align: left;
+        margin-left: 63px;
+        @include tablet {
+          font-size: 20px;
+          line-height: 25px;
+          margin-top: 8px;
+          margin-left: 90px;
+        }
+        @include mobile {
+          font-size: vw(20);
+          line-height: vw(25);
+          margin-top: vw(8);
+          margin-left: vw(90);
+        }
+      }
+    }
+    &-02 {
+      text-align: center;
+      width: 338px;
+      top: 498px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      @include tablet {
+        width: 485px;
+        top: 705px;
+      }
+      @include mobile {
+        width: vw(485);
+        top: vw(705);
+      }
+      .sender-name {
+        display: inline-block;
+        font-size: 18px;
+        font-weight: 400;
+        @include tablet {
+          font-size: 27px;
+        }
+        @include mobile {
+          font-size: vw(27);
+        }
+      }
+      .recipient-name {
+        display: inline-block;
+        text-align: center;
+        font-size: 18px;
+        margin-left: 10px;
+        color: #fff;
+        font-weight: 400;
+        &::before {
+          content: "to";
+          margin-right: 10px;
+          color: #8776c7;
+        }
+        @include tablet {
+          font-size: 27px;
+          margin-left: 15px;
+        }
+        @include mobile {
+          font-size: vw(27);
+          margin-left: vw(15);
+        }
+      }
+      .message {
+        color: #fff;
+        margin-top: 13px;
+        letter-spacing: 1px;
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 300;
+        text-align: center;
+        height: 45px;
+        @extend %flex-center;
+        @include tablet {
+          font-size: 18px;
+          line-height: 28px;
+          margin-top: 23px;
+          height: 60px;
+        }
+        @include mobile {
+          font-size: vw(18);
+          line-height: vw(28);
+          margin-top: vw(23);
+          height: vw(60);
+        }
+      }
+    }
+    &-03 {
+      text-align: center;
+      width: 338px;
+      margin: 0 auto;
+      right: 0;
+      left: 0;
+      top: 265px;
+      @include tablet {
+        width: 485px;
+        top: 375px;
+      }
+      @include mobile {
+        width: vw(485);
+        top: vw(375);
+      }
+      .sender-name {
+        color: #ffee99;
+        font-size: 20px;
+        @include tablet {
+          font-size: 27px;
+        }
+        @include mobile {
+          font-size: vw(27);
+        }
+      }
+      .recipient-name {
+        text-align: left;
+        color: #ffee99;
+        font-size: 28px;
+        margin-top: 144px;
+        margin-left: 45px;
+        letter-spacing: 2px;
+        @include tablet {
+          font-size: 30px;
+          margin-top: 214px;
+          margin-left: 65px;
+        }
+        @include mobile {
+          font-size: vw(30);
+          margin-top: vw(214);
+          margin-left: vw(65);
+        }
+      }
+      .message {
+        color: #1b1916;
+        margin-top: 28px;
+        letter-spacing: 1px;
+        font-size: 15px;
+        line-height: 25px;
+        text-align: justify;
+        @include tablet {
+          margin-top: 38px;
+          font-size: 22px;
+          line-height: 33px;
+        }
+        @include mobile {
+          margin-top: vw(38);
+          font-size: vw(22);
+          line-height: vw(33);
+        }
+      }
+    }
+    &-04 {
+      text-align: left;
+      width: 338px;
+      margin: 0 auto;
+      right: 0;
+      left: 0;
+      top: 423px;
+      @include tablet {
+        width: 485px;
+        top: 600px;
+      }
+      @include mobile {
+        width: vw(485);
+        top: vw(600);
+      }
+      .sender-name {
+        color: #fff;
+        font-size: 20px;
+        margin-left: 50px;
+        font-weight: 400;
+        letter-spacing: 2px;
+        @include tablet {
+          font-size: 27px;
+          margin-left: 74px;
+        }
+        @include mobile {
+          font-size: vw(27);
+          margin-left: vw(74);
+        }
+      }
+      .recipient-name {
+        text-align: center;
+        color: #fadb86;
+        font-size: 20px;
+        margin-top: 18px;
+        letter-spacing: 2px;
+        margin-left: 25px;
+        font-weight: 400;
+        @include tablet {
+          font-size: 27px;
+          margin-top: 28px;
+          margin-left: 40px;
+        }
+        @include mobile {
+          font-size: vw(27);
+          margin-top: vw(28);
+          margin-left: vw(40);
+        }
+      }
+      .message {
+        color: #fff;
+        margin-top: 28px;
+        letter-spacing: 1px;
+        font-size: 15px;
+        line-height: 20px;
+        text-align: center;
+        font-weight: 400;
+        @include tablet {
+          margin-top: 32px;
+          font-size: 22px;
+          line-height: 33px;
+        }
+        @include mobile {
+          margin-top: vw(32);
+          font-size: vw(22);
+          line-height: vw(33);
+        }
+      }
+    }
+  }
+  .selected-card {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    &-01 {
+      background: url("../images/greeting/cards/ibon-card1.png") no-repeat
+        center/cover;
+    }
+    &-02 {
+      background: url("../images/greeting/cards/ibon-card2.png") no-repeat
+        center/cover;
+    }
+    &-03 {
+      background: url("../images/greeting/cards/ibon-card3.png") no-repeat
+        center/cover;
+    }
+    &-04 {
+      background: url("../images/greeting/cards/ibon-card4.png") no-repeat
+        center/cover;
+    }
+  }
+  .photo {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #412649;
+    &-01 {
+      margin: 52px 0 0 176px;
+      width: 103px;
+      height: 103px;
+      @include tablet {
+        margin: 74px 0 0 250px;
+        width: 145px;
+        height: 145px;
+      }
+      @include mobile {
+        margin: vw(74) 0 0 vw(250);
+        width: vw(145);
+        height: vw(145);
+      }
+    }
+    &-02 {
+      margin: 41px 0 0 137px;
+      width: 120px;
+      height: 120px;
+      @include tablet {
+        margin: 59px 0 0 196px;
+        width: 168px;
+        height: 168px;
+      }
+      @include mobile {
+        margin: vw(59) 0 0 vw(196);
+        width: vw(168);
+        height: vw(168);
+      }
+    }
+    &-03 {
+      margin: 88px 0 0 110px;
+      width: 165px;
+      height: 165px;
+      @include tablet {
+        margin: 124px 0 0 155px;
+        width: 235px;
+        height: 235px;
+      }
+      @include mobile {
+        margin: vw(124) 0 0 vw(155);
+        width: vw(235);
+        height: vw(235);
+      }
+    }
+    &-04 {
+      margin: 311px 0 0 141px;
+      width: 105px;
+      height: 105px;
+      @include tablet {
+        margin: 441px 0 0 199px;
+        width: 150px;
+        height: 150px;
+      }
+      @include mobile {
+        margin: vw(441) 0 0 vw(199);
+        width: vw(150);
+        height: vw(150);
+      }
+    }
+    img {
+      width: 100%;
+    }
+  }
+
+  .video-show {
+    width: 100%;
+    height: auto;
+    // width: 390px;
+    // @include tablet {
+    //   width: 552px;
+    // }
+    // @include mobile {
+    //   width: vw(552);
+    // }
+  }
+
+  &.flip {
+    transform: rotateY(180deg);
+  }
+
+  canvas,
+  img {
+    backface-visibility: hidden;
+    overflow: hidden;
+    width: 390px;
+  }
+  .make-img {
+    width: 390px;
+  }
+}
+%cover-page {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  z-index: 2;
+}
+// loading 動畫
+#greeting-animation {
+  z-index: 5;
+  @extend %cover-page;
+  // display: block;
+  .greeting-container {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    @extend %flex-center;
+    flex-flow: column;
+    background: #fd5e73;
+  }
+  .loading-img {
+    width: 340px;
+    margin-bottom: 37px;
+    @include tablet {
+      width: 514px;
+      margin-bottom: 57px;
+    }
+    @include mobile {
+      width: vw(514);
+      margin-bottom: vw(57);
+    }
+  }
+  .making-text {
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 20px;
+    @include tablet {
+      font-size: 36px;
+      margin-bottom: 32px;
+    }
+    @include mobile {
+      font-size: vw(36);
+      margin-bottom: vw(32);
+    }
+  }
+  .progress-bar {
+    width: 270px;
+    height: 15px;
+    border: 3px solid #000;
+    border-radius: 50px;
+    background: #fff;
+    @include tablet {
+      width: 410px;
+      height: 21px;
+      border: 4px solid #000;
+    }
+    @include mobile {
+      width: vw(410);
+      height: vw(21);
+      border: vw(4) solid #000;
+    }
+  }
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(
+      315deg,
+      #23ac38 25%,
+      #df0006 25%,
+      #df0006 50%,
+      #23ac38 50%,
+      #23ac38 75%,
+      #df0006 75%,
+      #df0006
+    );
+    background-size: 60px 60px;
+    animation: progress-animation 4s linear infinite;
+  }
+  @keyframes progress-animation {
+    0% {
+      background-position: 0 0;
+      width: 0%;
+    }
+    100% {
+      background-position: 60px 0;
+      width: 100%;
+    }
+  }
+  .message {
+    margin-bottom: 30px;
+    @include tablet {
+      margin-top: -22px;
+    }
+    @include mobile {
+      margin-top: vw(-22);
+      margin-bottom: vw(30);
+    }
+    .text {
+      color: #fff;
+      font-size: 18px;
+      line-height: lineHeight(18, 30);
+      span {
+        font-size: 36px;
+      }
+      @include tablet {
+        font-size: 30px;
+        span {
+          font-size: 48px;
+        }
+      }
+      @include mobile {
+        font-size: vw(30);
+        span {
+          font-size: vw(48);
+        }
+      }
+    }
+  }
+
+  .receive-text {
+    font-size: 19px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 30px;
+    margin-top: 10px;
+    @include tablet {
+      font-size: 28px;
+      line-height: 45px;
+      margin-top: 12px;
+    }
+    @include mobile {
+      font-size: vw(28);
+      line-height: vw(45);
+      margin-top: vw(12);
+    }
+  }
+  
+  
+}
+
+// 收到賀卡
+#receive__video {
+  // display: none;
+  display: flex;
+  @extend %cover-page;
+  // display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../images/greeting/bg-finish.png) no-repeat #5d000c
+    center;
+  @extend %video-show-block;
+}
+
+#inner {
+  display: none;
+}

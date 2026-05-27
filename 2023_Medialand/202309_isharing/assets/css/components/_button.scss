@@ -1,0 +1,42 @@
+/*--------------- 按鈕 ---------------*/
+
+.button {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #000;
+    font-weight: 600;
+    border-color: #000;
+    border-width: 2px;
+    border-style: solid;
+    background: #fff600;
+    box-shadow: rgba(0, 0, 0, 1) 0 2px 0;
+
+    @include tablet {
+        border-width: 3px;
+        box-shadow: rgba(0, 0, 0, 1) 0 5px 0;
+    }
+
+    @include mobile {
+        border-width: vw(3);
+        box-shadow: rgba(0, 0, 0, 1) 0 vw(5) 0;
+    }
+
+    &:active {
+        color: #000;
+        background: #dbcc4a;
+        box-shadow: none;
+        transform: translateY(2px);
+    }
+
+    @include hover {
+        &:hover {
+            color: #000;
+            background: #dbcc4a;
+            box-shadow: none;
+            transform: translateY(2px);
+        }
+    }
+
+}

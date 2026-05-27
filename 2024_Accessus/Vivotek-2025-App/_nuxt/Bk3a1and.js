@@ -1,0 +1,1 @@
+import{X as n,Y as i,Z as l,_ as r,$ as c}from"./B1oVwC2a.js";import{u as f}from"./CkcQHn4U.js";const p=n(e=>{const{authenticated:o,token:s}=i(f()),a=l("token",{secure:!0}),u=r(),t=e==null?void 0:e.name;if(t.split("___")[1],a.value&&(o.value=!0,s.value=a.value),a.value&&t.split("___")[0]==="login")return c(u("/"))});export{p as default};

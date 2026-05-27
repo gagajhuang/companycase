@@ -1,0 +1,82 @@
+#pop-event_game-rule {
+
+    // width: 380px;
+    width: 460px;
+    margin-top: 95px;
+    margin-bottom: 95px;
+    padding: 138px 40px 154px;
+
+    @include tablet {
+        width: 588px;
+        margin-top: 204px;
+        margin-bottom: 204px;
+        padding: 208px 40px 214px;
+    }
+
+    @include mobile {
+        width: vw(588);
+        margin-top: vw(204);
+        margin-bottom: vw(204);
+        padding: vw(208) vw(40) vw(214);
+    }
+
+    .pop__text:nth-of-type(2) {
+        margin-top: 14px;
+        @include tablet {
+            margin-top: 12px;
+        }
+        @include mobile {
+            margin-top: vw(12);
+        }
+    }
+
+    .pop__buttons {
+        padding-top: 22px;
+        @include tablet {
+            padding-top: 30px;
+        }
+        @include mobile {
+            padding-top: vw(30);
+        }
+    }
+
+    .pop__button {
+        align-items: center;
+        justify-content: flex-start;
+        height: 43px;
+        padding-bottom: 2px;
+        border-radius: 7px;
+        @include tablet {
+            height: 88px;
+            padding-bottom: 4px;
+            border-width: 4px;
+            border-radius: 11px;
+        }
+        @include mobile {
+            height: vw(88);
+            padding-bottom: vw(4);
+            border-width: vw(4);
+            border-radius: vw(11);
+        }
+    }
+
+    .pop__button-start {
+        justify-content: center;
+        width: 94px;
+        font-size: 20px;
+        margin: 0 auto;
+        @include tablet {
+            width: 250px;
+            font-size: 36px;
+            letter-spacing: #{PsdLetterSpacing(50, 36)}px;
+            padding-left: #{PsdLetterSpacing(50, 36)}px;
+        }
+        @include mobile {
+            width: vw(250);
+            font-size: vw(36);
+            letter-spacing: vw(PsdLetterSpacing(50, 36));
+            padding-left: vw(PsdLetterSpacing(50, 36));
+        }
+    }
+
+}

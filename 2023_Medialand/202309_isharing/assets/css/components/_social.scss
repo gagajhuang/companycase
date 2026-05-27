@@ -1,0 +1,65 @@
+/*--------------- 社群連結 ---------------*/
+
+.social {
+
+    li {
+        margin-right: 9px;
+        @include tablet {
+            margin-right: 11px;
+            margin-left: 11px;
+        }
+        @include mobile {
+            margin-right: vw(11);
+            margin-left: vw(11);
+        }
+    }
+
+    a {
+        display: block;
+        width: 30px;
+        height: 30px;
+        @include hide-text;
+        background-image: url('/assets/images/common/icon-social.png');
+        background-repeat: no-repeat;
+        @include tablet {
+            width: 57px;
+            height: 54px;
+            background-image: url('/assets/images/common/icon-social_m.png');
+            background-size: auto 100%;
+        }
+        @include mobile {
+            width: vw(57);
+            height: vw(54);
+        }
+        $social: (
+            'youtube': 1px,
+            'facebook': -38px,
+            'instagram': -77px,
+            'website': -115px,
+            'line': -155px,
+        );
+        @each $name, $value in $social {
+            &.#{$name} {
+                background-position: $value 1px;
+                @include hover {
+                    &:hover { background-position: $value -29px; }
+                }
+            }
+        }
+        $socialTablet: (
+            'youtube': 0,
+            'facebook': -78,
+            'instagram': -154,
+            'website': -232,
+            'line': -311,
+        );
+        @each $name, $value in $socialTablet {
+            &.#{$name} {
+                @include tablet { background-position: $value+px 0px; }
+                @include mobile { background-position: vw($value) 0px; }
+            }
+        }
+    }
+
+}
+

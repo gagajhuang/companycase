@@ -1,0 +1,433 @@
+#menu {
+
+    display: none;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    background: #fd5e73;
+    z-index: 1;
+
+    .inner {
+
+        @include tablet {
+        }
+
+        @include mobile {
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 353px;
+            width: 285px;
+            height: 185px;
+            background: url('../images/common/menu-extra.png') 0 0 no-repeat;
+            pointer-events: none;
+            @include tablet {
+                left: 163px;
+                width: 407px;
+                height: 294px;
+                background-image: url('../images/common/menu-extra_m.png');
+                background-size: contain;
+            }
+            @include mobile {
+                left: vw(163);
+                width: vw(407);
+                height: vw(294);
+            }
+        }
+
+    }
+
+    #user {
+
+        margin-bottom: 56px;
+
+        @include tablet {
+            margin-bottom: 96px;
+        }
+
+        @include mobile {
+            margin-bottom: vw(96);
+        }
+
+        .user__avatar {
+            width: 140px;
+            height: 204px;
+            margin: 0 auto 14px;
+            background: url('../images/common/user-avatar.png') 0 0 no-repeat;
+            overflow: hidden;
+            @include tablet {
+                width: 239px;
+                height: 349px;
+                margin: 0 auto 26px;
+                background-image: url('../images/common/user-avatar_m.png');
+                background-size: contain;
+            }
+            @include mobile {
+                width: vw(239);
+                height: vw(349);
+                margin: 0 auto vw(26);
+            }
+        }
+
+        .user__image {
+
+            width: 116px;
+            height: 116px;
+            margin: 76.5px 0 0 13px;
+            border-radius: 116px;
+            background: #fff;
+            overflow: hidden;
+
+            @include tablet {
+                width: 196px;
+                height: 196px;
+                margin: 132px 0 0 21px;
+                border-radius: 196px;
+            }
+
+            @include mobile {
+                width: vw(196);
+                height: vw(196);
+                margin: vw(132) 0 0 vw(21);
+                border-radius: vw(196);
+            }
+
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+        }
+
+        .user__name {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &::before,
+            &::after {
+                content: '';
+                width: 15px;
+                height: 14px;
+                margin: -2px 3px 0;
+                background: url('../images/common/icon-star_red.png') 0 0 no-repeat;
+                @include tablet {
+                    width: 24px;
+                    height: 24px;
+                    margin: 4px 6px 0 4px;
+                    background-image: url('../images/common/icon-star_red_m.png');
+                    background-size: contain;
+                }
+                @include mobile {
+                    width: vw(24);
+                    height: vw(24);
+                    margin: vw(4) vw(6) 0 vw(4);
+                }
+            }
+
+            a, span {
+                color: #fefefe;
+                font-size: 22px;
+                font-weight: 600;
+                line-height: 1;
+                padding-bottom: 5px;
+                padding-left: #{PsdLetterSpacing(100, 22)}px;
+                border-bottom: transparent 1px solid;
+                letter-spacing: #{PsdLetterSpacing(100, 22)}px;
+                @include tablet {
+                    font-size: 37.27px;
+                    padding-bottom: 0;
+                    padding-left: #{PsdLetterSpacing(100, 37.27)}px;
+                    border-bottom: none;
+                    letter-spacing: #{PsdLetterSpacing(100, 37.27)}px;
+                }
+                @include mobile {
+                    font-size: vw(37.27);
+                    padding-left: vw(PsdLetterSpacing(100, 37.27));
+                    letter-spacing: vw(PsdLetterSpacing(100, 37.27));
+                }
+            }
+
+            a {
+                @include hover {
+                    &:hover {
+                        color: $hoverTextColor;
+                        border-bottom-color: $hoverTextColor;
+                        text-shadow: rgba(0,0,0,.15) 0 0 5px;
+                    }
+                }
+            }
+
+            span {
+
+            }
+
+        }
+
+    }
+
+    .menu__navigation {
+
+        width: 520px;
+        margin-left: 227px;
+
+        @include tablet {
+            width: 100%;
+            margin-bottom: 50px;
+            margin-left: 0;
+            padding-right: 52px;
+            padding-left: 48px;
+        }
+
+        @include mobile {
+            margin-bottom: vw(50);
+            padding-right: vw(52);
+            padding-left: vw(48);
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            @include tablet {
+                // justify-content: flex-start;
+            }
+        }
+
+        li {
+            margin-bottom: 10px;
+            @include tablet {
+                margin-bottom: 38px;
+            }
+            @include mobile {
+                margin-bottom: vw(38);
+            }
+            &:nth-child(odd) {
+                @include tablet {
+                    width: 330px;
+                }
+                @include mobile {
+                    width: vw(330);
+                }
+            }
+            &:nth-child(even) {
+                @include tablet {
+                    width: 270px;
+                }
+                @include mobile {
+                    width: vw(270);
+                }
+            }
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 200px;
+            color: $defaultTextColor;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: #{PsdLetterSpacing(50, 18)}px;
+
+            @include tablet {
+                width: 100%;
+                font-size: 30px;
+                font-weight: 500;
+                letter-spacing: #{PsdLetterSpacing(50, 30)}px;
+            }
+
+            @include mobile {
+                font-size: vw(30);
+                letter-spacing: vw(PsdLetterSpacing(50, 30));
+            }
+
+            @include hover {
+                &:hover {
+                    color: $hoverTextColor;
+                    text-shadow: rgba(0,0,0,.25) 0 0 5px;
+                    &::before {
+                        transform: translateY(2px);
+                    }
+                }
+            }
+
+            &::before {
+                content: '';
+                width: 37px;
+                height: 50px;
+                margin-right: 8px;
+                background-image: url('../images/common/icon-socks.png');
+                background-repeat: no-repeat;
+                transform: translateY(4px);
+                @include tablet {
+                    width: 59px;
+                    height: 81px;
+                    margin-right: 12px;
+                    background-image: url('../images/common/icon-socks_m.png');
+                    background-size: 186px 81px;
+                    transform: translateY(8px);
+                }
+                @include mobile {
+                    width: vw(59);
+                    height: vw(81);
+                    margin-right: vw(12);
+                    background-size: vw(186) vw(81);
+                    transform: translateY(vw(8));
+                }
+            }
+        }
+
+        li:nth-child(3n+1) a::before {background-position: 0 0;}
+        li:nth-child(3n+2) a::before {background-position: -80px 0;}
+        li:nth-child(3n+3) a::before {background-position: -40px 0;}
+
+        @include tablet {
+            li:nth-child(3n+1) a::before {background-position: 0 0;}
+            li:nth-child(3n+2) a::before {background-position: -124px 0;}
+            li:nth-child(3n+3) a::before {background-position: -62px 0;}
+        }
+
+        @include mobile {
+            li:nth-child(3n+1) a::before {background-position: 0 0;}
+            li:nth-child(3n+2) a::before {background-position: vw(-124) 0;}
+            li:nth-child(3n+3) a::before {background-position: vw(-62) 0;}
+        }
+
+    }
+
+    .menu__toggler {
+        position: absolute;
+        top: 52px;
+        left: 67px;
+        width: 86px;
+        height: 84px;
+        background: url('../images/common/menu-toggler.png') 0 0 no-repeat;
+        @include tablet {
+            top: 66px;
+            left: 52px;
+            width: 133px;
+            height: 127px;
+            background-image: url('../images/common/menu-toggler_m.png');
+            background-size: 272px 127px;
+        }
+        @include mobile {
+            top: vw(66);
+            left: vw(52);
+            width: vw(133);
+            height: vw(127);
+            background-size: vw(272) vw(127);
+        }
+        &:active {
+            @include tablet {
+                background-position: -136px 0;
+            }
+            @include mobile {
+                background-position: vw(-136) 0;
+            }
+        }
+        @include hover {
+            &:hover {
+                background-position: -90px 0;
+                @include tablet {
+                    background-position: -136px 0;
+                }
+                @include mobile {
+                    background-position: vw(-136) 0;
+                }
+            }
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 58px;
+            background: #000000;
+            transform: translate(42px, -99%);
+            pointer-events: none;
+            @include tablet {
+                width: 6px;
+                height: 70px;
+                transform: translate(63px, -100%);
+            }
+            @include mobile {
+                width: vw(6);
+                height: vw(70);
+                transform: translate(vw(63), -100%);
+            }
+        }
+    }
+
+    .menu__facebook {
+        position: absolute;
+        top: 142px;
+        left: 678px;
+        width: 68px;
+        height: 68px;
+        background: url('../images/common/menu-facebook.png') 0 0 no-repeat;
+        @include tablet {
+            top: 45px;
+            left: 594px;
+            width: 97px;
+            height: 97px;
+            background-image: url('../images/common/menu-facebook_m.png');
+            background-size: 200px 97px;
+        }
+        @include mobile {
+            top: vw(45);
+            left: vw(594);
+            width: vw(97);
+            height: vw(97);
+            background-size: vw(200) vw(97);
+        }
+        &:active {
+            @include tablet {
+                background-position: -100px 0;
+            }
+            @include mobile {
+                background-position: vw(-100) 0;
+            }
+        }
+        @include hover {
+            &:hover {
+                background-position: -70px 0;
+                @include tablet {
+                    background-position: -100px 0;
+                }
+                @include mobile {
+                    background-position: vw(-100) 0;
+                }
+            }
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 146px;
+            background: #000000;
+            transform: translate(32px, -99%);
+            pointer-events: none;
+            @include tablet {
+                width: 6px;
+                height: 48px;
+                transform: translate(46px, -100%);
+            }
+            @include mobile {
+                width: vw(6);
+                height: vw(48);
+                transform: translate(vw(46), -100%);
+            }
+        }
+    }
+
+}

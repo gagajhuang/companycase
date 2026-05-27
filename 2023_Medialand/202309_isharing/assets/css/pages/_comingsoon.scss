@@ -1,0 +1,48 @@
+#comingsoon {
+
+    .comingsoon__caption {
+        width: 814px;
+        height: 474px;
+        margin-bottom: 54px;
+        margin-left: 88px;
+        background: url('../images/comingsoon/caption.png') 0 0 no-repeat;
+        background-size: contain;
+        @include tablet {
+            width: 705px;
+            height: 676px;
+            margin-right: auto;
+            margin-bottom: 94px;
+            margin-left: auto;
+            background-image: url('../images/comingsoon/caption_m.png');
+        }
+        @include mobile {
+            width: vw(705);
+            height: vw(676);
+            margin-bottom: vw(94);
+            background-size: vw(705) vw(676);
+        }
+    }
+
+    .comingsoon__text {
+        color: #fff;
+        font-size: 30px;
+        font-weight: 600;
+        text-align: center;
+        letter-spacing: #{PsdLetterSpacing(100, 30)}px;
+        padding-left: #{PsdLetterSpacing(100, 30)}px;
+        margin-bottom: 100px;
+        @include tablet {
+            font-size: 48px;
+            font-weight: 500;
+            letter-spacing: #{PsdLetterSpacing(100, 48)}px;
+            padding-left: #{PsdLetterSpacing(100, 48)}px;
+        }
+        @include mobile {
+            font-size: vw(48);
+            letter-spacing: vw(PsdLetterSpacing(100, 48));
+            padding-left: vw(PsdLetterSpacing(100, 48));
+            margin-bottom: vw(100);
+        }
+    }
+
+}
