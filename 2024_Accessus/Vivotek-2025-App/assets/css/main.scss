@@ -1,0 +1,16 @@
+// @use 'abstracts/variables' as *;
+// @use 'abstracts/mixins' as *;
+// @use 'base/utilities' as *;
+// @use 'base/reset' as *;
+// @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
+@forward "base/reset";
+@forward "abstracts/variables";
+@forward "abstracts/mixins";
+@forward "base/utilities";
+
+
+// @import "abstracts/variables";
+// @import "abstracts/mixins";
+// @import "base/utilities";
+// @import "base/reset";

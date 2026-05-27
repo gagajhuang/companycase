@@ -1,0 +1,657 @@
+{
+  "header": {
+    "home": "Home",
+    "recap": "Event Recap",
+    "event": {
+      "title": "2025 Event+",
+      "event1": "Frame Our 25th Moments Together",
+      "event2": "VIVOTEK Green Day",
+      "event3": "Global Search Challenge",
+      "event4": "Global Step Challenge"
+    },
+    "profile": "Profile",
+    "login": "Log In",
+    "logout": "Log Out"
+  },
+  "footer": {
+    "text": "※The Organizer reserves the right to change or modify events. Any modification will update on this website.",
+    "text2": "※Your participation in this event implies your consent to the use of your photograph(s) taken during the event for post-event publicity."
+  },
+  "login": {
+    "des": "Join Now for 2025 Brand Boost!",
+    "email": "VIVOTEK Email Address",
+    "id": "VIVOTEK Employee ID",
+    "btn": "Log In",
+    "warn": "The account you entered is not suspended."
+  },
+  "profile": {
+    "title": "Profile",
+    "employeeId": "Employee ID",
+    "email": "E-mail",
+    "zhName": "Chinese Name",
+    "enName": "English Name",
+    "phone": "Mobile Number",
+    "warn": "* Number format error, please re-enter!",
+    "submit": "Save"
+  },
+  "index": {
+    "intro": {
+      "h3Sub": "Celebrating 25 Years of VIVOTEK",
+      "h3": "MAKE TOMORROW EASIER, TODAY!",
+      "h4": "On this momentous 25th anniversary, we're thrilled to unveil our new brand vision: 'MAKE TOMORROW EASIER, TODAY!' \n Through a variety of engaging activities, we invite all VIVOTEKers to join us in shaping our future together.\n Let's keep moving forward, fueled by passion and creativity, to make every tomorrow better.",
+      "videoH2": "Celebrating 25 Years, Starts Now!"
+    },
+    "activity": {
+      "annual": {
+        "title": "Point Tracker",
+        "name": "Name:",
+        "location": "Location:",
+        "quality": {
+          "title": "Global Search Challenge",
+          "points": "Points",
+          "ranking": "Rank",
+          "topic1": "Decode Everyday Safety",
+          "topic2": "Travel with VIVOTEK Vision",
+          "topic3": "See the Future Through Our Lens"
+        },
+        "speed": {
+          "title": "Global Step Challenge",
+          "points": "Points",
+          "ranking": "Rank",
+          "topic1": "September",
+          "topic2": "October",
+          "topic3": "November"
+        }
+      },
+      "event": {
+        "title": "2025 Brand Events",
+        "event1": {
+          "title": "Frame Our 25th Moments Together",
+          "date": "Feb.",
+          "des": "It's party time! Get creative and taka the coolest 25th-anniversary photoshoot ever. Let's find out where the unique VIVOTEKers are hiding!"
+        },
+        "event2": {
+          "title": "VIVOTEK \n Green Day",
+          "date": "Apr.",
+          "des": "Second year strong! Together with HAOSHI Foundation and green brands, we're all in for Earth Day (#OurPowerOurPlanet) and boosting ESG through #Teamwork."
+        },
+        "event3": {
+          "title": "Global Search Challenge",
+          "date": "Jun. - Aug.",
+          "des": "VIVOTEK 25th Anniversary Global Search Challenge is Now Live! Now it's your turn to become a search agent and capture this exciting 'Journey of Quality' through your lens!"
+        },
+        "event4": {
+          "title": "Global Step Challenge",
+          "date": "Sep. - Nov.",
+          "des": "For 25 years, we've pioneered the future with #speed. 10,000 steps = 1.42kg carbon footprint reduction = planting one tree! Rewards ft. carbon emission reduction. Moving forward with us in NEXT 25 years!"
+        },
+        "event5": {
+          "title": "品牌力參訪",
+          "date": "12 月",
+          "des": "準備好走進台達的創新殿堂，展開一場 #透明 對話，一同揭開智慧與永續未來的面紗吧！"
+        },
+        "btnMore": "More",
+        "btnComing": "Coming Soon"
+      },
+      "global": {
+        "title": "Leaderboard｜Global Search Challenge",
+        "ranking": "Rank",
+        "name": "Name",
+        "location": "Location",
+        "points": "Points",
+        "rankingChanges": "Rank Shift",
+        "remark01": "*The top 10 will receive special prizes, so hurry up and make it to the top!",
+        "remark02": "*Rankings are sorted by points daily. In case of ties, the colleague who first accumulated the points will be prioritized."
+      },
+      "globalSpeed": {
+        "title": "Leaderboard｜Global Search Challenge",
+        "ranking": "Rank",
+        "name": "Name",
+        "location": "Location",
+        "points": "Steps",
+        "rankingChanges": "Rank Shift",
+        "remark01": "*The top 10 will receive special prizes!",
+        "remark02": "*Rankings are sorted by points daily. In case of ties, the colleague who first accumulated the points will be prioritized."
+      }
+    },
+    "review": {
+      "h2": "2024 Highlights",
+      "h2Sub": "BRAND BOOST is entering its exciting third year! Thank you everyone for your dedicated efforts in \nenergizing our brand and making our brand culture truly resonate with people's hearts!",
+      "performanceItem01": "Participant",
+      "performanceItem01Text": "",
+      "performanceItem02": "Carbon Emissions Reduced",
+      "performanceItem02Text": "tons",
+      "performanceItem03": "Equivalent to Planting",
+      "performanceItem03Text": "trees",
+      "btn": "Click for More"
+    }
+  },
+  "25th": {
+    "intro": {
+      "h3Sub": "Frame Our 25th Moments Together",
+      "h4": "Join us in celebrating 25 years of innovation and teamwork!\n Capture your special moments with our exclusive anniversary visuals.\n Pose, snap a photo, and share your best wishes—let's celebrate our journey together!",
+      "btn": "Join the Fun"
+    },
+    "event": {
+      "h2": "Throwback Moments",
+      "h2Sub": "Come and see how VIVOTEKers around the world capture precious memories, sharing magical moments and brand charisma!",
+      "btn": "More"
+    },
+    "activity": {
+      "step": {
+        "title": "Join the Celebration in 3 Simple Steps",
+        "item1": {
+          "title": "Capture the Moment",
+          "des": "Take selfies or group photos with our 25th-anniversary visuals—anytime, anywhere!"
+        },
+        "item2": {
+          "title": "Create Your Shot",
+          "des": "Customize your own VIVOTEK Polaroid with our exclusive anniversary frame!"
+        },
+        "item3": {
+          "title": "Share & Upload!",
+          "des": "Share your photo & message to be part of our collective story!"
+        }
+      },
+      "global": {
+        "h2": "Join Online or at HQ!",
+        "h2Sub": "",
+        "photoH2": "Online Event: Celebrate Anytime, Anywhere",
+        "content": {
+          "text": "Join us from anywhere in the world with our exclusive anniversary visuals.\nSnap a photo, get inspired, and share your part of the VIVOTEK journey!",
+          "date1": "When: Feb 10 - Feb 21, 18:00 (GMT+8)",
+          "date2": "Where: Online"
+        },
+        "directions": {
+          "item1": {
+            "title1": "Frame Your Moment with",
+            "title2": " 25th Anniversary ",
+            "title3": "Visuals",
+            "des": "Use our special props and visual elements to snap your photos. Want to get extra creative? Use AI effects to make your memories even more unique!",
+            "btn": "Download Assets"
+          },
+          "item2": {
+            "title": "Create Your Own VIVOTEK Polaroid",
+            "des": "Follow the steps on “Snap with VIVOTEKers” page to create and download your personalized photo",
+            "link": "Instruction",
+            "btn": "Snap with VIVOTEKers"
+          },
+          "end": {
+            "btn": "The End"
+          }
+        }
+      },
+      "headquarters": {
+        "h2": "HQ Exclusive: Instant Polaroid Printing",
+        "h2Sub": "For one day only, join us in person at HQ for a special Polaroid printing event!",
+        "date": "When: Feb 10, 2025, 10:00-18:00",
+        "location": "Where: Room Kandinsky, 6F, No. 192, HQ",
+        "more": "What You Get:",
+        "list1": "Your personalized VIVOTEK Polaroid—ready in just 30 seconds.",
+        "list2": "Instant high-quality printing on-site.",
+        "list3": "Option to print or download your digital file.",
+        "remark": "On-site Coordinator: Debby Liao ",
+        "text": ""
+      }
+    },
+    "upload": {
+      "title": "Don't Forget: Share Your Anniversary Moment!",
+      "date": "Your moment makes VIVOTEK's story even more special—thank you for being part of this milestone.\n Final Submission: Feb 21, 2025, 18:00 (GMT+8)",
+      "demo": "Sample",
+      "photo": {
+        "title": "Share Your Photos",
+        "label": "Upload"
+      },
+      "textarea": {
+        "title": "Send Your Best Wishes:",
+        "sub": "Share why 'Make Tomorrow Easier, Today!' resonates with you. \n(Minimum 20 words)",
+        "placeholder": "Example: 'VIVOTEK has been pioneering our industry for 25 years. Thank you for making innovation easier!'"
+      },
+      "btn": "Submit"
+    },
+    "notion": {
+      "title": "Notice",
+      "list1": "Express yourself with our 25th anniversary visuals - bring out your unique VIVOTEKer personality!",
+      "list2": "Uploaded photos should be in jpg or png format, and under 3MB.",
+      "list3": "By uploading photos, you grant VIVOTEK permission to use them on public platforms (including social media and internal newsletters).",
+      "list4-1": "For any questions, please contact the",
+      "list4-2": " VIVOTEK event team."
+    }
+  },
+  "recap": {
+    "intro": {
+      "h3Sub": "BRAND BOOST",
+      "h3": "Unleash Brand Power - Shape a Sustainable Tomorrow",
+      "h4": "Since its launch in 2022, BRAND BOOST has become an exclusive platform for all VIVOTEKers.\nWe’re all about turning ideas into action, pushing our company culture\n—Quality, Teamwork, Speed, and Transparency—in every challenges."
+    },
+    "review": {
+      "h2": "BRAND BOOST Milestones:",
+      "h2Sub": "Shoutout to VIVOTEKers,\nOver the past two years, BRAND BOOST has delivered these awesome results:",
+      "performanceItem01": "Participants",
+      "performanceItem01Text": "",
+      "performanceItem02": "Steps \n Walked",
+      "performanceItem02Text": "",
+      "performanceItem02Num1": " ",
+      "performanceItem02Num2": "128",
+      "performanceItem02Text2": "M steps",
+      "performanceItem03": "Reduce Carbon \n Emissions",
+      "performanceItem03Text": "tons",
+      "performanceItem04": "Equivalent to \n Planting",
+      "performanceItem04Text": "trees",
+      "performanceItem05": "ESG \n Partners",
+      "performanceItem05Text": "partners"
+    },
+    "activity": {
+      "h2": "Highlights Recap",
+      "24th": {
+        "title": "In 2024, we're extending our brand vision with a stronger focus on ESG,\nworking with our partners to build a brighter future!",
+        "item": {
+          "01": {
+            "title": "VIVOTEK Green Day × Teamwork \n｜Apr. 22",
+            "des": "Celebrating The Earth Day, we partnered with the HAOSHI Foundation to create a lively market and insightful sessions. Driving sustainability awareness and highlighting VIVOTEK's #Teamwork culture."
+          },
+          "02": {
+            "title": "Global Search Challenge × Quality \n｜May. - Aug.",
+            "des": "Spotting VIVOTEK products in iconic locations: form Paris metros, Dutch stations, to Japanese hotspots, etc., highlighting our superior #Quality and global influence."
+          },
+          "03": {
+            "title": "Global Step Challenge × Speed \n｜Sep. - Nov.",
+            "des": "Constantly pushing boundaries! Over two years,  we have walked almost 130 million steps, resulting in a reduction around 30 tons of carbon emissions—that's like planting 2,489 trees! That’s how we leverage #Speed culture."
+          },
+          "04": {
+            "title": "The Group Vision × Transparency \n｜Nov. 29",
+            "des": "Visiting Delta Group to explore smart buildings and sustainable development. Connect with their team, reinforcing VIVOTEK's culture of #Transparency."
+          }
+        }
+      },
+      "23th": {
+        "title": "In 2023, we expanded BRAND BOOST, crafting our brand culture.\nInspiring all VIVOTEKers to be the driver of our brand.",
+        "item": {
+          "01": {
+            "title": "The EXTREME Challenge × Quality \n｜Mar. - Jul.",
+            "des": "Through the challenge, we showcased the global applications of VIVOTEK products. From the mountains of Taiwan to the Arabian Desert, our products perform reliably despite extreme temperature variations and various challenges,"
+          },
+          "02": {
+            "title": "Brand Workshop × Teamwork \n｜May. 11",
+            "des": "Collaborating to transform the product waste into creative, eco-friendly planters. Showcased both our dedication to environmental responsibility, #Teamwork and creativity."
+          },
+          "03": {
+            "title": "The Eco-Walking Challenge × Speed｜Aug. - Nov.",
+            "des": "To promote eco-friendly commuting, our FIRST Eco-Walking Challenge reached 80 million steps and highlighting our brand's #Speed culture. One VIVOTEKer achieved excellent results and successfully lost 17 kilograms, realizing a win-win for both health and sustainability."
+          },
+          "04": {
+            "title": "Company Visit × Transparency \n｜Nov. 29",
+            "des": "We visited O'right to learn about their green building and sustainability initiatives. This experience will help us advance VIVOTEK's #Transparency and sustainable development, fulfilling our brand vision."
+          }
+        }
+      },
+      "conclusion": "Join BRAND BOOST! Level Up VIVOTEK!"
+    }
+  },
+  "quality": {
+    "intro": {
+      "h4": "VIVOTEK 25th Anniversary Global Search Challenge is Now Live!\nFor 25 years, our products have been safeguarding every corner of the globe. Now it's your turn to become a search agent and capture this exciting 'Journey of Quality' through your lens!\nThree themes, up to",
+      "h4-num1": "US$2,550",
+      "h4-text2": " total prizes, monthly bonus check-ins and lucky draws are waiting for you!",
+      "h4-num2": "",
+      "h4-text3": "",
+      "btn": "Vote Now"
+    },
+    "step": {
+      "h2": "Join the 25th Anniversary Search Squad",
+      "h2Sub": "Every submission enters you into the lucky draw!\nChallenge three themes, climb the leaderboard, and prove you're the ultimate Global Seeker!",
+      "h2Text": "Join Us in Just 3 Steps!",
+      "item1": {
+        "title": "Choose the Theme",
+        "des": "Three major themes to challenge!\nTriple theme conquests are welcome, too!"
+      },
+      "item2": {
+        "title": "Capture Photos",
+        "des": " Must-have: Product photo x1 + Environment photo x1",
+        "des2": "Bonus points: Selfie with the product/Overseas shooting works"
+      },
+      "item3": {
+        "title": "Share Your Story",
+        "des": "Simply share the story of discovering the product.\nThe more creative, the more votes you'll get!"
+      }
+    },
+    "description": {
+      "h2": "How Are Points Calculated? How to Win?",
+      "h2Sub": "Every participation accumulates points - the higher your score, the closer you are to victory!",
+      "item1": {
+        "title": "Beginner",
+        "des1": "Submit product and location photos.\nShare you story of how you found it ",
+        "des2": "Earn"
+      },
+      "item2": {
+        "title": "Voting",
+        "des1": "Voted by colleagues worldwide\nTop 3 per theme get",
+        "des2": "Voted by senior management worldwide\nTop 3 per theme get"
+      },
+      "item3": {
+        "title": "Bonus",
+        "des1": "Photo that includes you",
+        "des2": "Photos are out of Taiwan"
+      },
+      "item4": {
+        "title": "Check-in Points",
+        "des1-1": "Monthly check-in on the 25th!",
+        "des1-2": "",
+        "des2": "Up to",
+        "des3": " for three consecutive check-ins"
+      },
+      "points": "points"
+    },
+    "awards": {
+      "h2": "Rich Prizes, Everyone Has a Chance!",
+      "itemDes": "Each Theme",
+      "item1": {
+        "title": "Champion"
+      },
+      "item2": {
+        "title": "Runner-Up"
+      },
+      "item3": {
+        "title": "Third Place"
+      },
+      "item4": {
+        "title": "4th–7th Place",
+        "des": ""
+      },
+      "item5": {
+        "title": "Lucky Draw",
+        "des": "(eligible upon submission)"
+      },
+      "item6": {
+        "title": "8th–10th Place",
+        "des": " Brand Selected Gifts"
+      },
+      "announcement": {
+        "h2": "Leaderboard",
+        "lucky": "Lucky Draw",
+        "submission": "Submission ",
+        "voting": "Voting ",
+        "gift": "Brand Eco Bag"
+      }
+    },
+    "activity": {
+      "schedule": {
+        "h2": "Challenge Roadmap"
+      },
+      "topic": {
+        "h2": "Unlock Three Major Themes and Showcase Your Creative Vision!",
+        "item1": {
+          "step": "Theme 1",
+          "title": "Decode Everyday Safety",
+          "des": "Entrance/Meeting Room/Ceiling, etc."
+        },
+        "item2": {
+          "step": "Theme 2",
+          "title": "Travel with VIVOTEK Vision",
+          "des": "Transportation/Hotel/ Extreme destinations, etc."
+        },
+        "item3": {
+          "step": "Theme 3",
+          "title": "See the Future Through Our Lens",
+          "des": "Automatic doors/Green Buildings/Smart Traffic Systems, etc."
+        }
+      },
+      "upload": {
+        "h2": "Submit｜Now Capture, Upload, Share the Adventure!",
+        "placeholder": "Example: Walking into the office every day, VIVOTEK PTZ cameras capture every detail with ultra-clear quality, providing 24/7 protection that instantly gives me peace of mind and complete security!",
+        "category": {
+          "item1": {
+            "title": "Decode Everyday Safety"
+          },
+          "item2": {
+            "title": "Travel with VIVOTEK Vision"
+          },
+          "item3": {
+            "title": "See the Future Through Our Lens"
+          }
+        },
+        "photo": {
+          "pd": {
+            "title": "Product Photo (required)",
+            "des": "Demonstrate the uniqueness of our products."
+          },
+          "place": {
+            "title": "Location Photo (required)",
+            "des": "Show a panoramic view or environment."
+          },
+          "bonus": {
+            "title": "Bonus",
+            "des": "Photo of you and the product."
+          }
+        },
+        "remark": "* Location Photo: the photo of the overall scenery or environment of the product's location.\n*Photos should be horizontal, in jpg or png format, and is under 3MB per file.",
+        "checkbox": "Please TICK if the photo is taken out of Taiwan.",
+        "btn": {
+          "submit": "Submit",
+          "ing": "Re-Submit",
+          "success": "Approved"
+        },
+        "alert": {
+          "text": "Please Enter Your Story",
+          "pd": "Please Upload Product Photo",
+          "place": "Please Upload Location Photo",
+          "success": "Success",
+          "fail": "Failed"
+        },
+        "remark2": "*Please don't leave this page until you see the 'Success' confirmation."
+      },
+      "vote": {
+        "h2": "Vote the Best｜Your Choice Matters!",
+        "h2Sub": {
+          "text1":"One vote per person per category. Use your expertise to select the most",
+          "text2":" creative",
+          "text3":" and",
+          "text4":" quality",
+          "text5":" works! \nVoting closes on 10/3 — your vote decides the winner!"
+        },
+        "category": {
+          "item1": {
+            "title": "Decode Everyday Safety"
+          },
+          "item2": {
+            "title": "Travel with VIVOTEK Vision"
+          },
+          "item3": {
+            "title": "Decode Everyday Safety"
+          }
+        },
+        "button":{
+          "notVote": "Vote",
+          "voted": "Voted"
+        },
+        "alert": {
+          "success": "Success！",
+          "fail": "Failed！"
+        }
+      },
+      "signIn": {
+        "h2": "25th Special｜Check-in on the 25th to Earn Points & Unlock Content!",
+        "h2Sub": "Log in event page and complete your check-in on the 25th of each month to earn points!",
+        "bonus": {
+          "title": "Single check-in 10 points, 2 check-ins 15 points, 3 check-ins maximum 30 points.",
+          "des": "Points accumulate monthly, rewards await!",
+          "month": "月",
+          "btn": {
+            "status1": "Missed",
+            "status2": "Mission Complete",
+            "status3": "Let's Check In!",
+            "status4": "Stay Tuned"
+          }
+        },
+        "alertSuccess": "Success!",
+        "remark": "Check-in available: 25th 10:00 to 26th 10:00 each month (GMT+8)"
+      },
+      "linkedIn": {
+        "title1": "This Month's Highlight｜",
+        "title2": "– India Team",
+        "des": "Follow us on LinkedIn to explore more stories from our journey."
+      },
+      "ended": {
+        "des": "Capture Your VIVOTEK 25th Anniversary Story Through the Lens!"
+      }
+    },
+    "notion": {
+      "title": "Notice",
+      "list1": "Submissions must be original, not from the 2023–2024 Global Search Challenge event; horizontal JPG/PNG, max 3MB.",
+      "list2": "Each approved submission earns 20 points. Photos featuring both a person and the product earn an additional 10 points, and overseas submissions receive an extra 10 points. Points are cumulative.",
+      "list3": "Ranking is based on total votes from all employees and supervisors; ties are broken by total vote count.",
+      "list4": "Voting is strictly confidential; please respect colleagues’ voting freedom. Organizers reserve final interpretation rights for irregularities.",
+      "list5": "The event timeline follows Taiwan Time (GMT+8); prize money is calculated based on the exchange rate on the remittance date.",
+      "list6": "For inquiries, please contact the VIVOTEK event team."
+    }
+  },
+  "speed": {
+    "intro": {
+      "h4": "For 25 years, we've pioneered the future with #speed. Join our quarter-century milestone and keep accelerating forward!\n10,000 steps = 1.42kg carbon footprint reduction = planting one tree!\nWin rewards while contributing to the planet. 3-month dual challenge – total prize pool",
+      "h4-text": "US$2,550, 33 awards waiting for you!",
+      "btn": "Join NOW!"
+    },
+    
+    "awards": {
+      "h2": "33 WINNING SPOTS - Everyone Gets a Chance!",
+      "h2Sub": "11 Prizes × 3 Months = 33 Winning Opportunities!\nJoin to Enter the Monthly US$50 Lucky Draw!",
+      "itemDes": "Month",
+      "item1": {
+        "title": "No.1"
+      },
+      "item2": {
+        "title": "No.2"
+      },
+      "item3": {
+        "title": "No.3"
+      },
+      "item4": {
+        "title": "No. 4-10",
+        "des": "Month Person"
+      },
+      "item5": {
+        "title": "Lucky Participation Award",
+        "des": "Month Person"
+      }
+    },
+    "step": {
+      "h2": "Three Simple Steps to Victory",
+      "h2Sub": "Health, Carbon Reduction, and Big Prizes - It's That Easy!",
+      "item1": {
+        "title": "Choose Your Step-Counting Buddy",
+        "des": "Any device or APPs that tracks your movement!",
+        "des2": "(Fitbit / Garmin / Apple Watch...)"
+      },
+      "item2": {
+        "title": "Start Your Carbon-Reducing Action",
+        "des": "Main Challenge + Side Bonus!\nEvery step changes the world!"
+      },
+      "item3": {
+        "title": "Upload Your Achievements",
+        "des": "Share the step count and exciting moments.\nBecome a Speed Expert!"
+      }
+    },
+    "activity": {
+      "schedule": {
+        "h2": "Challenge Roadmap",
+        "h2Sub": "3-Month Championship, Monthly Prizes! Main Challenge Upload the Following Month; Side Bonus Sprint within the Current Month!",
+        "remark": "*Prize money will be transferred to designated accounts by the end of January 2026, calculated at the exchange rate on the transfer date."
+      },
+      "announcement": {
+        "step": "steps",
+        "winner": {
+          "sep": {
+            "text1": "Participating in the company's 25th Anniversary 'Walk Out 25' event was deeply symbolic. It created wonderful memories, providing the momentum needed for us to move forward towards future success.",
+            "text2": "Happy 25th Anniversary, my dear VIVOTEK!",
+            "text3": "We walked the '25' at the Sun Yat-sen Memorial Hall, enjoying the greenery, Taipei Dome, and iconic Taipei 101. These beautiful sights celebrate VIVOTEK's 25th Anniversary as we strive to MAKES TOMORROW EASIER, TODAY!"
+          },
+          "oct": {
+            "text1": "I deliberately parked my scooter far away and walked to Guang Hua Digital Plaza, leaving 25th footprints along the way, taking in all the street scenes and alley views.",
+            "text2": "Happy 25th Anniversary!",
+            "text3": "In the quaint and charming old city of Chiang Mai, leaving VIVOTEK's mark of 25."
+          },
+          "nov": {
+            "text1": "Witnessing 25 years of growth and breakthroughs, I feel deeply honored to be part of this journey and look forward to reaching new heights together.",
+            "text2": "During my vacation, I explored the city's streets and alleys, leaving traces of '25' to celebrate the company's 25th anniversary. Make VIVOTEK great again.",
+            "text3": "Passing by Godzilla in Taipei, aka Tao Zhu Yin Yuan, to celebrate the happy 25th anniversary!!!"
+          }
+        },
+        "remark": "*The total number of steps above is the sum of monthly walking steps plus bonus steps."
+      },
+      "upload": {
+        "h2": "Main Challenge｜Monthly Runs - Become a Speed Expert",
+        "h2Sub": "Inviting global partners to step out green footprints together! Every stride is a health bonus and an action for reducing Earth's carbon footprint.",
+        "des": "Three Steps to Participate:\n Record daily steps\n→ Screenshot statistics at month-end  \n→  Upload anytime within the next month",
+        "textarea": "Step Count (Required)",
+        "category": {
+          "item1": {
+            "title": "September"
+          },
+          "item2": {
+            "title": "October"
+          },
+          "item3": {
+            "title1": "November",
+            "title": "November Main Challenge"
+          }
+        },
+        "photo": {
+          "demo": "Example",
+          "title": "Snapshot (Required)"
+        },
+        "remark": "*Screenshot must show the month and total steps clearly.\n*Please ensure your uploaded photo is under 2MB in file size.\n*Step counts or screenshots found to be fake or fraudulent will result in immediate disqualification. Top 10 monthly participants will undergo additional verification.",
+        "btn": {
+          "coming": "Coming Soon",
+          "submit": "Submit",
+          "ing": "Re-Submit",
+          "success": "Approved",
+          "endBasic": "This Month's Main Challenge Ended",
+          "endBonus": "This Month's Bonus Ended"
+        },
+        "alert": {
+          "text": "Please enter the stp counts.",
+          "base": "Please upload the photo or screenshot.",
+          "bonusText": "Please enter the reflection.",
+          "success": "Success！",
+          "fail": "Failed！"
+        },
+        "remark2": "*Please don't leave this page until you see the 'Success' confirmation."
+      },
+      "bonus": {
+        "h2": "Side Bonus｜25th Anniversary × Walk Out 25",
+        "h2Sub": "25th Anniversary Exclusive! Use GPS tracking to walk out the number '25' and leave your unique footprint!\n\nBonus Rewards:\nComplete single digit '2' or '5': Extra 43,400 steps\nComplete full '25' double digits: Extra 108,400 steps\nUpload period: Whole month",
+        "des": {
+          "text1":"Three Steps to Participate:\nPlan your route\n→ GPS record movement track (e.g., Strava / Google Maps)\n→ Upload anytime within the same month",
+          "text2":"Instruction"
+        },
+        "textarea": "25th Anniversary Reflection (Required)",
+        "placeholder": "Stepping out '25' - feeling SPEED MAKES TOMORROW EASIER with every stride!",
+        "photo": {
+          "item1": {
+            "title": "'25' Screenshot (Required)",
+            "des": "　"
+          },
+          "item2": {
+            "title": "Action Photos (Required)",
+            "des": "　"
+          }
+        },
+        "remark": "*Please ensure your uploaded photo is under 2MB in file size.",
+        "remark2": "*Please don't leave this page until you see the 'Success' confirmation."
+      },
+      "ended": {
+        "des": "Step Into VIVOTEK's Next 25 Years!"
+      }
+    },
+    "notion": {
+      "title": "Notice",
+      "list1": "All activity times are based on Taiwan time (GMT+8).",
+      "list2": "Upload Periods: Main Challenge - 1st 10:00 to last day 23:59 of following month; Side Bonus - 1st 10:00 to last day 23:59 of current month.",
+      "list3": "Upload screenshots or photos in JPG or PNG format only, file size not exceeding 2MB.",
+      "list4": "Photos can be updated before review completion. System will display latest uploaded data. No changes allowed after review approval.",
+      "list5": "Step counts or screenshots found to be fake or fraudulent will result in immediate disqualification. Top 10 monthly participants will undergo additional verification.",
+      "list6": "Bonus steps calculated using 2024 Walking Challenge participants' median as baseline.",
+      "list7": "Results will be announced on the webpage in the first week following submission deadline. Please refer to e-news for details."
+    }
+  }
+}

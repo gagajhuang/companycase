@@ -1,0 +1,13 @@
+{
+    "script": "./.output/server/index.mjs",
+    "node_args": "--max_old_space_size=1024",
+    "max_memory_restart": "512M",
+    "vizion": true,
+    "watch": [".output"],
+    "watch_options": {
+        "followSymlinks": true
+    },
+    "port": 12025,
+    "exec_mode": "cluster",
+    "name": "process-vivotek-2025"
+}

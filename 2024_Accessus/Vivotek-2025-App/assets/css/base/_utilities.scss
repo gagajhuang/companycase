@@ -1,0 +1,969 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+/*--------------- 顯示與隱藏 ---------------*/
+
+.visible {
+	&-desktop {
+		display: inline;
+		@include mobile {
+			display: none;
+		}
+	}
+	&-tablet {
+		display: none;
+		@include tablet {
+			display: inline;
+		}
+	}
+	&-mobile {
+		display: none;
+		@include mobile {
+			display: inline;
+		}
+	}
+}
+
+.hidden {
+	&-desktop {
+		display: none;
+		@include mobile {
+			display: inline;
+		}
+	}
+	&-tablet {
+		display: inline;
+		@include tablet {
+			display: none;
+		}
+	}
+	&-mobile {
+		display: inline;
+		@include mobile {
+			display: none;
+		}
+	}
+}
+
+.hide-block {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	opacity: 0;
+	overflow: hidden;
+	pointer-events: none;
+}
+
+/*--------------- 邊框 ---------------*/
+
+/*--------------- 文字 ---------------*/
+
+.weight {
+	&-400 {
+		font-weight: 400;
+	}
+	&-500 {
+		font-weight: 500;
+	}
+	&-600 {
+		font-weight: 600;
+	}
+	&-700 {
+		font-weight: 700;
+	}
+}
+
+body {
+	background: #eeeeff;
+	color: $primaryColorDarkBlack;
+	overflow-x: hidden;
+}
+
+.text-dark-blue {
+	color: $primaryColorDarkBlue;
+}
+.text-logo-blue {
+	color: $primaryColorBlueLogo;
+}
+/*--------------- 按鈕 ---------------*/
+.btn-style {
+	padding: 13px 24px 12px 24px;
+	background: $primaryColorDarkBlue;
+	cursor: pointer;
+	transition: all 0.2s;
+	border-radius: 8px;
+	font-size: 22px;
+	line-height: 32px;
+	font-weight: 600;
+	color: #fff;
+	a {
+		color: #fff;
+	}
+	@include mobile {
+		font-size: vw(22);
+		line-height: vw(26);
+		padding: vw(14) vw(24) vw(13) vw(24);
+	}
+	&:hover {
+		background: $primaryColorBlueLogo;
+	}
+	&.disabled {
+		background: $secondaryColorDarkGray;
+	}
+}
+.disabled {
+	.btn-style {
+		background: $secondaryColorDarkGray;
+	}
+}
+
+/*------ Login、Profile 的input -------*/
+.login-form {
+	width: 100%;
+	@include flex-center;
+	flex-direction: column;
+	gap: 24px;
+
+	@include mobile {
+		gap: vw(24);
+	}
+
+	.input-style {
+		width: 100%;
+
+		label {
+			@include flex-style(center, flex-start);
+			flex-direction: column;
+			gap: 12px;
+
+			@include mobile {
+				gap: vw(12);
+			}
+
+			span {
+				font-size: 16px;
+				color: $primaryColorDarkBlack;
+				font-weight: 500;
+
+				@include mobile {
+					font-size: vw(16);
+				}
+			}
+
+			input {
+				width: 100%;
+				border-radius: 4px 8px 8px 4px;
+				border: 1px solid #fff;
+				border-left: 4px solid $primaryColorDarkBlue;
+				background: #f2f2f2;
+				padding: 16px;
+				font-size: 16px;
+
+				@include mobile {
+					border-radius: vw(4) vw(8) vw(8) vw(4);
+					border-left: vw(4) solid $primaryColorDarkBlue;
+					padding: vw(16);
+					font-size: vw(16);
+				}
+				&:focus {
+					border: 1px solid $primaryColorDarkBlue;
+					border-left: 4px solid $primaryColorDarkBlue;
+				}
+			}
+		}
+	}
+
+	.login-btn {
+		width: 100%;
+		@include flex-center;
+		flex-direction: column;
+		gap: 4px;
+
+		@include mobile {
+			gap: vw(4);
+		}
+
+		.btn-style {
+			padding: 12px 40px;
+			font-size: 20px;
+			line-height: 30px;
+			font-weight: 400;
+
+			@include mobile {
+				padding: vw(24) vw(40);
+				font-size: vw(24);
+				line-height: vw(35);
+				width: 100%;
+			}
+		}
+	}
+	// 不得輸入或更改
+	.disabled {
+		pointer-events: none;
+		label {
+			input {
+				background: #d6d6d6;
+			}
+		}
+	}
+	.btn-style {
+		padding: 8px 16px;
+		background: $primaryColorDarkBlue;
+		color: #fff;
+		cursor: pointer;
+		transition: all 0.2s;
+		border-radius: 8px;
+		font-size: 16px;
+		line-height: 23px;
+		font-weight: 500;
+		@include mobile {
+			border-radius: vw(8);
+			font-size: vw(16);
+			line-height: vw(23);
+		}
+		&:hover {
+			background: $primaryColorBlueLogo;
+		}
+		&.disabled {
+			background: $secondaryColorDarkGray;
+		}
+	}
+}
+
+/*--------------- 活動頁共用 ---------------*/
+%bor-radius24 {
+	border-radius: 24px;
+	overflow: hidden;
+	@include mobile {
+		border-radius: vw(24);
+	}
+}
+h2 {
+	@include flex-center;
+	flex-direction: column;
+	gap: 12px;
+	font-size: 40px;
+	line-height: 58px;
+	font-weight: 600;
+	text-align: center;
+	margin-bottom: 50px;
+	color: $primaryColorDarkBlack;
+	@include mobile {
+		gap: vw(12);
+		font-size: vw(40);
+		line-height: vw(48);
+		margin-bottom: vw(50);
+	}
+	.sub {
+		font-size: 24px;
+		line-height: 35px;
+		font-weight: 500;
+		white-space: pre-line;
+		@include mobile {
+			font-size: vw(24);
+			line-height: vw(35);
+		}
+	}
+}
+// 25 週年標語
+h3 {
+	font-size: 32px;
+	line-height: 32px;
+	font-weight: 600;
+	text-align: center;
+	color: $primaryColorDarkBlack;
+	@include mobile {
+		font-size: vw(32);
+		line-height: vw(32);
+	}
+	.sub {
+		margin-bottom: 4px;
+		text-transform: none;
+		@include mobile {
+			margin-bottom: vw(4);
+		}
+	}
+}
+h4 {
+	font-size: 24px;
+	line-height: 40px;
+	letter-spacing: 1px;
+	font-weight: 500;
+	color: $primaryColorDarkBlack;
+	white-space: pre-line;
+	text-align: center;
+	@include mobile {
+		font-size: vw(22);
+		line-height: vw(35);
+	}
+}
+
+.text {
+	&-warn {
+		color: $textPrimary;
+		font-size: 14px;
+		line-height: 20px;
+		@include mobile {
+			font-size: vw(14);
+			line-height: vw(20);
+		}
+	}
+}
+.kv {
+	// width: vwXL(1920);
+	// height: vwXL(1080);
+	// img{
+	//     width: 100%;
+	// }
+}
+
+.container {
+	@include flex-center;
+	flex-direction: column;
+	gap: 80px;
+	padding: 150px 20px 150px 20px;
+	@include mobile {
+		gap: vw(80);
+		padding: vw(100) vw(20) vw(100) vw(20);
+	}
+}
+.w-1280 {
+	max-width: 1320px;
+	width: 100%;
+	margin: 0 auto;
+}
+.w-1200 {
+	max-width: 1240px;
+	width: 100%;
+	margin: 0 auto;
+}
+.w-960 {
+	max-width: 960px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+// 區塊樣式
+.block-style01 {
+	@extend %bor-radius24;
+	background: #fff;
+	.content {
+		padding: 32px 24px;
+		@include mobile {
+			padding: vw(32) vw(24);
+		}
+	}
+}
+%block-title {
+	width: 100%;
+	padding: 16px 40px;
+	font-size: 24px;
+	line-height: 35px;
+	font-weight: 600;
+	text-align: center;
+	background: $primaryColorPurple;
+	color: #fff;
+	@include mobile {
+		padding: vw(16) vw(40);
+		font-size: vw(24);
+		line-height: vw(35);
+	}
+}
+.title-purple {
+	@extend %block-title;
+	background: $primaryColorPurple;
+}
+.title-blue {
+	@extend %block-title;
+	background: $primaryColorDarkBlue;
+}
+.title-blue2 {
+	@extend %block-title;
+	background: $primaryColorBlueLogo;
+}
+
+hr {
+	width: 100%;
+	display: block;
+	border: 0;
+	border-top: 0.5px solid #cccccc;
+	margin: 0;
+	padding: 0;
+}
+
+// 照片上傳區
+.tabs-block {
+	max-width: 1280px;
+	@include margin-auto;
+
+	.tabs-btn {
+		@include flex-style(center, stretch);
+		margin-bottom: 40px;
+		gap: vwXL(24);
+		@include mobile {
+			margin-bottom: vw(40);
+			gap: vw(24);
+		}
+
+		.tabs-item {
+			@include flex-style(center, center);
+			border: 1px rgb(65 65 65 / 70%) solid;
+			color: rgb(65 65 65 / 80%);
+			padding: 16px 64px;
+			border-radius: 16px;
+			font-weight: bold;
+			font-size: 26px;
+			letter-spacing: 1px;
+			cursor: pointer;
+			text-align: center;
+
+			@include mobile {
+				// padding: vw(16) vw(64);
+				width: 100%;
+				padding: vw(16) vw(18);
+				border-radius: vw(16);
+				font-size: vw(24);
+				line-height: vw(30);
+			}
+
+			&.active {
+				background: $primaryColorPurple;
+				border: none;
+				color: #fff;
+				position: relative;
+
+				&::after {
+					content: "";
+					display: block;
+					position: absolute;
+					width: 16px;
+					height: 14px;
+					bottom: -12px;
+
+					@include mobile {
+						width: vw(16);
+						height: vw(14);
+						bottom: vw(-12);
+					}
+				}
+			}
+
+			&.not-open {
+				pointer-events: none;
+			}
+		}
+	}
+
+	.tabs-category {
+		max-width: 1280px;
+		@include margin-auto;
+		position: relative;
+
+		@include mobile {
+			max-width: none;
+		}
+
+		.category-style {
+			@include flex-style(space-around, center);
+			flex-direction: column;
+			gap: 36px;
+			width: 100%;
+			display: none;
+			// transition: all 0.5s;
+
+			@include mobile {
+				gap: vw(36);
+			}
+
+			&.active {
+				display: flex;
+			}
+			&.show {
+				animation: showFade 0.5s forwards;
+			}
+			@keyframes showFade {
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+		}
+
+		.category-title {
+			font-size: 24px;
+			line-height: 35px;
+			font-weight: 500;
+			text-align: center;
+			white-space: pre-line;
+
+			@include mobile {
+				font-size: vw(24);
+				line-height: vw(35);
+			}
+		}
+	}
+
+	.categoryEn {
+		max-width: 1200px;
+
+		.category-title {
+			@include mobile {
+				font-size: vw(21);
+				line-height: vw(30);
+			}
+		}
+	}
+}
+.tabs-content {
+	width: 100%;
+	padding: 40px;
+	@extend %bor-radius24;
+	background: #fff;
+	@include flex-center;
+	flex-direction: column;
+	gap: 40px;
+
+	@include mobile {
+		padding: vw(40) vw(25);
+		gap: vw(40);
+	}
+}
+
+.upload-title {
+	@include flex-center;
+	flex-direction: column;
+	gap: 8px;
+	font-size: 40px;
+	line-height: 48px;
+	font-weight: 600;
+	text-align: center;
+	color: $primaryColorDarkBlack;
+	@include mobile {
+		gap: vw(10);
+		font-size: vw(40);
+		line-height: vw(48);
+	}
+	.sub {
+		font-size: 18px;
+		line-height: 22px;
+		font-weight: 500;
+		white-space: pre-line;
+		@include mobile {
+			font-size: vw(18);
+			line-height: vw(22);
+		}
+	}
+}
+.upload-des {
+	font-size: 18px;
+	line-height: 25px;
+	text-align: center;
+	white-space: pre-line;
+	@include mobile {
+		font-size: vw(18);
+		line-height: vw(25);
+	}
+	a {
+		color: $primaryColorBlueLogo;
+	}
+}
+.upload-right {
+	@include flex-center;
+	flex-direction: column;
+	gap: 24px;
+	max-width: 600px;
+	width: 100%;
+	@include mobile {
+		gap: vw(24);
+		max-width: none;
+	}
+
+	.upload-style {
+		@include flex-style(center, flex-start);
+		flex-direction: column;
+		gap: 8px;
+		width: 100%;
+		@include mobile {
+			@include flex-style(center, center);
+			gap: vw(8);
+		}
+	}
+
+	.title {
+		font-size: 20px;
+		line-height: 24px;
+		font-weight: 600;
+		text-align: center;
+		@include mobile {
+			font-size: vw(20);
+			line-height: vw(24);
+		}
+		.sub-title {
+			font-size: 16px;
+			line-height: 19px;
+			display: block;
+			font-weight: 400;
+			@include mobile {
+				font-size: vw(16);
+				line-height: vw(19);
+			}
+		}
+	}
+
+	.sub {
+		font-size: 18px;
+		line-height: 20px;
+		color: $secondaryColorDarkGray;
+		@include mobile {
+			font-size: vw(18);
+			line-height: vw(20);
+		}
+	}
+
+	.photo-upload {
+		max-width: 420px;
+		width: 100%;
+		height: 235px;
+		background: #f5f5f5;
+		border-radius: 8px;
+		position: relative;
+		overflow: hidden;
+		@include mobile {
+			max-width: none;
+			height: vw(250);
+		}
+
+		input[type="file"] {
+			display: none;
+		}
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: contain;
+		}
+
+		.upload-file {
+			@include flex-style(center, center);
+			flex-direction: column;
+			height: 100%;
+			cursor: pointer;
+
+			.icon-upload {
+				max-width: 64px;
+				height: auto;
+				@include mobile {
+					font-size: vw(20);
+					line-height: vw(24);
+				}
+			}
+
+			p {
+				color: #0009;
+				font-weight: 600;
+				width: 100%;
+				text-align: center;
+				font-size: 20px;
+				line-height: 24px;
+				@include mobile {
+					font-size: vw(20);
+					line-height: vw(24);
+				}
+			}
+		}
+
+		.preview {
+			position: absolute;
+			overflow: hidden;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+
+			// img {
+			// 	height: 100%;
+			// 	width: 100%;
+			// 	object-fit: contain;
+			// }
+
+			.upload-del {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				background: rgba($color: #000000, $alpha: 0.2);
+				cursor: pointer;
+
+				img {
+					max-width: 64px;
+					width: 100%;
+					margin: 0 auto;
+				}
+			}
+		}
+	}
+
+	textarea,
+	input {
+		border: 1px solid $secondaryColorDarkGray;
+		border-radius: 16px;
+		padding: 16px;
+		max-width: 575px;
+		width: 100%;
+		height: 200px;
+		font-size: 20px;
+		line-height: 24px;
+		@include mobile {
+			border-radius: vw(16);
+			padding: vw(16);
+			max-width: none;
+			height: vw(200);
+			font-size: vw(20);
+			line-height: vw(24);
+		}
+		&::placeholder {
+			color: $secondaryColorGray;
+		}
+	}
+	input {
+		height: auto;
+	}
+}
+.submit-btn {
+	.btn-style {
+		@include flex-center;
+		gap: 8px;
+		@include mobile {
+			gap: vw(8);
+		}
+		&::after {
+			content: "";
+			display: block;
+			width: 16px;
+			height: 16px;
+			background: url(../../images/25th/icon-arrow4.svg) no-repeat bottom/cover;
+			@include mobile {
+				width: vw(16);
+				height: vw(16);
+			}
+		}
+	}
+}
+
+//步驟
+.step {
+	width: 100%;
+
+	.step-content {
+		@include flex-style(center, stretch);
+		gap: 30px;
+
+		@include mobile {
+			gap: vw(30);
+			flex-direction: column;
+			@include flex-style(center, center);
+		}
+
+		.step-item {
+			@include flex-style(center, center);
+			gap: 25px;
+			max-width: 345px;
+			width: 100%;
+
+			@include mobile {
+				gap: vw(25);
+				flex-direction: column;
+				max-width: none;
+			}
+			.item-content {
+				@include flex-center;
+				flex-direction: column;
+				border-radius: 16px;
+				overflow: hidden;
+				width: 100%;
+				height: 100%;
+
+				@include mobile {
+					max-width: none;
+				}
+
+				.step-num {
+					width: 100%;
+					color: #fff;
+					background: $primaryColorPurple;
+					text-align: center;
+					padding: 8px 0;
+					font-size: 40px;
+
+					@include mobile {
+						padding: vw(8) 0;
+						font-size: vw(40);
+					}
+				}
+
+				.item-des {
+					background: #fff;
+					padding: 32px 24px;
+					height: 100%;
+					width: 100%;
+					@include flex-style(flex-start, center);
+					flex-direction: column;
+					gap: 12px;
+
+					@include mobile {
+						padding: vw(32) vw(24);
+						gap: vw(12);
+					}
+
+					.img {
+						max-width: 120px;
+
+						img {
+							width: 100%;
+						}
+					}
+
+					.title {
+						font-size: 32px;
+						line-height: 38px;
+						font-weight: 600;
+
+						@include mobile {
+							font-size: vw(32);
+							line-height: vw(38);
+						}
+
+						&.titleEn {
+							font-size: 26px;
+							line-height: 30px;
+							text-align: center;
+
+							@include mobile {
+								font-size: vw(26);
+								line-height: vw(30);
+							}
+						}
+					}
+
+					.text {
+						font-size: 20px;
+						line-height: 26px;
+						font-weight: 500;
+						color: $secondaryColorDarkGray;
+						white-space: pre-line;
+
+						@include mobile {
+							font-size: vw(22);
+							line-height: vw(26);
+						}
+					}
+					.text-s {
+						font-size: 17px;
+						line-height: 20px;
+						font-weight: 500;
+						color: $secondaryColorDarkGray;
+						white-space: pre-line;
+						text-align: center;
+						margin-top: 8px;
+
+						@include mobile {
+							font-size: vw(17);
+							line-height: vw(20);
+							margin-top: vw(8);
+						}
+					}
+				}
+			}
+		}
+		.step-arrow {
+			max-width: 38px;
+			width: 100%;
+			background-color: $primaryColorPurple;
+			-webkit-mask-image: url(../../images/25th/icon-arrow2.svg);
+			-webkit-mask-repeat: no-repeat;
+			-webkit-mask-position: center;
+			-webkit-mask-size: contain;
+
+			mask-image: url(../../images/25th/icon-arrow2.svg);
+			mask-repeat: no-repeat;
+			mask-position: center;
+			mask-size: contain;
+
+			@include mobile {
+				width: vw(38);
+				height: vw(38);
+				transform: rotate(90deg);
+				min-width: auto;
+			}
+		}
+	}
+}
+
+// 注意事項
+#notion {
+	background: $primaryColorDarkBlue;
+	color: #fff;
+
+	.notion-content {
+		@include flex-style(center, flex-start);
+		flex-direction: column;
+		gap: 24px;
+		@include mobile {
+			gap: vw(24);
+		}
+
+		p {
+			font-weight: 600;
+			font-size: 32px;
+			line-height: 38px;
+			@include mobile {
+				font-size: vw(32);
+				line-height: vw(38);
+			}
+		}
+
+		ul {
+			margin-left: 25px;
+			@include mobile {
+				margin-left: vw(25);
+			}
+
+			li {
+				list-style: decimal;
+				font-size: 20px;
+				line-height: 35px;
+				@include mobile {
+					font-size: vw(20);
+					line-height: vw(35);
+				}
+
+				a {
+					color: #fff;
+					text-decoration: underline;
+					text-decoration-thickness: 1px;
+					text-underline-offset: 5px;
+					@include mobile {
+						text-decoration-thickness: vw(1);
+						text-underline-offset: vw(5);
+					}
+				}
+			}
+		}
+	}
+}
+
+// 結語
+.ended {
+	// background: #fff;
+	// padding-top: 30px;
+	// @include mobile {
+	// 	padding-top: vw(30);
+	// }
+	h2 {
+		margin: 0;
+		color: $primaryColorDarkBlue;
+	}
+}

@@ -1,0 +1,221 @@
+// Function
+@use "sass:math";
+@use "variables" as *;
+
+@function vw($value) {
+  $value: calc(100 * $value / $rwdS);
+  @return $value + vw; // 單位可改 vmin 或 vw
+}
+
+@function vmin($value) {
+  $value: calc(100 * $value / $rwdS);
+  @return $value + vmin;
+}
+
+@function vwM($value) {
+  $value: calc(100 * $value / $rwdM);
+  @return $value + vw;
+}
+
+@function vwL($value) {
+  $value: calc(100 * $value / $rwdL);
+  @return $value + vw;
+}
+
+@function vwX($value) {
+  $value: calc(100 * $value / $rwdX);
+  @return $value + vw;
+}
+
+@function vwXL($value) {
+  $value: calc(100 * $value / $rwdXL);
+  @return $value + vw;
+}
+
+@function vh($value) {
+  $value: calc(100 * $value / (700 + 0));
+  @return $value + vh;
+}
+
+@function vhX($value) {
+  $value: calc(100 * $value / (1080 + 0));
+  @return $value + vh;
+}
+
+@function lineHeight($fontSize, $lineHeight) {
+  $value: calc($lineHeight / $fontSize);
+  @return $value;
+}
+
+@function PsdLetterSpacing($value, $fontSize) {
+  $value: calc(($value * $fontSize) / 1000);
+  @return $value;
+}
+
+// Mixin
+
+@mixin desktop {
+  @media (min-width: #{$rwdM + 1}px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin rwdWidth($value) {
+  @media (max-width: #{$value}px) {
+    @content;
+  }
+}
+
+// 寬大於高
+@mixin landscape {
+  @media (max-width: $tablet) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin stroke($color: #000, $size: 1px) {
+  text-shadow:
+    -#{$size} -#{$size} 0 $color,
+    0 -#{$size} 0 $color,
+    #{$size} -#{$size} 0 $color,
+    #{$size} 0 0 $color,
+    #{$size} #{$size} 0 $color,
+    0 #{$size} 0 $color,
+    -#{$size} #{$size} 0 $color,
+    -#{$size} 0 0 $color;
+}
+
+@mixin hide-text {
+  font-size: 0;
+  text-indent: -5000px;
+}
+
+@mixin wide-text {
+  display: inline-block;
+  transform-origin: center top;
+  transform: scaleX(1.2);
+}
+
+@mixin narrow-text {
+  display: inline-block;
+  transform-origin: left top;
+  transform: scaleX(0.95);
+}
+
+@mixin blink-button($y, $color: #fefefe) {
+  --button-y: #{$y};
+  --color: #{$color};
+  animation: blinkButton 1s linear infinite;
+  @keyframes blinkButton {
+    0% {
+      color: #ffffff;
+      background-position: center 0;
+    }
+    49.5% {
+      color: #ffffff;
+      background-position: center 0;
+    }
+    50% {
+      color: var(--color);
+      background-position: center var(--button-y);
+    }
+    100% {
+      color: var(--color);
+      background-position: center var(--button-y);
+    }
+  }
+}
+
+@mixin moveFadeIn($props: transform) {
+  @if $props == transform {
+    transform: translateY(0);
+  } @else if $props == (margin) {
+    margin-top: 0;
+  }
+  opacity: 1;
+}
+
+@mixin setMoveInDelay($length) {
+  @for $i from 1 through $length {
+    .move-in:nth-child(#{$i}) {
+      transition-delay: $i * 0.125s;
+    }
+  }
+}
+
+@mixin scaleDefault {
+  transition: all $primaryDuration ease-out;
+  transition-property: opacity, transform;
+  transform: scale(0) translateZ(0);
+  opacity: 0;
+  backface-visibility: hidden;
+  will-change: transform, opacity;
+}
+
+@mixin scaleIn {
+  transform: scale(1);
+  opacity: 1;
+}
+
+// 常用
+@mixin margin-auto {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@mixin position-center($property) {
+  position: $property;
+  left: 0;
+  right: 0;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-style($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin grid-style($justify, $align) {
+  display: grid;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin grid-between {
+  display: grid;
+  display: -ms-flexbox;
+  -ms-flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@mixin btn-hover($color) {
+  &:hover {
+    background: $color;
+  }
+}
+
+@mixin border-all($px, $color) {
+  border: #{$px}px solid $color;
+}
+
+@mixin weight($num) {
+  font-weight: $num;
+}
