@@ -1,1 +1,0 @@
-import{X as s,Y as u,Z as r,_ as n}from"./B1oVwC2a.js";import{u as i}from"./CkcQHn4U.js";const f=s(e=>{const{authenticated:t,token:o}=u(i()),a=r("token",{secure:!0});n(),(e==null?void 0:e.name).split("___")[1],a.value&&(t.value=!0,o.value=a.value)});export{f as default};

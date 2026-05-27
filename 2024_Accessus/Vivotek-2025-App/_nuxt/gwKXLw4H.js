@@ -1,1 +1,0 @@
-import{u as t}from"./CkcQHn4U.js";import{C as e,m as r,n}from"./B1oVwC2a.js";const p=e({__name:"logout",setup(s){const o=r();return n(()=>{t().revokeToken(),o.push("/login")}),()=>{}}});export{p as default};
