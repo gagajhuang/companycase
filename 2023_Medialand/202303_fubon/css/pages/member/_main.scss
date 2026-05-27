@@ -1,0 +1,459 @@
+.member {
+  display: none;
+  padding-top: 62px;
+  min-height: 100vh;
+  background: #00688d;
+  box-sizing: border-box;
+
+  .member__header {
+    position: relative;
+    height: vw(400);
+    background: url('/images/member/background_mb.jpg') center center no-repeat;
+    background-size: auto 100%;
+
+    @include desktop {
+      height: 305px;
+      background-image: url('/images/member/background.jpg');
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: vw(344);
+      height: vw(373);
+      margin-left: vw(-78);
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @include desktop {
+        width: 284px;
+        height: 292px;
+        margin-left: 12px;
+      }
+    }
+    &.lin::before {
+      background-image: url('/images/member/athlete-lin_mb.png');
+      @include desktop {
+        background-image: url('/images/member/athlete-lin.png');
+      }
+    }
+    &.kuo::before {
+      background-image: url('/images/member/athlete-kuo_mb.png');
+      @include desktop {
+        background-image: url('/images/member/athlete-kuo.png');
+      }
+    }
+    &.chen::before {
+      background-image: url('/images/member/athlete-chen_mb.png');
+      @include desktop {
+        background-image: url('/images/member/athlete-chen.png');
+      }
+    }
+  }
+
+  .member__header__slogan {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: vw(481);
+    height: vw(109);
+    transform: translate(vw(-485), vw(-105));
+    background: url('/images/member/slogan_mb.png') center center no-repeat;
+    background-size: contain;
+    @include desktop {
+      width: 341px;
+      height: 77px;
+      transform: translate(-362px, -44px);
+      background-image: url('/images/member/slogan.png');
+    }
+  }
+
+  .member__avatar {
+    width: 100%;
+
+    &__img {
+      position: absolute;
+      left: 50%;
+      width: vw(282);
+      height: vw(282);
+      margin: vw(-88) 0 0 vw(-141);
+      border-radius: 100%;
+      border: vw(4) #00a0aa solid;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 2;
+    }
+
+    @include desktop { // @media (min-width: 768px)
+      &__img {
+        width: 146px;
+        height: 146px;
+        left: 50%;
+        margin: -40px 0 0 -73px;
+        border-width: 4px;
+      }
+    }
+
+    &__text {
+      display: flex;
+      width: 100%;
+      height: vw(116);
+      font-weight: 500;
+      letter-spacing: vw(4);
+      z-index: 1;
+
+      @include desktop {
+        height: 64px;
+        letter-spacing: 4px;
+      }
+
+      &__team {
+        flex: 0 0 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        max-width: 50%;
+        font-size: vw(40);
+        line-height: vw(50);
+        padding-right: vw(120);
+        background-color: #fff;
+        box-sizing: border-box;
+
+        @include desktop {
+          justify-content: flex-end;
+          font-size: 24px;
+          line-height: 40px;
+          padding-right: 104px;
+        }
+
+      }
+
+      &__slogan {
+        flex: 0 0 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        max-width: 50%;
+        color: #fff;
+        font-size: vw(40);
+        line-height: vw(50);
+        padding-left: vw(120);
+        box-sizing: border-box;
+
+        @include desktop {
+          justify-content: start;
+          font-size: 24px;
+          line-height: 40px;
+          padding-left: 136px;
+        }
+      }
+    }
+
+  }
+
+  .member__main {
+    // padding: vw(98) vw(115) vw(115);
+    padding: vw(98) vw(92) vw(92);
+    background: #00688d;
+    background: linear-gradient(45deg, #00688d 0%, #00688d 60%, #33908f 100%);
+
+    @include desktop {
+      padding: 44px 25px 25px;
+      background: #0366a4;
+      background: linear-gradient(45deg, #0366a4 0%, #3dc3ac 90%, #3dc3ac 100%);
+    }
+
+    &__name {
+      width: 100%;
+      font-size: vw(50);
+      line-height: vw(60);
+      color: #fff;
+      font-weight: 500;
+      text-align: center;
+      margin: 0 auto vw(46);
+      @include desktop {
+        font-size: 24px;
+        line-height: 40px;
+        max-width: 512px;
+        margin: 0 auto 38px;
+      }
+    }
+
+    &__board {
+      width: 100%;
+      letter-spacing: vw(4);
+      margin: 0 auto;
+      border: vw(3.5) #4fb3cc solid;
+      border-radius: vw(22);
+      background-color: #fff;
+      box-sizing: border-box;
+
+      @include desktop {
+        max-width: 512px;
+        letter-spacing: 2px;
+        border-width: 3.5px;
+        border-radius: 25px;
+      }
+
+      &__row {
+        display: flex;
+        width: 100%;
+        border-bottom: vw(2) $secondaryColor solid;
+
+        @include desktop {
+          border-bottom-width: 2px;
+        }
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        &__col {
+          flex: 0 0 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          width: 50%;
+          max-width: 50%;
+          height: vw(120);
+          color: #109bbc;
+          font-size: vw(40);
+          font-weight: 500;
+          line-height: vw(50);
+          border-right: vw(2) $secondaryColor solid;
+
+          @include desktop {
+            height: 68px;
+            font-size: 22px;
+            line-height: 30px;
+            border-right-width: 2px;
+          }
+
+          &:last-child {
+            border-right: none;
+          }
+
+          &__green-point {
+            width: vw(270);
+            @include desktop {
+              width: 154px;
+            }
+          }
+
+          &.col {
+            &--number {
+              height: vw(128);
+              font-size: vw(76);
+              font-weight: 500;
+              line-height: vw(70);
+              @include desktop {
+                height: 72px;
+                font-size: 42px;
+                line-height: 44px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &__btns {
+      margin-top: vw(32);
+      padding: 0 vw(20);
+
+      @include desktop {
+        max-width: 480px;
+        margin: 18px auto 50px;
+        padding: 0;
+      }
+      
+      &__hint {
+        color: #fff;
+        font-size: vw(20);
+        text-align: center;
+        line-height: vw(30);
+        margin-bottom: vw(-32);
+
+        @include desktop {
+          font-size: 16px;
+          line-height: 25px;
+          margin-bottom: -24px;
+        }
+      }
+
+      &__btn {
+        width: 100%;
+        color: #fff;
+        font-size: vw(40);
+        font-weight: 500;
+        line-height: vw(50);
+        letter-spacing: .1em;
+        text-align: center;
+        margin: vw(56) 0;
+        padding: vw(29) 0 vw(31);
+        border-radius: vw(20);
+        cursor: pointer;
+
+        @include desktop {
+          font-size: 22px;
+          line-height: 30px;
+          margin: 30px 0;
+          padding: 12px 0 14px;
+          border-radius: 12px;
+        }
+
+        &.btn {
+          &--share {
+            background-color: #40babe;
+          }
+
+          &--mission {
+            background-color: #40babe;
+            background-image: linear-gradient(
+              115deg,
+              #40babe 0,
+              #40babe 15%,
+              #74dbbf 50%,
+              #40babe 85%,
+              #40babe 100%
+            );
+            background-size: 100% 200%;
+            z-index: 3;
+            animation: share-text 8s infinite 0.5s;
+            animation-direction: alternate-reverse;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: vw(18) 0 vw(20);
+            @include desktop {
+              padding: 8.5px 0;
+            }
+          }
+
+          @keyframes share-text {
+            from {
+              background-position: vw(-1000) top;
+            }
+            to {
+              background-position: vw(1000) top;
+            }
+          }
+
+          &--bonus-mission {
+            background-color: #f7c248;
+            background-image: linear-gradient(
+              115deg,
+              #f7c248 0,
+              #f7c248 15%,
+              #f7d074 50%,
+              #f7c248 85%,
+              #f7c248 100%
+            );
+            background-size: 100% 200%;
+            z-index: 3;
+            animation: share-text 8s infinite -0.5s;
+            animation-direction: alternate-reverse;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: vw(18) 0 vw(20);
+            @include desktop {
+              padding: 8.5px 0;
+            }
+          }
+
+          &--mission,
+          &--re-choice {
+            background-color: #40babe;
+          }
+        }
+        span {
+          position: relative;
+          display: inline-block;
+          top: vw(2);
+          width: vw(284);
+          height: vw(72);
+          font-size: 0;
+          text-indent: -5000px;
+          margin: 0 vw(6) 0 vw(4);
+          vertical-align: middle;
+          background: url('/images/member-green-point.png') center center no-repeat;
+          background-size: contain;
+          @include desktop {
+            top: 2px;
+            width: 154px;
+            height: 39px;
+            margin: 0 6px 0 4px;
+          }
+        }
+      }
+    }
+  }
+
+  &.member {
+    &--lin {
+      .member {
+        &__avatar {
+          &__text {
+            border-top: 2px solid #864590;
+            border-bottom: 2px solid #864590;
+
+            &__team {
+              color: $linColor;
+            }
+
+            &__slogan {
+              background-color: $linColor;
+            }
+          }
+        }
+      }
+    }
+
+    &--kuo {
+      .member {
+        &__avatar {
+          &__text {
+            border-top: 2px solid $kuoColor;
+            border-bottom: 2px solid $kuoColor;
+
+            &__team {
+              color: $kuoColor;
+            }
+
+            &__slogan {
+              background-color: $kuoColor;
+            }
+          }
+        }
+      }
+    }
+
+    &--chen {
+      .member {
+        &__avatar {
+          &__text {
+            border-top: 2px solid $chenColor;
+            border-bottom: 2px solid $chenColor;
+
+            &__team {
+              color: $chenColor;
+            }
+
+            &__slogan {
+              background-color: $chenColor;
+            }
+          }
+        }
+      }
+    }
+  }
+}

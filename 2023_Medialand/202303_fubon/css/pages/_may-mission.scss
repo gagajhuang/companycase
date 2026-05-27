@@ -1,0 +1,225 @@
+%margin-auto{
+  width: 100%;
+  margin:0 auto;
+}
+  
+#may-mission{
+  height: 90vh;
+  background: url("../images/mission/may/mission2-bg.png") no-repeat top/cover;
+  @include pc{
+    background: transparent;
+  }
+  //問題區
+  .mission__question{
+    max-width: none;
+    width: 85%;
+    @extend %margin-auto;
+    @include pc{
+      max-width: 360px;
+    }
+  }
+
+  .question{
+    &-num{
+      font-family: Arial, "Helvetica Neue";
+      font-weight: 900;
+      @include font-line(50);
+      text-align: center;
+      color: $primaryColor;
+    }
+    &-block{
+      padding: 30px 25px;
+      border-radius: 15px;
+      border: 2px solid $borderColor;
+      background: url('../images/mission/may/mission2-box-bg2.jpg');
+      color: #fff;
+      @include font-line(16);
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-align: center;
+      @include pc{
+        padding: 30px 30px
+      }
+      span{
+        display: inline-block;
+        width: 50px;
+        border-bottom: 2px solid #fff;
+      }
+    }
+      
+  }
+
+  .choice{
+    margin-top: 20px;
+    padding: 0 40px;
+    &-item{
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      border: 1px solid #0097bc; 
+      background: #fff;
+      color: $primaryColor;
+      padding: 10px;
+      cursor: pointer;
+      + .choice-item{
+        margin-top: 15px;
+      }
+    }
+      
+    &-wrong{
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 9;
+      overflow: hidden;
+      letter-spacing: 2px;
+      display: none;
+      &-modal{
+        max-width: 200px;
+        @extend %margin-auto;
+        padding: 30px;
+        border: 2px solid $borderColor;
+        border-radius: 10px;
+        background: #fff;
+        text-align: center;
+        color: $primaryColor;
+        @include font-line(16);
+        font-weight: 500;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      &-close{
+        background: $primaryColor;
+        color: #fff;
+        cursor: pointer;
+        margin-top: 20px;
+        border-radius: 30px;
+        padding: 10px 10px 10px 15px;
+      }   
+    } 
+  }  
+  .quiz{
+    &-hide{
+      display: none
+    }
+    &-show{
+      display: block
+    }
+  }
+
+  // 進度條樣式
+  .stepper{
+    &-block{
+      @include flex-center;
+      justify-content: space-between;
+      position: relative;
+      margin-bottom: 4rem;
+      height: 60px;
+      max-width: 170px;
+      @extend %margin-auto;
+      .done{
+        background: $borderColor;
+        color: #fff;
+      }
+    }
+    &-item{
+      text-align: center;
+    }
+    &-button{
+      position: relative;
+      width: 25px;
+      height: 25px;
+      line-height: 25px;
+      background: #ccc;
+      border-radius: 50%;
+      padding: 0;
+      margin-top: 10px;
+      border: 0;
+      color: #fff;
+      @include font-line(14);
+      img{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 24%;
+        max-width: 13px;
+        @extend %margin-auto;
+      }
+    }   
+  } 
+    
+  #progress{
+    position: absolute;
+    width: 100%;
+    z-index: 5;
+    height: 2px;
+    bottom: 24px;
+    margin: 0 auto;
+    background: #ccc;
+    color: $borderColor;
+    z-index: -1;
+    appearance: none;
+    &::-webkit-progress-value{
+      background: $borderColor;
+      transition: .5s ease;
+    }
+    &::-webkit-progress-bar{
+      background: #ccc
+    } 
+    &::-moz-progress-bar{
+      background: #ccc
+    }
+  } 
+
+  .scan-light{
+    background: linear-gradient(-70deg, #b1ebdb, #70c1d9 50%, #b1ebdb);
+    background-size: 200% 100%;
+    animation: answerLights 2s linear 0s infinite;
+  }
+  @keyframes answerLights{
+    0%{
+      background-position: 0 0
+    } 
+    50%{
+      background-position: -100% 0
+    }
+    100%{
+      background-position: -200% 0
+    }
+  } 
+}
+  
+#mission-may{
+  @media (min-width: 768px){
+    margin-left: 60px;
+  }
+  .mission__lists__item__box__main{
+    background: url("../images/mission/may/mission2-box-bg.jpg") no-repeat top/cover;
+    &__title{
+      padding-top: 32vw;
+      @media (min-width: 768px){
+        padding-top: 160px;
+      }
+    }
+  }
+}
+  
+#popup-may-mission-complete{
+  .popup__main__box__main__btn{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+  }
+}
+  
+
+
+
+    
+     
+

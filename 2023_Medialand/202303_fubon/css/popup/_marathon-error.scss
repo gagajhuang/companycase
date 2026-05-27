@@ -1,0 +1,67 @@
+#popup-marathon-error {
+
+    $scale: 0.9;
+
+    position: relative;
+    width: 730px * $scale;
+    height: 485px * $scale;
+    padding: 0;
+    margin-top: 50px * $scale;
+    background: url('/images/popup/marathon-error.png') 0 0 no-repeat;
+    background-size: contain;
+
+    @include tablet {
+        width: vw(1000);
+        height: vw(664);
+        margin-top: vw(-50);
+        background-size: vw(1000) vw(664);
+    }
+
+    .popup__main__box__main__dialog {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 43px * $scale;
+        left: 343px * $scale;
+        width: 341px * $scale;
+        height: 238px * $scale;
+        color: #004d6e;
+        font-size: 26px * $scale;
+        font-weight: 500;
+        letter-spacing: .075em;
+        text-align: left;
+        line-height: 38px * $scale;
+        padding-left: 6px * $scale;
+        box-sizing: border-box;
+        @include tablet {
+            top: vw(59);
+            left: vw(470);
+            width: vw(468);
+            height: vw(326);
+            font-size: vw(35.6);
+            line-height: vw(52);
+            padding-left: 0;
+        }
+
+        p {
+            display: none;
+            &.show {
+                display: block;
+            }
+            &.claimed {
+                padding-top: 10px * $scale;
+                @include tablet {
+                    padding-top: vw(15);
+                }
+            }
+            &.wrong {
+                padding-left: 30px * $scale;
+                @include tablet {
+                    padding-left: vw(40);
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,128 @@
+@use "sass:math";
+
+// Function
+@function vw($value) {
+  $value: 100 * $value / $rwdS;
+  @return $value + vw;
+  // @return $value + vmin;
+}
+
+@function vwM($value) {
+  $value: 100 * $value / $rwdM;
+  @return $value + vw;
+}
+
+@function vwL($value) {
+  $value: 100 * $value / $rwdL;
+  @return $value + vw;
+}
+
+@function vwX($value) {
+  $value: 100 * $value / $rwdX;
+  @return $value + vw;
+}
+
+@function vw2X($value) {
+  $value: 100 * $value / $rwd2X;
+  @return $value + vw;
+}
+
+@function vwMobile($value) {
+  $value: 100 * $value / $rwdMobile;
+  @return $value + vw;
+}
+
+@function vh2X($value) {
+  $value: 100 * $value / $rwd2Y;
+  @return $value + vh;
+}
+
+@function vhMobile($value) {
+  $value: 100 * $value / $rwdMobile;
+  @return $value + vh;
+}
+
+
+
+@function font($value) {
+  $font-rem: math.div($value, 16);
+  @return #{$font-rem}rem;
+}
+
+@function lineH($value) {
+  $line-rem: math.div($value, 16) * 1.5;
+  @return #{$line-rem}rem;
+}
+
+// Mixin
+@mixin pc {
+  @media (min-width: $pc) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$rwdM - 1}px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+// May、June
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin font-line($size) {
+  font-size: font($size);
+  line-height: lineH($size);
+}
+
+@mixin hover {
+    
+  @media (hover: hover) {
+      @content;
+  }
+
+}
+
+@mixin stroke($color: #fff, $size: 1px) {
+  text-shadow:
+      -#{$size} -#{$size} 0 $color,
+      0        -#{$size} 0 $color,
+      #{$size} -#{$size} 0 $color,
+      #{$size}  0        0 $color,
+      #{$size}  #{$size} 0 $color,
+      0         #{$size} 0 $color,
+      -#{$size}  #{$size} 0 $color,
+      -#{$size}  0        0 $color;
+}
+
+@mixin margin-auto {
+  width: 100%;
+  margin:0 auto;
+}
+
+@mixin pc-1080 {
+  @media (max-width: $pc) {
+    @content;
+  }
+}
+// @mixin mobile750 {
+//   @media (max-width: $mobile) {
+//     @content;
+//   }
+// }
+
+@mixin mobile($size) {
+  @media (max-width: $size) {
+    @content;
+  }
+}

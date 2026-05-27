@@ -1,0 +1,59 @@
+#popup-social-login.popup__basic {
+
+    width: 548px!important;
+    height: 548px!important;
+    padding: 136px 0 0!important;
+
+    @include tablet {
+        width: vw(848)!important;
+        height: vw(947)!important;
+        padding: vw(142) 0 0!important;
+    }
+
+    &::before {
+        top: -37px;
+        left: -110px;
+        width: 680px;
+        height: 612px;
+        background-image: url('/images/popup/finish-form_background.png');
+        @include tablet {
+            top: vw(-57);
+            left: vw(-76);
+            width: vw(959);
+            height: vw(1041);
+            background-image: url('/images/popup/finish-form_background_mb.png');
+        }
+    }
+
+    .popup__main__box__main__share-btn {
+        img {
+            width: 210px;
+            height: auto;
+            margin: 0 6px;
+            cursor: pointer;
+            @include tablet {
+                width: vw(420);
+                padding: 0;
+                margin-top: vw(20);
+            }
+        }
+    }
+
+    .popup__main__box__main__title {
+        flex-basis: 100%;
+        margin-bottom: 15px;
+        @include tablet {
+            margin-bottom: vw(32);
+        }
+    }
+
+    .popup__main__box__main__text--line {
+        font-size: 16px!important;
+        line-height: 24px!important;
+        @include tablet {
+            font-size: vw(31)!important;
+            line-height: 1.29!important;
+        }
+    }
+
+}

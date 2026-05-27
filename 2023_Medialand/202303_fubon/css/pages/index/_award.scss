@@ -1,0 +1,601 @@
+#index-award {
+
+    $root: &;
+    $secondAward: #{$root} '.index__award__main__item ~ .index__award__main__item';
+
+    min-height: 1299px;
+    padding-bottom: 0;
+    background: url('/images/index/award/background.jpg') #fff center top no-repeat;
+    background-size: 1920px auto;
+    box-sizing: border-box;
+
+    @include tablet {
+        min-height: vw(3858);
+        padding-bottom: 0;
+        // background-image: url('/images/index/award/background-bottom_mb.png');
+        // background-position: center bottom vw(73);
+        // background-size: vw(1080) vw(515);
+        background-image: url('/images/index/award/background_mb.png');
+        background-position: 0 0;
+        background-size: vw(13) vw(13);
+        background-repeat: repeat;
+    }
+
+    &::before {
+        @include tablet {
+            content: '';
+            position: absolute;
+            top: vw(42);
+            left: 0;
+            width: 100%;
+            height: vw(421);
+            background: url('/images/index/award/background-top_mb_v2.png') 0 0 no-repeat;
+            background-size: contain;
+            z-index: 1;
+            pointer-events: none;
+        }
+    }
+
+    &::after {
+        @include tablet {
+            content: '';
+            position: absolute;
+            bottom: vw(62);
+            left: 0;
+            width: 100%;
+            height: vw(604);
+            background: url('/images/index/award/background-bottom_mb_v2.png') 0 0 no-repeat;
+            background-size: contain;
+            z-index: 1;
+            pointer-events: none;
+        }
+    }
+
+    // br {
+    .desktop {
+        display: block;
+        @include tablet {
+            display: none;
+        }
+    }
+    .mobile {
+        display: none;
+        @include tablet {
+            display: block;
+        }
+    }
+    // span.mobile {
+    //     @include tablet {
+    //         display: inline;
+    //     }
+    // }
+    // }
+
+    // 區塊標題
+    .index__award__main__marquee {
+        position: relative;
+        width: 338px;
+        height: 86px;
+        margin: 59px auto 42px;
+        background: url('/images/index/award/title.png') 0 0 no-repeat;
+        background-size: contain;
+
+        @include tablet {
+            width: vw(621);
+            height: vw(158);
+            margin: vw(146) auto vw(203);
+            background-image: url('/images/index/award/title_mb.png');
+        }
+    }
+
+    // 年度分享獎標題
+    .index__award__main__item__title {
+        display: flex;
+        flex-wrap: wrap;
+        width: 608px;
+        margin: 0 auto;
+        @include tablet {
+            width: 100%;
+        }
+        @at-root #{$secondAward} .index__award__main__item__title {
+            width: 916px;
+            margin-top: 24px;
+            @include tablet {
+                width: 100%;
+                margin-top: vw(104);
+            }
+        }
+    }
+
+    .index__award__main__item__title__col {
+        display: flex;
+        align-items: center;
+        height: 84px;
+        border: #0097bc 3px solid;
+        box-sizing: border-box;
+        @include tablet {
+            height: vw(170);
+            border: 0;
+            border-top: #00a4a1 vw(2) solid;
+            border-bottom: #0097bc vw(2) solid;
+        }
+        &:nth-child(1) {
+            justify-content: flex-end;
+            width: 290px;
+            color: #004c69;
+            font-size: 30px;
+            font-weight: 900;
+            letter-spacing: 4px;
+            padding-right: 24px;
+            border-right: 0;
+            border-radius: 84px 0 0 84px;
+            background: #ffffff;
+            @include tablet {
+                justify-content: center;
+                width: vw(493);
+                font-size: vw(70);
+                letter-spacing: vw(8);
+                padding-right: 0;
+                border-radius: 0;
+            }
+        }
+        &:nth-child(2) {
+            width: 318px;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            line-height: 1.5;
+            padding-left: 15px;
+            border-radius: 0 84px 84px 0;
+            border-left: #00a4a1 vw(2) solid;
+            background: rgb(19,157,189);
+            background: linear-gradient(37deg, rgba(19,157,189,1) 0%, rgba(116,219,191,1) 35%, rgba(116,219,191,1) 100%);
+            @include tablet {
+                flex-grow: 1;
+                width: auto;
+                font-size: vw(38);
+                letter-spacing: vw(4);
+                line-height: 1.579;
+                padding-left: vw(44);
+                border-radius: 0;
+            }
+        }
+        @at-root #{$secondAward} .index__award__main__item__title__col {
+            height: 110px;
+            @include tablet {
+                height: vw(280);
+            }
+        }
+        @at-root #{$secondAward} .index__award__main__item__title__col:nth-child(1) {
+            justify-content: center;
+            width: 340px;
+            color: #004c69;
+            font-size: 28px;
+            letter-spacing: 3px;
+            padding-right: 0;
+            border-radius: 25px 0 0 25px;
+            @include tablet {
+                // width: vw(403);
+                width: vw(363);
+                // width: auto;
+                font-size: vw(60);
+                // font-size: vw(70);
+                line-height: vw(85);
+                letter-spacing: vw(6);
+                // padding: 0 vw(60);
+                border-radius: 0;
+            }
+        }
+        @at-root #{$secondAward} .index__award__main__item__title__col:nth-child(2) {
+            width: 576px;
+            font-size: 17px;
+            letter-spacing: 1px;
+            line-height: 1.52;
+            padding-left: 19px;
+            border-radius: 0 25px 25px 0;
+            background: rgb(19,157,189);
+            background: linear-gradient(37deg, rgba(19,157,189,1) 0%, rgba(19,157,189,1) 10%, rgba(116,219,191,1) 55%, rgba(116,219,191,1) 100%);
+            @include tablet {
+                flex-grow: 1;
+                width: auto;
+                font-size: vw(38);
+                letter-spacing: vw(4);
+                // line-height: 1.421;
+                line-height: 1.5;
+                padding-left: vw(42);
+                border-radius: 0;
+            }
+            img {
+                display: inline-block;
+                height: 36px;
+                vertical-align: middle;
+                margin: -4px 4px 0;
+                @include tablet {
+                    position: absolute;
+                    height: vw(64);
+                    margin: vw(-4) 0 vw(4) vw(6);
+                }
+            }
+        }
+    }
+
+    .index__award__main__item__title__detail {
+        display: flex;
+        justify-content: flex-end;
+        flex-basis: 100%;
+        color: #41484b;
+        font-weight: 500;
+        padding-top: 10px;
+        padding-right: 64px;
+        @include tablet {
+            padding-top: vw(40);
+            padding-right: vw(40);
+        }
+        &#index-award01-detail {
+            cursor: pointer;
+            &::before {
+                content: '詳細活動辦法';
+                font-size: 15px;
+                letter-spacing: 2px;
+                padding-bottom: 4px;
+                padding-left: 4px;
+                border-bottom: #41484b 1px solid;
+                @include tablet {
+                    font-size: vw(30);
+                    letter-spacing: vw(2);
+                    padding-bottom: vw(18);
+                    padding-left: vw(4);
+                }
+            }
+        }
+        &#index-award02-detail {
+            color: #004c69;
+            font-size: 12px;
+            letter-spacing: .5px;
+            padding-right: 28px;
+            @include tablet {
+                font-size: vw(24);
+                letter-spacing: vw(2);
+                padding-right: vw(40);
+            }
+        }
+    }
+
+    #index-share-award-swiper {
+        display: none;
+
+        @include tablet {
+            position: relative;
+            display: block;
+            padding-top: vw(205);
+        }
+
+        // 單一 swiper-slide
+        .index__award__main__item__swiper__wrap__slide {
+            width: vw(640);
+            margin: 0 vw(33);
+            overflow: visible;
+        }
+
+        // 單一 swiper-slide 內層
+        .index__award__main__item__swiper__wrap__slide__inner {
+            position: relative;
+            width: 100%;
+            height: vw(600);
+            background: url('/images/index/award/slide_bg-1_mb.png') 0 0 no-repeat;
+            background-size: contain;
+        }
+
+    }
+
+    // 年度分享獎 Swiper (桌機)
+    .index__award__main__item__swipertop {
+
+        padding-top: 48px;
+
+        @at-root #{$secondAward} .index__award__main__item__swiper {
+            padding-top: 28px;
+        }
+
+        @include tablet {
+            display: none;
+        }
+
+        .index__award__main__item__swiper__wrap {
+            justify-content: center;
+        }
+
+        // 單一 swiper-slide
+        .index__award__main__item__swiper__wrap__slide {
+            width: 276px;
+            margin: 0 11px;
+            overflow: visible;
+        }
+
+        // 單一 swiper-slide 內層
+        .index__award__main__item__swiper__wrap__slide__inner {
+            position: relative;
+            width: 100%;
+            height: 260px;
+            background: url('/images/index/award/slide_bg-1.png') 0 0 no-repeat;
+            background-size: contain;
+        }
+
+    }
+
+    #index-mission-award-swiper {
+        display: none;
+
+        @include tablet {
+            position: relative;
+            display: block;
+            padding-top: vw(124);
+        }
+
+        // 單一 swiper-slide
+        .index__award__main__item__swiper__wrap__slide {
+            width: vw(628);
+            margin: 0 vw(33);
+            overflow: visible;
+        }
+
+        // 單一 swiper-slide 內層
+        .index__award__main__item__swiper__wrap__slide__inner {
+            position: relative;
+            width: 100%;
+            height: vw(588);
+            background: url('/images/index/award/slide_bg-2_mb.png') 0 0 no-repeat;
+            background-size: contain;
+        }
+
+    }
+
+    // 第二階段任務獎 Swiper (桌機)
+    // .index__award__main__item__swipertop ~ .index__award__main__item__swipertop {
+    @at-root #{$secondAward} .index__award__main__item__swiper {
+
+        @include desktop {
+            padding-top: 24px;
+        }
+        
+        @include tablet {
+            display: none;
+        }
+
+        .index__award__main__item__swiper__wrap {
+            @include desktop {
+                justify-content: center;
+            }
+        }
+
+        // 單一 swiper-slide
+        .index__award__main__item__swiper__wrap__slide {
+            @include desktop {
+                width: 254px;
+                margin: 0 18px;
+                overflow: visible;
+            }
+        }
+
+        // 單一 swiper-slide 內層
+        .index__award__main__item__swiper__wrap__slide__inner {
+            @include desktop {
+                position: relative;
+                width: 100%;
+                height: 238px;
+                background: url('/images/index/award/slide_bg-2.png') 0 0 no-repeat;
+                background-size: contain;
+            }
+        }
+
+        .index__award__main__item__swiper__wrap__slide__inner__text p {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin: 0 auto;
+        }
+
+    }
+
+    // 單一 swiper-slide 文字
+    .index__award__main__item__swiper__wrap__slide__inner__text {
+        $slideText: &;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        height: 70px;
+        color: #004a62;
+        font-size: 17px;
+        font-weight: 700;
+        text-align: center;
+        line-height: 23px;
+        letter-spacing: .05em;
+        padding-top: 168px;
+        z-index: 2;
+        @include tablet {
+            height: vw(160);
+            font-size: vw(40);
+            line-height: vw(54);
+            padding-top: vw(396);
+        }
+        span {
+            position: relative;
+            top: -2px;
+            font-size: 12px;
+            font-weight: 500;
+            @include tablet {
+                top: 0;
+                font-size: vw(28);
+            }
+            @at-root #{$slideText}.workshop span {
+                // text-align: right;
+                // padding-right: 42px;
+                // @include tablet {
+                //     padding-right: vw(88);
+                // }
+            }
+        }
+        @at-root #{$secondAward} .index__award__main__item__swiper__wrap__slide__inner__text {
+            height: 52px;
+            padding-top: 170px;
+            @include tablet {
+                height: vw(120);
+                padding-top: vw(432);
+            }
+        }
+    }
+
+    // 單一 swiper-slide 圖片
+    .index__award__main__item__swiper__wrap__slide__inner__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        &.bike {
+            top: -12px;
+            left: -10px;
+            @include tablet {
+                top: vw(-39);
+                left: vw(-33);
+                width: vw(691);
+                height: vw(407);
+            }
+        }
+        &.scooter {
+            top: -63px;
+            left: -20px;
+            @include tablet {
+                top: vw(-160);
+                left: vw(-59);
+                width: vw(744);
+                height: vw(590);
+            }
+        }
+        &.watch {
+            top: -42px;
+            left: 44px;
+            @include tablet {
+                top: vw(-110);
+                left: vw(94);
+                width: vw(397);
+                height: vw(527);
+            }
+        }
+        &.workshop {
+            top: -14px;
+            left: 38px;
+            @include tablet {
+                top: vw(-42);
+                left: vw(93);
+                width: vw(454);
+                height: vw(455);
+            }
+        }
+        &.momo {
+            top: -16px;
+            left: 41px;
+            @include tablet {
+                top: vw(-46);
+                left: vw(98);
+                width: vw(463);
+                height: vw(472);
+            }
+        }
+    }
+
+    // *號備註文字
+    .index__award__main__item__swiper__wrap__slide__note {
+        color: #004c69;
+        font-size: 12px;
+        font-weight: 500;
+        text-align: justify;
+        line-height: 1.83;
+        letter-spacing: .5px;
+        padding: 18px 14px 0 12px;
+        
+        @include tablet {
+            font-size: vw(32);
+            line-height: 1.406;
+            letter-spacing: vw(2);
+            padding: 0;
+        }
+    }
+
+    .swiper-pagination {
+        display: none;
+        @include tablet {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            bottom: 0;
+            padding: vw(68) 0 vw(62);
+            @at-root #{$root} #index-mission-award-swiper .swiper-pagination {
+                padding: vw(100) 0 vw(64);
+            }
+        }
+        .swiper-pagination-bullet {
+            width: vw(39);
+            height: vw(39);
+            margin: 0 vw(8.5);
+            border: #fff vw(3) solid;
+            background: #0091bc;
+            box-sizing: border-box;
+            opacity: 1;
+            &-active {
+                border: 0;
+                background: url('/images/index/award/pagination-dot.png') 0 0 no-repeat;
+                background-size: contain;
+                &::after {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
+    #index-mission-award-swiper-notes {
+        p {
+            @include tablet {
+                padding: 0 vw(190);
+                // letter-spacing: vw(3);
+            }
+        }
+    }
+
+    .index__award__main__item__swiper__notes {
+        position: relative;
+        display: none;
+        @include tablet {
+            display: block;
+            &#index-share-award-swiper-notes {
+                height: vw(226);
+            }
+        }
+        p {
+            display: none;
+            pointer-events: none;
+            @include tablet {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                display: block;
+                color: #004c69;
+                font-size: vw(32);
+                font-weight: 500;
+                text-align: center;
+                line-height: 1.78;
+                opacity: 0;
+                transition: opacity .35s ease;
+                // padding: 0 vw(80);
+                box-sizing: border-box;
+                &.show {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+}
