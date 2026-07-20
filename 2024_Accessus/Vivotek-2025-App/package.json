@@ -20,7 +20,7 @@
     "@vesp/nuxt-fontawesome": "^1.2.0",
     "aos": "^2.3.4",
     "axios": "^1.7.9",
-    "nuxt": "^3.14.1592",
+    "nuxt": "^3.21.9",
     "nuxt-swiper": "^2.0.0",
     "pinia-plugin-persistedstate": "^4.2.0",
     "vue": "latest",
